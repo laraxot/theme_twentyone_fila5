@@ -26,7 +26,7 @@ TwentyOne/
 ### 1. Installazione Dependencies
 
 ```bash
-cd /var/www/html/_bases/base_predict_fila3_mono/laravel/Themes/TwentyOne
+cd /var/www/html/_bases/base_predict_fila5_mono/laravel/Themes/TwentyOne
 npm install
 ```
 
@@ -127,7 +127,7 @@ fs.copySync(source, destination, { overwrite: true });
 #!/bin/bash
 
 # Pubblicazione automatica del tema
-cd /var/www/html/_bases/base_predict_fila3_mono/laravel/Themes/TwentyOne
+cd /var/www/html/_bases/base_predict_fila5_mono/laravel/Themes/TwentyOne
 
 # Installazione dipendenze
 npm install

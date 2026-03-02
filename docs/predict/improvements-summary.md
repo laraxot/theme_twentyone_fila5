@@ -2,7 +2,7 @@
 
 ## 📋 Panoramica
 
-Questo documento riassume tutti i miglioramenti proposti per la pagina `/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/Predict/resources/views/pages/predicts/[slug].blade.php`, basati sull'analisi comparativa con i migliori siti di prediction market del settore.
+Questo documento riassume tutti i miglioramenti proposti per la pagina `/var/www/html/_bases/base_predict_fila5_mono/laravel/Modules/Predict/resources/views/pages/predicts/[slug].blade.php`, basati sull'analisi comparativa con i migliori siti di prediction market del settore.
 
 ## 🎯 Obiettivo
 

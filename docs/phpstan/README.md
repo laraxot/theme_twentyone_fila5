@@ -39,7 +39,7 @@ Questo è fondamentale per:
 1. **Entrare nella cartella del tema**  
    Esempio:  
    ```
-   cd /var/www/html/_bases/base_predict_fila3_mono/laravel/Themes/TwentyOne
+   cd /var/www/html/_bases/base_predict_fila5_mono/laravel/Themes/TwentyOne
    ```
 2. **Eseguire la pubblicazione del tema**  
    ```

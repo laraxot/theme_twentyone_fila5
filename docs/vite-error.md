@@ -28,7 +28,7 @@ Unable to locate file in Vite manifest: resources/css/app.css
 ### 1. Pubblicare il Tema
 
 ```bash
-cd /var/www/html/_bases/base_predict_fila3_mono/laravel/Themes/TwentyOne
+cd /var/www/html/_bases/base_predict_fila5_mono/laravel/Themes/TwentyOne
 npm run copy
 ```
 
