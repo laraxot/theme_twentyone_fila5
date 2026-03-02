@@ -3,7 +3,7 @@
 ## 📊 Analisi del Codice Attuale
 
 ### File Analizzato
-`/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/Predict/resources/views/pages/predicts/[slug].blade.php`
+`/var/www/html/_bases/base_predict_fila5_mono/laravel/Modules/Predict/resources/views/pages/predicts/[slug].blade.php`
 
 ### Struttura Attuale
 La pagina utilizza un layout moderno con:

@@ -2,7 +2,7 @@
 
 ## 🎯 Sintesi delle Analisi
 
-Ho analizzato il file `/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/Predict/resources/views/pages/predicts/[slug].blade.php` e confrontato con i migliori siti di prediction market del settore. Ecco le raccomandazioni principali per migliorare significativamente l'esperienza utente.
+Ho analizzato il file `/var/www/html/_bases/base_predict_fila5_mono/laravel/Modules/Predict/resources/views/pages/predicts/[slug].blade.php` e confrontato con i migliori siti di prediction market del settore. Ecco le raccomandazioni principali per migliorare significativamente l'esperienza utente.
 
 ## 🚀 Miglioramenti Prioritari
 

@@ -36,7 +36,7 @@ Eseguire `npm run copy` dalla directory del tema risolve il problema perché:
 
 1. Navigare alla directory del tema:
    ```bash
-   cd /var/www/html/_bases/base_predict_fila3_mono/laravel/Themes/TwentyOne
+   cd /var/www/html/_bases/base_predict_fila5_mono/laravel/Themes/TwentyOne
    ```
 
 2. Eseguire il comando di build e copia:

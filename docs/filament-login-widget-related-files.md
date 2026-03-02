@@ -4,7 +4,7 @@
 
 ### 1. LoginWidget.php
 ```php
-// Path: /var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/app/Filament/Widgets/LoginWidget.php
+// Path: /var/www/html/_bases/base_predict_fila5_mono/laravel/Modules/User/app/Filament/Widgets/LoginWidget.php
 // Tipo: Widget Filament
 // Stato: Implementazione base
 // Miglioramenti necessari: Vedi filament-login-widget-code-analysis.md
@@ -12,7 +12,7 @@
 
 ### 2. RecentLoginsWidget.php
 ```php
-// Path: /var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/app/Filament/Widgets/RecentLoginsWidget.php
+// Path: /var/www/html/_bases/base_predict_fila5_mono/laravel/Modules/User/app/Filament/Widgets/RecentLoginsWidget.php
 // Tipo: Widget Filament
 // Funzione: Mostra login recenti
 // Relazione: Utilizza dati del LoginWidget
@@ -20,7 +20,7 @@
 
 ### 3. login-widget.blade.php (Views)
 ```php
-// Path: /var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/resources/views/widgets/auth/login-widget.blade.php
+// Path: /var/www/html/_bases/base_predict_fila5_mono/laravel/Modules/User/resources/views/widgets/auth/login-widget.blade.php
 // Tipo: Template Blade
 // Funzione: Vista del widget
 // Miglioramenti necessari:
@@ -31,7 +31,7 @@
 
 ### 4. login-widget.blade.php (Livewire)
 ```php
-// Path: /var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/resources/views/livewire/auth/login-widget.blade.php
+// Path: /var/www/html/_bases/base_predict_fila5_mono/laravel/Modules/User/resources/views/livewire/auth/login-widget.blade.php
 // Tipo: Template Livewire
 // Funzione: Vista Livewire del widget
 // Miglioramenti necessari:
@@ -43,7 +43,7 @@
 
 ### 1. XotBaseWidget
 ```php
-// Path: /var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/Xot/Filament/Widgets/XotBaseWidget.php
+// Path: /var/www/html/_bases/base_predict_fila5_mono/laravel/Modules/Xot/Filament/Widgets/XotBaseWidget.php
 // Tipo: Classe Base
 // Funzione: Fornisce funzionalità base per i widget
 // Miglioramenti necessari:
@@ -54,7 +54,7 @@
 
 ### 2. Auth Facade
 ```php
-// Path: /var/www/html/_bases/base_predict_fila3_mono/laravel/vendor/laravel/framework/src/Illuminate/Support/Facades/Auth.php
+// Path: /var/www/html/_bases/base_predict_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Support/Facades/Auth.php
 // Tipo: Facade Laravel
 // Funzione: Gestione autenticazione
 // Miglioramenti necessari:
@@ -67,7 +67,7 @@
 
 ### 1. Data Objects
 ```php
-// Path: /var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/Datas/LoginData.php
+// Path: /var/www/html/_bases/base_predict_fila5_mono/laravel/Modules/User/Datas/LoginData.php
 // Tipo: Data Object
 // Funzione: Validazione e tipizzazione dati login
 // Implementazione: Vedi filament-login-widget-code-analysis.md
@@ -75,7 +75,7 @@
 
 ### 2. Action Handler
 ```php
-// Path: /var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/Actions/HandleLoginAction.php
+// Path: /var/www/html/_bases/base_predict_fila5_mono/laravel/Modules/User/Actions/HandleLoginAction.php
 // Tipo: Action
 // Funzione: Gestione logica login
 // Implementazione: Vedi filament-login-widget-code-analysis.md
@@ -83,12 +83,12 @@
 
 ### 3. Services
 ```php
-// Path: /var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/Services/SecurityManager.php
+// Path: /var/www/html/_bases/base_predict_fila5_mono/laravel/Modules/User/Services/SecurityManager.php
 // Tipo: Service
 // Funzione: Gestione sicurezza
 // Implementazione: Vedi filament-login-widget-code-analysis.md
 
-// Path: /var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/Services/SessionManager.php
+// Path: /var/www/html/_bases/base_predict_fila5_mono/laravel/Modules/User/Services/SessionManager.php
 // Tipo: Service
 // Funzione: Gestione sessioni
 // Implementazione: Vedi filament-login-widget-code-analysis.md
@@ -96,12 +96,12 @@
 
 ### 4. Tests
 ```php
-// Path: /var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/Tests/Unit/LoginWidgetTest.php
+// Path: /var/www/html/_bases/base_predict_fila5_mono/laravel/Modules/User/Tests/Unit/LoginWidgetTest.php
 // Tipo: Unit Test
 // Funzione: Test unitari widget
 // Implementazione: Vedi filament-login-widget-code-analysis.md
 
-// Path: /var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/Tests/Feature/LoginTest.php
+// Path: /var/www/html/_bases/base_predict_fila5_mono/laravel/Modules/User/Tests/Feature/LoginTest.php
 // Tipo: Feature Test
 // Funzione: Test feature login
 // Implementazione: Vedi filament-login-widget-code-analysis.md
