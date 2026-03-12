@@ -45,7 +45,22 @@ Su filesystem case-insensitive (Windows, macOS default), file con nomi che diffe
   → file-naming-rules.md
   → phpstan-fixes.md
   → api-integration.md
+  → homepage-ui-ux-audit.md
+
+❌ ERRATO:
+- homepage-ui-ux-audit-2026-03-12.md
+- prd-index-2026-03-12.md
+- report_2026_03_12.md
 ```
+
+### Regola aggiuntiva: niente date nel nome dei `.md`
+
+I file markdown devono essere documenti vivi, non snapshot usa-e-getta.
+
+- le date vanno nel contenuto del documento, non nel filename;
+- il filename deve restare stabile per evitare link fragili;
+- se un documento evolve, si aggiorna lo stesso file;
+- se serve storico, si usa una sezione `Cronologia`, non un nuovo file con data.
 
 ### File Blade
 
@@ -101,6 +116,7 @@ Se entrambi i file contengono contenuto diverso:
 - [ ] Nessun file con nome duplicato case-insensitive
 - [ ] File PHP in PascalCase (tranne migrations)
 - [ ] File .md documentazione in kebab-case minuscolo
+- [ ] Nessun file `.md` con data nel nome
 - [ ] File .md standard (README, LICENSE, etc.) in MAIUSCOLO
 - [ ] File blade in kebab-case minuscolo
 - [ ] Nessun carattere speciale nei nomi file (solo a-z, 0-9, -, _)
