@@ -2,7 +2,7 @@
     <div class="p-16 text-white bg-[#0F2734] hidden md:block">
         <div class="flex flex-col justify-between h-full">
             <a href="/" class="">
-                <x-filament-panels::logo  />
+                <img src="{{ asset('assets/predict/img/logo-ft.svg') }}" alt="{{ config('app.name') }}" class="h-8 w-auto" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </a>
             {{-- <a class="block" href="{{ route('home') }}">
