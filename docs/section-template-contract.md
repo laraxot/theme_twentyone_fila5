@@ -42,4 +42,4 @@ Il pattern e' coerente con il tema `Meetup` del progetto `base_laravelpizza`, do
 ## Collegamenti
 
 - [Theme docs index](./README.md)
-- [Theme asset pipeline governance](../../../project_docs/THEME_ASSET_PIPELINE_GOVERNANCE.md)
+- [Theme asset pipeline governance](../../../../docs/project/THEME_ASSET_PIPELINE_GOVERNANCE.md)

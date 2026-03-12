@@ -79,7 +79,7 @@ Senza TwentyOne:
 
 - [README.md](README.md)
 - [vite_manifest_error.md](vite_manifest_error.md)
-- [PRD Indice Centrale](../../../project_docs/PRD_INDEX_2026_03_12.md)
+- [PRD Indice Centrale](../../../../docs/project/PRD_INDEX_2026_03_12.md)
 
 ## Testing & Coverage
 
