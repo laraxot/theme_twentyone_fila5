@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Database\MultipleRecordsFoundException;
 use Modules\Blog\Models\Article;
 use Illuminate\Support\Arr;
 use Illuminate\View\View;
@@ -10,7 +12,12 @@ name('article.view');
 //middleware(['auth', 'verified']);
 
 render(function (View $view, string $slug) {
-    $article = Article::firstWhere(['slug' => $slug]);
+    try {
+        $article = Article::query()->where('slug', $slug)->sole();
+    } catch (ModelNotFoundException|MultipleRecordsFoundException) {
+        $article = null;
+    }
+
     return $view->with('article', $article);
 });
 

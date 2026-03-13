@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Database\MultipleRecordsFoundException;
 use Modules\Predict\Models\Category;
 use Illuminate\Support\Arr;
 use Illuminate\View\View;
@@ -10,10 +12,12 @@ name('category.view');
 //middleware(['auth', 'verified']);
 
 render(function (View $view, string $slug) {
-    $category = Category::firstWhere(['slug' => $slug]);
-    if($category == null){
-      return view('pub_theme::404');
+    try {
+        $category = Category::query()->where('slug', $slug)->sole();
+    } catch (ModelNotFoundException|MultipleRecordsFoundException) {
+        return view('pub_theme::404');
     }
+
     return $view->with('category', $category);
 });
 

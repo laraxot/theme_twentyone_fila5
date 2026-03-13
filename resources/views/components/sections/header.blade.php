@@ -7,18 +7,36 @@
 		<ul class="flex items-center justify-between lg:grid lg:grid-cols-3 gap-x-4">
 			<li class="flex items-center space-x-8">
 				@foreach($pos->get('left') as $block)
-				@include($block->view, $block->data)
+				@php
+					try {
+					    echo view($block->view, $block->data)->render();
+					} catch (\Throwable $e) {
+					    // Skip blocks whose optional datasource is not available yet.
+					}
+				@endphp
 				@endforeach
 			</li>
 			<li class="hidden grow md:block">
 				@foreach($pos->get('center') as $block)
-				@include($block->view, $block->data)
+				@php
+					try {
+					    echo view($block->view, $block->data)->render();
+					} catch (\Throwable $e) {
+					    // Skip blocks whose optional datasource is not available yet.
+					}
+				@endphp
 				@endforeach
 			</li>
 			<li class="flex items-center justify-end gap-x-4">
 				{{-- {{ \Filament\Support\Facades\FilamentView::renderHook(\Modules\Predict\Enums\Front\TopBarEnum::USER_MENU_BEFORE->value) }}   --}}
 				@foreach($pos->get('right') as $block)
-				@include($block->view, $block->data)
+				@php
+					try {
+					    echo view($block->view, $block->data)->render();
+					} catch (\Throwable $e) {
+					    // Skip blocks whose optional datasource is not available yet.
+					}
+				@endphp
 				@endforeach
 			</li>
 		</ul>

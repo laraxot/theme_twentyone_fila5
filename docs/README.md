@@ -34,7 +34,8 @@ TwentyOne/
 1. Clona il repository nella cartella `laravel/Themes/TwentyOne`
 2. Esegui `composer install` per installare le dipendenze PHP
 3. Esegui `npm install` per installare le dipendenze JavaScript
-4. Esegui `npm run dev` per compilare gli assets in modalità sviluppo
+4. Esegui `npm run build` per compilare gli asset del tema in `public/`
+5. Esegui `npm run copy` per pubblicare manifest e asset in `public_html/themes/TwentyOne`
 
 ## Configurazione
 Il tema può essere configurato attraverso i seguenti file:
@@ -52,7 +53,10 @@ Per iniziare lo sviluppo:
 Per creare una build ottimizzata per la produzione:
 ```bash
 npm run build
+npm run copy
 ```
+
+Nel progetto corrente il solo `npm run build` non basta: Laravel legge gli asset del tema dal path runtime `public_html/themes/TwentyOne`, quindi dopo ogni build serve la copia verso quella destinazione.
 
 ## Personalizzazione
 Il tema può essere personalizzato in diversi modi:
@@ -62,9 +66,10 @@ Il tema può essere personalizzato in diversi modi:
 
 ## Troubleshooting
 Per problemi comuni, consulta la documentazione nella cartella `docs`:
-- [Vite Manifest Error](VITE_MANIFEST_ERROR.md)
+- [Vite Manifest Error](vite_manifest_error.md)
 - [Vite Error](vite-error.md)
 - [Publishing](publishing.md)
+- [Section Template Contract](section-template-contract.md)
 
 ## Documentazione correlata
 - `laravel/Themes/TwentyOne/docs/` - Documentazione del tema

@@ -13,10 +13,7 @@ TwentyOne/
 │   │   └── app.css
 │   └── js/
 │       └── app.js
-├── public/
-│   └── themes/
-│       └── TwentyOne/
-│           └── dist/
+├── public/                  # Output locale Vite del tema
 ├── vite.config.js
 └── package.json
 ```
@@ -38,7 +35,7 @@ npm run build
 
 Questo comando:
 - Compila CSS e JS
-- Genera il manifest
+- Genera il manifest locale in `laravel/Themes/TwentyOne/public/manifest.json`
 - Ottimizza gli asset
 
 ### 3. Copia Assets
@@ -48,9 +45,31 @@ npm run copy
 ```
 
 Questo comando:
-- Copia gli asset compilati in `public/themes/TwentyOne/dist`
+- Copia gli asset compilati in `public_html/themes/TwentyOne`
 - Mantiene la struttura delle cartelle
-- Aggiorna il manifest
+- Pubblica il manifest nel path runtime effettivamente letto da Laravel
+
+### Perche' `copy` e' obbligatorio
+
+Le Blade attive del tema usano `@vite(..., 'themes/TwentyOne')`, quindi Laravel cerca:
+
+```text
+public_html/themes/TwentyOne/manifest.json
+```
+
+La build del tema invece genera il manifest in:
+
+```text
+laravel/Themes/TwentyOne/public/manifest.json
+```
+
+Per questo la pipeline corretta e':
+
+```bash
+npm install
+npm run build
+npm run copy
+```
 
 ## Script NPM
 
@@ -61,22 +80,9 @@ Questo comando:
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "copy": "node scripts/copy-assets.js"
+    "copy": "cp -r ./public/* ../../../public_html/themes/TwentyOne"
   }
 }
-```
-
-### copy-assets.js
-
-```javascript
-// Script per copiare gli asset nella cartella pubblica
-const fs = require('fs-extra');
-const path = require('path');
-
-const source = path.resolve(__dirname, '../dist');
-const destination = path.resolve(__dirname, '../../public/themes/TwentyOne/dist');
-
-fs.copySync(source, destination, { overwrite: true });
 ```
 
 ## Best Practices
@@ -105,8 +111,9 @@ fs.copySync(source, destination, { overwrite: true });
 ### Errori Comuni
 
 1. **Manifest non trovato**
-   - Verificare il percorso nel vite.config.js
+   - Verificare la coerenza tra `@vite(..., 'themes/TwentyOne')` e `public_html/themes/TwentyOne`
    - Controllare i permessi delle cartelle
+   - Verificare che esista `public_html/themes/TwentyOne`
    - Pulire la cache di Laravel
 
 2. **Asset non aggiornati**
