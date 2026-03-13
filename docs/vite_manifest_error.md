@@ -1,94 +1,131 @@
-# Errore Vite Manifest: Risoluzione e Comprensione
+# Errori Runtime Home `/it` - Theme TwentyOne
 
-## Perché si verifica questo errore
+## 1. Manifest Vite mancante
 
-L'errore `Illuminate\Foundation\ViteException: Unable to locate file in Vite manifest: resources/css/app.css` si verifica quando:
+### Sintomo
 
-1. Il tema TwentyOne non è stato correttamente compilato e pubblicato
-2. I file di asset richiesti dalla direttiva `@vite` non sono disponibili nella directory di distribuzione
-3. Il manifest di Vite (che mappa i nomi dei file originali ai file compilati con hash) non esiste o non contiene i riferimenti necessari
+```text
+Illuminate\Foundation\ViteManifestNotFoundException
+Vite manifest not found at: /var/www/_bases/base_predict_fila5/public_html/themes/TwentyOne/manifest.json
+```
 
-Questo errore è fondamentale perché:
-- Interrompe completamente il rendering del frontend
-- Indica un problema nel processo di build degli asset
-- Rivela una disconnessione tra il codice del template e gli asset disponibili
+### Causa reale
 
-## Cosa rappresenta questo errore
+Il layout del tema usa:
 
-Questo errore rappresenta un problema nel ciclo di pubblicazione degli asset del tema. Specificamente:
+```blade
+@vite(['resources/css/app.css'], 'themes/TwentyOne')
+@vite(['resources/js/app.js'], 'themes/TwentyOne')
+```
 
-- La direttiva `@vite(['resources/css/app.css'],'themes/TwentyOne/dist')` in `app.blade.php` sta cercando di caricare un file CSS
-- Il secondo parametro `'themes/TwentyOne/dist'` indica la directory dove Vite dovrebbe cercare il manifest e gli asset compilati
-- L'errore indica che il file non è stato trovato nel manifest, il che significa che:
-  - O il manifest non esiste (build non eseguita)
-  - O il manifest esiste ma non contiene un riferimento a `resources/css/app.css` (configurazione errata)
+Laravel quindi legge il manifest runtime da:
 
-## Soluzione e processo di risoluzione
+```text
+/var/www/_bases/base_predict_fila5/public_html/themes/TwentyOne/manifest.json
+```
 
-### Perché funziona la soluzione
-Eseguire `npm run copy` dalla directory del tema risolve il problema perché:
+`npm run build` genera il manifest locale in `laravel/Themes/TwentyOne/public/manifest.json`.
+`npm run copy` lo pubblica nel path letto realmente dall'applicazione.
 
-1. Compila gli asset sorgente (CSS, JS) in file ottimizzati per la produzione
-2. Genera il manifest di Vite con i riferimenti corretti
-3. Copia i file compilati nella directory di distribuzione specificata nella configurazione di Vite
+### Procedura corretta
 
-### Passi dettagliati per risolvere
+```bash
+cd /var/www/_bases/base_predict_fila5/laravel/Themes/TwentyOne
+npm install
+npm run build
+npm run copy
+```
 
-1. Navigare alla directory del tema:
-   ```bash
-   cd /var/www/html/_bases/base_predict_fila5_mono/laravel/Themes/TwentyOne
-   ```
+### Regole
 
-2. Eseguire il comando di build e copia:
-   ```bash
-   npm run copy
-   ```
+- Se il tema usa `@vite(..., 'themes/TwentyOne')`, il manifest runtime deve stare in `public_html/themes/TwentyOne/`.
+- Lo script `copy` deve creare la directory di destinazione se manca.
+- I path CSS verso `vendor/filament/*` devono essere relativi alla posizione reale del file nel tema.
 
-3. Verificare che la directory `dist` contenga:
-   - Il file `manifest.json`
-   - I file CSS e JS compilati con hash nel nome
+## 2. Section template `v1` mancante
 
-## Prevenzione e automazione
+### Sintomo
 
-Per prevenire questo errore in futuro:
+```text
+View [components.sections.header.v1] not found.
+```
 
-1. **Integrazione nel processo di deployment**: Includere `npm run copy` per ogni tema nel processo di deployment automatico
-2. **Verifica pre-commit**: Aggiungere un hook pre-commit che avvisa se i file del tema sono stati modificati ma non compilati
-3. **Monitoraggio**: Implementare controlli che verifichino la presenza e la validità dei manifest di Vite
+### Causa reale
 
-## Comprensione approfondita
+Il componente CMS `Modules\Cms\View\Components\Section` usa di default `tpl = 'v1'` e risolve sempre:
 
-### Architettura degli asset in Laravel/Vite
+```text
+pub_theme::components.sections.<slug>.v1
+```
 
-1. **Flusso di lavoro di Vite in Laravel**:
-   - I file sorgente vengono sviluppati in `resources/`
-   - Vite compila questi file in versioni ottimizzate con hash
-   - Il manifest mappa i nomi originali ai file compilati
-   - Laravel usa la direttiva `@vite` per risolvere questi riferimenti
+Con:
 
-2. **Struttura multi-tema**:
-   - Ogni tema ha la propria directory `resources/`
-   - Ogni tema richiede la propria build separata
-   - La direttiva `@vite` accetta un secondo parametro per specificare la directory del tema
+```blade
+<x-section slug="header" />
+<x-section slug="footer" />
+```
 
-### Relazione con l'architettura del progetto
+il tema deve quindi esporre almeno:
 
-Questo processo è particolarmente importante nel nostro sistema modulare perché:
-- I temi sono separati dal core dell'applicazione
-- Diversi temi possono essere attivati in base al contesto
-- La compilazione degli asset è specifica per ogni tema
+- `resources/views/components/sections/header/v1.blade.php`
+- `resources/views/components/sections/footer/v1.blade.php`
 
-## Diagnostica avanzata
+In TwentyOne esistevano `header.blade.php` e `footer.blade.php`, ma non i wrapper `v1`, quindi la home `/it` cadeva in `500`.
 
-Se `npm run copy` non risolve il problema:
+### Fix corretto
 
-1. Verificare che `vite.config.js` nel tema sia configurato correttamente
-2. Controllare che tutte le dipendenze npm siano installate (`npm install`)
-3. Esaminare i log di build per errori specifici
-4. Verificare che i percorsi nella direttiva `@vite` corrispondano alla struttura effettiva dei file
+Creare wrapper compatibili che delegano ai template già presenti:
 
-## Collegamenti ad altre documentazioni
+```blade
+@include('pub_theme::components.sections.header', ['blocks' => $blocks])
+@include('pub_theme::components.sections.footer', ['blocks' => $blocks])
+```
 
-- [Documentazione sull'architettura dei temi](/docs/architecture/themes.md)
-- [Processo di build e deployment](/docs/development/build-process.md)
-- [Configurazione di Vite in Laravel](/docs/development/vite-configuration.md)
+### Regola strutturale
+
+Se un layout usa `<x-section slug="..."/>`, il tema deve rispettare il contratto del CMS e fornire `components/sections/<slug>/v1.blade.php`, oppure deve passare esplicitamente `tpl`.
+
+## 3. Schema Blog base mancante su `predict_data`
+
+### Sintomo
+
+```text
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'predict_data.banners' doesn't exist
+```
+
+Poi a cascata:
+
+- `predict_data.categories`
+- `predict_data.articles`
+
+### Causa reale
+
+Il tema `TwentyOne` e il modulo `Predict` usano modelli che estendono il layer Blog:
+
+- `Modules\Predict\Models\Banner` estende `Modules\Blog\Models\Banner`
+- `Modules\Predict\Models\Category` estende `Modules\Blog\Models\Category`
+- `Modules\Predict\Models\Predict` estende `Modules\Blog\Models\Article`
+
+Quindi il database `predict_data` deve contenere anche le tabelle base Blog necessarie:
+
+- `categories`
+- `banners`
+- `articles`
+
+Se queste migration non sono state eseguite, la homepage `/it` cade in `500` anche se il tema e le Blade sono corretti.
+
+### Fix corretto
+
+Eseguire le migration Blog pendenti che creano lo schema base condiviso:
+
+```bash
+php artisan migrate \
+  --path=Modules/Blog/database/migrations/2023_11_23_000011_create_blog_categories_table.php \
+  --path=Modules/Blog/database/migrations/2024_01_01_000004_create_banners_table.php \
+  --path=Modules/Blog/database/migrations/2024_01_01_000011_create_articles_table.php \
+  --no-interaction
+```
+
+### Nota infrastrutturale
+
+`Modules\Xot\Database\Migrations\XotBaseMigration` usava `getDoctrineSchemaManager()`, non disponibile in questo setup Laravel 12. E' stato aggiunto un fallback compatibile che usa l'update schema standard quando Doctrine non e' presente.

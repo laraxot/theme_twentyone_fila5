@@ -68,9 +68,8 @@ The TwentyOne theme shows **good code quality** with room for improvement in doc
 ## 🔗 Related Documentation
 
 - [Sixteen Theme Analysis](../../Sixteen/docs/CODE_QUALITY_ANALYSIS.md)
-- [Project Code Quality Standards](../../../project_docs/code-quality.md)
+- [Project Code Quality Standards](../../../../docs/project/code-quality.md)
 
 ---
 
 *Analysis performed by: Super Mucca 🐮*  
-*Last Updated: 2025-10-01*
