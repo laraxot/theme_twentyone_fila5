@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Database\MultipleRecordsFoundException;
 use Modules\Cms\Models\Page;
 use Illuminate\Support\Arr;
 use Illuminate\View\View;
@@ -10,10 +12,12 @@ name('page_slug.view');
 //middleware(['auth', 'verified']);
 
 render(function (View $view, string $slug) {
-    $page = Page::firstWhere(['slug' => $slug]);
-    if($page == null){
-      return view('pub_theme::404');
+    try {
+        $page = Page::query()->where('slug', $slug)->sole();
+    } catch (ModelNotFoundException|MultipleRecordsFoundException) {
+        return view('pub_theme::404');
     }
+
     return $view->with('page', $page);
 });
 
