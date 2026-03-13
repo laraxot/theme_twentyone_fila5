@@ -73,7 +73,7 @@
     <footer class="flex items-center justify-between pt-2 border-t border-gray-200 dark:border-gray-700">
         <x-predict.action-buttons 
             :predict="$record" 
-            :show-bet-button="true"
+            :show-bet-button="false"
         />
         
         <x-predict.meta-info 

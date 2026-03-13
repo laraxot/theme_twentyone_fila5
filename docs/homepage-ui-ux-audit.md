@@ -28,6 +28,43 @@ Rendere la homepage piu' bella, piu' chiara e piu' credibile, senza fingere un l
 - search, categorie e mercati in evidenza competono troppo tra loro
 - alcune superfici possono apparire piu' mature del backend reale
 
+## Findings runtime confermati
+
+### 1. Footer con brand duplicato
+
+La homepage attiva mostrava il logo sia nell'header che nel footer. Questo aumentava la ridondanza senza aggiungere fiducia.
+
+Stato: corretto.
+
+### 2. Mobile tabs con markup non valido
+
+Il file `layouts/mobile_tabs.blade.php` aveva tag `<a>` non chiusi correttamente, con rischio reale di comportamento UI incoerente su mobile.
+
+Stato: corretto.
+
+### 3. CTA footer delle card non coerente
+
+Le card dei mercati mostravano una CTA di puntata secondaria che non era il punto di ingresso migliore nella homepage. La card ha gia' azioni di puntata sul corpo e deve tenere il footer piu' semplice.
+
+Stato: corretto semplificando il footer action layer.
+
+### 4. Homepage senza focus forte su un solo messaggio
+
+Il contenuto attivo porta rapidamente ai mercati, ma manca ancora una hero/intro di livello homepage con proposta di valore esplicita.
+
+Stato: aperto.
+
+### 5. Delta reale rispetto ai competitor
+
+Dall'analisi delle homepage leader del settore emergono quattro pattern ricorrenti:
+
+- promessa di valore leggibile in pochi secondi;
+- accesso immediato ai mercati;
+- spiegazione rapida di come funziona;
+- trust chiaro su regole e rischio.
+
+Stato: corretto in buona parte sulla homepage canonica introducendo hero, blocco onboarding/trust e CTA finale.
+
 ## Regole UI/UX da applicare
 
 ### 1. Hero con proposta di valore netta
@@ -109,6 +146,14 @@ La homepage deve evitare:
 - introdurre una hero unica e piu' netta
 - aggiungere una trust strip con 3-4 punti chiari
 - portare i mercati in evidenza sopra elementi accessori
+
+Stato attuale P0:
+
+- hero unica: `100%`
+- blocco onboarding/trust: `100%`
+- ordine homepage piu' leggibile: `80%`
+- semplificazione header: `40%`
+- rifinitura footer: `70%`
 
 ### Priorita' P1
 
