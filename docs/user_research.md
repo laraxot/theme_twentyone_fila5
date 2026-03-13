@@ -4,7 +4,6 @@
 
 **Document Version:** 1.0  
 **Research Period:** Q4 2025 - Q1 2026  
-**Last Updated:** March 12, 2026  
 **Owner:** Theme Product Team
 
 ---
