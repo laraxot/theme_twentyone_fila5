@@ -80,12 +80,12 @@
                        cursor-pointer"
                 aria-label="Sort markets"
             >
-                <option value="hot">🔥 Hot</option>
-                <option value="new">🆕 Nuovi</option>
-                <option value="volume">📈 Volume</option>
-                <option value="participants">👥 Partecipanti</option>
-                <option value="ending">⏰ Scadenza</option>
-                <option value="probability">📊 Probabilità</option>
+                <option value="hot">Hot</option>
+                <option value="new">Nuovi</option>
+                <option value="volume">Volume</option>
+                <option value="participants">Partecipanti</option>
+                <option value="ending">Scadenza</option>
+                <option value="probability">Probabilità</option>
             </select>
         </div>
     </div>

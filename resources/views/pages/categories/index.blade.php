@@ -34,7 +34,7 @@ render(function (View $view) {
 
 
             <a class="flex items-center space-x-2 text-2xl font-semibold"
-                href="{{ route('category.view', ['lang'=>$lang,'slug' => $category->slug ]) }}"
+                href="{{ url(app()->getLocale().'/categories/'.$category->slug) }}"
                 >
                 {{ $category->title }}
             </a>
@@ -44,7 +44,7 @@ render(function (View $view) {
                 @foreach($category->descendants()->get() as $descendant)
                 <li>
                     <a type="button" 
-                        href="{{ route('category.view', ['lang'=>$lang,'slug' => $descendant->slug ]) }}" 
+                        href="{{ url(app()->getLocale().'/categories/'.$descendant->slug) }}" 
                         class="px-3 py-1 transition-colors bg-gray-200 rounded hover:bg-gray-300">
                         <span>{{ $descendant->title }}</span>
                     </a>

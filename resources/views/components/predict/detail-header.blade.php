@@ -37,7 +37,7 @@
             <span class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase">Volume</span>
         </div>
         <div class="text-2xl font-bold text-slate-900 dark:text-white">
-            {{ number_format(($predict->sum_credit_yes ?? 0) / 100, 0) }} 🍺
+            <span class="inline-flex items-center gap-1">{{ number_format(($predict->sum_credit_yes ?? 0) / 100, 0) }} <x-filament::icon icon="predict-currency" class="h-4 w-4" aria-hidden="true" /></span>
         </div>
     </div>
     

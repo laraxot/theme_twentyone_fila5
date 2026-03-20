@@ -1,5 +1,5 @@
 @props([
-    'title' => __('predict::home.trending_markets'),
+    'title' => __('predict::home.trending_markets.label'),
     'markets' => [],
 ])
 
@@ -23,8 +23,9 @@
         {{-- Section Header --}}
         <div class="flex items-center justify-between mb-8">
             <div>
-                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">
-                    🔥 {{ $title }}
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-2">
+                    <x-filament::icon icon="heroicon-o-fire" class="h-8 w-8 text-orange-500" aria-hidden="true" />
+                    {{ $title }}
                 </h2>
                 <p class="text-slate-600 dark:text-slate-400">
                     I mercati più popolari di oggi
@@ -61,7 +62,8 @@
                     {{-- Hot Badge --}}
                     @if($isHot)
                     <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-orange-500 to-red-500 text-white mb-3">
-                        🔥 Hot
+                        <x-filament::icon icon="heroicon-o-fire" class="h-3.5 w-3.5" aria-hidden="true" />
+                        Hot
                     </span>
                     @endif
 
@@ -82,7 +84,8 @@
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 5.293a1 1 0 00-1.414-1.414L9 11.172 7.707 9.879a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                             </svg>
-                            {{ number_format($mVolume) }} 🍺
+                            <x-filament::icon icon="predict-currency" class="h-4 w-4 shrink-0" aria-hidden="true" />
+                            {{ number_format($mVolume) }} CAPS
                         </span>
                     </div>
 

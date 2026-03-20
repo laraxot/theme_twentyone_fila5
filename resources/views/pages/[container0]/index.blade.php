@@ -2,7 +2,8 @@
 
 declare(strict_types=1);
 
-use function Laravel\Folio\{middleware, name};
+use function Laravel\Folio\middleware;
+use function Laravel\Folio\name;
 use Livewire\Volt\Component;
 use Modules\Cms\Http\Middleware\PageSlugMiddleware;
 
@@ -10,31 +11,40 @@ name('container0.list');
 middleware(PageSlugMiddleware::class);
 
 new class extends Component {
-    public string $container0;
-    public string $slug0 = '';
+    public string $container0 = '';
+
+    /** @var array<string, mixed> */
     public array $data = [];
+
+    public function mount(string $container0): void
+    {
+        $this->container0 = $container0;
+        $this->data = [
+            'container0' => $container0,
+            'slug' => $container0,
+        ];
+    }
 };
 ?>
 
-<x-layouts.app>
-    @volt('container0.view')
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {{-- Hero Section --}}
-        <div class="mb-8">
-            <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-2">
-                @if($container0 === 'predicts')
-                    {{ __('predict::predict_table.titles.prediction_markets.label') }}
-                @else
-                    {{ ucfirst($container0) }}
-                @endif
-            </h1>
-            <p class="text-gray-600 dark:text-gray-400">
-                {{ __('predict::predict_table.descriptions.browse_markets.label') }}
-            </p>
-        </div>
+@php
+    $pageTitle = match ($container0) {
+        'predicts' => 'Mercati di Predizione',
+        default => ucfirst(str_replace('-', ' ', $container0)),
+    };
 
-        {{-- Filament Table Widget --}}
-        @livewire(\Modules\Predict\Filament\Widgets\PredictTableWidget::class)
+    $pageMetaDescription = match ($container0) {
+        'predicts' => 'Esplora i mercati di predizione attivi, con probabilita, volume e accesso diretto ai dettagli.',
+        default => 'Pagina pubblica '.$pageTitle,
+    };
+@endphp
+
+<x-layouts.app :title="$pageTitle" :meta-description="$pageMetaDescription">
+    @volt('container0.list')
+    <div class="min-h-screen bg-slate-50 dark:bg-slate-950">
+        <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-10">
+            <x-page side="content" :slug="$this->container0" :data="$this->data" />
+        </div>
     </div>
     @endvolt
 </x-layouts.app>

@@ -32,3 +32,12 @@ Evita ambiguità: `container0.view` non deve indicare la lista.
 {{-- Link al dettaglio --}}
 <a href="{{ route('container0.view', ['container0' => 'predicts', 'slug0' => $slug]) }}">Dettaglio</a>
 ```
+
+## Route legacy da non usare
+
+- `predicts.list`
+- `predicts.detail`
+- `predict.view`
+- `predicts.show`
+
+Nel front office pubblico del tema tutto deve convergere su `container0.list` e `container0.view`.

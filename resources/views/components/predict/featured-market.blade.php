@@ -46,7 +46,7 @@
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
             </span>
-            🔥 TRENDING
+            <x-filament::icon icon="heroicon-o-fire" class="h-4 w-4" aria-hidden="true" /> TRENDING
         </span>
     </div>
     @endif
@@ -79,7 +79,7 @@
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                         </svg>
-                        <span class="font-bold">{{ number_format($volume) }} 🍺 Volume</span>
+                        <span class="font-bold inline-flex items-center gap-1">{{ number_format($volume) }} <x-filament::icon icon="predict-currency" class="h-4 w-4" aria-hidden="true" /> Volume</span>
                     </div>
                     @if($endDate)
                     <div class="flex items-center gap-2 text-amber-400">
@@ -95,7 +95,7 @@
             {{-- CTA Button --}}
             <div class="flex-shrink-0">
                 <a href="{{ url('/' . app()->getLocale() . '/predicts/' . $predict->slug) }}" 
-                   class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-indigo-500 to-violet-500 hover:from-indigo-600 hover:to-violet-600 text-white font-bold rounded-xl shadow-lg shadow-indigo-500/30 hover:shadow-xl hover:shadow-indigo-500/50 hover:-translate-y-0.5 transition-all duration-200">
+                   class="btn-kinetic inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-indigo-500 to-violet-500 hover:from-indigo-600 hover:to-violet-600 text-white font-bold rounded-xl shadow-lg shadow-indigo-500/30 hover:shadow-xl hover:shadow-indigo-500/50 transition-all duration-200">
                     Trade Now
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
@@ -117,7 +117,7 @@
                     $colorClass = $percentage > 60 ? 'bg-emerald-500' : ($percentage < 40 ? 'bg-rose-500' : 'bg-amber-500');
                 @endphp
 
-                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:border-indigo-500/50 transition-all duration-200">
+                <div class="card-kinetic bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:border-indigo-500/50">
                     <div class="flex justify-between items-center mb-2">
                         <span class="text-sm font-semibold text-white truncate">{{ Str::limit($ratingTitle, 25) }}</span>
                         <span class="text-lg font-bold text-white">{{ $percentage }}%</span>

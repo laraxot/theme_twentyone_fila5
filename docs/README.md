@@ -1,5 +1,8 @@
 # TwentyOne Theme Documentation
 
+Per workflow GSD/BMAD e coordinamento multi-agente: [docs/project/gsd-and-bmad-workflow.md](../../../../docs/project/gsd-and-bmad-workflow.md).  
+Per studio web design e checklist sito: [web-design-study.md](web-design-study.md).
+
 ## Introduzione
 TwentyOne è un tema moderno e performante per Laravel, basato su Tailwind CSS e Vite.
 Questo tema è progettato per offrire una soluzione robusta e facilmente personalizzabile

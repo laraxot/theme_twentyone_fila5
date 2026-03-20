@@ -49,7 +49,7 @@
             {{-- Expiration Badge --}}
             @if($article->time_left_for_humans != null)
                 {{-- <span class="absolute top-4 right-4 bg-amber-500/90 text-gray-900 text-[10px] font-bold uppercase px-3 py-1 rounded-full shadow-md flex items-center gap-1">
-                    ⏰ {{ $scadenza ?? 'Expired' }}
+                    <x-filament::icon icon="heroicon-o-clock" class="w-4 h-4" /> {{ $scadenza ?? 'Expired' }}
                 </span> --}}
             @endif
             
@@ -62,6 +62,7 @@
                             src="{{ $article->image }}" 
                             alt="{{ $article->title }}" 
                             class="w-full h-20 object-cover transition-transform duration-500 hover:scale-110" 
+                            loading="lazy"
                         />
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent animate-gradient"></div>
                     </a>
@@ -78,7 +79,8 @@
                     
                     @if($scadenza)
                         <div class="text-gray-400 text-xs flex items-center gap-1">
-                            📅 {{ $scadenza }}
+                            <x-filament::icon icon="heroicon-o-calendar" class="w-4 h-4" />
+                            {{ $scadenza }}
                         </div>
                     @else
                         <div class="text-gray-400 text-xs">Expired</div>

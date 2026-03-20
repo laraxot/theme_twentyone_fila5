@@ -1,14 +1,19 @@
 @php
     $predicts = \Modules\Predict\Models\Predict::query()
         ->whereIn('status', ['active', 'open', 'published'])
-        ->whereRaw('(sum_credit_yes + sum_credit_no) > 0')
-        ->with(['ratings'])
+        ->hasTitle()
         ->orderBy('created_at', 'desc')
-        ->limit(24)
+        ->limit(12)
         ->get();
 @endphp
 
 <div class="fi-ta-content-grid" style="--content-grid-col-width: 1fr; --content-grid-gap: 1.5rem; --content-grid-md-col-count: 1; --content-grid-xl-col-count: 3; display: grid; grid-template-columns: repeat(var(--content-grid-md-col-count), var(--content-grid-col-width)); gap: var(--content-grid-gap);">
+    @if($predicts->isEmpty())
+        <div class="col-span-full rounded-2xl border border-gray-200 bg-white p-12 text-center shadow-sm">
+            <p class="text-gray-600">{{ __('predict::messages.no_markets_available') }}</p>
+            <p class="mt-2 text-sm text-gray-500">{{ __('predict::messages.no_markets_hint') }}</p>
+        </div>
+    @else
     @foreach($predicts as $predict)
         @php
             $title = $predict->title;
@@ -27,20 +32,21 @@
             $isHot = $volume > 200;
         @endphp
         
-        <div class="fi-ta-record-item bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-indigo-200 transition-all duration-200 overflow-hidden">
+        <div class="fi-ta-record-item card-kinetic bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
             <div class="p-5">
                 {{-- Hot Badge --}}
                 @if($isHot)
-                    <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-700 mb-3">
-                        🔥 Hot
+                    <span class="badge-hot inline-flex items-center gap-1 bg-orange-100 text-orange-700">
+                        <x-filament::icon icon="heroicon-o-fire" class="h-3.5 w-3.5" aria-hidden="true" />
+                        Hot
                     </span>
                 @endif
                 
                 {{-- Title --}}
                 <h3 class="text-base font-semibold text-gray-900 mb-3 line-clamp-3">
                     <a
-                        href="{{ route('market.detail', ['slug' => $predict->slug]) }}"
-                        class="hover:text-indigo-700 transition-colors"
+                        href="{{ url('/' . app()->getLocale() . '/predicts/' . $predict->slug) }}"
+                        class="link-kinetic hover:text-indigo-700"
                     >
                         {{ $title }}
                     </a>
@@ -54,7 +60,7 @@
                     </div>
                     <div class="h-3 bg-gray-100 rounded-full overflow-hidden">
                         <div
-                            class="h-full rounded-full transition-all duration-500 {{ $yesPrice > 60 ? 'bg-emerald-500' : ($yesPrice < 40 ? 'bg-rose-500' : 'bg-amber-400') }}"
+                            class="h-full rounded-full probability-bar-animated {{ $yesPrice > 60 ? 'bg-emerald-500' : ($yesPrice < 40 ? 'bg-rose-500' : 'bg-amber-400') }} {{ $isHot ? 'high-activity' : '' }}"
                             style="width: {{ $yesPrice }}%"
                         ></div>
                     </div>
@@ -72,12 +78,12 @@
                         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
                         </svg>
-                        <span>{{ number_format($volume) }} 🍺</span>
+                        <span class="inline-flex items-center gap-1">{{ number_format($volume) }} <x-filament::icon icon="predict-currency" class="h-4 w-4" aria-hidden="true" /></span>
                     </span>
                 </div>
                 <a
-                    href="{{ route('market.detail', ['slug' => $predict->slug]) }}"
-                    class="inline-flex items-center gap-1 px-3 py-1.5 bg-indigo-600 text-white text-xs font-semibold rounded-lg hover:bg-indigo-700 transition-colors"
+                    href="{{ url('/' . app()->getLocale() . '/predicts/' . $predict->slug) }}"
+                    class="btn-kinetic-enhanced inline-flex items-center gap-1 px-3 py-1.5 bg-indigo-600 text-white text-xs font-semibold rounded-lg hover:bg-indigo-700"
                 >
                     Scambia
                     <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -87,4 +93,5 @@
             </div>
         </div>
     @endforeach
+    @endif
 </div>

@@ -3,7 +3,7 @@
 use function Livewire\Volt\{state, computed, mount, on};
 
 state([
-    'title' => '💰 Storie di Successo Reali',
+    'title' => 'Storie di Successo Reali',
     'subtitle' => 'Migliaia di utenti stanno già guadagnando',
     'testimonials' => [],
     'show_earnings' => true,
@@ -166,7 +166,10 @@ $getDefaultTestimonials = function() {
                                 @endif
                             </div>
                             <p class="text-sm text-gray-500 dark:text-gray-400">@{{ $testimonial['username'] }}</p>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">📍 {{ $testimonial['location'] }}</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 flex items-center gap-1">
+                                <x-filament::icon icon="heroicon-o-map-pin" class="w-4 h-4" />
+                                {{ $testimonial['location'] }}
+                            </p>
                             
                             <!-- Rating Stars -->
                             <div class="flex items-center mt-2">
@@ -199,13 +202,13 @@ $getDefaultTestimonials = function() {
                     <!-- Additional Info -->
                     <div class="mt-4 flex flex-wrap gap-2">
                         <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900/50 dark:text-purple-200">
-                            💎 {{ $testimonial['favorite_market'] }}
+                            <x-filament::icon icon="heroicon-o-sparkles" class="w-4 h-4 mr-1" /> {{ $testimonial['favorite_market'] }}
                         </span>
                         <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-200">
-                            🏆 Max: {{ $testimonial['biggest_win'] }}
+                            <x-filament::icon icon="heroicon-o-trophy" class="w-4 h-4 mr-1" /> Max: {{ $testimonial['biggest_win'] }}
                         </span>
                         <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200">
-                            📅 Dal {{ \Carbon\Carbon::parse($testimonial['join_date'])->format('M Y') }}
+                            <x-filament::icon icon="heroicon-o-calendar" class="w-4 h-4 mr-1" /> Dal {{ \Carbon\Carbon::parse($testimonial['join_date'])->format('M Y') }}
                         </span>
                     </div>
                 </div>
@@ -219,13 +222,15 @@ $getDefaultTestimonials = function() {
                 Unisciti a migliaia di utenti che stanno già guadagnando con le loro previsioni. Inizia gratis oggi stesso!
             </p>
             <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <a href="/register" 
-                   class="inline-flex items-center px-8 py-3 text-lg font-bold text-green-600 bg-white rounded-full hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg">
-                    🚀 Inizia Gratis Ora
+                <a href="{{ url(app()->getLocale().'/register') }}"
+                   class="inline-flex items-center px-8 py-3 text-lg font-bold text-green-600 bg-white rounded-full hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg gap-2">
+                    <x-filament::icon icon="heroicon-o-rocket-launch" class="w-5 h-5" />
+                    <span>Inizia Gratis Ora</span>
                 </a>
-                <a href="/demo" 
-                   class="inline-flex items-center px-6 py-3 text-lg font-semibold text-white border-2 border-white/30 rounded-full hover:bg-white/10 transition-all duration-300">
-                    📊 Vedi Demo
+                <a href="{{ url(app()->getLocale().'/demo') }}"
+                   class="inline-flex items-center px-6 py-3 text-lg font-semibold text-white border-2 border-white/30 rounded-full hover:bg-white/10 transition-all duration-300 gap-2">
+                    <x-filament::icon icon="heroicon-o-chart-bar" class="w-5 h-5" />
+                    <span>Vedi Demo</span>
                 </a>
             </div>
         </div>

@@ -33,7 +33,7 @@
                             {{ $pred['action'] }}
                         </span>
                         <span class="text-slate-300">{{ Str::limit($pred['market'], 20) }}</span>
-                        <span class="text-amber-400 font-semibold">{{ $pred['amount'] }} 🍺</span>
+                        <span class="text-amber-400 font-semibold inline-flex items-center gap-1">{{ $pred['amount'] }} <x-filament::icon icon="predict-currency" class="h-4 w-4" aria-hidden="true" /></span>
                         <span class="text-slate-500 text-xs">{{ $pred['time'] }} fa</span>
                     </div>
                     @endforeach
