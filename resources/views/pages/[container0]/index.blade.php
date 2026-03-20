@@ -19,9 +19,9 @@ new class extends Component {
     public function mount(string $container0): void
     {
         $this->container0 = $container0;
+        $this->pageSlug = $container0 . '.index';
         $this->data = [
-            'container0' => $container0,
-            'slug' => $container0,
+            'container0' => $container0
         ];
     }
 };
@@ -43,7 +43,7 @@ new class extends Component {
     @volt('container0.list')
     <div class="min-h-screen bg-slate-50 dark:bg-slate-950">
         <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-10">
-            <x-page side="content" :slug="$this->container0" :data="$this->data" />
+            <x-page side="content" :slug="$this->pageSlug" :data="$this->data" />
         </div>
     </div>
     @endvolt

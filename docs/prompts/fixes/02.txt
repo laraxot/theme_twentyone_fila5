@@ -63,3 +63,9 @@ allora non mi piacciono le predict di tipo si/no , mostra in homepage predict co
 
 devi capire il perche' , la logica, la filosofia, la politica, la religione , lo zen , documentarle dentro le tue docs, le tue rules, le tue memories e le tue skills, 
   aggiorna studia e migliora le tue docs, le tue rules, le tue memories, le tue skills, ricorda che dopo aver modificato un file devi controllarlo con phpstan,phpmd, phpinsights e pest, ricorda che questo task lo diamo a piu' agenti ai, percio' comportati di conseguenza e cerca di unire le forze con gli altri agenti ai 
+
+
+  la pagina http://predict.local/it/predicts/  fai pure degli screenshots e analizzala se corrisponde ai criteri di bellezza e di ui/ux che ci siamo imposti 
+
+
+  AGENTS.md, CLAUDE.md, GEMINI.md, QWEN.md, IFLOW.md sono file grandi spezzali in piu' files .md e mettili dentro ./.agents/docs e crea collegamenti bidirezionali relativi , nel contempo cerca anche di migliorare , cerchiamo sempre di lasciare i file meglio di quello che li troviamo , regola del buon boy scout 
