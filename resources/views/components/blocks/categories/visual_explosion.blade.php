@@ -1,17 +1,17 @@
 @props([
-    'title' => '🎯 ESPLORA PER CATEGORIA',
+    'title' => 'Esplora per Categoria',
     'subtitle' => 'Trova il tuo settore preferito e inizia a vincere',
     'categories' => []
 ])
 
 @php
     $defaultCategories = [
-        ['name' => '💰 Crypto & DeFi', 'hot_markets' => 23, 'volume' => '1.2M crediti', 'color' => 'orange'],
-        ['name' => '🗳️ Politica & Elezioni', 'hot_markets' => 18, 'volume' => '890K crediti', 'color' => 'blue'],
-        ['name' => '🚀 Tech & AI', 'hot_markets' => 31, 'volume' => '750K crediti', 'color' => 'purple'],
-        ['name' => '⚽ Sport & Olimpiadi', 'hot_markets' => 45, 'volume' => '650K crediti', 'color' => 'green'],
-        ['name' => '🎬 Entertainment', 'hot_markets' => 27, 'volume' => '420K crediti', 'color' => 'pink'],
-        ['name' => '🌍 Clima & Ambiente', 'hot_markets' => 12, 'volume' => '280K crediti', 'color' => 'emerald']
+        ['name' => 'Crypto & DeFi', 'icon' => 'heroicon-o-currency-bitcoin', 'hot_markets' => 23, 'volume' => '1.2M crediti', 'color' => 'orange'],
+        ['name' => 'Politica & Elezioni', 'icon' => 'heroicon-o-briefcase', 'hot_markets' => 18, 'volume' => '890K crediti', 'color' => 'blue'],
+        ['name' => 'Tech & AI', 'icon' => 'heroicon-o-command-line', 'hot_markets' => 31, 'volume' => '750K crediti', 'color' => 'purple'],
+        ['name' => 'Sport & Olimpiadi', 'icon' => 'heroicon-o-trophy', 'hot_markets' => 45, 'volume' => '650K crediti', 'color' => 'green'],
+        ['name' => 'Entertainment', 'icon' => 'heroicon-o-film', 'hot_markets' => 27, 'volume' => '420K crediti', 'color' => 'pink'],
+        ['name' => 'Clima & Ambiente', 'icon' => 'heroicon-o-globe-alt', 'hot_markets' => 12, 'volume' => '280K crediti', 'color' => 'emerald']
     ];
     $displayCategories = !empty($categories) ? $categories : $defaultCategories;
 @endphp
@@ -32,6 +32,14 @@
 
             <div class="relative z-10">
                 <div class="text-center">
+                    {{-- Icon --}}
+                    <div class="mb-3">
+                        <x-filament::icon 
+                            :icon="$category['icon']" 
+                            class="w-10 h-10 mx-auto text-{{ $category['color'] }}-400 group-hover:scale-110 group-hover:text-{{ $category['color'] }}-300 transition-all duration-300"
+                        />
+                    </div>
+
                     <h3 class="text-white font-bold text-lg mb-3 group-hover:text-{{ $category['color'] }}-300 transition-colors">
                         {{ $category['name'] }}
                     </h3>
@@ -52,17 +60,17 @@
                     </button>
                 </div>
             </div>
-
-            <!-- Sparkle effects -->
-            <div class="absolute top-2 right-2 text-{{ $category['color'] }}-400 opacity-60 group-hover:animate-pulse">✨</div>
         </div>
         @endforeach
     </div>
 
-    <!-- Bottom CTA -->
+    {{-- Bottom CTA --}}
     <div class="text-center mt-8">
         <button class="px-8 py-4 bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 hover:from-purple-700 hover:via-blue-700 hover:to-teal-700 text-white font-black rounded-xl transition-all duration-300 transform hover:scale-105 shadow-2xl">
-            🚀 VEDI TUTTE LE CATEGORIE
+            <span class="inline-flex items-center gap-2">
+                VEDI TUTTE LE CATEGORIE
+                <x-filament::icon icon="heroicon-o-arrow-right" class="w-5 h-5" />
+            </span>
         </button>
     </div>
 </div>

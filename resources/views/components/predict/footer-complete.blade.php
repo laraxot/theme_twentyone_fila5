@@ -1,5 +1,5 @@
 @props([
-    'description' => __('predict::footer.description'),
+    'description' => __('predict::footer.description.label'),
     'newsletterAction' => '#',
 ])
 

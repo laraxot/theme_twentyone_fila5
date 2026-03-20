@@ -1,5 +1,22 @@
 # Best Practices: Widget Filament
 
+## Contratto front office
+
+Dal 2026-03-20 questo documento governa anche il front office pubblico del tema TwentyOne.
+
+- Se c'e' un form pubblico, il contratto corretto e' un widget Filament.
+- Se c'e' una griglia o lista di record, il contratto corretto e' un `TableWidget` Filament.
+- La Blade deve fare da bridge visivo e non da contenitore di logica di stato.
+
+Riferimento ufficiale:
+
+- https://filamentphp.com/docs/5.x/forms/overview
+- https://filamentphp.com/docs/5.x/tables/overview
+- https://filamentphp.com/docs/5.x/tables/layout
+- https://filamentphp.com/docs/5.x/tables/custom-data
+- https://filamentphp.com/docs/5.x/components/table
+- https://filamentphp.com/docs/5.x/widgets/overview#table-widgets
+
 ## Riferimenti
 - [Integrazione Widget](filament-widget-integration.md)
 - [Testing Widget](filament-widget-testing.md)
@@ -135,6 +152,13 @@ public function authenticate(): void
 
 ## Best Practices
 
+### 0. Filosofia
+
+- Il widget e' il contratto applicativo; la Blade e' il bridge di composizione.
+- Form, validazione, azioni, modali e notifiche devono vivere nel widget.
+- Search, filters, sorting, pagination ed empty state dei listati devono vivere nella tabella Filament.
+- Se una card-grid home o listing mostra record reali, usare `contentGrid()` e una view custom della tabella, non un loop Blade senza strumenti.
+
 ### 1. Sicurezza
 - Implementare rate limiting
 - Validare input
@@ -162,6 +186,12 @@ public function authenticate(): void
 - Performance tests
 - Security tests
 - Edge cases
+
+### 5. Front office pubblico
+- Login, register, forgot password e reset password devono essere richiamati da pagine pubbliche tramite widget auth Filament.
+- Filtri predict e trading form pubblici devono convergere verso widget Filament dedicati.
+- Listing homepage, predicts listing, leaderboard e feed record devono convergere verso `TableWidget`.
+- Le Blade del tema non devono duplicare form o tabelle gia' presenti come widget in un modulo.
 
 ## Checklist Implementazione
 

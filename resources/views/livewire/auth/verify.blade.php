@@ -1,46 +1,58 @@
-@section('title', 'Verify your email address')
+@section('title', 'Verifica il tuo indirizzo email')
 
-<div>
-    <div class="sm:mx-auto sm:w-full sm:max-w-md">
-        <a href="{{ route('home') }}">
-            <x-logo class="w-auto h-16 mx-auto text-indigo-600" />
-        </a>
+@php
+    $particlesColor = 'rgba(125,211,252,0.35)';
+@endphp
 
-        <h2 class="mt-6 text-3xl font-extrabold text-center text-gray-900 leading-9">
-            Verify your email address
-        </h2>
-
-        <p class="mt-2 text-sm text-center text-gray-600 leading-5 max-w">
-            Or
-            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150">
-                sign out
-            </a>
-
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-            </form>
-        </p>
+<div class="antigravity-field relative min-h-screen overflow-hidden bg-slate-950 text-white" data-antigravity-field>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.24),_transparent_30%),radial-gradient(circle_at_80%_30%,_rgba(99,102,241,0.22),_transparent_26%),linear-gradient(180deg,_#020617_0%,_#0f172a_55%,_#111827_100%)]"></div>
+    <div class="absolute inset-0 opacity-40">
+        <div class="absolute -left-24 top-24 h-72 w-72 rounded-full bg-sky-400/15 blur-3xl"></div>
+        <div class="absolute right-0 top-0 h-80 w-80 rounded-full bg-indigo-500/15 blur-3xl"></div>
+        <div class="absolute bottom-0 left-1/3 h-64 w-64 rounded-full bg-cyan-300/10 blur-3xl"></div>
     </div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.06)_1px,transparent_1px)] bg-[size:48px_48px] opacity-20"></div>
+    <x-ui.particles count="72" :color="$particlesColor" size="3px" zIndex="0" />
+    <div class="antigravity-grid" aria-hidden="true"></div>
+    <div class="antigravity-spotlight" aria-hidden="true"></div>
+    <div class="antigravity-orb antigravity-orb-1" aria-hidden="true"></div>
+    <div class="antigravity-orb antigravity-orb-2" aria-hidden="true"></div>
+    <div class="antigravity-orb antigravity-orb-3" aria-hidden="true"></div>
 
-    <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div class="px-4 py-8 bg-white shadow sm:rounded-lg sm:px-10">
-            @if (session('resent'))
-                <div class="flex items-center px-4 py-3 mb-6 text-sm text-white bg-green-500 rounded shadow" role="alert">
-                    <svg class="w-4 h-4 mr-3 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                    </svg>
+    <main class="relative z-10">
+        <div class="mx-auto flex min-h-screen max-w-7xl items-center px-5 py-14 sm:px-8 lg:px-10">
+            <div class="grid w-full gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+                <section class="flex flex-col justify-between">
+                    <div class="space-y-8">
+                        <a href="{{ url('/' . app()->getLocale()) }}" class="inline-flex items-center gap-3 text-white/90 transition hover:text-white">
+                            <img src="{{ asset('assets/predict/img/logo-ft.svg') }}" alt="{{ config('app.name') }}" class="h-8 w-auto" />
+                            <span class="text-sm font-semibold uppercase tracking-[0.28em] text-slate-300">Predict</span>
+                        </a>
 
-                    <p>A fresh verification link has been sent to your email address.</p>
-                </div>
-            @endif
+                        <div class="space-y-6">
+                            <div class="inline-flex items-center gap-2 rounded-full border border-sky-300/20 bg-sky-400/10 px-4 py-2 text-sm font-semibold text-sky-100">
+                                <span class="h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_24px_rgba(52,211,153,0.9)]"></span>
+                                <span>Quasi pronto</span>
+                            </div>
 
-            <div class="text-sm text-gray-700">
-                <p>Before proceeding, please check your email for a verification link.</p>
+                            <div class="space-y-4">
+                                <p class="text-sm font-semibold uppercase tracking-[0.32em] text-slate-300">Verifica account</p>
+                                <h1 class="max-w-3xl text-5xl font-black leading-[0.95] text-white sm:text-6xl xl:text-7xl">
+                                    Conferma la tua email e sblocca l&apos;esperienza Predict
+                                </h1>
+                                <p class="max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
+                                    Questa schermata usa un linguaggio visivo cinematico: profondità, glow e particelle leggere per dare senso di avanzamento senza trasformare il percorso auth in un luna park.
+                                </p>
+                            </div>
+                        </div>
 
-                <p class="mt-3">
-                    If you did not receive the email, <a wire:click="resend" class="text-indigo-700 cursor-pointer hover:text-indigo-600 focus:outline-none focus:underline transition ease-in-out duration-150">click here to request another</a>.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
+                        <div class="grid gap-4 sm:grid-cols-3">
+                            <div class="card-kinetic rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-md">
+                                <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-sky-400/10 text-sky-200">
+                                    <x-filament::icon icon="heroicon-o-envelope" class="h-6 w-6" />
+                                </div>
+                                <h2 class="text-base font-bold text-white">1. Controlla la casella</h2>
+                                <p class="mt-2 text-sm leading-6 text-slate-300">Apri il messaggio inviato al tuo indirizzo e cerca il link di verifica.</p>
+                            </div>
+                            <div class="card-kinetic rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-md">
+                                <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-ind

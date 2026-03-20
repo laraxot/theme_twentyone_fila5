@@ -74,6 +74,20 @@
 - Controllare errori simili
 - Aggiornare metriche
 
+## Guardrail Bootstrap Web
+
+### Cosa evitare
+- logging globale nel bootstrap Laravel che duplica il reporter nativo;
+- `xdebug.start_with_request=yes` come default stabile;
+- log PHP scritti nel root del workspace;
+- dipendenze opzionali di cache che possono rompere il bootstrap locale.
+
+### Cosa fare
+- fallire velocemente in `public_html/index.php` se mancano prerequisiti minimi;
+- scrivere i log PHP in `laravel/storage/logs/`;
+- usare Xdebug a trigger;
+- documentare ogni regressione strutturale in `docs/project/bootstrap-failure-prevention.md`.
+
 ## Best Practices
 
 ### 1. Documentazione
@@ -126,6 +140,8 @@
 - [ ] Migliorare test
 - [ ] Aggiornare documentazione
 - [ ] Verificare best practices
+- [ ] Verificare i prerequisiti di bootstrap web
+- [ ] Evitare flood di log in caso di errori gestiti
 
 ## Conclusioni
 

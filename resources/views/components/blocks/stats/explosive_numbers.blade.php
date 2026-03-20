@@ -3,7 +3,7 @@
 use function Livewire\Volt\{state, computed, mount, on};
 
 state([
-    'title' => '📊 Numeri che Parlano Chiaro',
+    'title' => 'Numeri che Parlano Chiaro',
     'subtitle' => 'I risultati della nostra community',
     'stats' => [],
     'show_live_counter' => true,
@@ -30,7 +30,7 @@ $getDefaultStats = function() {
             'label' => 'Guadagni Totali',
             'value' => 2400000,
             'display_value' => '€2.4M+',
-            'icon' => '💰',
+            'icon' => 'predict-currency',
             'color' => 'green',
             'growth' => '+127%',
             'growth_period' => 'questo mese',
@@ -42,7 +42,7 @@ $getDefaultStats = function() {
             'label' => 'Utenti Attivi',
             'value' => 12847,
             'display_value' => '12.8K+',
-            'icon' => '👥',
+            'icon' => 'heroicon-o-users',
             'color' => 'blue',
             'growth' => '+89%',
             'growth_period' => 'ultima settimana',
@@ -54,7 +54,7 @@ $getDefaultStats = function() {
             'label' => 'Tasso di Successo',
             'value' => 89,
             'display_value' => '89%',
-            'icon' => '🎯',
+            'icon' => 'heroicon-o-flag',
             'color' => 'purple',
             'growth' => '+12%',
             'growth_period' => 'vs media settore',
@@ -66,7 +66,7 @@ $getDefaultStats = function() {
             'label' => 'Mercati Disponibili',
             'value' => 247,
             'display_value' => '247+',
-            'icon' => '📈',
+            'icon' => 'predict-trending-up',
             'color' => 'orange',
             'growth' => '+34%',
             'growth_period' => 'questo mese',
@@ -78,7 +78,7 @@ $getDefaultStats = function() {
             'label' => 'Previsioni Giornaliere',
             'value' => 1547,
             'display_value' => '1.5K+',
-            'icon' => '⚡',
+            'icon' => 'heroicon-o-bolt',
             'color' => 'yellow',
             'growth' => '+156%',
             'growth_period' => 'vs ieri',
@@ -90,7 +90,7 @@ $getDefaultStats = function() {
             'label' => 'Rating Medio',
             'value' => 4.9,
             'display_value' => '4.9★',
-            'icon' => '⭐',
+            'icon' => 'heroicon-o-star',
             'color' => 'pink',
             'growth' => '+0.3',
             'growth_period' => 'ultimo mese',
@@ -185,8 +185,8 @@ $getColorClasses = function($color) {
                     
                     <!-- Icon -->
                     <div class="flex items-center justify-between mb-6">
-                        <div class="w-16 h-16 {{ $colors['icon_bg'] }} dark:bg-gray-700 rounded-2xl flex items-center justify-center text-2xl">
-                            {{ $stat['icon'] }}
+                        <div class="w-16 h-16 {{ $colors['icon_bg'] }} dark:bg-gray-700 rounded-2xl flex items-center justify-center">
+                            <x-filament::icon :icon="$stat['icon'] ?? 'heroicon-o-chart-bar'" class="h-8 w-8" aria-hidden="true" />
                         </div>
                         
                         @if($show_growth_indicators && isset($stat['growth']))
@@ -257,7 +257,7 @@ $getColorClasses = function($color) {
                 <div class="flex items-center justify-between mb-6">
                     <h3 class="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
                         <div class="w-4 h-4 bg-green-400 rounded-full animate-pulse mr-3"></div>
-                        🔥 Attività in Tempo Reale
+                        <x-filament::icon icon="heroicon-o-fire" class="inline h-6 w-6 mr-2" aria-hidden="true" /> Attività in Tempo Reale
                     </h3>
                     <div class="text-sm text-gray-500 dark:text-gray-400">
                         Aggiornato ogni secondo
@@ -299,19 +299,19 @@ $getColorClasses = function($color) {
         <div class="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-white">
             <h3 class="text-3xl font-bold mb-4">Pronto a Far Parte di Questi Numeri?</h3>
             <p class="text-purple-100 mb-8 max-w-2xl mx-auto text-lg">
-                Unisciti alla community di predictor più vincente d'Italia. I numeri parlano chiaro: qui si guadagna davvero!
+                Sii tra i primi a prevedere il futuro. La piattaforma è appena nata.
             </p>
             <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <a href="/register" 
+                <a href="{{ url(app()->getLocale().'/register') }}"
                    class="inline-flex items-center px-8 py-4 text-lg font-bold text-purple-600 bg-white rounded-full hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg">
-                    🚀 Inizia Gratis
+                    <x-filament::icon icon="heroicon-o-rocket-launch" class="inline h-5 w-5 mr-2" aria-hidden="true" /> Inizia Gratis
                     <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
                 </a>
-                <a href="/demo" 
+                <a href="{{ url(app()->getLocale().'/demo') }}"
                    class="inline-flex items-center px-6 py-4 text-lg font-semibold text-white border-2 border-white/30 rounded-full hover:bg-white/10 transition-all duration-300">
-                    📊 Vedi Demo
+                    <x-filament::icon icon="heroicon-o-chart-bar" class="inline h-5 w-5 mr-2" aria-hidden="true" /> Vedi Demo
                 </a>
             </div>
         </div>

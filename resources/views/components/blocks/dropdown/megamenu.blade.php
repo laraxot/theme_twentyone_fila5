@@ -28,19 +28,15 @@ new class extends Component {
             <ul class="flex flex-wrap max-w-4xl gap-1">
                 @foreach($items as $item)
                 <li class="flex flex-col w-[220px] p-3 space-y-4 transition-colors rounded justify-content-between hover:ring-1 hover:ring-gray-100">
-                    <a href="
-                        {{ route('category.view', ['lang'=>$lang,'slug' => $item->slug ]) }}
-                        ">
+                    <a href="{{ url(app()->getLocale().'/categories/'.$item->slug) }}">
                         <div class="flex items-center space-x-2">
                             <span class="grid text-blue-600 bg-blue-100 rounded place-items-center size-8">
                                 @if($item->icon == null)
                                 <x-heroicon-o-question-mark-circle class="size-6" />
                                 @elseif(preg_match('/^[a-z0-9\-_]+$/i', $item->icon))
-                                {{-- Se è un nome valido per una SVG --}}
                                 @svg($item->icon, 'size-6')
                                 @else
-                                {{-- Altrimenti mostra il contenuto come emoji o testo --}}
-                                <span class="text-xl">{{ $item->icon }}</span>
+                                <x-heroicon-o-tag class="size-6" />
                                 @endif
                             </span>
                             <span class="font-semibold">{{ $item->title }}</span>
@@ -49,9 +45,7 @@ new class extends Component {
                     <ul class="space-y-1 grow">
                         @foreach($item->children as $child)
                         <li>
-                            <a class="block p-1 -ms-1 hover:text-blue-600" href="
-                                    {{ route('category.view', ['lang'=>$lang,'slug' => $child->slug ]) }}
-                                    ">
+                            <a class="block p-1 -ms-1 hover:text-blue-600" href="{{ url(app()->getLocale().'/categories/'.$child->slug) }}">
                                 {{ $child->title }}
                             </a>
                         </li>

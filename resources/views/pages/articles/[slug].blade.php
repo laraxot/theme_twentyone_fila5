@@ -59,7 +59,7 @@ render(function (View $view, string $slug) {
 
 
                 <div class="flex justify-center py-12">
-					<a href="{{ route('category.view', ['lang'=>$lang,'slug' => $article->category->slug ]) }}" class="flex items-center px-4 py-2 space-x-2 font-semibold text-white bg-blue-500 rounded hover:bg-blue-600">
+					<a href="{{ $article->category ? url(app()->getLocale().'/categories/'.$article->category->slug) : url(app()->getLocale().'/articles') }}" class="flex items-center px-4 py-2 space-x-2 font-semibold text-white bg-blue-500 rounded hover:bg-blue-600">
 						<span>{{ __('blog::page.load-more') }}</span>
 					</a>
 				</div>

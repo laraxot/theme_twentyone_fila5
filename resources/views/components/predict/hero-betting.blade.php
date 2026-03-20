@@ -1,20 +1,20 @@
 @props([
-    'title' => __('predict::hero.title'),
-    'subtitle' => __('predict::hero.subtitle'),
-    'badge' => __('predict::hero.badge'),
+    'title' => __('predict::home.hero.title.label'),
+    'subtitle' => __('predict::home.hero.subtitle.label'),
+    'badge' => __('predict::home.hero.badge.label'),
     'stats' => [
-        ['value' => '500', 'label' => __('predict::hero.stats.free_credits')],
-        ['value' => '10+', 'label' => __('predict::hero.stats.languages')],
-        ['value' => '24/7', 'label' => __('predict::hero.stats.support')],
-        ['value' => '100%', 'label' => __('predict::hero.stats.transparent')],
+        ['value' => '500', 'label' => __('predict::home.hero.stats.free_credits.label')],
+        ['value' => '10+', 'label' => __('predict::home.hero.stats.languages.label')],
+        ['value' => '24/7', 'label' => __('predict::home.hero.stats.support.label')],
+        ['value' => '100%', 'label' => __('predict::home.hero.stats.transparent.label')],
     ],
     'primaryCta' => [
-        'text' => __('predict::hero.cta.explore'),
+        'text' => __('predict::home.hero.cta_explore.label'),
         'url' => route('container0.list', ['container0' => 'predicts']),
         'icon' => 'heroicon-m-compass',
     ],
     'secondaryCta' => [
-        'text' => __('predict::hero.cta.how_it_works'),
+        'text' => __('predict::home.hero.cta_learn.label'),
         'url' => '#how-it-works',
         'icon' => 'heroicon-m-play-circle',
     ],
@@ -73,6 +73,7 @@
                               shadow-lg shadow-indigo-500/30 
                               hover:shadow-xl hover:shadow-indigo-500/50 
                               hover:-translate-y-0.5 
+                              focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-slate-900
                               transition-all duration-200">
                         @if(isset($primaryCta['icon']))
                             <x-dynamic-component :component="$primaryCta['icon']" class="w-5 h-5" />
@@ -92,6 +93,7 @@
                               text-white font-bold rounded-xl 
                               border-2 border-white/30 
                               hover:border-white/50 
+                              focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-slate-900
                               transition-all duration-200">
                         @if(isset($secondaryCta['icon']))
                             <x-dynamic-component :component="$secondaryCta['icon']" class="w-5 h-5" />
@@ -148,7 +150,7 @@
                         <span class="text-lg font-bold text-credits">Credits, NOT Euro</span>
                     </div>
                     <p class="mt-2 text-xs text-indigo-400">
-                        {{ __('predict::hero.virtual_currency_disclaimer') }}
+                        {{ __('predict::home.hero.virtual_currency_disclaimer.label') }}
                     </p>
                 </div>
             </div>

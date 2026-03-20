@@ -1,78 +1,616 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
-/* Required by all components */
-@import '../../../../vendor/filament/support/resources/css/index.css';
+@source "../../Modules/**/resources/views/**/*.blade.php";
+@source "../../Modules/**/Filament/**/*.php";
+@source "./resources/views/**/*.blade.php";
+@source "../../resources/views/**/*.blade.php";
 
-/* Required by actions and tables */
-@import '../../../../vendor/filament/actions/resources/css/index.css';
-
-/* Required by actions, forms and tables */
-@import '../../../../vendor/filament/forms/resources/css/index.css';
-
-/* Required by actions and infolists */
-@import '../../../../vendor/filament/infolists/resources/css/index.css';
-
-/* Required by notifications */
-@import '../../../../vendor/filament/notifications/resources/css/index.css';
-
-/* Required by actions, infolists, forms, schemas and tables */
-@import '../../../../vendor/filament/schemas/resources/css/index.css';
-
-/* Required by tables */
-@import '../../../../vendor/filament/tables/resources/css/index.css';
-
-/* Required by widgets */
-@import '../../../../vendor/filament/widgets/resources/css/index.css';
-
-@variant dark (&:where(.dark, .dark *));
-
-/* Swiper CSS */
-@import 'swiper/css/bundle';
-
-/* Custom modal styles */
-@import "./modal.css";
-
-/* Dark mode variant */
-@variant dark (&:where(.dark, .dark *));
-
-/* Custom theme styles for prediction market */
-.prediction-card {
-	@apply bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4;
+:root {
+    --ag-pointer-x: 50%;
+    --ag-pointer-y: 50%;
 }
 
-.market-yes {
-	@apply text-green-600 bg-green-50 dark:bg-green-900/20 px-2 py-1 rounded;
+/* ============================================
+   Kinetic Cinematic Enhancements
+   ============================================ */
+
+/* Blob animation for mesh gradients */
+@keyframes blob {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
 }
 
-.market-no {
-	@apply text-red-600 bg-red-50 dark:bg-red-900/20 px-2 py-1 rounded;
+.animate-blob {
+    animation: blob 10s infinite;
 }
 
-.probability-high {
-	@apply text-emerald-600 bg-emerald-50 dark:bg-emerald-900/20 px-2 py-1 rounded font-medium;
+.animation-delay-2000 {
+    animation-delay: 2s;
 }
 
-.probability-medium {
-	@apply text-amber-600 bg-amber-50 dark:bg-amber-900/20 px-2 py-1 rounded font-medium;
+.animation-delay-4000 {
+    animation-delay: 4s;
 }
 
-.probability-low {
-	@apply text-red-600 bg-red-50 dark:bg-red-900/20 px-2 py-1 rounded font-medium;
+/* Cinematic entrance with blur */
+@keyframes cinematic-blurIn {
+    from { 
+        opacity: 0; 
+        filter: blur(10px);
+        transform: scale(1.1);
+    }
+    to { 
+        opacity: 1; 
+        filter: blur(0);
+        transform: scale(1);
+    }
 }
 
-/* Custom button styles */
-.btn-market {
-	@apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
+/* Text reveal animation */
+@keyframes cinematic-textReveal {
+    0% { 
+        opacity: 0; 
+        transform: translateY(100%);
+        -webkit-mask-image: linear-gradient(to top, transparent 0%, black 100%);
+        mask-image: linear-gradient(to top, transparent 0%, black 100%);
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateY(0);
+        -webkit-mask-image: linear-gradient(to top, black 0%, transparent 100%);
+        mask-image: linear-gradient(to top, black 0%, transparent 100%);
+    }
 }
 
-.btn-market-primary {
-	@apply bg-indigo-600 hover:bg-indigo-700 text-white;
+/* 3D Tilt effect base */
+.cinematic-tilt {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: transform 0.3s ease-out;
 }
 
-.btn-market-success {
-	@apply bg-green-600 hover:bg-green-700 text-white;
+.cinematic-tilt:hover {
+    transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) scale(1.02);
 }
 
-.btn-market-danger {
-	@apply bg-red-600 hover:bg-red-700 text-white;
+/* Floating particles background */
+@keyframes cinematic-floatParticle {
+    0%, 100% { 
+        transform: translateY(0) rotate(0deg); 
+        opacity: 0.3;
+    }
+    50% { 
+        transform: translateY(-20px) rotate(180deg); 
+        opacity: 0.8;
+    }
 }
+
+.cinematic-particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.cinematic-particles span {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: currentColor;
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: cinematic-floatParticle 6s ease-in-out infinite;
+}
+
+/* Glow pulse ring */
+@keyframes cinematic-glowPulse {
+    0%, 100% { 
+        box-shadow: 0 0 5px currentColor, 0 0 10px currentColor;
+        transform: scale(1);
+    }
+    50% { 
+        box-shadow: 0 0 20px currentColor, 0 0 40px currentColor;
+        transform: scale(1.05);
+    }
+}
+
+.cinematic-glow {
+    animation: cinematic-glowPulse 3s ease-in-out infinite;
+}
+
+/* Magnetic button effect */
+@keyframes cinematic-magnetic {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(2px, -2px); }
+    50% { transform: translate(-2px, 2px); }
+    75% { transform: translate(2px, 2px); }
+    100% { transform: translate(0, 0); }
+}
+
+.cinematic-magnetic:hover {
+    animation: cinematic-magnetic 0.3s ease-in-out;
+}
+
+/* Parallax container */
+.cinematic-parallax {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.cinematic-parallax > * {
+    transform: translateZ(-20px) scale(1.02);
+}
+
+/* Progress bar reveal */
+@keyframes cinematic-progressReveal {
+    from { width: 0; }
+}
+
+.cinematic-progress {
+    animation: cinematic-progressReveal 1s ease-out forwards;
+}
+
+/* Number counter with easing */
+@keyframes cinematic-counter {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.cinematic-counter {
+    animation: cinematic-counter 0.6s ease-out forwards;
+}
+
+@keyframes antigravity-particle-drift {
+    0% {
+        transform: translate3d(0, 12px, 0) scale(0.92);
+        opacity: 0;
+    }
+    20% {
+        opacity: var(--particle-opacity, 0.42);
+    }
+    50% {
+        transform: translate3d(var(--particle-drift-x, 18px), calc(var(--particle-rise, -110px) * 0.45), 0) scale(1);
+    }
+    100% {
+        transform: translate3d(calc(var(--particle-drift-x, 18px) * -0.35), var(--particle-rise, -110px), 0) scale(0.72);
+        opacity: 0;
+    }
+}
+
+@keyframes antigravity-particle-pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+        filter: brightness(0.95);
+    }
+    50% {
+        box-shadow: 0 0 22px color-mix(in srgb, var(--particle-color, rgba(59, 130, 246, 0.45)) 72%, transparent);
+        filter: brightness(1.16);
+    }
+}
+
+@keyframes antigravity-orb-float {
+    0%, 100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+        transform: translate3d(0, -18px, 0) scale(1.05);
+    }
+}
+
+.antigravity-field {
+    position: relative;
+    isolation: isolate;
+    --ag-pointer-x: 50%;
+    --ag-pointer-y: 50%;
+}
+
+.antigravity-field::before {
+    content: "";
+    position: absolute;
+    inset: -12%;
+    z-index: 0;
+    background:
+        radial-gradient(circle at var(--ag-pointer-x) var(--ag-pointer-y), rgba(125, 211, 252, 0.2), transparent 22%),
+        radial-gradient(circle at 18% 22%, rgba(45, 212, 191, 0.18), transparent 30%),
+        radial-gradient(circle at 78% 28%, rgba(96, 165, 250, 0.14), transparent 30%),
+        radial-gradient(circle at 52% 82%, rgba(129, 140, 248, 0.16), transparent 34%);
+    filter: blur(28px);
+    opacity: 0.95;
+    pointer-events: none;
+}
+
+.antigravity-grid {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: radial-gradient(circle at center, black 40%, transparent 95%);
+    opacity: 0.38;
+}
+
+.antigravity-spotlight {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at var(--ag-pointer-x) var(--ag-pointer-y), rgba(255, 255, 255, 0.08), transparent 20%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 28%);
+    mix-blend-mode: screen;
+    opacity: 0.9;
+}
+
+.antigravity-orb {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(60px);
+    opacity: 0.4;
+    animation: antigravity-orb-float 12s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.antigravity-orb-1 {
+    top: 10%;
+    left: -4%;
+    width: 22rem;
+    height: 22rem;
+    background: rgba(45, 212, 191, 0.24);
+}
+
+.antigravity-orb-2 {
+    top: 8%;
+    right: 6%;
+    width: 18rem;
+    height: 18rem;
+    background: rgba(96, 165, 250, 0.22);
+    animation-delay: 2s;
+}
+
+.antigravity-orb-3 {
+    bottom: -4%;
+    left: 32%;
+    width: 24rem;
+    height: 24rem;
+    background: rgba(129, 140, 248, 0.18);
+    animation-delay: 4s;
+}
+
+.ui-particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.ui-particle {
+    position: absolute;
+    left: var(--particle-left, 50%);
+    top: var(--particle-top, 50%);
+    width: var(--particle-size, 4px);
+    height: var(--particle-size, 4px);
+    border-radius: 9999px;
+    background: var(--particle-color, rgba(255, 255, 255, 0.35));
+    opacity: var(--particle-opacity, 0.42);
+    will-change: transform, opacity;
+}
+
+.ui-particles--antigravity .ui-particle {
+    animation:
+        antigravity-particle-drift var(--particle-duration, 15s) linear infinite,
+        antigravity-particle-pulse calc(var(--particle-duration, 15s) * 0.45) ease-in-out infinite;
+    animation-delay: var(--particle-delay, 0s);
+}
+
+.ui-particles--antigravity .ui-particle::after {
+    content: "";
+    position: absolute;
+    inset: -180% -40%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.22), transparent 70%);
+    opacity: 0.55;
+    filter: blur(8px);
+}
+
+/* Entrance animations */
+.animate-cinematic-blurIn {
+    animation: cinematic-blurIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-cinematic-textReveal {
+    animation: cinematic-textReveal 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-cinematic-slideUp {
+    animation: kinetic-slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-cinematic-scaleIn {
+    animation: kinetic-scaleIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .cinematic-tilt,
+    .cinematic-glow,
+    .cinematic-magnetic,
+    .animate-cinematic-blurIn,
+    .animate-cinematic-textReveal,
+    .animate-cinematic-slideUp,
+    .animate-cinematic-scaleIn {
+        animation: none !important;
+        transform: none !important;
+    }
+
+    .ui-particle,
+    .antigravity-orb {
+        animation: none !important;
+    }
+
+    .antigravity-field::before,
+    .antigravity-spotlight {
+        opacity: 0.45;
+    }
+}
+
+/* Kinetic utility classes (Berger.team) */
+.btn-kinetic,
+a.btn-kinetic,
+button.btn-kinetic {
+	transition: all 0.2s ease;
+}
+.btn-kinetic:hover,
+a.btn-kinetic:hover,
+button.btn-kinetic:hover {
+	transform: translateY(-1px);
+}
+.btn-kinetic:active,
+a.btn-kinetic:active,
+button.btn-kinetic:active {
+	transform: scale(0.98);
+}
+
+.card-kinetic {
+	transition: all 0.3s ease;
+}
+.card-kinetic:hover {
+	transform: translateY(-4px);
+}
+.card-kinetic:active {
+	transform: translateY(-2px);
+}
+
+.hero-stat-card {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.hero-spotlight-shell {
+    position: relative;
+}
+
+.hero-spotlight-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background:
+        radial-gradient(circle at top left, rgba(125, 211, 252, 0.12), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(129, 140, 248, 0.12), transparent 26%);
+    pointer-events: none;
+}
+
+.hero-market-tile {
+    box-shadow: 0 24px 70px rgba(2, 6, 23, 0.22);
+}
+
+.hero-market-tile:hover {
+    box-shadow: 0 28px 86px rgba(14, 165, 233, 0.2);
+}
+
+.link-kinetic {
+	transition: color 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.btn-kinetic:hover, .btn-kinetic:active,
+	a.btn-kinetic:hover, a.btn-kinetic:active,
+	button.btn-kinetic:hover, button.btn-kinetic:active,
+	.card-kinetic:hover, .card-kinetic:active {
+		transform: none !important;
+	}
+}
+
+/* ============================================
+   Kinetic Scroll Reveal Animations
+   ============================================ */
+
+@keyframes kinetic-fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes kinetic-fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes kinetic-fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes kinetic-fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes kinetic-scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes kinetic-bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes kinetic-shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@keyframes kinetic-pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+@keyframes kinetic-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Scroll reveal base */
+[data-kinetic-block] {
+    opacity: 0;
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-kinetic-block].reveal-kinetic {
+    opacity: 1;
+}
+
+[data-kinetic-block].reveal-kinetic.visible {
+    animation: kinetic-fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+[data-kinetic-block="fadeInDown"].reveal-kinetic.visible {
+    animation: kinetic-fadeInDown 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+[data-kinetic-block="fadeInLeft"].reveal-kinetic.visible {
+    animation: kinetic-fadeInLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+[data-kinetic-block="fadeInRight"].reveal-kinetic.visible {
+    animation: kinetic-fadeInRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+[data-kinetic-block="scaleIn"].reveal-kinetic.visible {
+    animation: kinetic-scaleIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+[data-kinetic-block="bounceIn"].reveal-kinetic.visible {
+    animation: kinetic-bounceIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Parallax container */
+.parallax-container {
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.parallax-layer {
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.parallax-bg {
+    transform: translateZ(-50px) scale(1.05);
+}
+
+.parallax-mid {
+    transform: translateZ(0);
+}
+
+.parallax-fg {
+    transform: translateZ(50px) scale(0.95);
+}
+
+/* Probability bar animations */
+.probability-bar-animated {
+    transition: width 1s ease-out;
+    animation: kinetic-fadeInUp 0.5s ease-out forwards;
+}
+
+/* Badge animations */
+.badge-hot {
+    animation: kinetic-pulse 2s ease-in-out infinite;
+}
+
+/* ============================================
+   End Kinetic Scroll Reveal Animations
+   ============================================ */
+
+/* ============================================
+   End Kinetic Cinematic Enhancements
+   ============================================ */

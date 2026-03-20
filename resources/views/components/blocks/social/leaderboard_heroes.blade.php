@@ -69,9 +69,9 @@ if (empty($topPerformers)) {
 }
 
 $podiumColors = [
-    1 => ['bg' => 'from-yellow-400 to-yellow-600', 'text' => 'text-yellow-900', 'border' => 'border-yellow-300', 'icon' => '👑'],
-    2 => ['bg' => 'from-gray-300 to-gray-500', 'text' => 'text-gray-900', 'border' => 'border-gray-300', 'icon' => '🥈'],
-    3 => ['bg' => 'from-amber-600 to-amber-800', 'text' => 'text-amber-100', 'border' => 'border-amber-400', 'icon' => '🥉']
+    1 => ['bg' => 'from-yellow-400 to-yellow-600', 'text' => 'text-yellow-900', 'border' => 'border-yellow-300', 'icon' => 'trophy'],
+    2 => ['bg' => 'from-gray-300 to-gray-500', 'text' => 'text-gray-900', 'border' => 'border-gray-300', 'icon' => 'trophy'],
+    3 => ['bg' => 'from-amber-600 to-amber-800', 'text' => 'text-amber-100', 'border' => 'border-amber-400', 'icon' => 'trophy']
 ];
 @endphp
 
@@ -94,7 +94,7 @@ $podiumColors = [
             </div>
             <div class="text-right">
                 <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200">
-                    🏆 Top Performers
+                    <x-filament::icon icon="heroicon-o-trophy" class="inline h-5 w-5" aria-hidden="true" /> Top Performers
                 </span>
             </div>
         </div>
@@ -113,8 +113,11 @@ $podiumColors = [
                         <div class="relative mb-2">
                             <img class="h-16 w-16 rounded-full border-4 {{ $colors['border'] }} shadow-lg" 
                                  src="{{ $hero['avatar'] ?? 'https://ui-avatars.com/api/?name=' . urlencode($hero['name']) . '&color=7F9CF5&background=EBF4FF' }}" 
-                                 alt="{{ $hero['name'] }}">
-                            <div class="absolute -top-2 -right-2 text-2xl">{{ $colors['icon'] }}</div>
+                                 alt="{{ $hero['name'] }}"
+                                 loading="lazy">
+                            <div class="absolute -top-2 -right-2">
+                                <x-filament::icon icon="heroicon-o-trophy" class="w-6 h-6 text-yellow-500" />
+                            </div>
                         </div>
                         
                         <!-- Podium -->
@@ -133,7 +136,7 @@ $podiumColors = [
                                 </span>
                                 @if(isset($hero['streak']) && $hero['streak'] > 0)
                                     <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-200">
-                                        🔥 {{ $hero['streak'] }}
+                                        <x-filament::icon icon="heroicon-o-fire" class="inline h-4 w-4" aria-hidden="true" /> {{ $hero['streak'] }}
                                     </span>
                                 @endif
                             </div>

@@ -1,89 +1,141 @@
-{{-- Vista per il widget PredictTableWidget nel tema TwentyOne --}}
-{{-- Mostra i predict in formato card con informazioni complete e ratings --}}
-{{-- Versione refactorizzata seguendo i principi DRY e KISS --}}
-<?php
+@php
     $record = $getRecord();
-  
-?>
-<div class="p-2 space-y-3">
-    {{-- Header con stato e badge --}}
-    <header class="flex items-center justify-between">
-        <x-predict.status-badge 
-            :status="$record->status" 
-            :with-animation="true" 
-        />
-        <x-predict.bettable-badge 
-            :is-bettable="$record->is_bettable" 
-        />
-    </header>
+    $card = app(\Modules\Predict\Actions\Frontoffice\ResolvePredictCardDataAction::class)->execute($record);
+    $visibleOptions = collect($card['options'])->take(4)->values();
+    $leadingOption = $visibleOptions->first();
+    $statusClasses = $card['status_tone'] === 'active'
+        ? 'border-emerald-400/30 bg-emerald-500/12 text-emerald-50'
+        : 'border-white/10 bg-slate-500/18 text-slate-100';
+    $tx = static function (string $key, string $fallback): string {
+        $translated = __($key);
+        if (is_string($translated) && $translated !== $key) {
+            return $translated;
+        }
 
-    {{-- Contenuto principale --}}
-    <main class="space-y-3">
-        {{-- Titolo e categoria --}}
-        <section>
-        
-            <a href="{{ route('predict.view', ['lang' => app()->getLocale(), 'slug' => $record->slug]) }}" 
-               class="block group">
-                <h3 class="text-sm font-bold text-gray-900 dark:text-white mb-1 line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                    {{ $record->title }}
-                </h3>
+        $translatedLabel = __($key.'.label');
+        if (is_string($translatedLabel) && $translatedLabel !== ($key.'.label')) {
+            return $translatedLabel;
+        }
+
+        return $fallback;
+    };
+@endphp
+
+<article class="group relative overflow-hidden rounded-[2rem] border border-slate-800/80 bg-slate-950 shadow-[0_28px_90px_-42px_rgba(15,23,42,0.9)]">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.18),_transparent_36%),radial-gradient(circle_at_bottom_right,_rgba(236,72,153,0.16),_transparent_34%)]"></div>
+    <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/35 to-transparent"></div>
+
+    <div class="relative p-5 md:p-6">
+        <div class="mb-5 flex items-start justify-between gap-3">
+            <div class="space-y-3">
+                <div class="flex flex-wrap items-center gap-2">
+                    <span class="inline-flex items-center rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] {{ $statusClasses }}">
+                        {{ $card['status_label'] }}
+                    </span>
+
+                    @if($card['category_title'])
+                        <span class="inline-flex items-center rounded-full border border-white/10 bg-white/6 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-slate-200 backdrop-blur-sm">
+                            {{ $card['category_title'] }}
+                        </span>
+                    @endif
+                </div>
+
+                <div class="space-y-2">
+                    <h3 class="max-w-2xl text-xl font-semibold leading-tight text-white md:text-[1.4rem]">
+                        <a href="{{ $card['detail_url'] }}" class="transition-colors group-hover:text-sky-200 focus:outline-none focus:underline">
+                            {{ $card['title'] }}
+                        </a>
+                    </h3>
+
+                    @if($leadingOption)
+                        <p class="text-sm text-slate-300">
+                            {{ $tx('predict::labels.leading_outcome', 'Opzione in testa') }}
+                            <span class="font-semibold text-white">{{ $leadingOption['title'] }}</span>
+                            <span class="text-sky-300">{{ number_format($leadingOption['percentage'], 1) }}%</span>
+                        </p>
+                    @endif
+                </div>
+            </div>
+
+            <a
+                href="{{ $card['detail_url'] }}"
+                class="inline-flex shrink-0 items-center gap-2 rounded-full border border-sky-400/35 bg-sky-400/16 px-4 py-2 text-sm font-semibold text-sky-50 shadow-[0_0_0_1px_rgba(125,211,252,0.08)] backdrop-blur-md transition hover:border-sky-300/60 hover:bg-sky-400/24 focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-slate-950"
+            >
+                {{ $tx('predict::actions.trade_market', 'Apri il mercato') }}
+                <span aria-hidden="true">→</span>
             </a>
-            
-            @if($record->category)
-                <div class="flex items-center text-xs text-gray-600 dark:text-gray-400">
-                    <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6 2C3.79086 2 2 3.79086 2 6V7C2 9.20914 3.79086 11 6 11H7C9.20914 11 11 9.20914 11 7V6C11 3.79086 9.20914 2 7 2H6ZM17 2C14.7909 2 13 3.79086 13 6V7C13 9.20914 14.7909 11 17 11H18C20.2091 11 22 9.20914 22 7V6C22 3.79086 20.2091 2 18 2H17ZM6 13C3.79086 13 2 14.7909 2 17V18C2 20.2091 3.79086 22 6 22H7C9.20914 22 11 20.2091 11 18V17C11 14.7909 9.20914 13 7 13H6ZM17 13C14.7909 13 13 14.7909 13 17V18C13 20.2091 14.7909 22 17 22H18C20.2091 22 22 20.2091 22 18V17C22 14.7909 20.2091 13 18 13H17Z" />
-                    </svg>
-                    {{ $record->getBloodlineCategories() }}
-                </div>
-            @endif
-        </section>
+        </div>
 
-        {{-- Ratings section --}}
-        @if($record->ratings && $record->ratings->count() > 0)
-            <section class="space-y-2">
-                {{-- Grid responsiva dei rating --}}
-                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-1">
-                    @foreach($record->ratings as $rating)
-                        <x-predict.rating-card 
-                            :rating="$rating" 
-                            :predict-id="$record->id" 
-                        />
-                    @endforeach
-                </div>
+        <div class="grid grid-cols-2 gap-3">
+            @foreach($visibleOptions as $option)
+                <a
+                    href="{{ $card['detail_url'] }}"
+                    class="group/option block overflow-hidden rounded-[1.4rem] border border-white/10 bg-white/6 shadow-[0_20px_45px_-34px_rgba(15,23,42,0.95)] backdrop-blur-sm transition hover:-translate-y-1 hover:border-white/22 hover:bg-white/10"
+                    aria-label="{{ $option['title'] }} {{ number_format($option['percentage'], 1) }}%"
+                >
+                    <span class="relative block aspect-[5/4] overflow-hidden bg-slate-900">
+                        @if($option['image_url'])
+                            <img
+                                src="{{ $option['image_url'] }}"
+                                alt="{{ $option['title'] }}"
+                                loading="lazy"
+                                class="h-full w-full object-cover transition duration-700 group-hover/option:scale-[1.04]"
+                            >
+                        @else
+                            <span class="flex h-full items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950">
+                                <x-filament::icon icon="heroicon-o-photo" class="h-10 w-10 text-slate-500" />
+                            </span>
+                        @endif
 
-                {{-- Statistiche --}}
-                <x-predict.statistics-row 
-                    :bets-count="$record->count_credit"
-                    :total-credits="$record->sum_credit"
-                />
-            </section>
-        @endif
+                        <span class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/28 to-transparent"></span>
 
-        {{-- Meta informazioni --}}
-        <x-predict.meta-info 
-            :predict="$record" 
-            :show-author="true"
-            :show-date="true"
-            :show-expiration="false"
-        />
-    </main>
+                        <span class="absolute inset-x-0 top-0 flex items-center justify-between p-3">
+                            <span class="rounded-full border border-white/15 bg-slate-950/72 px-2.5 py-1 text-xs font-semibold text-white shadow-sm backdrop-blur-md">
+                                {{ number_format($option['percentage'], 1) }}%
+                            </span>
+                        </span>
 
-    {{-- Footer con azioni --}}
-    <footer class="flex items-center justify-between pt-2 border-t border-gray-200 dark:border-gray-700">
-        <x-predict.action-buttons 
-            :predict="$record" 
-            :show-bet-button="false"
-        />
-        
-        <x-predict.meta-info 
-            :predict="$record" 
-            :show-author="false"
-            :show-date="false"
-            :show-expiration="true"
-        />
-    </footer>
+                        <span class="absolute inset-x-3 bottom-3 block overflow-hidden rounded-2xl border border-white/10 bg-slate-950/72 p-2.5 backdrop-blur-md">
+                            <span class="mb-2 flex items-center justify-between gap-2">
+                                <span class="truncate text-sm font-semibold text-white">{{ $option['title'] }}</span>
+                                <span class="shrink-0 text-[11px] font-medium uppercase tracking-[0.16em] text-slate-300">
+                                    {{ $tx('predict::labels.credits_share', 'Quota') }}
+                                </span>
+                            </span>
 
-    {{-- Modal per le azioni Filament --}}
-    <x-filament-actions::modals />
-</div>
+                            <span class="block h-2.5 overflow-hidden rounded-full bg-white/10">
+                                <span
+                                    class="block h-full rounded-full"
+                                    style="width: {{ max(2, min(100, $option['percentage'])) }}%; background: linear-gradient(90deg, {{ $option['color'] }}, color-mix(in srgb, {{ $option['color'] }} 58%, white));"
+                                ></span>
+                            </span>
+                        </span>
+                    </span>
+                </a>
+            @endforeach
+        </div>
+
+        <div class="mt-5 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-4 text-sm">
+            <div class="flex flex-wrap items-center gap-4 text-slate-300">
+                <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/6 px-3 py-1.5">
+                    <span class="text-slate-400">{{ $tx('predict::labels.volume', 'Volume') }}</span>
+                    <span class="font-semibold text-white">{{ number_format($card['volume'], 0) }}</span>
+                </span>
+
+                <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/6 px-3 py-1.5">
+                    <span class="text-slate-400">{{ $tx('predict::labels.participants', 'Partecipanti') }}</span>
+                    <span class="font-semibold text-white">{{ number_format($card['participants']) }}</span>
+                </span>
+
+                <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/6 px-3 py-1.5">
+                    <span class="text-slate-400">{{ $tx('predict::labels.outcomes', 'Esiti') }}</span>
+                    <span class="font-semibold text-white">{{ $visibleOptions->count() }}</span>
+                </span>
+            </div>
+
+            <a href="{{ $card['detail_url'] }}" class="font-semibold text-sky-300 transition hover:text-sky-200">
+                {{ $tx('predict::actions.view_details', 'Vedi dettagli') }}
+            </a>
+        </div>
+    </div>
+</article>

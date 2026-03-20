@@ -1,4 +1,4 @@
-<a href="/">
+<a href="{{ url(app()->getLocale()) }}">
     <div class="size-8">
         <img 
             src="{{ asset('assets/predict/img/logo-ft.svg') }}" 

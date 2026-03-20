@@ -17,12 +17,12 @@
 				</li>
 			@else
 				<li class="block lg:hidden">
-					<a href="{{route('register')}}" class="flex items-center p-2 space-x-2 text-blue-500 transition-colors rounded hover:text-blue-600 hover:bg-white">
+					<a href="{{ url(app()->getLocale().'/auth/register') }}" class="flex items-center p-2 space-x-2 text-blue-500 transition-colors rounded hover:text-blue-600 hover:bg-white">
 						<span>Sign Up</span>
 					</a>
 				</li>
 				<li class="block lg:hidden">
-					<a href="{{route('login')}}" class="flex items-center p-2 space-x-2 transition-colors rounded hover:text-blue-500 hover:bg-white">
+					<a href="{{ url(app()->getLocale().'/auth/login') }}" class="flex items-center p-2 space-x-2 transition-colors rounded hover:text-blue-500 hover:bg-white">
 						<span>Login</span>
 					</a>
 				</li>
@@ -40,7 +40,7 @@
 
 			@auth
 				<li>
-					<form action="{{ route('logout') }}" method="post"> @csrf
+					<form action="{{ url(app()->getLocale().'/auth/logout') }}" method="post"> @csrf
 						<button type="submit" class="flex items-center w-full p-2 space-x-2 text-red-500 rounded hover:text-red-600 hover:bg-white">
 							<x-heroicon-o-power class="size-6" />
 							<span>{{ __('Logout') }}</span>

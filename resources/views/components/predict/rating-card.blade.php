@@ -2,7 +2,10 @@
 @props([
     'rating',
     'predictId',
-    'action' => 'bet'
+    'action' => 'bet',
+    'imageUrl' => null,
+    'percentage' => null,
+    'theme' => 'emerald',
 ])
 
 @php
@@ -10,56 +13,82 @@
         'predict_id' => $predictId,
         'rating_id' => $rating->id,
     ];
-
-    // Gestione dell'immagine con fallback sicuro
-    $image = $rating->getFirstMedia();
-    $imageUrl = null;
-
-    if ($image == null) {
-        // Genera un URL casuale per l'immagine placeholder
-        $imageId = $rating->id ?? rand(1, 1000);
-        $imageUrl = "https://picsum.photos/seed/{$imageId}/200/300";
-
-        // Usa sempre l'URL diretto per evitare problemi di permessi filesystem
-        $image = (object)[
-            'url' => $imageUrl,
-            'alt' => $rating->title ?? 'Rating Image'
-        ];
-    }
+    $resolvedImageUrl = $imageUrl
+        ?? app(\Modules\Predict\Actions\Rating\ResolveRatingImageUrlAction::class)->execute($rating);
+    $resolvedPercentage = is_numeric($percentage)
+        ? round((float) $percentage, 1)
+        : round((float) ((float) ($rating->pivot->percentage ?? 0) * 100), 1);
+    $title = is_scalar($rating->title ?? null) ? (string) $rating->title : 'Opzione';
+    $initials = \Illuminate\Support\Str::upper(\Illuminate\Support\Str::substr($title, 0, 2));
+    $probabilityLabel = __('predict::labels.probability');
+    $probabilityLabel = is_string($probabilityLabel) && $probabilityLabel !== 'predict::labels.probability'
+        ? $probabilityLabel
+        : 'Probabilità';
+    $themePalette = match ($theme) {
+        'amber' => [
+            'gradient' => 'from-amber-500 via-amber-400 to-orange-500',
+            'text' => 'text-amber-700 dark:text-amber-300',
+        ],
+        'slate' => [
+            'gradient' => 'from-slate-600 via-slate-500 to-slate-400',
+            'text' => 'text-slate-700 dark:text-slate-300',
+        ],
+        'rose' => [
+            'gradient' => 'from-rose-600 via-rose-500 to-pink-500',
+            'text' => 'text-rose-700 dark:text-rose-300',
+        ],
+        default => [
+            'gradient' => 'from-emerald-600 via-emerald-500 to-teal-500',
+            'text' => 'text-emerald-700 dark:text-emerald-300',
+        ],
+    };
 @endphp
 
-<button wire:click="mountAction('{{ $action }}', @js($data))" class="block w-full">
-    <div class="relative overflow-hidden rounded-lg group/rating cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:z-10">
-        {{-- Container quadrato per l'immagine --}}
-        <div class="aspect-square bg-gray-100 dark:bg-gray-700 relative">
-            {{-- Immagine principale --}}
-            @if(isset($image->url))
-                <img src="{{ $image->url }}" class="w-full h-full object-cover transition-transform duration-300 group-hover/rating:scale-110" alt="{{ $rating->title }}">
+<button
+    wire:click="mountAction('{{ $action }}', @js($data))"
+    class="predict-outcome-card card-kinetic block w-full text-left focus:outline-none"
+    type="button"
+>
+    <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-gray-700 dark:bg-gray-900">
+        <div class="predict-outcome-media relative aspect-[4/3] overflow-hidden bg-gray-100 dark:bg-gray-800">
+            @if($resolvedImageUrl)
+                <img
+                    src="{{ $resolvedImageUrl }}"
+                    alt="{{ $title }}"
+                    class="h-full w-full object-cover transition-transform duration-500"
+                    loading="lazy"
+                >
             @else
-                {{ $image('150x150')->attributes(['class' => 'w-full h-full object-cover transition-transform duration-300 group-hover/rating:scale-110']) }}
+                <div class="flex h-full w-full items-center justify-center bg-gradient-to-br {{ $themePalette['gradient'] }}">
+                    <span class="text-4xl font-black tracking-tight text-white">{{ $initials }}</span>
+                </div>
             @endif
 
-            {{-- Overlay gradiente per migliore leggibilità --}}
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-opacity duration-300 group-hover/rating:opacity-90"></div>
-
-            {{-- Badge percentuale --}}
-            <div class="absolute top-1 right-1 transform transition-all duration-300 group-hover/rating:scale-110 group-hover/rating:rotate-3">
-                <div class="bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-xs font-bold px-1.5 py-0.5 rounded shadow-lg border border-gray-200 dark:border-gray-600">
-                    {{ number_format($rating->pivot->percentage * 100, 1) }}%
+            <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
+            <div class="absolute inset-x-3 bottom-3">
+                <div class="flex items-center justify-between gap-3 rounded-xl bg-black/50 px-3 py-2 backdrop-blur-sm">
+                    <span class="truncate text-sm font-semibold text-white">{{ $title }}</span>
+                    <span class="shrink-0 rounded-full bg-white/95 px-2 py-1 text-xs font-bold text-gray-900">{{ $resolvedPercentage }}%</span>
                 </div>
             </div>
+        </div>
 
-            {{-- Titolo del rating --}}
-            <div class="absolute bottom-1 left-1 right-1 transform transition-all duration-300 group-hover/rating:translate-y-0 group-hover/rating:scale-105">
-                <div class="bg-black/70 dark:bg-gray-900/70 backdrop-blur-sm rounded px-1.5 py-1 border border-white/20">
-                    <p class="text-xs font-bold text-white leading-tight line-clamp-2">
-                        {{ $rating->title }}
-                    </p>
+        <div class="space-y-2 px-4 py-4">
+            <p class="line-clamp-2 text-sm font-semibold text-gray-900 dark:text-white">
+                {{ $title }}
+            </p>
+            <div class="space-y-1">
+                <div class="flex items-center justify-between text-xs font-medium {{ $themePalette['text'] }}">
+                    <span>{{ $probabilityLabel }}</span>
+                    <span>{{ $resolvedPercentage }}%</span>
+                </div>
+                <div class="h-2 overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700">
+                    <div
+                        class="probability-bar-animated h-full rounded-full bg-gradient-to-r {{ $themePalette['gradient'] }}"
+                        style="width: {{ min(100, $resolvedPercentage) }}%"
+                    ></div>
                 </div>
             </div>
-
-            {{-- Effetto hover aggiuntivo --}}
-            <div class="absolute inset-0 bg-blue-500/0 group-hover/rating:bg-blue-500/10 transition-all duration-300 rounded-lg"></div>
         </div>
     </div>
 </button> 

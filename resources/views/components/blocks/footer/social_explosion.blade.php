@@ -132,7 +132,10 @@ $getRecentWinners = function() {
                         
                         <!-- Newsletter -->
                         <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                            <h4 class="font-semibold mb-2">🚀 Newsletter VIP</h4>
+                            <h4 class="font-semibold mb-2 flex items-center gap-2">
+                                <x-filament::icon icon="heroicon-o-envelope" class="w-5 h-5" />
+                                <span>Newsletter VIP</span>
+                            </h4>
                             <p class="text-sm text-gray-300 mb-3">Ricevi previsioni esclusive e bonus</p>
                             <div class="flex">
                                 <input type="email" placeholder="La tua email" 
@@ -146,13 +149,16 @@ $getRecentWinners = function() {
                     
                     <!-- Quick Links -->
                     <div>
-                        <h4 class="text-lg font-semibold mb-4">🎯 Mercati</h4>
+                        <h4 class="text-lg font-semibold mb-4 flex items-center gap-2">
+                            <x-filament::icon icon="heroicon-o-target" class="w-5 h-5" />
+                            <span>Mercati</span>
+                        </h4>
                         <ul class="space-y-2">
-                            <li><a href="/markets/crypto" class="text-gray-300 hover:text-white transition-colors">Crypto</a></li>
-                            <li><a href="/markets/sports" class="text-gray-300 hover:text-white transition-colors">Sport</a></li>
-                            <li><a href="/markets/politics" class="text-gray-300 hover:text-white transition-colors">Politica</a></li>
-                            <li><a href="/markets/tech" class="text-gray-300 hover:text-white transition-colors">Tech</a></li>
-                            <li><a href="/markets/finance" class="text-gray-300 hover:text-white transition-colors">Finanza</a></li>
+                            <li><a href="{{ url('/' . app()->getLocale() . '/predicts?category=crypto') }}" class="text-gray-300 hover:text-white transition-colors">Crypto</a></li>
+                            <li><a href="{{ url('/' . app()->getLocale() . '/predicts?category=sports') }}" class="text-gray-300 hover:text-white transition-colors">Sport</a></li>
+                            <li><a href="{{ url('/' . app()->getLocale() . '/predicts?category=politics') }}" class="text-gray-300 hover:text-white transition-colors">Politica</a></li>
+                            <li><a href="{{ url('/' . app()->getLocale() . '/predicts?category=tech') }}" class="text-gray-300 hover:text-white transition-colors">Tech</a></li>
+                            <li><a href="{{ url('/' . app()->getLocale() . '/predicts?category=finance') }}" class="text-gray-300 hover:text-white transition-colors">Finanza</a></li>
                         </ul>
                     </div>
                     
@@ -160,11 +166,11 @@ $getRecentWinners = function() {
                     <div>
                         <h4 class="text-lg font-semibold mb-4">🛟 Supporto</h4>
                         <ul class="space-y-2">
-                            <li><a href="/help" class="text-gray-300 hover:text-white transition-colors">Centro Aiuto</a></li>
-                            <li><a href="/tutorial" class="text-gray-300 hover:text-white transition-colors">Come Funziona</a></li>
-                            <li><a href="/faq" class="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
-                            <li><a href="/contact" class="text-gray-300 hover:text-white transition-colors">Contatti</a></li>
-                            <li><a href="/terms" class="text-gray-300 hover:text-white transition-colors">Termini</a></li>
+                            <li><a href="{{ url(app()->getLocale().'/help') }}" class="text-gray-300 hover:text-white transition-colors">Centro Aiuto</a></li>
+                            <li><a href="{{ url(app()->getLocale().'/tutorial') }}" class="text-gray-300 hover:text-white transition-colors">Come Funziona</a></li>
+                            <li><a href="{{ url(app()->getLocale().'/faq') }}" class="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
+                            <li><a href="{{ url(app()->getLocale().'/contact') }}" class="text-gray-300 hover:text-white transition-colors">Contatti</a></li>
+                            <li><a href="{{ url(app()->getLocale().'/terms') }}" class="text-gray-300 hover:text-white transition-colors">Termini</a></li>
                         </ul>
                     </div>
                 </div>
