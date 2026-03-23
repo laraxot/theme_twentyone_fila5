@@ -12,6 +12,8 @@ export default {
 		'../../storage/framework/views/*.php',
 		'../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
 		'./node_modules/flowbite/**/*.js',
+		'./node_modules/preline/preline.js',
+		'./node_modules/daisyui/**/*.js',
 	],
 	theme: {
 		fontFamily: {
@@ -34,7 +36,29 @@ export default {
 			animation: {
 				'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
 				'bounce-in': 'bounceIn 0.5s ease-out',
+				'kinetic-float': 'float 6s ease-in-out infinite',
+			},
+			keyframes: {
+				float: {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-20px)' },
+				}
 			}
 		},
+	},
+	plugins: [
+		require('daisyui'),
+		require('flowbite/plugin')(),
+		require('preline/plugin'),
+	],
+	daisyui: {
+		themes: ['light', 'dark', 'synthwave', 'cyberpunk'],
+		darkTheme: 'synthwave',
+		base: true,
+		styled: true,
+		utils: true,
+		prefix: '',
+		logs: false,
+		themeRoot: ':root',
 	},
 }

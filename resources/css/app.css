@@ -1452,13 +1452,82 @@ a:not(.btn):not([role="button"]) {
    Per integrazione con dark theme del sito
    ============================================ */
 
-/* APPLICARE A TUTTI I WIDGET FILAMENT NEL FRONT-OFFICE */
+/* ============================================
+   Filament Table Widget v5 - Dark Theme
+   Override per rendere trasparente il widget nel front-office
+   ============================================ */
+
 /* Container generico per widget Filament nel front-office */
 .fi-wi {
     background-color: transparent !important;
 }
 
-/* Widget container - trasparente */
+/* Widget container - trasparente - v5 classes */
+.fi-ta,
+.fi-ta-ctn,
+.fi-ta-content,
+.fi-ta-content-ctn,
+.fi-ta-main,
+.fi-ta-record-content,
+.fi-ta-record-content-ctn {
+    background-color: transparent !important;
+}
+
+/* Grid content */
+.fi-ta-content-grid,
+.fi-grid {
+    background-color: transparent !important;
+}
+
+/* Header e Footer */
+.fi-ta-header-ctn,
+.fi-ta-footer-ctn,
+.fi-ta-header,
+.fi-ta-footer {
+    background-color: transparent !important;
+    border-color: rgba(255,255,255,0.1) !important;
+}
+
+/* Record/Righe */
+.fi-ta-record {
+    background-color: transparent !important;
+    border-color: rgba(255,255,255,0.1) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fi-ta-record:hover {
+    background-color: rgba(34, 211, 238, 0.05) !important;
+    border-color: rgba(34, 211, 238, 0.3) !important;
+}
+
+/* Celle */
+.fi-ta-cell {
+    color: rgb(248 250 252) !important;
+}
+
+/* Toolbar */
+.fi-ta-header-toolbar,
+.fi-ta-actions {
+    background-color: transparent !important;
+}
+
+/* Empty state */
+.fi-ta-empty-state {
+    color: rgb(148 163 184) !important;
+}
+
+/* Reduced spacing per le cards del widget - Più compatto */
+.fi-ta-content-grid,
+.fi-grid {
+    gap: 1rem !important;
+}
+
+.fi-ta-content-grid > div,
+.fi-grid > div {
+    margin-bottom: 0 !important;
+}
+
+/* Alternativo: supporta anche la classe vecchia */
 .filament-table-widget .fi-ta,
 .filament-table-widget .fi-ta-content,
 .filament-table-widget .fi-ta-table {

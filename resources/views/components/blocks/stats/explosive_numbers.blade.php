@@ -150,7 +150,7 @@
                     $colors = $getColorClasses($stat['color']);
                 @endphp
 
-                <div class="group relative overflow-hidden rounded-2xl border {{ $colors['border'] }} bg-white dark:bg-slate-800/50 p-6 backdrop-blur transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
+                <div class="group relative overflow-hidden rounded-2xl border {{ $colors['border'] }} bg-slate-800/50 p-6 backdrop-blur transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
                     {{-- Background Gradient --}}
                     <div class="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-gradient-to-br {{ $colors['bg'] }} opacity-10 blur-2xl transition-opacity group-hover:opacity-20"></div>
 
