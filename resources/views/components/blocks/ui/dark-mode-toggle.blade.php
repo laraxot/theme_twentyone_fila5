@@ -171,57 +171,15 @@
     </span>
 </div>
 
-@push('scripts')
-<script>
-/**
- * Dark Mode Toggle - Interaction Logic
- * 
- * Features:
- * - Keyboard shortcut (D)
- * - localStorage persistence
- * - System preference detection
- * - Smooth transition
- */
-(function() {
-    const toggle = document.getElementById('dark-mode-toggle');
-    if (!toggle) return;
+{{-- 
+    Dark Mode Toggle - Script removed
+    Logic is now in Themes/TwentyOne/resources/js/dark-mode.js
+    Imported automatically via @vite(['resources/js/app.js'])
     
-    // Check localStorage
-    const isDark = localStorage.getItem('darkMode') === 'true';
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    Architecture:
+    - Blade = UI markup only
+    - JS = Logic (dark-mode.js)
+    - CSS = Styles (app.css)
     
-    // Apply initial state
-    if (isDark || (!localStorage.getItem('darkMode') && systemPrefersDark)) {
-        document.documentElement.classList.add('dark');
-        toggle.setAttribute('aria-checked', 'true');
-    }
-    
-    // Toggle on click
-    toggle.addEventListener('click', function() {
-        const isDark = document.documentElement.classList.toggle('dark');
-        localStorage.setItem('darkMode', isDark);
-        toggle.setAttribute('aria-checked', isDark ? 'true' : 'false');
-        
-        // Update tooltip text
-        const tooltip = this.nextElementSibling;
-        if (tooltip && tooltip.tagName === 'SPAN') {
-            tooltip.textContent = isDark ? 'Tema Chiaro' : 'Tema Scuro';
-        }
-    });
-    
-    // Keyboard shortcut (D)
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'd' && !e.ctrlKey && !e.metaKey && !e.altKey) {
-            toggle.click();
-        }
-    });
-    
-    // Listen for system preference changes
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-        if (!localStorage.getItem('darkMode')) {
-            document.documentElement.classList.toggle('dark', e.matches);
-        }
-    });
-})();
-</script>
-@endpush
+    DOCS: docs/project/DARK_MODE_ARCHITECTURE.md
+--}}

@@ -1,7 +1,7 @@
-<header class="sticky top-0 z-50 bg-white">
+<header class="sticky top-0 z-50 bg-transparent backdrop-blur-md bg-slate-950/80 dark:bg-slate-950/80 border-b border-white/10">
 	@php
 	$pos=collect($blocks)->groupBy('data.position');
-	
+
 	@endphp
 	<nav class="px-6 py-4 mx-auto container-xl">
 		<ul class="flex items-center justify-between lg:grid lg:grid-cols-3 gap-x-4">
