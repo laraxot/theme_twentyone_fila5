@@ -1,4 +1,5 @@
 import "flowbite";
+import "preline";
 
 import Swiper from "swiper/bundle";
 window.Swiper = Swiper;

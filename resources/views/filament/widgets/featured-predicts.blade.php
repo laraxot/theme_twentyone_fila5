@@ -20,7 +20,7 @@
             \Modules\Predict\Filament\Widgets\PredictTableWidget::class,
             [
                 'homepageMode' => true,
-                'minimumOutcomes' => 4,
+                'minimumOutcomes' => 0, {{-- Show all, not just multi-outcome --}}
                 'showTableControls' => false,
             ],
             key('featured-predicts-table-widget')
