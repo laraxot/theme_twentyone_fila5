@@ -5,11 +5,16 @@
 
 /* Widget Container - TRANSPARENT BACKGROUND (Glassmorphism) */
 /* CRITICAL: Must override Filament's default white backgrounds */
-.fi-ta-content-grid,
+.filament-table-widget,
+.filament-widget,
 .fi-wi-widget,
+.fi-ta-content-grid,
 .fi-ta-ctn,
 .fi-widget,
-[data-livewire-id] {
+[data-livewire-id],
+.fi-ta,
+[class*="fi-ta"],
+[class*="filament-table"] {
     background-color: transparent !important;
     background: transparent !important;
     --tw-bg-opacity: 0 !important;
@@ -17,12 +22,14 @@
     box-shadow: none !important;
 }
 
-/* Target ALL possible Filament container elements */
-.fi-ta,
-.filament-table-widget,
-[class*="fi-ta"],
-[class*="filament-table"] {
-    background-color: transparent !important;
+/* Table container - match homepage dark theme */
+.fi-ta-container {
+    @apply bg-slate-900/80;
+    @apply dark:bg-slate-900/60;
+    @apply backdrop-blur-md;
+    @apply border border-white/5;
+    @apply rounded-2xl;
+    @apply overflow-hidden;
 }
 
 /* Table Widget - Glass Effect */
