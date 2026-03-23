@@ -40,17 +40,31 @@ new class extends Component {
 
 <x-layouts.app>
     @volt("container0.view")
-    <div class="min-h-screen bg-gray-50 dark:bg-slate-900">
-        <div class="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 py-8 lg:grid-cols-12 lg:px-6">
-            <div class="lg:col-span-8">
-                <x-page side="content" :slug="$this->pageSlug" :data="$this->data" />
-            </div>
-            <aside class="lg:col-span-4">
-                <div class="lg:sticky lg:top-6">
-                    <x-page side="sidebar" :slug="$this->pageSlug" :data="$this->data" />
-                </div>
-            </aside>
+    {{--
+        CRITICAL: Zen Architecture Philosophy
+        - NO styling hardcoded in [container0]/[slug0]/index.blade.php
+        - Layout app.blade.php già ha bg-gradient-to-br (dark theme)
+        - Questo div è SOLO wrapper semantico per grid layout
+        - Styling va nei components CMS (x-page, blocks)
+
+        WHY:
+        - [container0]/[slug0] è AGNOSTICO (gestisce predicts, blog, events, etc.)
+        - NON deve imporre styling (violerebbe separation of concerns)
+        - Grid layout va bene (è struttura, non styling)
+
+        DOCS:
+        - docs/project/CONTAINER_ARCHITECTURE_ZEN.md
+        - docs/project/NO_HARDCODED_STYLING_IN_CONTAINER.md
+    --}}
+    <div class="grid grid-cols-1 gap-6 px-4 py-8 lg:grid-cols-12 lg:px-6">
+        <div class="lg:col-span-8">
+            <x-page side="content" :slug="$this->pageSlug" :data="$this->data" />
         </div>
+        <aside class="lg:col-span-4">
+            <div class="lg:sticky lg:top-6">
+                <x-page side="sidebar" :slug="$this->pageSlug" :data="$this->data" />
+            </div>
+        </aside>
     </div>
     @endvolt
 </x-layouts.app>

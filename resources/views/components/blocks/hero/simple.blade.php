@@ -110,7 +110,7 @@
                         @endif
                         
                         {{-- CTA --}}
-                        <a href="{{ \Mcamara\LaravelLocalization\Facades\LaravelLocalization::localizeURL('/predicts/'.$predict->slug) }}" class="block text-center py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors">
+                        <a href="{{ url(app()->getLocale().'/predicts/'.$predict->slug) }}" class="block text-center py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors">
                             {{ __('predict::actions.view_detail') ?? 'Vedi Dettagli' }}
                         </a>
                     </div>
@@ -119,7 +119,7 @@
             </div>
             
             <div class="text-center mt-8">
-                <a href="{{ \Mcamara\LaravelLocalization\Facades\LaravelLocalization::localizeURL('/predicts') }}" class="inline-block px-8 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl backdrop-blur-sm border border-white/20 transition-all duration-300">
+                <a href="{{ url(app()->getLocale().'/predicts') }}" class="inline-block px-8 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl backdrop-blur-sm border border-white/20 transition-all duration-300">
                     {{ __('predict::actions.view_all_markets') ?? 'Vedi Tutti i Mercati' }}
                 </a>
             </div>

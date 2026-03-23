@@ -39,6 +39,14 @@ La pagina http://predict.local/it/predicts appariva scarna e con link errati.
 - Traders: `COUNT(DISTINCT user_id)` da BetHistory
 - Credits: calcolo da `sum_credit_yes + sum_credit_no` con fallback 1000
 
+### 6. CSS e routing hardening (DRY + KISS)
+
+- Confermato: nessun tag `<style>` inline in `resources/views/components/layouts/app.blade.php`.
+- Il CSS condiviso resta in `resources/css/app.css` (single source of truth).
+- Confermato: non esiste `resources/views/pages/it/predicts/index.blade.php`.
+- `/it/predicts` deve sempre essere gestito da `resources/views/pages/[container0]/index.blade.php`.
+- Pipeline obbligatoria tema: dalla cartella `Themes/TwentyOne` eseguire `npm run build` e `npm run copy`.
+
 ## Regola per agenti
 
 **Mai usare `route('market.detail', ...)` per link a Predict.** Usare sempre:
@@ -52,3 +60,5 @@ La pagina http://predict.local/it/predicts appariva scarna e con link errati.
 - [homepage-governance](homepage-governance.md)
 - [route-names-philosophy](route-names-philosophy.md)
 - [Predict routing-and-filters-fix](../../Modules/Predict/docs/routing-and-filters-fix.md)
+- [no-predict-specific-pages](NO_PREDICT_SPECIFIC_PAGES.md)
+- [container0-routing-philosophy](../../../../docs/project/CONTAINER0_ROUTING_PHILOSOPHY.md)

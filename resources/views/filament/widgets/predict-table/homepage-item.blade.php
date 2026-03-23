@@ -5,7 +5,7 @@
 
 <article
     x-data="{ activeOutcome: null }"
-    class="card-kinetic group relative overflow-hidden rounded-[2rem] border border-white/12 bg-slate-950/90 shadow-[0_28px_80px_rgba(2,6,23,0.45)]"
+    class="card-kinetic group relative overflow-hidden rounded-[2rem] border border-white/12 bg-transparent shadow-[0_28px_80px_rgba(2,6,23,0.35)]"
 >
     <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,0.18),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.16),transparent_32%)]"></div>
     <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sky-300/50 to-transparent"></div>

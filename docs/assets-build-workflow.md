@@ -47,3 +47,27 @@ Devono esistere almeno:
 - I path CSS verso `vendor/filament/*` devono essere relativi alla posizione reale del file nel tema.
 - Lo script `copy` deve creare la directory di destinazione.
 - Un errore manifest del tema va risolto prima nella pipeline asset, non nel codice PHP.
+
+## Regola JS animation stack (GSAP)
+
+Nel tema TwentyOne, `gsap` e `ScrollTrigger` devono essere gestiti come dipendenze npm e import ES module.
+
+Motivazione architetturale:
+
+- evita dipendenza da file globali `.min.js` caricati in Blade;
+- mantiene il bundle coerente con Vite e con il manifest versionato;
+- riduce regressioni tra ambienti (dev/build/copy) e mantiene il comportamento deterministico.
+
+Implementazione obbligatoria:
+
+1. `npm install gsap`
+2. modulo `resources/js/gsap-core.js` per bootstrap di `gsap`
+3. modulo `resources/js/gsap-scroll-trigger.js` per registrare `ScrollTrigger`
+4. import dei due moduli in `resources/js/app.js`
+5. `npm run build && npm run copy`
+
+Riferimenti:
+
+- `../resources/js/app.js`
+- `../resources/js/gsap-core.js`
+- `../resources/js/gsap-scroll-trigger.js`

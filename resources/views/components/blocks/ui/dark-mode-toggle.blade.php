@@ -1,16 +1,227 @@
 @props([
-    'size' => 'md',
-    'position' => 'header-right',
-    'show_label' => false,
-    'variant' => 'icon-only'
+    'position' => 'header-right'
 ])
 
-{{-- Block version for CMS integration --}}
-<div class="dark-mode-toggle-block">
-    <x-ui.dark-mode-toggle 
-        :size="$size"
-        :position="$position" 
-        :show_label="$show_label"
-        :variant="$variant"
-    />
+{{--
+/**
+ * Dark Mode Toggle - Premium UI/UX
+ * 
+ * Features:
+ * - Smooth transition con animazione custom
+ * - Icone sole/luna con rotate effect
+ * - Tooltip accessibile
+ * - Respect prefers-color-scheme
+ * - Storage locale (localStorage)
+ * - Coerente con tema globale
+ * 
+ * Architecture:
+ * - Blade component (tema)
+ * - JavaScript: dark-mode.js (gestisce logica)
+ * - CSS: app.css (classi animate-*)
+ * - JSON: header.json (configurazione posizione)
+ */
+--}}
+
+<div 
+    class="dark-mode-toggle-block"
+    data-position="{{ $position }}"
+>
+    <button
+        id="dark-mode-toggle"
+        type="button"
+        role="switch"
+        aria-checked="false"
+        aria-label="Cambia tema scuro/chiaro"
+        title="Cambia tema (D)"
+        class="
+            group
+            relative
+            overflow-hidden
+            p-2 
+            rounded-xl
+            bg-gradient-to-br from-slate-100 to-slate-200 
+            dark:from-slate-800 dark:to-slate-700
+            hover:from-amber-100 hover:to-orange-100
+            dark:hover:from-indigo-900 dark:hover:to-slate-800
+            transition-all
+            duration-500
+            ease-out
+            shadow-sm
+            hover:shadow-md
+            hover:scale-105
+            active:scale-95
+            focus:outline-none
+            focus:ring-2
+            focus:ring-amber-500
+            focus:ring-offset-2
+            dark:focus:ring-offset-slate-900
+        "
+    >
+        {{-- Icon Container con animazione rotate --}}
+        <span class="relative block w-5 h-5">
+            {{-- Sun Icon (visible in dark mode) --}}
+            <span 
+                data-icon="sun" 
+                class="
+                    absolute
+                    inset-0
+                    flex
+                    items-center
+                    justify-center
+                    opacity-0
+                    dark:opacity-100
+                    transition-all
+                    duration-500
+                    ease-out
+                    transform
+                    rotate-90
+                    dark:rotate-0
+                    scale-75
+                    dark:scale-100
+                "
+            >
+                <x-filament::icon 
+                    icon="heroicon-o-sun" 
+                    class="
+                        w-5 h-5 
+                        text-amber-500 
+                        drop-shadow-[0_0_8px_rgba(245,158,11,0.5)]
+                        animate-kinetic-glow
+                    " 
+                />
+            </span>
+            
+            {{-- Moon Icon (visible in light mode) --}}
+            <span 
+                data-icon="moon" 
+                class="
+                    absolute
+                    inset-0
+                    flex
+                    items-center
+                    justify-center
+                    opacity-100
+                    dark:opacity-0
+                    transition-all
+                    duration-500
+                    ease-out
+                    transform
+                    rotate-0
+                    dark:-rotate-90
+                    scale-100
+                    dark:scale-75
+                "
+            >
+                <x-filament::icon 
+                    icon="heroicon-o-moon" 
+                    class="
+                        w-5 h-5 
+                        text-slate-600 
+                        dark:text-indigo-400
+                    " 
+                />
+            </span>
+        </span>
+        
+        {{-- Glow effect on hover --}}
+        <span 
+            class="
+                pointer-events-none
+                absolute
+                inset-0
+                rounded-xl
+                bg-gradient-to-r
+                from-amber-500/0
+                via-amber-500/10
+                to-amber-500/0
+                opacity-0
+                group-hover:opacity-100
+                transition-opacity
+                duration-500
+            "
+        ></span>
+    </button>
+    
+    {{-- Tooltip (opzionale, per accessibility) --}}
+    <span 
+        class="
+            pointer-events-none
+            absolute
+            -bottom-10
+            left-1/2
+            -translate-x-1/2
+            px-2
+            py-1
+            text-xs
+            font-medium
+            text-slate-600
+            dark:text-slate-400
+            bg-slate-900/90
+            dark:bg-slate-100/90
+            rounded-md
+            opacity-0
+            group-hover:opacity-100
+            transition-opacity
+            duration-300
+            whitespace-nowrap
+            z-50
+        "
+    >
+        Tema Scuro
+    </span>
 </div>
+
+@push('scripts')
+<script>
+/**
+ * Dark Mode Toggle - Interaction Logic
+ * 
+ * Features:
+ * - Keyboard shortcut (D)
+ * - localStorage persistence
+ * - System preference detection
+ * - Smooth transition
+ */
+(function() {
+    const toggle = document.getElementById('dark-mode-toggle');
+    if (!toggle) return;
+    
+    // Check localStorage
+    const isDark = localStorage.getItem('darkMode') === 'true';
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    // Apply initial state
+    if (isDark || (!localStorage.getItem('darkMode') && systemPrefersDark)) {
+        document.documentElement.classList.add('dark');
+        toggle.setAttribute('aria-checked', 'true');
+    }
+    
+    // Toggle on click
+    toggle.addEventListener('click', function() {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('darkMode', isDark);
+        toggle.setAttribute('aria-checked', isDark ? 'true' : 'false');
+        
+        // Update tooltip text
+        const tooltip = this.nextElementSibling;
+        if (tooltip && tooltip.tagName === 'SPAN') {
+            tooltip.textContent = isDark ? 'Tema Chiaro' : 'Tema Scuro';
+        }
+    });
+    
+    // Keyboard shortcut (D)
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'd' && !e.ctrlKey && !e.metaKey && !e.altKey) {
+            toggle.click();
+        }
+    });
+    
+    // Listen for system preference changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('darkMode')) {
+            document.documentElement.classList.toggle('dark', e.matches);
+        }
+    });
+})();
+</script>
+@endpush

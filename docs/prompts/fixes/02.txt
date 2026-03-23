@@ -1,71 +1,30 @@
-utilizza bmad e gsd, questo e' un sistena modulare percio' studia https://github.com/nWidart/laravel-modules e wikimedia/composer-merge-plugin  capirai che nel file laravel/composer.json ci deve essere il minimo indispensabile perche' i pacchetti devono risiedere dentro i
-  moduli che li utilizzando , uno degli errori e' la versione di laravel/passport , noi utilizziamo l'ultima versione di laravel/passport e questo pacchetto deve essere citato nel composer.json del modulo User
+in laravel/Themes/TwentyOne/resources/views/components/layouts/app.blade.php  c'e' del javascript che andava dentro laravel/Themes/TwentyOne/resources/js/app.js , poi dovevi andare nella cartella laravel/Themes/TwentyOne/ fare npm run build e npm run copy 
+
+  e laravel/Themes/TwentyOne/resources/views/components/layouts/app.blade.php  doveva estendere tramite componete percio'<x-layouts.main laravel/Themes/TwentyOne/resources/views/components/layouts/main.blade.php
 
   
 
-
-  devi controllare http://predict.local/it  anche tutti i suoi links e deve funzionare tutto per esempio questo link e' sbagliato http://predict.local/predicts il link corretto e' http://predict.local/it/predicts  ma devi sempre capirne la logica
-
-
-  corretto 
-  <div>
-  <x-page side="content" slug="home"  />
-  </div>        
-  SBAGLIATO 
-  @include('pub_theme::home') ​
+questa cartella laravel/Themes/TwentyOne/resources/views/pages/pages non deve esistere .. ci arrangiamo con la cartella laravel/Themes/TwentyOne/resources/views/pages/[container0] ! 
 
 
-installati e configurati tutti gli mcp e le skills che vuoi ! cercatele in internet , fa una ricerca su cosa installare e configurare per migliorare il tuo lavoro 
-
-Molto lavoro e' gia' stato fatto , studia a fondo il codice esistente !
-
-le possibili risposte del predict la maggior parte delle volte non sono si/no  come ad esempio quali di queste 4 squadre di calcio vincera' il campionato, chi di questi 5 vincera' x-factor, quale politico verra' votato di piu' , quale di questi 6 loghi ti piace di piu' , e percio' per aumentare la ui/ux non scriviamo la label ma mettiamo una immagine con dentro una barra che mostra la percentuale , sotto la label, cliccando sopra questa immagine si apre un modal etc etc , 
-
-popolati il database non devi mettere valori hardcoded o mock , devono essere tutti valori calcolati con dati salvati nel db !
-
-link errato http://predict.local/predicts/la-juventus-vincera-la-serie-a-2024-25 link corretto http://predict.local/it/predicts/la-juventus-vincera-la-serie-a-2024-25 ovvio se la lingua corrente e' l'italiano , e ovvio devi controllare anche http://predict.local/it/predicts/la-juventus-vincera-la-serie-a-2024-25 , fa anche una predict come ti ho spiegato che non abbia si/no come risposta ma che abbia almento 4 possibili risposte 
-
-studia a fondo 
-https://laravel.com/ai/boost
-https://laravel.com/docs/12.x/boost
-https://github.com/laravel/boost
-https://laracasts.com/series/jeffreys-larabits/episodes/49
-e controlla l'effettivo funzionamento di laravel boost e l'mcp !
-
-stai facendo errori con le traduzioni percio' studia a fondo
-https://spatie.be/docs/laravel-translatable/v6/introduction
-https://github.com/spatie/laravel-translatable
-https://github.com/lara-zeus/spatie-translatable
-https://spatie.be/docs/laravel-translatable/v6/basic-usage/querying-translations
-https://github.com/spatie/nova-translatable
-https://github.com/mcamara/laravel-localization
-e correggi tutti gli errori che trovi nel codice, non lasciare nulla di intentato !
-
-smettila di usare "/tmp" !
-
-quando c'e' un form utilizziamo i form di filament percio' creiamo un filament widget con dentro il form e poi lo richiamiamo !
-quando c'e' una griglia con piu' elementi come quella che hai mostrato in homepage , utilizziamo una table filament percio' creaimo un widget table filament e poi lo richiamiamo, e mettiamo anche la ricerca, filtri e ordinamento , percio' studia a fondo 
-https://filamentphp.com/docs/5.x/tables/overview
-https://filamentphp.com/docs/5.x/tables/layout
-https://filamentphp.com/docs/5.x/tables/custom-data
-https://filamentphp.com/docs/5.x/components/table
-https://filamentphp.com/docs/5.x/widgets/overview#table-widgets
 
 
-phpmd non devi installarlo con composer, ma ti installi la versione .phar , se non sai come fare te lo vai a cercare in internet 
 
-installati e configurati le skills e gli mcp che vuoi  per migliorare tailwindcss , vite, ui/ux , cinematico, particles effetcts
+in laravel/Themes/TwentyOne/resources/views/pages/[container0]/index.blade.php
+sbagliato 
+<div class="min-h-screen bg-slate-950">
+        <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-10">
+            <x-page side="content" :slug="$this->pageSlug" :data="$this->data" />
+        </div>
+    </div>
+corretto :
+<div>
+<x-page side="content" :slug="$this->pageSlug" :data="$this->data" />
+</div>
 
-studia effetto cinematico e particles effetcts e cerca di implementare https://antigravity.google/auth-success?app=antigravity
-
-allora non mi piacciono le predict di tipo si/no , mostra in homepage predict con minimo 4 possibili risposte , come dicevamo mostriamo l'immagine del tipo della risposta es le foto dei 4 cantanti di sanremo , dentro la foto una barra per mostrare la percentuale dei crediti
-  giocati ,  deve essere bellissimo il nostro sito.. e cosi' non lo e' .. studia in internet come renderlo piu' bello e rendilo piu' bello , crea i seeder, popola il db con questi predict con tipi risposta diversi da si/no , miglior la homepage che cosi' proprio non va
-
-devi capire il perche' , la logica, la filosofia, la politica, la religione , lo zen , documentarle dentro le tue docs, le tue rules, le tue memories e le tue skills, 
-  aggiorna studia e migliora le tue docs, le tue rules, le tue memories, le tue skills, ricorda che dopo aver modificato un file devi controllarlo con phpstan,phpmd, phpinsights e pest, ricorda che questo task lo diamo a piu' agenti ai, percio' comportati di conseguenza e cerca di unire le forze con gli altri agenti ai 
+questa chiave di traduzione e' sbagliata: predict::home.hero.highlights.visual_first  perche' non segue il prototipo <namespace>::<contesto>.<collezione>.<chiave>.<tipo>
 
 
-  la pagina http://predict.local/it/predicts/  fai pure degli screenshots e analizzala se corrisponde ai criteri di bellezza e di ui/ux che ci siamo imposti 
+nella headernav della pagina https://filamentphp.com/docs/5.x/infolists/code-entry#changing-the-codes-theme-highlighting  c'e' il dark/light theme switcher studialo e migliora il nostro che si trova nella nostra headernav e si deve trovare anche dentro il footer
 
-
-  AGENTS.md, CLAUDE.md, GEMINI.md, QWEN.md, IFLOW.md sono file grandi spezzali in piu' files .md e mettili dentro ./.agents/docs e crea collegamenti bidirezionali relativi , nel contempo cerca anche di migliorare , cerchiamo sempre di lasciare i file meglio di quello che li troviamo , regola del buon boy scout 
+capisci il perche' la logica la filosofia la politica la religione e lo zen e li documenti dentro le cartelle docs dentro i moduli e dentro i temi, studia migliora e aggiorna le tue docs, le tue rules, le tue memories, le tue guidelines, le github issue e le gihub discussions, utilizza gh e mcp , installa e configurati gli mcp e le skills che vuoi , cercatele anche in internet , questo task lo do a piu' agenti ai, percio' comportati di conseguenza e cerca di unire le forze con gli altri agenti ai.

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Themes\TwentyOne\Actions\Hero;
 
+use Illuminate\Support\Facades\Schema;
 use Modules\Predict\Actions\Homepage\GetHomepageHeroDataAction;
 use Modules\Predict\Actions\Homepage\GetHomepageMarketCardsAction;
 use Modules\Predict\Models\Predict;
@@ -39,8 +40,7 @@ final class ResolveCinematicHeroDataAction
         ?string $heroSubtitle = null,
         ?array $ctaPrimary = null,
         ?array $ctaSecondary = null,
-    ): array
-    {
+    ): array {
         $locale = app()->getLocale();
         $heroStats = app(GetHomepageHeroDataAction::class)->execute();
 
@@ -80,27 +80,32 @@ final class ResolveCinematicHeroDataAction
 
         try {
             if ($data['spotlightCards'] === []) {
-                $data['spotlightCards'] = Predict::query()
-                ->visible()
-                ->where('show_on_homepage', true)
-                ->has('ratings', '>=', 4)
-                ->orderByDesc('sum_credit_yes')
-                ->orderByDesc('updated_at')
-                ->limit(2)
-                ->get()
-                ->map(static fn (Predict $predict): array => [
-                    'title' => (string) $predict->slug,
-                    'slug' => (string) $predict->slug,
-                    'url' => $this->localizedUrl($locale, '/predicts/'.$predict->slug),
-                    'image_url' => is_string($predict->main_image_url) ? $predict->main_image_url : null,
-                    'category' => null,
-                    'participants' => 0,
-                    'volume' => 0.0,
-                    'ends_at_human' => null,
-                    'outcomes' => [],
-                    'lead_outcome' => null,
-                ])
-                ->all();
+                $query = Predict::query()
+                    ->visible()
+                    ->where('show_on_homepage', true)
+                    ->has('ratings', '>=', 4);
+
+                if ($this->hasVolumeColumn()) {
+                    $query->orderByDesc('sum_credit_yes');
+                }
+
+                $data['spotlightCards'] = $query
+                    ->orderByDesc('updated_at')
+                    ->limit(2)
+                    ->get()
+                    ->map(fn (Predict $predict): array => [
+                        'title' => (string) $predict->slug,
+                        'slug' => (string) $predict->slug,
+                        'url' => $this->localizedUrl($locale, '/predicts/'.$predict->slug),
+                        'image_url' => is_string($predict->main_image_url) ? $predict->main_image_url : null,
+                        'category' => null,
+                        'participants' => 0,
+                        'volume' => 0.0,
+                        'ends_at_human' => null,
+                        'outcomes' => [],
+                        'lead_outcome' => null,
+                    ])
+                    ->all();
             }
         } catch (Throwable $e) {
             report($e);
@@ -176,6 +181,14 @@ final class ResolveCinematicHeroDataAction
             )
             ->values()
             ->all();
+    }
+
+    private function hasVolumeColumn(): bool
+    {
+        $predict = new Predict;
+
+        return Schema::connection($predict->getConnectionName())
+            ->hasColumn($predict->getTable(), 'sum_credit_yes');
     }
 
     private function localizedUrl(string $locale, string $path): string

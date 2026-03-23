@@ -4,9 +4,10 @@
     Modifica liberamente questa struttura per UX custom
 --}}
 <div class="filament-widget-login space-y-6">
-    @if ($errors->any())
+    <?php $allErrors = $errors->all(); ?>
+    @if ($allErrors !== [])
         <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative text-sm">
-            @foreach ($errors->all() as $error)
+            @foreach ($allErrors as $error)
                 <div>{{ $error }}</div>
             @endforeach
         </div>
@@ -19,8 +20,6 @@
         </button>
     </form>
     <div class="text-center text-sm text-gray-500 mt-2">
-        @if (Route::has('password.request'))
-            <a href="{{ route('password.request') }}" class="underline hover:text-blue-700">{{ __('Password dimenticata?') }}</a>
-        @endif
+        <a href="{{ route('password.request') }}" class="underline hover:text-blue-700">{{ __('Password dimenticata?') }}</a>
     </div>
 </div>
