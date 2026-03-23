@@ -12,6 +12,7 @@ middleware(PageSlugMiddleware::class);
 
 new class extends Component {
     public string $container0 = '';
+    public string $pageSlug = '';
 
     /** @var array<string, mixed> */
     public array $data = [];
@@ -41,10 +42,19 @@ new class extends Component {
 
 <x-layouts.app :title="$pageTitle" :meta-description="$pageMetaDescription">
     @volt('container0.list')
-    <div class="min-h-screen bg-slate-50 dark:bg-slate-950">
-        <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-10">
-            <x-page side="content" :slug="$this->pageSlug" :data="$this->data" />
-        </div>
+    {{--
+        CRITICAL: Zen Naked Page Philosophy
+        - NO styling hardcoded in [container0]/index.blade.php
+        - Layout app.blade.php già ha bg-slate-950 (dark theme)
+        - Questo div è SOLO wrapper semantico (NO styling)
+        - Styling va nei components CMS (x-page, blocks)
+        - Permette full-width cinematic sections e spacing personalizzato per blocco
+
+        DOCS:
+        - docs/ZEN_NAKED_PAGE_PHILOSOPHY.md
+    --}}
+    <div>
+        <x-page side="content" :slug="$this->pageSlug" :data="$this->data" />
     </div>
     @endvolt
 </x-layouts.app>

@@ -74,12 +74,10 @@
                     </button>
                 </form>
 
-                @if (Route::has('login'))
-                    <div class="text-center font-semibold">
-                        <span>Hai gia' un account?</span>
-                        <a class="text-[#0027cc]" href="{{ route('login') }}">Accedi</a>
-                    </div>
-                @endif
+                <div class="text-center font-semibold">
+                    <span>Hai gia un account?</span>
+                    <a class="text-[#0027cc]" href="{{ route('login') }}">Accedi</a>
+                </div>
             </div>
         </main>
     </div>

@@ -65,12 +65,10 @@
                     </div>
                 </form>
 
-                @if (Route::has('register'))
-                    <div class="text-center font-semibold">
-                        <span>Non hai ancora un account?</span>
-                        <a class="text-[#0027cc]" href="{{ url('/' . app()->getLocale() . '/auth/register') }}">Registrati</a>
-                    </div>
-                @endif
+                <div class="text-center font-semibold">
+                    <span>Non hai ancora un account?</span>
+                    <a class="text-[#0027cc]" href="{{ url('/' . app()->getLocale() . '/auth/register') }}">Registrati</a>
+                </div>
             </div>
         </main>
     </div>

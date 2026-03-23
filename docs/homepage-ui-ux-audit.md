@@ -198,6 +198,89 @@ Stato attuale P0:
 - ridondanza percepita header/footer: sotto **10%**
 - accesso ai mercati in massimo 1 scroll: target **100%**
 
+
+## Checklist operativa sito bello e usabile
+
+Checklist derivata dall'audit interno e da fonti esterne su kinetic web design, web immersivo, micro-interazioni e accessibilita'.
+
+### 1. Movimento con funzione, non ornamentale
+- Le animazioni devono guidare focus, gerarchia e orientamento.
+- Particles e orb non devono ridurre il contrasto del copy o coprire CTA e percentuali.
+- Ogni sezione above the fold deve restare leggibile anche con motion disattivata.
+
+### 2. Homepage dinamica ma non confusa
+- La hero deve spiegare cosa fa il prodotto in meno di 5 secondi.
+- Il primo scroll deve mostrare mercati reali o segnali di trust, non solo decorazione.
+- Nessun blocco deve sembrare finto, gonfiato o piu' maturo del backend reale.
+
+### 3. Micro-interazioni con feedback chiaro
+- Hover, active, loading e modal devono confermare sempre cosa e' cliccabile.
+- Le card mercato devono far capire subito che il click porta al detail o apre approfondimento.
+- Barre percentuali, immagini outcome e CTA devono avere stati coerenti tra homepage, listing e detail.
+
+### 4. Accessibilita' come quality gate
+- Contrasto reale sufficiente tra testo e sfondo anche nelle superfici cinematiche.
+- Focus visible sempre presente su link, card, CTA, filtri e controlli mobili.
+- Touch target minimo 44x44 per elementi interattivi.
+- Reduced motion rispettato senza rompere layout o significato.
+
+### 5. Credibilita' del prodotto
+- Claim sinceri: niente leadership o social proof non dimostrabili.
+- I numeri devono provenire da DB o degradare a zero/fallback onesto.
+- I mercati home devono privilegiare multi-outcome con immagini e dati persistiti.
+
+## Stato audit 2026-03-20
+
+- Runtime locale `http://predict.local/it`: di nuovo operativo con `200 OK` dopo correzione header HTTP locale, fix block stats e fix provider Folio localization.
+- Screenshot headless automatico: non affidabile in questo ambiente per limiti snap/mount di Chromium; audit visuale da rifare con browser non confinato o altro tool.
+- Prossimo gate consigliato: verificare desktop + mobile reali e aggiornare questo documento con finding visivi puntuali.
+
+## Audit autonomo runtime + visuale (2026-03-20)
+
+Audit eseguito in autonomia su:
+
+- `http://predict.local/it`
+- `http://predict.local/it/predicts`
+
+### Esito rapido
+
+- Endpoint runtime attuali: `200` su entrambe le pagine.
+- Rimangono criticita' visuali e di coerenza UX su `/it/predicts`.
+
+### Findings prioritizzati
+
+#### Critical
+
+- Errore SQL intermittente osservato in audit precedente su `/it/predicts`:
+  - `Unknown column 'sum_credit_yes' in order clause`
+  - impatto: listing bloccato in alcune esecuzioni.
+
+#### High
+
+- Regressione i18n su `/it/predicts`: renderizzate chiavi di traduzione in pagina.
+- Contrasto insufficiente in sezioni listing (leggibilita' bassa).
+- Overlay/shape grafica invasiva che riduce chiarezza del contenuto.
+- Listing non percepito come "tabellare" coerente con obiettivo prodotto.
+
+#### Medium
+
+- Alcuni link principali non esplicitamente localizzati (`/it/...`) ma relativi.
+- Coerenza CTA tra hero home e listing da riallineare.
+
+### Evidenze screenshot
+
+- `screenshots/audit-home-hero-it.png`
+- `screenshots/audit-home-predicts-section-it.png`
+- `screenshots/audit-predicts-hero-it.png`
+- `screenshots/audit-predicts-listing-it.png`
+
+### Decisione operativa DRY + KISS
+
+- mantenere cinematic forte in hero;
+- ridurre motion/overlay nelle superfici data-heavy (`/predicts`);
+- centralizzare link localizzati e rendering listing in un solo componente sorgente;
+- usare fallback schema-aware lato query per evitare regressioni runtime su colonne aggregate.
+
 ## Prossima wave consigliata
 
 1. rifare hero + trust strip

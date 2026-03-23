@@ -10,7 +10,7 @@
     ],
     'primaryCta' => [
         'text' => __('predict::home.hero.cta_explore.label'),
-        'url' => route('container0.list', ['container0' => 'predicts']),
+        'url' => \Mcamara\LaravelLocalization\Facades\LaravelLocalization::getLocalizedURL(app()->getLocale(), '/predicts') ?? url('/'.app()->getLocale().'/predicts'),
         'icon' => 'heroicon-m-compass',
     ],
     'secondaryCta' => [

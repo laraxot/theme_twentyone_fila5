@@ -1,5 +1,38 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
+/* Filament 5.x CSS Imports - Required for components */
+/* Path: Themes/TwentyOne/resources/css -> ../../../../vendor */
+
+/* Required by all components */
+@import '../../../../vendor/filament/support/resources/css/index.css';
+
+/* Required by actions and tables */
+@import '../../../../vendor/filament/actions/resources/css/index.css';
+
+/* Required by actions, forms and tables */
+@import '../../../../vendor/filament/forms/resources/css/index.css';
+
+/* Required by actions and infolists */
+@import '../../../../vendor/filament/infolists/resources/css/index.css';
+
+/* Required by notifications */
+@import '../../../../vendor/filament/notifications/resources/css/index.css';
+
+/* Required by actions, infolists, forms, schemas and tables */
+@import '../../../../vendor/filament/schemas/resources/css/index.css';
+
+/* Required by tables */
+@import '../../../../vendor/filament/tables/resources/css/index.css';
+
+/* Required by widgets */
+@import '../../../../vendor/filament/widgets/resources/css/index.css';
+
+/* Custom Filament Widgets Styling - Dark Theme Consistency */
+@import './components/filament-widgets.css';
+
+@variant dark (&:where(.dark, .dark *));
+
+/* Tailwind source files */
 @source "../../Modules/**/resources/views/**/*.blade.php";
 @source "../../Modules/**/Filament/**/*.php";
 @source "./resources/views/**/*.blade.php";
@@ -13,6 +46,26 @@
 /* ============================================
    Kinetic Cinematic Enhancements
    ============================================ */
+
+/* Floating animation for particles */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px);
+    }
+    25% {
+        transform: translateY(-20px) translateX(10px);
+    }
+    50% {
+        transform: translateY(-10px) translateX(-10px);
+    }
+    75% {
+        transform: translateY(-30px) translateX(5px);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
 
 /* Blob animation for mesh gradients */
 @keyframes blob {
@@ -37,6 +90,12 @@
 
 .animation-delay-4000 {
     animation-delay: 4s;
+}
+
+.cta-grid-overlay {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
 }
 
 /* Cinematic entrance with blur */
@@ -295,6 +354,347 @@
     inset: 0;
     overflow: hidden;
     pointer-events: none;
+}
+
+/* ============================================
+   Filament Tables - Custom Styling
+   ============================================ */
+
+/* CRITICAL: Transparent Background for Front-Office
+   Philosophy: Widget = contenitore trasparente, non elemento visivo
+   Docs: docs/project/FILAMENT_WIDGET_TRANSPARENT_BACKGROUND.md
+   ============================================ */
+
+/* Widget container - SEMPRE trasparente in front-office */
+.fi-ta-content {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+/* Table wrapper - trasparente */
+.fi-ta-table {
+    background-color: transparent !important;
+}
+
+/* Toolbar (search, filters) - trasparente */
+.fi-ta-toolbar {
+    background-color: transparent !important;
+}
+
+/* Search icon size fix - Lente d'ingrandimento troppo grande */
+.fi-ta-search-input .fi-icon {
+    width: 18px !important;
+    height: 18px !important;
+    color: #94a3b8 !important; /* slate-400 */
+}
+
+/* Search input styling */
+.fi-ta-search-input input {
+    font-size: 0.875rem !important; /* text-sm */
+    padding-left: 2.5rem !important;
+    padding-right: 1rem !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #f8fafc !important; /* slate-50 */
+}
+
+.fi-ta-search-input input::placeholder {
+    color: #64748b !important; /* slate-500 */
+}
+
+.fi-ta-search-input input:focus {
+    border-color: rgba(16, 185, 129, 0.5) !important; /* emerald-500/50 */
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1) !important;
+}
+
+/* Filters dropdown styling */
+.fi-ta-filter-trigger {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.875rem !important;
+    border-radius: 0.5rem !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #f8fafc !important;
+}
+
+.fi-ta-filter-trigger:hover {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Pagination styling */
+.fi-ta-pagination {
+    margin-top: 1rem !important;
+    padding-top: 1rem !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.fi-ta-pagination select {
+    font-size: 0.875rem !important;
+    padding: 0.375rem 2rem 0.375rem 0.75rem !important;
+    border-radius: 0.5rem !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #f8fafc !important;
+}
+
+.fi-ta-pagination .fi-ta-pagination-items {
+    gap: 0.25rem !important;
+}
+
+.fi-ta-pagination button {
+    min-width: 2.5rem !important;
+    min-height: 2.5rem !important;
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.875rem !important;
+    border-radius: 0.5rem !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #f8fafc !important;
+}
+
+.fi-ta-pagination button:hover {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.fi-ta-pagination button[aria-current="page"],
+.fi-ta-pagination button.fi-ta-button-active {
+    background-color: rgba(16, 185, 129, 0.2) !important;
+    border-color: rgba(16, 185, 129, 0.5) !important;
+    color: #10b981 !important; /* emerald-500 */
+    font-weight: 600 !important;
+}
+
+/* Table container responsive */
+.fi-ta-content {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Mobile optimization */
+@media (max-width: 640px) {
+    .fi-ta-search-input .fi-icon {
+        width: 16px !important;
+        height: 16px !important;
+    }
+    
+    .fi-ta-search-input input {
+        font-size: 0.8125rem !important;
+    }
+    
+    .fi-ta-filter-trigger span {
+        display: none;
+    }
+    
+    .fi-ta-pagination {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .fi-ta-pagination .fi-ta-pagination-items {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* ============================================
+   PREDICT CARDS - Kinetic Design (Berger.Team)
+   ============================================ */
+
+/* Card hover lift with shadow expansion */
+@keyframes predict-card-lift {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-6px); }
+}
+
+/* Card entrance with stagger */
+@keyframes predict-card-entrance {
+    0% {
+        opacity: 0;
+        transform: translateY(24px) scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Probability bar fill animation */
+@keyframes predict-bar-fill {
+    0% {
+        width: 0;
+        opacity: 0.5;
+    }
+    50% { opacity: 1; }
+    100% {
+        width: var(--target-width, 100%);
+        opacity: 1;
+    }
+}
+
+/* Button press effect */
+@keyframes predict-btn-press {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.97); }
+    100% { transform: scale(1); }
+}
+
+/* Ripple effect on click */
+@keyframes predict-ripple {
+    0% {
+        transform: scale(0);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+/* Badge pulse for hot markets */
+@keyframes predict-badge-pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.6);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+        transform: scale(1.03);
+    }
+}
+
+/* Gradient shimmer for loading */
+@keyframes predict-shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* Option card hover glow */
+@keyframes predict-option-glow {
+    0%, 100% {
+        border-color: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    100% {
+        border-color: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 12px 28px rgba(56, 189, 248, 0.15);
+    }
+}
+
+/* Kinetic Card Classes */
+.predict-card-kinetic {
+    animation: predict-card-entrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+                border-color 0.2s ease-out;
+    will-change: transform, box-shadow;
+}
+
+.predict-card-kinetic:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 20px 60px -20px rgba(56, 189, 248, 0.35),
+                0 8px 32px -16px rgba(129, 140, 248, 0.25);
+    border-color: rgba(56, 189, 248, 0.35);
+}
+
+.predict-card-kinetic:active {
+    transform: translateY(-2px) scale(0.995);
+    transition-duration: 0.1s;
+}
+
+/* Stagger delays for grid items */
+.predict-card-kinetic:nth-child(1) { animation-delay: 0ms; }
+.predict-card-kinetic:nth-child(2) { animation-delay: 60ms; }
+.predict-card-kinetic:nth-child(3) { animation-delay: 120ms; }
+.predict-card-kinetic:nth-child(4) { animation-delay: 180ms; }
+.predict-card-kinetic:nth-child(5) { animation-delay: 240ms; }
+.predict-card-kinetic:nth-child(6) { animation-delay: 300ms; }
+
+/* Probability Bar Kinetic */
+.predict-bar-kinetic {
+    animation: predict-bar-fill 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    transform-origin: left;
+    will-change: width;
+}
+
+/* Button Kinetic */
+.predict-btn-kinetic {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.2s ease-out,
+                border-color 0.2s ease-out;
+}
+
+.predict-btn-kinetic:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(56, 189, 248, 0.25);
+    border-color: rgba(56, 189, 248, 0.5);
+}
+
+.predict-btn-kinetic:active {
+    animation: predict-btn-press 0.15s ease-out;
+    transform: scale(0.97);
+}
+
+/* Hot Badge Kinetic */
+.predict-badge-hot {
+    animation: predict-badge-pulse 2s ease-in-out infinite;
+}
+
+/* Option Card Kinetic */
+.predict-option-kinetic {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+                border-color 0.2s ease-out,
+                box-shadow 0.3s ease-out;
+    will-change: transform;
+}
+
+.predict-option-kinetic:hover {
+    transform: translateY(-4px) scale(1.02);
+    border-color: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 16px 48px -12px rgba(56, 189, 248, 0.25);
+}
+
+/* Loading Shimmer */
+.predict-shimmer-loading {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.03) 25%,
+        rgba(255, 255, 255, 0.08) 50%,
+        rgba(255, 255, 255, 0.03) 75%
+    );
+    background-size: 200% 100%;
+    animation: predict-shimmer 1.8s ease-in-out infinite;
+}
+
+/* Scroll Reveal */
+.predict-reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.predict-reveal-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .predict-card-kinetic,
+    .predict-bar-kinetic,
+    .predict-btn-kinetic,
+    .predict-badge-hot,
+    .predict-option-kinetic {
+        animation: none !important;
+        transition: none !important;
+        will-change: auto;
+    }
 }
 
 .ui-particle {
@@ -602,9 +1002,255 @@ button.btn-kinetic:active {
     animation: kinetic-fadeInUp 0.5s ease-out forwards;
 }
 
+/* ============================================
+   CSS migrated from app.blade.php (2026-03-20)
+   Philosophy: CSS separato dal HTML
+   Docs: docs/project/CSS_ARCHITECTURE_PHILOSOPHY.md
+   ============================================ */
+
+/* x-cloak for Alpine.js */
+[x-cloak] {
+    display: none !important;
+}
+
+/* Reduced Motion - Accessibility (WCAG 2.2 AA) */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Focus Indicators - WCAG 2.2 AA Compliance */
+*:focus-visible {
+    outline: 3px solid #059669 !important; /* emerald-600 */
+    outline-offset: 2px !important;
+    border-radius: 4px !important;
+}
+
+/* Enhanced focus for buttons and interactive elements */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+    outline: 3px solid #059669 !important;
+    outline-offset: 3px !important;
+    box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.3) !important;
+}
+
+/* Touch Targets - Minimum 44x44px (WCAG 2.2) */
+button,
+a.btn,
+[role="button"],
+input[type="button"],
+input[type="submit"],
+input[type="checkbox"],
+input[type="radio"] {
+    min-width: 44px !important;
+    min-height: 44px !important;
+}
+
+/* Exception for small inline elements */
+a:not(.btn):not([role="button"]) {
+    min-height: auto !important;
+}
+
+/* Scroll Reveal Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Utility classes for scroll reveal */
+.animate-fade-in-up {
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+.animate-slide-in-right {
+    animation: slideInRight 0.5s ease-out forwards;
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.5s ease-out forwards;
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+}
+
+/* Staggered animation delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* Page Transitions */
+.page-enter {
+    opacity: 0;
+}
+.page-enter-active {
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+}
+.page-leave {
+    opacity: 1;
+}
+.page-leave-active {
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}
+
+/* Skeleton shimmer effect */
+.skeleton-shimmer {
+    background: linear-gradient(
+        90deg,
+        #e5e7eb 0%,
+        #f3f4f6 50%,
+        #e5e7eb 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skeleton-shimmer {
+        animation: none;
+        background: #e5e7eb;
+    }
+}
+
+/* Micro-interactions - Card Hover Effects */
+.predict-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.predict-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(16, 185, 129, 0.3);
+    border-color: rgba(52, 211, 153, 0.5);
+}
+
+.predict-card:active {
+    transform: translateY(-2px) scale(0.98);
+}
+
+/* Button Active States */
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Loading Skeleton */
+.skeleton-loader {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
 /* Badge animations */
 .badge-hot {
     animation: kinetic-pulse 2s ease-in-out infinite;
+}
+
+/* ============================================
+   Predicts List Page Animations
+   ============================================ */
+
+/* Fade In Up Animation */
+.animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation Delays */
+.animate-delay-1 { animation-delay: 0.1s; }
+.animate-delay-2 { animation-delay: 0.2s; }
+.animate-delay-3 { animation-delay: 0.3s; }
+.animate-delay-4 { animation-delay: 0.4s; }
+.animate-delay-5 { animation-delay: 0.5s; }
+
+/* Float Animation for Particles */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateY(-30px) rotate(180deg);
+        opacity: 0.8;
+    }
+}
+
+.animate-float {
+    animation: float linear infinite;
 }
 
 /* ============================================
@@ -614,3 +1260,268 @@ button.btn-kinetic:active {
 /* ============================================
    End Kinetic Cinematic Enhancements
    ============================================ */
+
+/* ============================================
+   Filament Tables Styling (Light Mode)
+   ============================================ */
+
+/* Table Filters Dropdown - Light Mode */
+.filament-tables-filters-form {
+    @apply bg-white border border-gray-200 rounded-lg shadow-xl;
+}
+
+.filament-tables-filter {
+    @apply text-gray-700;
+}
+
+.filament-tables-filter:hover {
+    @apply bg-gray-100 text-gray-900;
+}
+
+.filament-tables-filter-active {
+    @apply bg-emerald-100 text-emerald-700;
+}
+
+/* Filter Select Dropdown - Light Mode */
+.filament-tables-filters-form .fi-fo-select {
+    @apply bg-white border border-gray-300 text-gray-900 rounded-md;
+}
+
+.filament-tables-filters-form .fi-fo-select option {
+    @apply bg-white text-gray-900;
+}
+
+/* Table Search Input - Light Mode */
+.filament-tables-search-input {
+    @apply bg-white border border-gray-300 text-gray-900 placeholder-gray-400 rounded-md;
+}
+
+.filament-tables-search-input:focus {
+    @apply ring-emerald-500 border-emerald-500;
+}
+
+/* Table Pagination - Light Mode */
+.filament-tables-pagination {
+    @apply bg-transparent border-t border-gray-200;
+}
+
+.filament-tables-pagination-records-per-page-select {
+    @apply bg-white border border-gray-300 text-gray-700 rounded-md text-sm;
+}
+
+.filament-tables-pagination-page-item {
+    @apply text-gray-600 border border-gray-300 rounded-md;
+}
+
+.filament-tables-pagination-page-item:hover {
+    @apply bg-gray-100 text-gray-900 border-gray-400;
+}
+
+.filament-tables-pagination-page-item-active {
+    @apply bg-emerald-500 text-white border-emerald-500;
+}
+
+.filament-tables-pagination-page-item-disabled {
+    @apply opacity-50 cursor-not-allowed;
+}
+
+.filament-tables-pagination-next-button,
+.filament-tables-pagination-previous-button {
+    @apply text-gray-600 border border-gray-300 rounded-md;
+}
+
+.filament-tables-pagination-next-button:hover,
+.filament-tables-pagination-previous-button:hover {
+    @apply bg-gray-100 text-gray-900;
+}
+
+/* Table Header - Light Mode */
+.filament-tables-table-header-cell {
+    @apply bg-gray-50 text-gray-600 border-b border-gray-200;
+}
+
+/* Table Rows - Light Mode */
+.filament-tables-table-row {
+    @apply border-b border-gray-100;
+}
+
+.filament-tables-table-row:hover {
+    @apply bg-gray-50;
+}
+
+/* Empty State - Light Mode */
+.filament-tables-empty-state {
+    @apply text-gray-500;
+}
+
+/* ============================================
+   Filament Tables Dark Theme Styling
+   ============================================ */
+
+/* Table Filters Dropdown - Dark Theme */
+.dark .filament-tables-filters-form {
+    @apply bg-slate-900 border border-slate-700 rounded-lg shadow-xl;
+}
+
+.dark .filament-tables-filter {
+    @apply text-slate-300;
+}
+
+.dark .filament-tables-filter:hover {
+    @apply bg-slate-800 text-white;
+}
+
+.dark .filament-tables-filter-active {
+    @apply bg-emerald-500/20 text-emerald-400;
+}
+
+/* Filter Select Dropdown */
+.dark .filament-tables-filters-form .fi-fo-select {
+    @apply bg-slate-800 border-slate-700 text-white rounded-md;
+}
+
+.dark .filament-tables-filters-form .fi-fo-select option {
+    @apply bg-slate-800 text-white;
+}
+
+/* Table Search Input */
+.dark .filament-tables-search-input {
+    @apply bg-slate-800 border-slate-700 text-white placeholder-slate-400 rounded-md;
+}
+
+.dark .filament-tables-search-input:focus {
+    @apply ring-emerald-500 border-emerald-500;
+}
+
+/* Table Pagination - Dark Theme */
+.dark .filament-tables-pagination {
+    @apply bg-transparent border-t border-slate-800;
+}
+
+.dark .filament-tables-pagination-records-per-page-select {
+    @apply bg-slate-800 border-slate-700 text-slate-300 rounded-md text-sm;
+}
+
+.dark .filament-tables-pagination-page-item {
+    @apply text-slate-400 border border-slate-700 rounded-md;
+}
+
+.dark .filament-tables-pagination-page-item:hover {
+    @apply bg-slate-800 text-white border-slate-600;
+}
+
+.dark .filament-tables-pagination-page-item-active {
+    @apply bg-emerald-500 text-white border-emerald-500;
+}
+
+.dark .filament-tables-pagination-page-item-disabled {
+    @apply opacity-50 cursor-not-allowed;
+}
+
+.dark .filament-tables-pagination-next-button,
+.dark .filament-tables-pagination-previous-button {
+    @apply text-slate-400 border border-slate-700 rounded-md;
+}
+
+.dark .filament-tables-pagination-next-button:hover,
+.dark .filament-tables-pagination-previous-button:hover {
+    @apply bg-slate-800 text-white;
+}
+
+/* Table Header */
+.dark .filament-tables-table-header-cell {
+    @apply bg-slate-900/50 text-slate-400 border-b border-slate-700;
+}
+
+/* Table Rows */
+.dark .filament-tables-table-row {
+    @apply border-b border-slate-800;
+}
+
+.dark .filament-tables-table-row:hover {
+    @apply bg-slate-800/50;
+}
+
+/* Empty State */
+.dark .filament-tables-empty-state {
+    @apply text-slate-500;
+}
+
+/* ============================================
+   Filament Table Widget - Transparent Background
+   Per integrazione con dark theme del sito
+   ============================================ */
+
+/* APPLICARE A TUTTI I WIDGET FILAMENT NEL FRONT-OFFICE */
+/* Container generico per widget Filament nel front-office */
+.fi-wi {
+    background-color: transparent !important;
+}
+
+/* Widget container - trasparente */
+.filament-table-widget .fi-ta,
+.filament-table-widget .fi-ta-content,
+.filament-table-widget .fi-ta-table {
+    background-color: transparent !important;
+    --tw-bg-opacity: 0 !important;
+}
+
+/* Header e Footer */
+.filament-table-widget .fi-ta-header,
+.filament-table-widget .fi-ta-footer {
+    background-color: transparent !important;
+    border-color: rgba(255,255,255,0.1) !important;
+}
+
+/* Righe */
+.filament-table-widget .fi-ta-row {
+    background-color: transparent !important;
+    border-color: rgba(255,255,255,0.1) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filament-table-widget .fi-ta-row:hover {
+    background-color: rgba(34, 211, 238, 0.05) !important;
+    border-color: rgba(34, 211, 238, 0.3) !important;
+    transform: scale(1.01);
+    box-shadow: 0 8px 32px rgba(34, 211, 238, 0.15);
+}
+
+/* Celle */
+.filament-table-widget .fi-ta-cell {
+    color: rgb(248 250 252) !important;
+}
+
+/* Header celle */
+.filament-table-widget .fi-th,
+.filament-table-widget .fi-tf {
+    color: rgb(203 213 225) !important;
+    background-color: transparent !important;
+}
+
+/* Empty state */
+.filament-table-widget .fi-ta-empty {
+    color: rgb(148 163 184) !important;
+}
+
+/* Reduced spacing per le cards del widget - Più compatto */
+.filament-table-widget .fi-ta-content-grid {
+    gap: 1rem !important;
+}
+
+.filament-table-widget .fi-ta-content-grid > div {
+    margin-bottom: 0 !important;
+}
+
+/* ============================================
+   Page Background Coherence Policy
+   TUTTE le pagine devono avere lo stesso sfondo
+   ============================================ */
+
+/* Forza sfondo scuro su TUTTI i container di pagina nel front-office */
+.page-content,
+.page-content-blocks,
+.page-content > div,
+[x-data] > div.min-h-screen {
+    background-color: rgb(2 6 23) !important; /* bg-slate-950 */
+}

@@ -21,6 +21,9 @@
                     <div class="grid text-sm font-semibold text-gray-900 bg-white rounded place-items-center size-8">
                         <span>18+</span>
                     </div>
+                    <div class="w-[38px] h-[38px] overflow-hidden rounded-full">
+                        <x-ui.light-dark-switch></x-ui.light-dark-switch>
+                    </div>
                 </div>
             </div>
 

@@ -54,7 +54,9 @@
         </div>
 
         <div class="rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-2xl shadow-slate-950/20 backdrop-blur-sm md:p-6">
-            @livewire(\Modules\Predict\Filament\Widgets\PredictTableWidget::class, ['minimumOutcomes' => 4, 'homepageMode' => true], key('homepage-featured-markets-table'))
+            <div class="filament-table-widget">
+                @livewire(\Modules\Predict\Filament\Widgets\PredictTableWidget::class, ['minimumOutcomes' => 4, 'homepageMode' => true], key('homepage-featured-markets-table'))
+            </div>
         </div>
 
         <div class="mt-10 text-center md:mt-12">
