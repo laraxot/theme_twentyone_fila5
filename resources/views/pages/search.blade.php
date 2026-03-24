@@ -28,49 +28,60 @@ render(function (View $view) {
 ?>
 
 <x-layouts.app>
-    <div x-data="{loggedIn:true}" class="container p-6 mx-auto space-y-4">
-        <div class="grid max-w-sm mx-auto -my-20 place-items-center">
-            @include('ui::svg.illustrations.search')
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="space-y-2 text-center mb-8">
+            <h1 class="text-4xl font-bold text-slate-900 dark:text-white">Cerca</h1>
+            <p class="text-slate-500 dark:text-slate-400">Trova mercati, categorie e contenuti in un unico posto.</p>
         </div>
-        <div class="space-y-2 text-center">
-            <div class="text-4xl font-bold">Search anything you want</div>
-            <p class="text-gray-500">Find out more articles, categories, tags, or everything in one place.</p>
-        </div>
-        <form action="{{ route('search', ['lang' => $lang]) }}" method="get" class="flex items-center max-w-4xl mx-auto space-x-2">
+
+        <form action="{{ url(app()->getLocale().'/search') }}" method="get" class="flex items-center max-w-2xl mx-auto space-x-2 mb-10">
             <div class="grow">
-                <input name="search" class="w-full bg-gray-200 border-0 rounded-lg ring-0 focus:ring focus:ring-blue-200 focus:bg-white pe-8" type="text" placeholder="Search anything ..." value="aaa{{-- $query --}}">
+                <input name="search"
+                       class="w-full rounded-lg border border-slate-300 dark:border-slate-700
+                              bg-white dark:bg-slate-800
+                              text-slate-900 dark:text-white
+                              placeholder-slate-400 dark:placeholder-slate-500
+                              focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500
+                              px-4 py-3 transition-colors"
+                       type="text"
+                       placeholder="Cerca mercati, categorie..."
+                       value="{{ request()->query('search', '') }}">
             </div>
             <div>
-                <button type="submit" class="flex items-center px-3 py-2 space-x-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600">
+                <button type="submit" class="flex items-center px-4 py-3 space-x-2 text-white bg-emerald-600 rounded-lg hover:bg-emerald-700 transition-colors">
                     <x-heroicon-o-magnifying-glass class="size-5" />
-                    <span class="hidden sm:block">Search</span>
+                    <span class="hidden sm:block">Cerca</span>
                 </button>
             </div>
         </form>
-        <br>
+
         @if(count($articles))
-            <div class="max-w-6xl p-4 mx-auto bg-white border border-gray-100 rounded-lg">
+            <div class="max-w-3xl mx-auto p-4 bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-xl">
                 <div class="space-y-4">
-                    <h5 class="font-semibold">Markets</h5>
+                    <h2 class="font-semibold text-slate-900 dark:text-white">Mercati</h2>
                     <ul class="space-y-2">
                         @foreach($articles as $article)
                             <li>
-                                <a href="{{ route('article.view', ['lang'=>$lang,'slug' => $article->slug ]) }}">
-                                    <div class="flex flex-row px-4 py-3 space-x-4 border border-gray-100 rounded hover:bg-gray-50">
-                                        <img class="flex rounded size-12 aspect-square" src="{{$article->ratings[0]['image'] ?? 'https://placehold.co/128x128'}}" alt=""/>
+                                <a href="{{ url(app()->getLocale().'/predicts/'.$article->slug) }}">
+                                    <div class="flex flex-row px-4 py-3 space-x-4 border border-slate-100 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                        <img class="flex rounded size-12 aspect-square object-cover" src="{{ $article->ratings[0]['image'] ?? 'https://placehold.co/128x128' }}" alt=""/>
                                         <div class="break-all grow">
-                                            <h6 class="text-blue-500 ">{{ $article->title }}</h6>
-                                            <div class="text-sm text-gray-500">
+                                            <h3 class="text-emerald-600 dark:text-emerald-400 font-medium">{{ $article->title }}</h3>
+                                            <div class="text-sm text-slate-500 dark:text-slate-400">
                                                 {{ \Carbon\Carbon::parse($article->published_at)->diffForHumans() }}
                                             </div>
                                         </div>
-                                        <div class="self-center hidden md:block">&RightArrow;</div>
+                                        <div class="self-center hidden text-slate-400 dark:text-slate-500 md:block">&rarr;</div>
                                     </div>
                                 </a>
                             </li>
                         @endforeach
                     </ul>
                 </div>
+            </div>
+        @elseif(request()->query('search'))
+            <div class="text-center py-12">
+                <p class="text-slate-500 dark:text-slate-400">Nessun risultato per "{{ request()->query('search') }}"</p>
             </div>
         @endif
     </div>

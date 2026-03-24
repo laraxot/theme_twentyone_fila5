@@ -1,6 +1,6 @@
 <?php
 
-use Modules\Models\Article as Post;
+use Modules\Blog\Models\Article as Post;
 use function Livewire\Volt\{with, state, rules, mount, usesPagination};
 
 usesPagination();
