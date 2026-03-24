@@ -69,6 +69,7 @@
 
                     {{-- Title --}}
                     <h3 class="text-base font-semibold text-slate-900 dark:text-white mb-3 line-clamp-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+
                         {{ Str::limit($mTitle, 60) }}
                     </h3>
 

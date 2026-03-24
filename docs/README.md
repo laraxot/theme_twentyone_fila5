@@ -76,8 +76,24 @@ Per problemi comuni, consulta la documentazione nella cartella `docs`:
 
 ## Documentazione correlata
 - `laravel/Themes/TwentyOne/docs/` - Documentazione del tema
+<<<<<<< HEAD
+- `docs/` - Documentazione globale di progetto
+
+## Web Design Best Practices
+Per le linee guida aggiornate sul web design moderno (2026), consulta:
+- `docs/web-design-best-practices-2026.md` - Best practices complete
+- `docs/website-checklist-2026.md` - Checklist operativa
+
+Questi documenti includono:
+- Web Design Immersivo e Cinetico
+- Micro-interazioni
+- Design Emozionale
+- Accessibilità Web (WCAG 2.2)
+- Performance Optimization
+=======
 - `project_docs/` - Documentazione di progetto (architettura, sviluppo)
 - `project_docs/roadmaps/` - Roadmap master e stato avanzamento
+>>>>>>> origin/dev
 
 ## Contribuire
 Le contribuzioni sono benvenute! Per contribuire:

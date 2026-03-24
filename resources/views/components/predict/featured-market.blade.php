@@ -35,6 +35,7 @@
     
     {{-- Background Pattern --}}
     <div class="absolute inset-0 opacity-5">
+
         <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0); background-size: 24px 24px;"></div>
     </div>
 
@@ -42,6 +43,7 @@
     @if($isHot)
     <div class="absolute top-4 right-4 z-10">
         <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg shadow-orange-500/30">
+
             <span class="relative flex h-2.5 w-2.5">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
@@ -57,6 +59,7 @@
             <div class="flex-1">
                 {{-- Category Tag --}}
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 mb-3">
+
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
                     </svg>
@@ -65,11 +68,13 @@
 
                 {{-- Title --}}
                 <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white mb-2">
+
                     {{ Str::limit($title, 80) }}
                 </h2>
 
                 {{-- Description --}}
                 <p class="text-indigo-200 text-sm md:text-base mb-4">
+
                     {{ Str::limit($predict->description ?? 'Prevedi il risultato di questo evento', 120) }}
                 </p>
 
@@ -98,6 +103,7 @@
                    class="btn-kinetic inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-indigo-500 to-violet-500 hover:from-indigo-600 hover:to-violet-600 text-white font-bold rounded-xl shadow-lg shadow-indigo-500/30 hover:shadow-xl hover:shadow-indigo-500/50 transition-all duration-200">
                     Trade Now
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                     </svg>
                 </a>

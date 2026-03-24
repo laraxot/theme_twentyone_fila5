@@ -16,6 +16,7 @@
     <!-- Navigation Controls with Micro-interactions -->
     <div x-data="{
         currentIndex: 0,
+
         slides: [
             {
                 title: 'Predizioni Avanzate',
@@ -24,6 +25,7 @@
                 action: 'Inizia a Predire',
                 gradient: 'from-blue-600 to-cyan-500',
                 pattern: 'pattern-spiral'
+
             },
             {
                 title: 'Comunità di Investitori',
@@ -32,6 +34,7 @@
                 action: 'Unisciti alla Comunità',
                 gradient: 'from-purple-600 to-pink-500',
                 pattern: 'pattern-wave'
+
             },
             {
                 title: 'Analisi Statistica',
@@ -106,6 +109,7 @@
                     class="group pointer-events-auto p-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-full hover:bg-white/20 hover:scale-110 transition-all duration-300 hover:shadow-2xl hover:shadow-white/20">
                 <svg class="w-6 h-6 text-white group-hover:-translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+
                 </svg>
             </button>
         </div>
@@ -136,6 +140,7 @@
     <div class="absolute top-6 right-6 lg:top-8 lg:right-8">
         <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 backdrop-blur-md rounded-full border border-blue-400/20 animate-float">
             <div class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+
             <span class="text-sm font-medium text-blue-400">AI Personalizzato</span>
         </div>
     </div>
