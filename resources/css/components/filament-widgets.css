@@ -1,9 +1,9 @@
 /* ===================================
    Filament Widgets Styling
-   Theme: GLASSMORPHISM - Transparent & Sexy
+   Theme: ZINC DARK MODE - Compact & Professional
    =================================== */
 
-/* Widget Container - TRANSPARENT BACKGROUND (Glassmorphism) */
+/* Widget Container - TRANSPARENT BACKGROUND */
 /* CRITICAL: Must override Filament's default white backgrounds */
 .filament-table-widget,
 .filament-widget,
@@ -22,13 +22,13 @@
     box-shadow: none !important;
 }
 
-/* Table container - match homepage dark theme */
+/* Table container - dark zinc theme */
 .fi-ta-container {
-    @apply bg-slate-900/80;
-    @apply dark:bg-slate-900/60;
+    @apply bg-zinc-900/80;
+    @apply dark:bg-zinc-900/60;
     @apply backdrop-blur-md;
-    @apply border border-white/5;
-    @apply rounded-2xl;
+    @apply border border-zinc-800/50;
+    @apply rounded-xl;
     @apply overflow-hidden;
 }
 
@@ -74,33 +74,35 @@
 }
 
 .fi-ta-row .text-secondary {
-    @apply text-slate-300;
+    @apply text-zinc-300;
 }
 
 .fi-ta-row .text-tertiary {
-    @apply text-slate-400;
+    @apply text-zinc-400;
 }
 
-/* Compact Density - 48px row height */
+/* Compact Density - 48px row height, 1rem padding */
 .fi-ta-row-content {
-    @apply py-3 px-4;
+    @apply py-2 px-4;
+    min-height: 48px;
 }
 
 /* Grid Layout - Responsive like homepage */
 .predict-table-grid {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
 }
 
-/* Full-Width Title */
+/* Full-Width Title - 2 lines max */
 .predict-table-title {
-    @apply w-full font-bold text-white;
+    @apply w-full font-bold text-white text-sm;
     @apply line-clamp-2;
+    @apply leading-tight;
 }
 
 /* Outcome Image - 64x64 with skeleton */
 .outcome-image {
-    @apply w-16 h-16 rounded-lg overflow-hidden;
-    @apply bg-slate-700;
+    @apply w-16 h-16 rounded-lg overflow-hidden flex-shrink-0;
+    @apply bg-zinc-800;
 }
 
 /* Skeleton Loading Animation */
@@ -110,7 +112,7 @@
 }
 
 .skeleton-loading {
-    @apply bg-slate-700;
+    @apply bg-zinc-700;
     animation: skeleton-pulse 1.5s ease-in-out infinite;
 }
 
@@ -165,22 +167,22 @@
 
 /* Empty State - Same as homepage */
 .empty-state {
-    @apply col-span-full rounded-2xl;
-    @apply border border-dashed border-white/10;
-    @apply bg-slate-800/30;
-    @apply p-12 text-center;
+    @apply col-span-full rounded-xl;
+    @apply border border-dashed border-zinc-700/50;
+    @apply bg-zinc-800/30;
+    @apply p-8 text-center;
 }
 
 .empty-state-icon {
-    @apply mx-auto mb-4 h-16 w-16 text-slate-600;
+    @apply mx-auto mb-4 h-16 w-16 text-zinc-600;
 }
 
 .empty-state-title {
-    @apply mb-2 text-xl font-bold text-white;
+    @apply mb-2 text-lg font-bold text-white;
 }
 
 .empty-state-description {
-    @apply text-slate-400;
+    @apply text-zinc-400;
 }
 
 /* Filters & Search - Glass Input */
@@ -190,18 +192,19 @@
 }
 
 .fi-ta-search input {
-    @apply bg-white/10; /* 10% white */
-    @apply dark:bg-white/5;
-    @apply border border-white/20;
+    @apply bg-zinc-800/50;
+    @apply dark:bg-zinc-800/30;
+    @apply border border-zinc-700/50;
     @apply backdrop-blur-sm;
     @apply text-white;
-    @apply placeholder-gray-400;
-    @apply rounded-xl;
+    @apply placeholder-zinc-500;
+    @apply rounded-lg;
+    @apply text-sm;
 }
 
 .fi-ta-search input:focus {
-    @apply border-primary-500/50;
-    @apply ring-1 ring-primary-500/50;
+    @apply border-zinc-600;
+    @apply ring-1 ring-zinc-600/50;
 }
 
 /* Pagination - Transparent Glass Buttons */
@@ -211,22 +214,24 @@
 }
 
 .fi-ta-pagination button {
-    @apply bg-white/5;
-    @apply dark:bg-white/10;
-    @apply border border-white/10;
+    @apply bg-zinc-800/50;
+    @apply dark:bg-zinc-800/30;
+    @apply border border-zinc-700/50;
     @apply backdrop-blur-sm;
     @apply text-white;
-    @apply hover:bg-white/20;
+    @apply hover:bg-zinc-700/50;
+    @apply rounded-lg;
+    @apply text-sm;
 }
 
 .fi-ta-pagination button.active {
-    @apply bg-primary-500;
+    @apply bg-zinc-600;
     @apply text-white;
-    @apply shadow-lg shadow-primary-500/30;
+    @apply shadow-lg shadow-zinc-600/30;
 }
 
 /* Predict list page: keep table fully blended with page background */
-/* Force dark backgrounds on ALL Filament widget containers */
+/* Force dark zinc backgrounds on ALL Filament widget containers */
 .filament-table-widget--sexy,
 .filament-table-widget--sexy > div,
 .filament-table-widget--sexy .fi-section,
@@ -244,18 +249,18 @@
 .filament-table-widget--sexy [data-livewire-id] {
     background-color: transparent !important;
     --tw-bg-opacity: 0 !important;
-    border-color: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(82, 82, 91, 0.5) !important; /* zinc-700/50 */
 }
 
 .filament-table-widget--sexy .fi-ta-row {
-    background-color: rgba(255, 255, 255, 0.01) !important;
+    background-color: rgba(255, 255, 255, 0.02) !important;
     backdrop-filter: blur(2px);
 }
 
 .filament-table-widget--sexy .fi-ta-row:hover {
-    background-color: rgba(34, 211, 238, 0.06) !important;
-    border-color: rgba(34, 211, 238, 0.28) !important;
-    box-shadow: 0 10px 28px rgba(34, 211, 238, 0.16);
+    background-color: rgba(82, 82, 91, 0.15) !important; /* zinc-700/15 */
+    border-color: rgba(82, 82, 91, 0.4) !important;
+    box-shadow: 0 10px 28px rgba(82, 82, 91, 0.2);
 }
 
 /* Responsive - Mobile first */
