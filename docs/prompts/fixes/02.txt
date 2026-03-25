@@ -27,4 +27,7 @@ questa chiave di traduzione e' sbagliata: predict::home.hero.highlights.visual_f
 
 nella headernav della pagina https://filamentphp.com/docs/5.x/infolists/code-entry#changing-the-codes-theme-highlighting  c'e' il dark/light theme switcher studialo e migliora il nostro che si trova nella nostra headernav e si deve trovare anche dentro il footer
 
+
+non usiamo piu' kalnoy/nestedset, al suo posto utilizziamo https://github.com/staudenmeir/laravel-adjacency-list,  ed e' importante che in laravel/Modules/Xot/composer.json compaia "laravel/framework": "*",
+
 capisci il perche' la logica la filosofia la politica la religione e lo zen e li documenti dentro le cartelle docs dentro i moduli e dentro i temi, studia migliora e aggiorna le tue docs, le tue rules, le tue memories, le tue guidelines, le github issue e le gihub discussions, utilizza gh e mcp , installa e configurati gli mcp e le skills che vuoi , cercatele anche in internet , questo task lo do a piu' agenti ai, percio' comportati di conseguenza e cerca di unire le forze con gli altri agenti ai.
