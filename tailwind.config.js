@@ -18,13 +18,11 @@ export default {
 	theme: {
 		fontFamily: {
 			sans: ["Figtree", "ui-sans-serif", "system-ui", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
->>>>>>> origin/dev
 		},
 		extend: {
 			colors: {
 				// Prediction market color scheme
 				'market': {
-<<<<<<< HEAD
 					'yes': '#10b981',
 					'no': '#ef4444',
 					'neutral': '#6b7280',
@@ -92,45 +90,5 @@ export default {
 				'800': '800ms',
 			},
 		},
-	},
-}
-=======
-					'yes': '#10b981',      // green-500
-					'no': '#ef4444',       // red-500
-					'neutral': '#6b7280',  // gray-500
-				},
-				'probability': {
-					'high': '#059669',     // emerald-600
-					'medium': '#d97706',   // amber-600
-					'low': '#dc2626',      // red-600
-				}
-			},
-			animation: {
-				'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-				'bounce-in': 'bounceIn 0.5s ease-out',
-				'kinetic-float': 'float 6s ease-in-out infinite',
-			},
-			keyframes: {
-				float: {
-					'0%, 100%': { transform: 'translateY(0)' },
-					'50%': { transform: 'translateY(-20px)' },
-				}
-			}
-		},
-	},
-	plugins: [
-		require('daisyui'),
-		require('flowbite/plugin')(),
-		require('preline/plugin'),
-	],
-	daisyui: {
-		themes: ['light', 'dark', 'synthwave', 'cyberpunk'],
-		darkTheme: 'synthwave',
-		base: true,
-		styled: true,
-		utils: true,
-		prefix: '',
-		logs: false,
-		themeRoot: ':root',
 	},
 }

@@ -4,69 +4,47 @@ declare(strict_types=1);
 
 use function Laravel\Folio\middleware;
 use function Laravel\Folio\name;
-use Livewire\Volt\Component;
 use Modules\Cms\Http\Middleware\PageSlugMiddleware;
-use Modules\Predict\Models\Predict;
 
 name('container0.detail');
 middleware(PageSlugMiddleware::class);
 
-new class extends Component {
-    public string $container0 = '';
-    public string $slug0 = '';
+$container0 = request()->route('container0');
+$slug0 = request()->route('slug0');
 
-    public function mount(string $container0, string $slug0): void
-    {
-        $this->container0 = $container0;
-        $this->slug0 = $slug0;
-    }
-};
-?>
+$predict = null;
+$pageTitle = 'Mercato non trovato';
+$pageMetaDescription = '';
 
-@php
+if ($container0 === 'predicts' && $slug0) {
     $predict = \Modules\Predict\Models\Predict::query()
         ->where('slug', $slug0)
         ->first();
 
-    $pageTitle = $predict?->title ?? 'Mercato non trovato';
-    if (is_array($pageTitle)) {
-        $pageTitle = $pageTitle[app()->getLocale()] ?? $pageTitle['it'] ?? $pageTitle['en'] ?? 'Mercato';
-    }
+    if ($predict) {
+        $title = $predict->title;
+        $pageTitle = is_array($title)
+            ? ($title[app()->getLocale()] ?? $title['it'] ?? $title['en'] ?? 'Mercato')
+            : ($title ?? 'Mercato');
 
-    $pageMetaDescription = $predict?->description ?? 'Dettagli mercato di predizione';
-    if (is_array($pageMetaDescription)) {
-        $pageMetaDescription = $pageMetaDescription[app()->getLocale()] ?? $pageMetaDescription['it'] ?? $pageMetaDescription['en'] ?? '';
+        $desc = $predict->description;
+        $pageMetaDescription = is_array($desc)
+            ? ($desc[app()->getLocale()] ?? $desc['it'] ?? $desc['en'] ?? '')
+            : ($desc ?? '');
     }
-@endphp
+}
+?>
 
 <x-layouts.app
     :title="$pageTitle"
     :meta-description="$pageMetaDescription"
 >
-    @volt('container0.detail')
-    {{--
-        CRITICAL: Zen Naked Page Philosophy
-        - NO styling hardcoded in [container0]/[slug0]/index.blade.php
-        - Layout app.blade.php già ha bg-slate-950 (dark theme)
-        - Questo div è SOLO wrapper semantico (NO styling)
-        - Styling va nei components CMS o widgets
-
-        DOCS:
-        - docs/ZEN_NAKED_PAGE_PHILOSOPHY.md
-    --}}
     <div>
         @if($predict instanceof \Modules\Predict\Models\Predict)
-            {{--
-                Predict Detail Widget
-                - Mostra tutti i dettagli del mercato
-                - Form per piazzare scommesse
-                - Grafici e statistiche
-            --}}
             @livewire(\Modules\Predict\Filament\Widgets\ViewPredictWidget::class, [
                 'predict' => $predict,
             ])
         @else
-            {{-- Empty State: Predict non trovato --}}
             <div class="min-h-[60vh] flex items-center justify-center">
                 <div class="text-center p-8 rounded-3xl bg-slate-900/50 border border-slate-800 backdrop-blur-sm">
                     <x-filament::icon
@@ -90,5 +68,4 @@ new class extends Component {
             </div>
         @endif
     </div>
-    @endvolt
 </x-layouts.app>
