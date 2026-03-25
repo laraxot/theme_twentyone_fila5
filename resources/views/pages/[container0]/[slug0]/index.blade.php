@@ -2,69 +2,70 @@
 
 declare(strict_types=1);
 
-use Livewire\Volt\Component;
-use Modules\Cms\Actions\ResolvePageAction;
-use Modules\Cms\Http\Middleware\PageSlugMiddleware;
-
 use function Laravel\Folio\middleware;
 use function Laravel\Folio\name;
+use Modules\Cms\Http\Middleware\PageSlugMiddleware;
 
-name('container0.view');
+name('container0.detail');
 middleware(PageSlugMiddleware::class);
 
-new class extends Component {
-    public string $container0 = "";
-    public string $slug0 = "";
-    public string $pageSlug = "";
+$container0 = request()->route('container0');
+$slug0 = request()->route('slug0');
 
-    /** @var array<string, mixed> */
-    public array $data = [];
+$predict = null;
+$pageTitle = 'Mercato non trovato';
+$pageMetaDescription = '';
 
-    public function mount(ResolvePageAction $resolvePageAction, string $container0, string $slug0): void
-    {
-        $this->container0 = $container0;
-        $this->slug0 = $slug0;
+if ($container0 === 'predicts' && $slug0) {
+    $predict = \Modules\Predict\Models\Predict::query()
+        ->where('slug', $slug0)
+        ->first();
 
-        $resolved = $resolvePageAction->execute($this->container0, $this->slug0);
-        $this->pageSlug = $resolved->pageSlug;
+    if ($predict) {
+        $title = $predict->title;
+        $pageTitle = is_array($title)
+            ? ($title[app()->getLocale()] ?? $title['it'] ?? $title['en'] ?? 'Mercato')
+            : ($title ?? 'Mercato');
 
-        $this->data = [
-            "container0" => $container0,
-            "slug0" => $slug0,
-            "slug" => $slug0,
-            "item" => $resolved->item,
-        ];
+        $desc = $predict->description;
+        $pageMetaDescription = is_array($desc)
+            ? ($desc[app()->getLocale()] ?? $desc['it'] ?? $desc['en'] ?? '')
+            : ($desc ?? '');
     }
-};
+}
 ?>
 
-<x-layouts.app>
-    @volt("container0.view")
-    {{--
-        CRITICAL: Zen Architecture Philosophy
-        - NO styling hardcoded in [container0]/[slug0]/index.blade.php
-        - Layout app.blade.php già ha bg-gradient-to-br (dark theme)
-        - Questo div è SOLO wrapper semantico per grid layout
-        - Styling va nei components CMS (x-page, blocks)
-
-        WHY:
-        - [container0]/[slug0] è AGNOSTICO (gestisce predicts, blog, events, etc.)
-        - NON deve imporre styling (violerebbe separation of concerns)
-        - Grid layout va bene (è struttura, non styling)
-
-        DOCS:
-        - docs/project/CONTAINER_ARCHITECTURE_ZEN.md
-        - docs/project/NO_HARDCODED_STYLING_IN_CONTAINER.md
-    --}}
-    <div class="grid grid-cols-1 gap-6 px-4 py-8 lg:grid-cols-12 lg:px-6">
-        <div class="lg:col-span-8">
-            <x-page side="content" :slug="$this->pageSlug" :data="$this->data" />
-        </div>
-        <aside class="lg:col-span-4">
-            <div class="lg:sticky lg:top-6">
-                <x-page side="sidebar" :slug="$this->pageSlug" :data="$this->data" />
+<x-layouts.app
+    :title="$pageTitle"
+    :meta-description="$pageMetaDescription"
+>
+    <div>
+        @if($predict instanceof \Modules\Predict\Models\Predict)
+            @livewire(\Modules\Predict\Filament\Widgets\ViewPredictWidget::class, [
+                'predict' => $predict,
+            ])
+        @else
+            <div class="min-h-[60vh] flex items-center justify-center">
+                <div class="text-center p-8 rounded-3xl bg-slate-900/50 border border-slate-800 backdrop-blur-sm">
+                    <x-filament::icon
+                        icon="heroicon-o-exclamation-circle"
+                        class="h-16 w-16 text-red-400 mx-auto mb-4"
+                    />
+                    <h2 class="text-2xl font-bold text-white mb-2">
+                        @lang('predict::messages.predict_not_found', 'Mercato non trovato')
+                    </h2>
+                    <p class="text-slate-400 mb-6">
+                        @lang('predict::messages.predict_not_found_description', 'Il mercato che stai cercando non esiste o è stato rimosso.')
+                    </p>
+                    <a
+                        href="{{ url('/' . app()->getLocale() . '/predicts') }}"
+                        class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-sky-500 to-cyan-500 text-white font-semibold hover:from-sky-400 hover:to-cyan-400 transition-all duration-300 hover:scale-105"
+                    >
+                        <x-filament::icon icon="heroicon-o-arrow-left" class="h-5 w-5" />
+                        @lang('predict::common.back_to_list', 'Torna alla lista')
+                    </a>
+                </div>
             </div>
-        </aside>
+        @endif
     </div>
-    @endvolt
 </x-layouts.app>
