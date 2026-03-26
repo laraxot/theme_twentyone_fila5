@@ -1,10 +1,18 @@
 @php
     // Support multiple data sources from CMS
-    $record = $record ?? $article ?? null;
+    $record = $record ?? $predict ?? $item ?? $article ?? null;
     
     // Try to get from $data array (CMS standard)
     if (!$record && isset($data['record'])) {
         $record = $data['record'];
+    }
+
+    if (!$record && isset($data['predict'])) {
+        $record = $data['predict'];
+    }
+
+    if (!$record && isset($data['item'])) {
+        $record = $data['item'];
     }
     
     // Try to get from page attribute

@@ -54,7 +54,7 @@ new class extends Component {
         - docs/ZEN_NAKED_PAGE_PHILOSOPHY.md
     --}}
     <div>
-        <x-page side="content" :slug="$this->pageSlug" :data="$this->data" />
+        <x-page side="content" :slug="$pageSlug" :data="$data" />
     </div>
     @endvolt
 </x-layouts.app>
