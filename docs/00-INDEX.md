@@ -30,6 +30,8 @@
 |------|-------|
 | BUILD_PROCESS.md | Build process |
 | CODE_QUALITY_ANALYSIS.md | Code quality |
+| PREDICT_DETAIL_AGNOSTIC_CONTRACT.md | Contratto del detail page agnostico per container0/slug0 |
+| ORDER_BOOK_MULTI_OUTCOME_CONTRACT.md | Contratto UI: l'order book itera outcome, non tipi yes/no |
 
 ## 🔗 Riferimenti
 
@@ -39,4 +41,4 @@
 
 ---
 
-**Ultimo Aggiornamento**: 2026-03-24
+**Ultimo Aggiornamento**: 2026-03-26
