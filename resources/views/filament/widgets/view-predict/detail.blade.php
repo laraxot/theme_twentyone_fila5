@@ -26,8 +26,39 @@ $statusClasses = match($card['status_tone']) {
     Salta al contenuto principale
 </a>
 
+{{-- Breadcrumb Navigation --}}
+<nav aria-label="Breadcrumb" class="mb-6">
+    <ol class="flex items-center gap-2 text-sm">
+        <li>
+            <a href="{{ url('/' . app()->getLocale()) }}" class="text-slate-400 hover:text-white transition-colors flex items-center gap-1">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+                <span>Home</span>
+            </a>
+        </li>
+        <li class="text-slate-600">/</li>
+        <li>
+            <a href="{{ url('/' . app()->getLocale() . '/predicts') }}" class="text-slate-400 hover:text-white transition-colors">
+                Mercati
+            </a>
+        </li>
+        <li class="text-slate-600">/</li>
+        <li class="text-white font-medium truncate max-w-[200px]">{{ $card['title'] }}</li>
+    </ol>
+</nav>
+
 <article class="predict-detail-kinetic" aria-labelledby="predict-title">
-    <header class="mb-6">
+    <header class="mb-8">
+        {{-- Back Button --}}
+        <a href="{{ url('/' . app()->getLocale() . '/predicts') }}"
+           class="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors mb-4 group"
+        >
+            <svg class="h-4 w-4 transition-transform group-hover:-translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+            <span>Torna ai mercati</span>
+        </a>
         <div class="flex flex-wrap items-center gap-2 mb-3">
             <span class="inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-wider {{ $statusClasses }}" role="status">
                 {{ $card['status_label'] }}
@@ -44,21 +75,45 @@ $statusClasses = match($card['status_tone']) {
             {{ $card['title'] ?: 'Mercato in aggiornamento' }}
         </h1>
         
-        {{-- Meta info --}}
-        <p class="mt-2 text-slate-400 text-sm">
-            <time datetime="{{ $record->resolution_at?->format('Y-m-d') ?? '' }}">
-                Risoluzione: {{ $record->resolution_at?->format('d/m/Y') ?? 'Da definire' }}
-            </time>
-        </p>
+        {{-- Meta info with Icons --}}
+        <div class="flex flex-wrap items-center gap-4 mt-3">
+            <span class="flex items-center gap-2 text-slate-400 text-sm">
+                <svg class="h-4 w-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <time datetime="{{ $record->resolution_at?->format('Y-m-d') ?? '' }}">
+                    Risoluzione: {{ $record->resolution_at?->format('d/m/Y') ?? 'Da definire' }}
+                </time>
+            </span>
+            @if($record->created_at)
+            <span class="flex items-center gap-2 text-slate-400 text-sm">
+                <svg class="h-4 w-4 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <time datetime="{{ $record->created_at->format('Y-m-d') }}">
+                    Creato: {{ $record->created_at->format('d/m/Y') }}
+                </time>
+            </span>
+            @endif
+        </div>
     </header>
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {{-- Main Content --}}
         <main id="predict-main-content" class="lg:col-span-2 space-y-6">
-            {{-- Outcomes Section --}}
-            <section aria-labelledby="outcomes-heading">
-                <h2 id="outcomes-heading" class="sr-only">Esiti Disponibili</h2>
+            {{-- Outcomes Section with Enhanced Cards --}}
+            <section aria-labelledby="outcomes-heading" class="relative">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 id="outcomes-heading" class="text-lg font-bold text-white flex items-center gap-2">
+                        <svg class="h-5 w-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                        Esiti Disponibili
+                    </h2>
+                    <span class="text-xs text-slate-500 uppercase tracking-wider">{{ $marketShapeLabel }}</span>
+                </div>
                 
+                <div class="space-y-4">
                 @foreach($visibleOptions as $index => $option)
                     @php
                         $optionTitle = is_string($option['title'] ?? null) ? $option['title'] : 'Opzione';
@@ -66,45 +121,60 @@ $statusClasses = match($card['status_tone']) {
                             ? $option['image_url']
                             : 'https://source.unsplash.com/800x450/?'.urlencode($optionTitle);
                         $percentage = isset($option['percentage']) ? (float) $option['percentage'] : 0.0;
+                        $odds = isset($option['odds']) ? (float) $option['odds'] : 0.0;
+                        $progressWidth = isset($option['progress_width']) ? (float) $option['progress_width'] : $percentage;
+                        $color = is_string($option['color'] ?? null) ? $option['color'] : '#6366f1';
+                        $isLeading = $index === 0 && $percentage > 50;
+                        $isUnderdog = $index > 0 && $percentage < 30;
                     @endphp
-                    <div class="mb-4">
+                    <div class="group relative">
+                        {{-- Leading/Underdog Badge --}}
+                        @if($isLeading)
+                        <div class="absolute -top-2 -right-2 z-10">
+                            <span class="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 px-3 py-1 text-xs font-bold text-slate-950 shadow-lg shadow-emerald-500/30">
+                                <svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                Favorto
+                            </span>
+                        </div>
+                        @endif
+                        @if($isUnderdog)
+                        <div class="absolute -top-2 -right-2 z-10">
+                            <span class="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-3 py-1 text-xs font-bold text-slate-950 shadow-lg shadow-amber-500/30">
+                                <svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd" />
+                                </svg>
+                                Sorpresa
+                            </span>
+                        </div>
+                        @endif
                         <a href="{{ $card['detail_url'] }}?option={{ $index }}"
                            class="block overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-all duration-300 hover:border-white/20 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-slate-950"
-                           aria-label="Vedi dettagli per {{ $optionTitle }} - Probabilità {{ number_format($percentage, 1) }}%"
+                           aria-label="{{ $option['aria_label'] ?? 'Vedi dettagli per ' . $optionTitle }}"
                         >
                             <div class="relative aspect-video">
                                 <img src="{{ $optionImage }}" alt="{{ $optionTitle }}" class="h-full w-full object-cover" loading="lazy">
                                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
-                                <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
-                                    <span class="text-xl font-bold text-white">{{ $optionTitle }}</span>
-                                    <span class="rounded-full bg-slate-950/80 px-4 py-2 text-2xl font-bold text-white" aria-label="Probabilità {{ number_format($percentage, 1) }} percento">
-                                        {{ number_format($percentage, 1) }}%
-                                    </span>
+                                <div class="absolute bottom-0 left-0 right-0 p-4">
+                                    {{-- Progress Bar --}}
+                                    <div class="mb-3 h-2 w-full overflow-hidden rounded-full bg-white/10">
+                                        <div class="h-full rounded-full transition-all duration-500" style="width: {{ $progressWidth }}%; background: linear-gradient(90deg, {{ $color }}, color-mix(in srgb, {{ $color }} 55%, white));"></div>
+                                    </div>
+                                    <div class="flex items-end justify-between">
+                                        <div>
+                                            <span class="text-xl font-bold text-white">{{ $optionTitle }}</span>
+                                            @if($odds > 0)
+                                            <span class="ml-2 text-sm font-medium text-slate-400">@ {{ $odds }}x</span>
+                                            @endif
+                                        </div>
+                                        <span class="rounded-full bg-slate-950/80 px-4 py-2 text-2xl font-bold text-white" aria-label="Probabilità {{ number_format($percentage, 1) }} percento">
+                                            {{ number_format($percentage, 1) }}%
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </a>
-                    </div>
-                @endforeach
-            </section>
-            
-            {{-- Trading Form Section --}}
-            <section aria-labelledby="trading-heading">
-                <h2 id="trading-heading" class="sr-only">Piazza Ordine</h2>
-                <x-predict.trading-form :predict="$record" />
-            </section>
-        </main>
-
-        {{-- Sidebar --}}
-        <aside class="lg:col-span-1" aria-label="Statistiche del mercato">
-            <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6 sticky top-6">
-                <h3 class="mb-4 text-lg font-bold text-white flex items-center gap-2">
-                    <x-heroicon-o-chart-pie class="w-5 h-5 text-blue-500" />
-                    Statistiche
-                </h3>
-                <dl class="space-y-4">
-                    <div class="flex justify-between">
-                        <dt class="text-slate-400">Volume</dt>
-                        <dd class="font-semibold text-white">{{ number_format($card['volume'], 0, ',', '.') }} Credits</dd>
                     </div>
                 @endforeach
                 </div>
