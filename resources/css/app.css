@@ -1,5 +1,64 @@
 @import 'tailwindcss';
 
+/* Custom Animations */
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.animate-shimmer {
+    animation: shimmer 2s infinite;
+}
+
+@keyframes progress-fill {
+    from {
+        width: 0%;
+    }
+    to {
+        width: var(--target-width);
+    }
+}
+
+/* Kinetic Web Design */
+.card-kinetic {
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.card-kinetic:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-kinetic {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease-out;
+}
+
+.btn-kinetic:hover {
+    transform: scale(1.05);
+}
+
+.btn-kinetic:active {
+    transform: scale(0.95);
+}
+
+/* Reveal on Scroll */
+.reveal-kinetic {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-kinetic.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Filament 5.x CSS Imports - Required for components */
 /* Path: Themes/TwentyOne/resources/css -> ../../../../vendor */
 

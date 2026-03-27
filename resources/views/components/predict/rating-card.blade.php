@@ -20,7 +20,7 @@
         : round((float) ((float) ($rating->pivot->percentage ?? 0) * 100), 1);
     $title = is_scalar($rating->title ?? null) ? (string) $rating->title : 'Opzione';
     $initials = \Illuminate\Support\Str::upper(\Illuminate\Support\Str::substr($title, 0, 2));
-    $probabilityLabel = __('predict::labels.probability');
+    $probabilityLabel = __('predict::common.labels.probability.label');
     $probabilityLabel = is_string($probabilityLabel) && $probabilityLabel !== 'predict::labels.probability'
         ? $probabilityLabel
         : 'Probabilità';

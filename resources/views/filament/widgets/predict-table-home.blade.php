@@ -26,7 +26,7 @@
             $predictsQuery->where('show_on_homepage', true);
         }
 
-        $predicts = $predictsQuery->limit(6)->get();
+        $predicts = $predictsQuery->limit(20)->get(); // ✅ Mostra 20 record
     }
 
     $title = $title ?? 'Mercati in Evidenza';

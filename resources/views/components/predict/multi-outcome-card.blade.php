@@ -24,12 +24,12 @@
     $initials = \Illuminate\Support\Str::upper(\Illuminate\Support\Str::substr($label, 0, 2));
 
     // Translation keys
-    $volumeLabel = __('predict::labels.volume');
+    $volumeLabel = __('predict::common.labels.volume.label');
     $volumeLabel = is_string($volumeLabel) && $volumeLabel !== 'predict::labels.volume'
         ? $volumeLabel
         : 'Volume';
 
-    $tradersLabel = __('predict::labels.traders');
+    $tradersLabel = __('predict::common.labels.traders.label');
     $tradersLabel = is_string($tradersLabel) && $tradersLabel !== 'predict::labels.traders'
         ? $tradersLabel
         : 'Traders';

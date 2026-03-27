@@ -13,7 +13,7 @@
         <x-slot name="heading">
             <div class="flex items-center gap-2">
                 <x-heroicon-o-chat-bubble-left-right class="w-5 h-5" />
-                <span>{{ __('predict::comments.widget.title', 'Commenti') }}</span>
+                <span>{{ __('predict::comments.widget.title') }}</span>
             </div>
         </x-slot>
 
@@ -23,13 +23,13 @@
                 <textarea
                     id="new-comment"
                     wire:model="newComment"
-                    placeholder="{{ __('predict::comments.form.placeholder', 'Scrivi un commento...') }}"
+                    placeholder="{{ __('predict::comments.form.placeholder') }}"
                     rows="3"
                     class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-primary-500 dark:focus:ring-primary-500"
                     required
                     minlength="10"
                     maxlength="2000"
-                    aria-label="{{ __('predict::comments.form.label', 'Nuovo commento') }}"
+                    aria-label="{{ __('predict::comments.form.label') }}"
                 ></textarea>
 
                 @error('newComment')
@@ -38,12 +38,12 @@
 
                 <div class="flex items-center justify-between">
                     <p class="text-xs text-gray-500 dark:text-gray-400">
-                        {{ __('predict::comments.form.help', 'Minimo 10 caratteri, massimo 2000') }}
+                        {{ __('predict::comments.form.help') }}
                     </p>
                     
                     <x-filament::button type="submit" color="primary">
                         <x-heroicon-o-paper-airplane class="w-4 h-4 mr-2" />
-                        {{ __('predict::comments.form.submit', 'Pubblica Commento') }}
+                        {{ __('predict::comments.form.submit') }}
                     </x-filament::button>
                 </div>
             </form>
@@ -52,12 +52,12 @@
         {{-- Ordinamento --}}
         <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-200 dark:border-gray-700">
             <p class="text-sm text-gray-600 dark:text-gray-400">
-                {{ $this->table->getTotalRecords() }} {{ __('predict::comments.count', 'commenti') }}
+                {{ $this->table->getTotalRecords() }} {{ __('predict::comments.count') }}
             </p>
 
             <div class="flex items-center gap-2">
                 <span class="text-xs text-gray-500 dark:text-gray-400">
-                    {{ __('predict::comments.sort.label', 'Ordina per:') }}
+                    {{ __('predict::comments.sort.label') }}
                 </span>
 
                 <x-filament::select
@@ -67,15 +67,15 @@
                 >
                     <x-filament::select.option value="popular">
                         <x-heroicon-o-hand-thumb-up class="w-4 h-4 inline mr-1" />
-                        {{ __('predict::comments.sort.popular', 'Più votati') }}
+                        {{ __('predict::comments.sort.popular') }}
                     </x-filament::select.option>
                     <x-filament::select.option value="recent">
                         <x-heroicon-o-clock class="w-4 h-4 inline mr-1" />
-                        {{ __('predict::comments.sort.recent', 'Più recenti') }}
+                        {{ __('predict::comments.sort.recent') }}
                     </x-filament::select.option>
                     <x-filament::select.option value="oldest">
                         <x-heroicon-o-calendar class="w-4 h-4 inline mr-1" />
-                        {{ __('predict::comments.sort.oldest', 'Più vecchi') }}
+                        {{ __('predict::comments.sort.oldest') }}
                     </x-filament::select.option>
                 </x-filament::select>
             </div>

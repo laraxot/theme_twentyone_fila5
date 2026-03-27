@@ -66,8 +66,8 @@
     <body class="{{ $bodyClass }} antialiased text-base leading-relaxed bg-slate-950 text-slate-100">
         <!-- Skip to Content (WCAG 2.2 AA) -->
         @php
-            $skipToContent = __('predict::predict.labels.navigation.skip_to_content.label');
-            $skipToContent = is_string($skipToContent) && $skipToContent !== 'predict::predict.labels.navigation.skip_to_content.label'
+            $skipToContent = __('predict::common.labels.skip_to_content.label');
+            $skipToContent = is_string($skipToContent) && $skipToContent !== 'predict::common.labels.skip_to_content.label'
                 ? $skipToContent
                 : 'Vai al contenuto principale';
         @endphp

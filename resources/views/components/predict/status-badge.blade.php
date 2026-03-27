@@ -9,13 +9,13 @@
         'open' => [
             'classes' => 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
             'iconColor' => 'bg-green-400',
-            'label' => __('predict::common.status.open'),
+            'label' => __('predict::common.labels.status.open.label'),
             'showAnimation' => true,
         ],
         'closed' => [
             'classes' => 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200',
             'iconColor' => 'bg-red-400',
-            'label' => __('predict::common.status.closed'),
+            'label' => __('predict::common.labels.status.closed.label'),
             'showAnimation' => false,
         ],
         default => [
