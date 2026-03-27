@@ -5,32 +5,32 @@
     $counterDuration = 2000;
 
     $predictClass = 'Modules\Predict\Models\Predict';
-    $profileClass = 'Modules\Predict\Models\Profile';
+    $userClass = 'Modules\User\Models\User';
     $transactionClass = 'Modules\Predict\Models\Transaction';
 
     try {
-        $marketsCount = class_exists($predictClass) ? $predictClass::query()->where('is_active', true)->count() : 0;
+        $marketsCount = class_exists($predictClass) ? $predictClass::query()->whereIn('status', ['active', 'open', 'published'])->count() : 0;
     } catch (\Throwable) {
         $marketsCount = 0;
     }
 
     try {
-        $usersCount = class_exists($profileClass) ? $profileClass::query()->distinct('user_id')->count('user_id') : 0;
+        $usersCount = class_exists($userClass) ? $userClass::on('user')->count() : 0;
     } catch (\Throwable) {
         $usersCount = 0;
     }
 
     try {
-        $volumeTotal = class_exists($transactionClass) ? (int) $transactionClass::query()->sum('amount') : 0;
+        $volumeTotal = class_exists($transactionClass) ? (int) $transactionClass::query()->sum('credits') : 0;
     } catch (\Throwable) {
         $volumeTotal = 0;
     }
 
     $growthRates = [
-        'markets' => min(99, max(5, $marketsCount * 2)),
-        'users' => min(99, max(10, $usersCount > 0 ? 45 : 0)),
-        'volume' => min(99, max(15, $volumeTotal > 0 ? 67 : 0)),
-        'predictions' => min(99, max(8, $marketsCount > 0 ? 34 : 0)),
+        'markets' => $marketsCount > 0 ? min(99, max(5, (int)($marketsCount * 2))) : 0,
+        'users' => $usersCount > 0 ? min(99, max(10, 45)) : 0,
+        'volume' => $volumeTotal > 0 ? min(99, max(15, (int)($volumeTotal > 10000 ? 67 : 20))) : 0,
+        'predictions' => $marketsCount > 0 ? min(99, max(8, (int)($marketsCount * 3))) : 0,
     ];
 
     $stats = [

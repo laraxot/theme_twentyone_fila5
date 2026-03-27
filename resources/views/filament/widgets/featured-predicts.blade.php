@@ -17,7 +17,7 @@
     {{-- Content container --}}
     <div class="relative">
         @livewire(
-            \Modules\Predict\Filament\Widgets\PredictTableWidget::class,
+            \Modules\Predict\Filament\Widgets\FeaturedPredictsWidget::class,
             [
                 'homepageMode' => true,
                 'minimumOutcomes' => 4, {{-- Show only multi-outcome (4+ outcomes) --}}
