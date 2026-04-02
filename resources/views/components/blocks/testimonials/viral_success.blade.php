@@ -113,21 +113,35 @@ $getDefaultTestimonials = function() {
             @if($show_stats)
                 <!-- Success Stats -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                    @php
+                        $totalUsers = \Illuminate\Support\Facades\DB::connection('user')->table('users')->count();
+                        $totalPredicts = \Illuminate\Support\Facades\DB::connection('blog')->table('articles')
+                            ->where('type', 'Modules\Predict\Models\Predict')
+                            ->whereNull('deleted_at')
+                            ->count();
+                        $totalVolume = (int) \Illuminate\Support\Facades\DB::connection('predict')->table('transactions')
+                            ->sum('credits') ?: 0;
+                        $formattedVolume = $totalVolume >= 1000000
+                            ? number_format($totalVolume / 1000000, 1).'M'
+                            : ($totalVolume >= 1000
+                                ? number_format($totalVolume / 1000, 0).'K'
+                                : number_format($totalVolume));
+                    @endphp
                     <div class="text-center">
-                        <div class="text-3xl font-black text-green-600 dark:text-green-400">€2.4M+</div>
-                        <div class="text-sm text-gray-600 dark:text-gray-400">Guadagni Totali</div>
+                        <div class="text-3xl font-black text-green-600 dark:text-green-400">{{ $formattedVolume }}</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-400">Crediti in gioco</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-3xl font-black text-blue-600 dark:text-blue-400">12,847</div>
-                        <div class="text-sm text-gray-600 dark:text-gray-400">Utenti Attivi</div>
+                        <div class="text-3xl font-black text-blue-600 dark:text-blue-400">{{ number_format($totalUsers) }}</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-400">Utenti Registrati</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-3xl font-black text-purple-600 dark:text-purple-400">89%</div>
-                        <div class="text-sm text-gray-600 dark:text-gray-400">Tasso Successo</div>
+                        <div class="text-3xl font-black text-purple-600 dark:text-purple-400">{{ $totalPredicts }}</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-400">Mercati Attivi</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-3xl font-black text-orange-600 dark:text-orange-400">4.9★</div>
-                        <div class="text-sm text-gray-600 dark:text-gray-400">Rating Medio</div>
+                        <div class="text-3xl font-black text-orange-600 dark:text-orange-400">{{ $totalPredicts > 0 ? number_format($totalUsers / max($totalPredicts, 1), 1) : '0' }}</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-400">Utenti/Mercato</div>
                     </div>
                 </div>
             @endif
