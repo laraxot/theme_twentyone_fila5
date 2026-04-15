@@ -76,6 +76,11 @@ Per problemi comuni, consulta la documentazione nella cartella `docs`:
 - `project_docs/` - Documentazione di progetto (architettura, sviluppo)
 - `project_docs/roadmaps/` - Roadmap master e stato avanzamento
 
+## LLM Wiki Workflow
+
+- Canonical wiki layer: [../../../../docs/wiki/README.md](../../../../docs/wiki/README.md)
+- Compiled index: [../../../../docs/wiki/index.md](../../../../docs/wiki/index.md)
+
 ## Contribuire
 Le contribuzioni sono benvenute! Per contribuire:
 1. Crea un fork del repository
