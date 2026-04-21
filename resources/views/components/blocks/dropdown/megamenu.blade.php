@@ -1,22 +1,22 @@
 <?php
- 
-use Livewire\Volt\Component;
-use Livewire\WithPagination;
- 
-new class extends Component {
-    use WithPagination;
 
+use Illuminate\Support\Facades\Cache;
+use Livewire\Volt\Component;
+
+new class extends Component {
     public $model;
 
     public function with(): array
     {
+        $cacheKey = 'pub_theme.megamenu.'.md5((string) $this->model.'|'.app()->getLocale());
+
         return [
-            'items' => $this->model::tree()->get()->toTree(),
+            'items' => Cache::remember($cacheKey, now()->addMinutes(10), fn () => $this->model::tree()->get()->toTree()),
         ];
     }
 }
 ?>
- <div>
+<div>
     @volt()
     <div>
         <button class="flex items-center space-x-1 text-sm font-semibold text-gray-600 hover:text-blue-600" data-dropdown-toggle="dropdown-markets">
@@ -24,8 +24,8 @@ new class extends Component {
             <span>{{ __('pub_theme::headernav.markets') }}</span>
             <x-heroicon-o-chevron-down class="size-4" />
         </button>
-        <div id="dropdown-markets" class="absolute z-20 hidden p-2 overflow-hidden text-sm bg-white border border-white rounded-lg">
-            <ul class="flex flex-wrap max-w-4xl gap-1">
+        <div id="dropdown-markets" class="absolute z-20 hidden overflow-hidden rounded-lg border border-white bg-white p-2 text-sm">
+            <ul class="flex max-w-4xl flex-wrap gap-1">
                 @foreach($items as $item)
                 <li class="flex flex-col w-[220px] p-3 space-y-4 transition-colors rounded justify-content-between hover:ring-1 hover:ring-gray-100">
                     <a href="
@@ -64,5 +64,3 @@ new class extends Component {
     </div>
     @endvolt
 </div>
-
-   
