@@ -17,9 +17,8 @@ wiki/
 
 ## Pagine Compilate
 
-| Pagina | Tipo | Argomento |
-|--------|------|-----------|
-| [twentyone-theme](./overviews/twentyone-theme.md) | overview | Zen agnostic, Kinetic design, GSAP, CMS-driven |
+- [twentyone-theme](./overviews/twentyone-theme.md) — overview: zen agnostic, kinetic design, GSAP, CMS-driven
+- [laravel12-lang-path-rule](./concepts/laravel12-lang-path-rule.md) — concept: percorsi traduzioni correnti del tema
 
 ## Raw Sources
 
@@ -31,4 +30,4 @@ Vedi [[../../../../docs/wiki/index|Index Globale Wiki]]
 
 ---
 
-*Ultimo aggiornamento: 2026-04-15*
+*Ultimo aggiornamento: 2026-04-21*

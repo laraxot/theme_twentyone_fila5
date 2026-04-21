@@ -89,3 +89,10 @@ Le contribuzioni sono benvenute! Per contribuire:
 
 ## Licenza
 Questo tema è rilasciato sotto la licenza MIT. Vedi il file [LICENSE](../LICENSE) per maggiori dettagli. 
+
+
+## Standard Rules & Workflow
+
+- [[BMAD Method](../../../../docs/wiki/concepts/bmad-method.md)]
+- [[Context Engineering](../../../../docs/wiki/concepts/context-engineering.md)]
+- [[LLM Wiki Governance](../../../../docs/wiki/concepts/llm-wiki-governance.md)]
