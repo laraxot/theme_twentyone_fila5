@@ -1,5 +1,10 @@
 # TwentyOne Wiki Log
 
+## [2026-04-28] governance | recepita regola PHPMD standalone `.phar`
+- aggiornato `docs/quality-tools.md` del tema TwentyOne: comando PHPMD portato a `php /home/zorin/.local/bin/phpmd.phar`.
+- aggiunto backlink da index locale alla regola root `docs/wiki/concepts/phpmd-standalone-phar-rule.md`.
+- chiarito vincolo permanente: nel tema TwentyOne PHPMD non deve rientrare in `composer.json`.
+
 ## [2026-04-15] init | wiki bootstrap
 - Struttura wiki/log.md inizializzata.
 - Layer raw: tutti i file in `docs/` (eccetto `wiki/`).
