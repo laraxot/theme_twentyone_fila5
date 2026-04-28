@@ -8,8 +8,8 @@ Theme-specific guidance for PHPMD, PHP-CS-Fixer, Laravel Pint, Psalm, PHPQA, act
 
 ## Safe Commands (Report/Dry-Run)
 ```bash
-# PHPMD (only PHP files)
-vendor/bin/phpmd Themes/TwentyOne text cleancode,codesize,design,naming,unusedcode --ignore-violations-on-exit --suffixes php
+# PHPMD standalone .phar (only PHP files)
+php /home/zorin/.local/bin/phpmd.phar Themes/TwentyOne text cleancode,codesize,design,naming,unusedcode --ignore-violations-on-exit --suffixes php
 
 # Pint (test only)
 vendor/bin/pint --test --preset laravel --path Themes/TwentyOne
@@ -44,3 +44,4 @@ vendor/bin/php-cs-fixer fix Themes/TwentyOne --allow-risky=no
 - Maintain parity with `Themes/Sixteen` and `Modules/UI` components.
 - After changes, rebuild assets and visually test key pages.
 - Track suppressions with rationale and review dates.
+- PHPMD must stay standalone `.phar`; do not install `phpmd/phpmd` with Composer.
