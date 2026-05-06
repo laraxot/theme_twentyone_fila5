@@ -42,9 +42,9 @@ final class ResolveFeaturedMarketsGridDataAction
         $locale = app()->getLocale();
 
         return [
-            'title' => $title ?: $this__('predict::home.featured_markets.title'),
-            'subtitle' => $subtitle ?: $this__('predict::home.featured_markets.subtitle'),
-            'showAllLink' => $showAllLink ?: (LaravelLocalization::getLocalizedURL($locale, '/predicts') ?? url('/'.$locale.'/predicts')),
+            'title' => $title ? $title : $this__('predict::home.featured_markets.title'),
+            'subtitle' => $subtitle ? $subtitle : $this__('predict::home.featured_markets.subtitle'),
+            'showAllLink' => $showAllLink ? $showAllLink : (LaravelLocalization::getLocalizedURL($locale, '/predicts') ?? url('/'.$locale.'/predicts')),
             'showAllLabel' => $this__('predict::home.featured_markets.cta_all'),
             'openMarketLabel' => $this__('predict::actions.trade_market'),
             'activeMarketsLabel' => $this__('predict::home.featured_markets.active_markets'),
