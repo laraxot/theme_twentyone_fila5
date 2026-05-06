@@ -46,8 +46,8 @@ final class ResolveCinematicHeroDataAction
 
         $data = [
             'eyebrow' => $this->translateText('predict::home.hero.eyebrow.label', 'Mercati multi-opzione in primo piano'),
-            'title' => $heroTitle ?: $this->translateText('predict::home.hero.title', 'Prevedi il Futuro'),
-            'subtitle' => $heroSubtitle ?: $this->translateText('predict::home.hero.subtitle', 'Mercati visuali, percentuali calcolate dal database e flussi pensati per capire chi sta davvero salendo.'),
+            'title' => $heroTitle ? $heroTitle : $this->translateText('predict::home.hero.title', 'Prevedi il Futuro'),
+            'subtitle' => $heroSubtitle ? $heroSubtitle : $this->translateText('predict::home.hero.subtitle', 'Mercati visuali, percentuali calcolate dal database e flussi pensati per capire chi sta davvero salendo.'),
             'primaryCta' => [
                 'text' => (string) ($ctaPrimary['text'] ?? $this->translateText('predict::home.hero.cta_primary.label', 'Esplora i mercati')),
                 'url' => (string) ($ctaPrimary['url'] ?? $this->localizedUrl($locale, '/predicts')),
@@ -122,7 +122,7 @@ final class ResolveCinematicHeroDataAction
         }
 
         $translatedLabel = __($key.'.label');
-        if (is_string($translatedLabel) && $translatedLabel !== ($key.'.label')) {
+        if (is_string($translatedLabel) && $translatedLabel !== $key.'.label') {
             return $translatedLabel;
         }
 
@@ -131,6 +131,7 @@ final class ResolveCinematicHeroDataAction
 
     /**
      * @param  array{marketsCount:int,usersCount:int,volumeCredits:int}  $heroStats
+     *
      * @return array<int, array{value:string,label:string,icon:string}>
      */
     private function buildStats(array $heroStats): array
@@ -185,7 +186,7 @@ final class ResolveCinematicHeroDataAction
 
     private function hasVolumeColumn(): bool
     {
-        $predict = new Predict;
+        $predict = new Predict();
 
         return Schema::connection($predict->getConnectionName())
             ->hasColumn($predict->getTable(), 'sum_credit_yes');
