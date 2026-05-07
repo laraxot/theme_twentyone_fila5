@@ -131,7 +131,6 @@ final class ResolveCinematicHeroDataAction
 
     /**
      * @param  array{marketsCount:int,usersCount:int,volumeCredits:int}  $heroStats
-     *
      * @return array<int, array{value:string,label:string,icon:string}>
      */
     private function buildStats(array $heroStats): array
@@ -186,7 +185,7 @@ final class ResolveCinematicHeroDataAction
 
     private function hasVolumeColumn(): bool
     {
-        $predict = new Predict();
+        $predict = new Predict;
 
         return Schema::connection($predict->getConnectionName())
             ->hasColumn($predict->getTable(), 'sum_credit_yes');
