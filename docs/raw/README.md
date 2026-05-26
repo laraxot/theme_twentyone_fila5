@@ -1,3 +1,7 @@
-# LLM Wiki
+---
+module: theme
+topic: README
+canonical: ../../../docs/shared-components/README-Modules.md
+---
 
-Questa cartella contiene pagine curate per l'uso con LLM (wiki). Mettere qui sintesi, convenzioni e pagine curate.
+See canonical documentation: ../../../docs/shared-components/README-Modules.md
