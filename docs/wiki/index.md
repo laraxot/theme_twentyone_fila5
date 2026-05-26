@@ -30,9 +30,7 @@ Tema alternativo zen-agnostic con design kinetic, GSAP animations e integrazione
 | Pagina | Tipo | Argomento | Data |
 |--------|------|-----------|------|
 | [twentyone-theme](./overviews/twentyone-theme.md) | Overview | Zen agnostic, kinetic design | 2026-04-21 |
-| [laravel12-lang-path-rule](./concepts/laravel12-lang-path-rule.md) | Concept | Path Laravel 12 | 2026-04-21 |
-
-## Best Practices
+| [ridondanze-hub-twentyone-xot](./concepts/ridondanze-hub-twentyone-xot.md) | Concept | Ridondanza: hub tema ↔ Xot | 2026-05-21 |
 
 - Usare componenti Blade riutilizzabili (vedi [blade-component-extraction-governance](../../../../docs/wiki/concepts/blade-component-extraction-governance.md))
 - Estendere XotBase classes per Folio pages (vedi [xotbase-check](../../../../docs/wiki/concepts/xotbase-check.md))
