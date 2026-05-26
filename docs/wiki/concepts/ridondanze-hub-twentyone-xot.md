@@ -3,7 +3,7 @@ title: "Hub ridondanze TwentyOne ↔ Xot core"
 type: concept
 theme: twentyone
 created: "2026-05-21"
-updated: "2026-05-23"
+updated: "2026-05-26"
 related:
   - ../../analisi-metodi-duplicati.md
   - ../../dry-kiss-analysis.md
@@ -37,7 +37,7 @@ Scan statico cross-tema: esistono file **`placeholder.blade.php`** con **stesso 
 L’analisi continuativa degli “anti-pattern di duplicazione” **cross-module** vivono in modulo **core**:
 
 - **[ridondanze-cross-cutting-codebase.md](../../../../../Modules/Xot/docs/wiki/concepts/ridondanze-cross-cutting-codebase.md)** (scaffold LLM‑wiki ripetuti, wizard doc pair, liste moduli cluster)
-- **[redundancy-report.md](../../../../../Modules/Xot/docs/redundancy-report.md)** inventario tecnico più recente nel modulo (`ColumnBuilder`, `AutoLabel`, DTO ospitati nella cartella sbagliata).
+- **[`audit-profondo-ridondanze-holistic.md`](../../../../../Modules/Xot/docs/wiki/redundancy/audit-profondo-ridondanze-holistic.md)** — dopo 2026-05-26 include **§ analisi nominale classe / pivot / ThemeComposer CMS** accanto allo scan checksum.
 
 ## Dove documentare dopo una nuova scoperta
 
