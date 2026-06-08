@@ -4,41 +4,50 @@ declare(strict_types=1);
 
 use function Laravel\Folio\middleware;
 use function Laravel\Folio\name;
+use Livewire\Volt\Component;
+use Modules\Cms\Actions\ResolvePageAction;
 use Modules\Cms\Http\Middleware\PageSlugMiddleware;
 
-name('container0.detail');
+name('container0.view');
 middleware(PageSlugMiddleware::class);
+
+new class extends Component {
+    public string $container0 = '';
+
+    public string $slug0 = '';
+
+    public string $pageSlug = '';
+
+    /** @var array<string, mixed> */
+    public array $data = [];
+
+    public function mount(string $container0, string $slug0 = ''): void
+    {
+        $this->container0 = $container0;
+        $this->slug0 = $slug0;
+
+        $resolved = app(ResolvePageAction::class)->execute($container0, $slug0);
+
+        $this->pageSlug = $resolved->pageSlug;
+
+        $item = $resolved->item;
+        $predictId = is_object($item) && isset($item->id) ? $item->id : null;
+
+        $this->data = [
+            'container0' => $container0,
+            'slug0' => $slug0,
+            'slug' => $slug0,
+            'item' => $item,
+            'predictId' => $predictId,
+        ];
+    }
+};
 ?>
-@php
-    $container0 = (string) request()->route('container0', '');
-    $slug0 = (string) request()->route('slug0', '');
 
-    $resolved = app(\Modules\Cms\Actions\ResolvePageAction::class)->execute($container0, $slug0);
-    $item = $resolved->item;
-    $pageSlug = $resolved->pageSlug;
-    $locale = app()->getLocale();
-
-    // Per i modelli dinamici come Predict, usa il pageSlug corretto per i blocchi
-    $blocksPageSlug = 'model' === $resolved->renderMode && $container0 === 'predicts'
-        ? 'predict-view'
-        : $pageSlug;
-
-    $title = is_object($item) && isset($item->title) ? $item->title : null;
-    $description = is_object($item) && isset($item->description) ? $item->description : null;
-
-    $pageTitle = is_array($title)
-        ? (string) ($title[$locale] ?? $title['it'] ?? $title['en'] ?? ucfirst($slug0))
-        : (string) ($title ?: ucfirst(str_replace('-', ' ', $slug0)));
-
-    $pageMetaDescription = is_array($description)
-        ? (string) ($description[$locale] ?? $description['it'] ?? $description['en'] ?? '')
-        : (string) ($description ?? '');
-
-    // Get predict ID for widget
-    $predictId = is_object($item) && isset($item->id) ? $item->id : null;
-@endphp
-<x-layouts.app :title="$pageTitle" :meta-description="$pageMetaDescription">
-    <div>
-        <x-page side="content" :slug="$blocksPageSlug" :data="['item' => $item, 'predictId' => $predictId]" />
+<x-layouts.app>
+    @volt('container0.view')
+    <div class="page-content content" data-slug="{{ $pageSlug }}" data-side="content">
+        <x-page side="content" :slug="$pageSlug" :data="$data" />
     </div>
+    @endvolt
 </x-layouts.app>

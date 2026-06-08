@@ -108,7 +108,7 @@ use Modules\Cms\Actions\ResolvePageAction;
 
 use function Laravel\Folio\name;
 
-name('container0.list');
+name('container0.index');
 
 new class extends Component {
     public string $container0 = '';
@@ -127,7 +127,7 @@ new class extends Component {
 ?>
 
 <x-layouts.app>
-    @volt('container0.list')
+    @volt('container0.index')
     <div class="min-h-screen">
         <!-- Content -->
         <x-page side="content" :slug="$container0" :data="$data" />
