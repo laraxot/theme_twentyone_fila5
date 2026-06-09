@@ -1,4 +1,32 @@
-# TwentyOne Theme LLM Wiki#
+---
+title: "TwentyOne Theme Wiki Index"
+type: index
+tags: [twentyone, theme, wiki, index]
+created: 2026-04-15
+updated: 2026-06-05
+qmd: "twentyone theme wiki index second brain harness"
+issues:
+  - "https://github.com/laraxot/base_fixcity_fila5/issues/272"
+discussions:
+  - "https://github.com/laraxot/base_fixcity_fila5/discussions/273"
+related:
+  - ../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md
+  - ../../../../docs/wiki/bmad/architecture.md
+  - ../../../../docs/wiki/rules/wiki-markdown-frontmatter-mandatory.md
+  - ../../docs/wiki/concepts/ai-harness-theme-discipline.md
+---
+
+# TwentyOne Theme LLM Wiki
+
+## AI / second brain
+
+- [hackernoon-ai-coding-tips-fixcity-map](../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md)
+- [second-brain-local-discipline](./concepts/second-brain-local-discipline.md) — stub tema
+- [llm-wiki prompt](../../../../bashscripts/tools/prompts/llm-wiki.txt)
+- [bmad/architecture](../../../../docs/wiki/bmad/architecture.md)
+- [ai-harness-theme-discipline](../../docs/wiki/concepts/ai-harness-theme-discipline.md)
+- [second-brain-operating-model](../../docs/wiki/concepts/second-brain-operating-model.md)
+
 
 Indice operativo del wiki TwentyOne.
 

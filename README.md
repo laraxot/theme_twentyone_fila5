@@ -1,36 +1,56 @@
-# Theme TwentyOne
+# 🎯 TwentyOne
 
-Tema frontend con asset separati via Vite.
+[![Theme](https://img.shields.io/badge/Theme-TwentyOne-546E7A.svg)](#)
+[![Laravel 12](https://img.shields.io/badge/Laravel-12-red.svg)](https://laravel.com/)
+[![Filament 5](https://img.shields.io/badge/Filament-5-ffab00.svg)](https://filamentphp.com/)
+[![PHP 8.4+](https://img.shields.io/badge/PHP-8.4+-777BB4.svg)](https://php.net/)
+[![PHPStan Level 10](https://img.shields.io/badge/PHPStan-Level%2010-brightgreen.svg)](https://phpstan.org/)
+[![PSR-12](https://img.shields.io/badge/Code-PSR--12-blue.svg)](https://www.php-fig.org/psr/psr-12/)
+[![Strict Types](https://img.shields.io/badge/PHP-strict__types-1-informational.svg)](#)
+[![Laraxot Modules](https://img.shields.io/badge/Architecture-Modular-purple.svg)](#)
+[![FixCity Platform](https://img.shields.io/badge/Platform-FixCity-008758.svg)](#)
 
-## Workflow corretto
+> **Tema alternativo Laraxot.** Base Filament/Livewire per scenari secondari e legacy parity.
 
-```bash
-cd /var/www/_bases/base_predict_fila5/laravel/Themes/TwentyOne
-npm install
-npm run build
-npm run copy
-```
+---
 
-`npm run build` genera gli asset hashati e `public/manifest.json` dentro il tema.
-`npm run copy` pubblica il contenuto di `public/` in `public_html/themes/TwentyOne/`, che e' il percorso realmente letto da Laravel quando le Blade usano `@vite(..., 'themes/TwentyOne')`.
+## Perché esiste
 
-## Perche' serve anche `copy`
+Variante architetturale e riferimento storico nel monorepo.
 
-Il tema non usa il manifest della root Laravel. Usa un manifest dedicato:
+## Superpoteri
 
-```text
-/var/www/_bases/base_predict_fila5/public_html/themes/TwentyOne/manifest.json
-```
+- Layout e componenti Filament
+- Documentazione PHPStan/wiki
+- Pattern riusabili cross-tema
+- Integrazione moduli Xot
 
-Se il file manca, Laravel lancia `ViteManifestNotFoundException`.
+## Certificazioni
 
-## Troubleshooting
+| Certificazione | Stato |
+|----------------|-------|
+| PHPStan livello 10 | Target progetto |
+| `declare(strict_types=1)` | Su nuovo codice PHP |
+| Filament 5 + XotBase | Admin enterprise |
+| Test PHPUnit / Pest | Suite modulo |
+| Documentazione wiki | Cartella `docs/` |
 
-- Se fallisce `build`, controlla prima i path `@import` verso `vendor/filament/*` nel CSS del tema.
-- Se fallisce `copy`, controlla che lo script crei la directory `public_html/themes/TwentyOne`.
-- Dopo modifiche a `resources/css/*`, `resources/js/*` o `vite.config.js`, riesegui sempre `npm run build` e `npm run copy`.
+## Vuoi entrare nel team?
 
-## Docs correlate
+Esplora **varianti tema** senza perdere le convenzioni.
 
-- `docs/assets-build-workflow.md`
-- `docs/vite_manifest_error.md`
+Stack frontoffice: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5** — vedi [STORY-133](../../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
+
+---
+
+## Documentazione
+
+| Lingua | Link |
+|--------|------|
+| 🇮🇹 Presentazione | Questo file (`README.md`) |
+| 🇬🇧 Business card | [docs/readme-en.md](./docs/readme-en.md) |
+| 📚 Wiki tecnica | [./docs/wiki/](./docs/) |
+
+---
+
+**Tema** `twentyone` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5
