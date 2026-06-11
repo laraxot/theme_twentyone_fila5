@@ -45,11 +45,11 @@ render(function (View $view, string $slug) {
 
                 @if($article->comments)
                     @auth
-                        <livewire:comments :model="$article"/>
+                        @livewire(\Modules\Comment\Filament\Widgets\Commentable\CommentsWidget::class, ['model' => $article])
                     @endauth
 
                     @guest
-                        <livewire:comments read-only :model="$article"/>
+                        @livewire(\Modules\Comment\Filament\Widgets\Commentable\CommentsWidget::class, ['model' => $article, 'readOnly' => true])
 
                         <p class="comments-no-comment-yet">
                             {{ __('comment::txt.log-in-for-comment') }}
