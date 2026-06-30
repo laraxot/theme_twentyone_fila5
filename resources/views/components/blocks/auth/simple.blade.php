@@ -1,10 +1,10 @@
 @guest
 <div class="hidden lg:block">
 	<div class="flex space-x-4">
-		<a href="{{ url('/' . app()->getLocale() . '/auth/register') }}" class="grid px-4 py-2 text-sm font-semibold transition rounded-lg text-nowrap ring-2 ring-inset ring-blue-500 place-items-center hover:bg-gray-50 hover:no-underline">
+		<a href="{{route('register')}}" class="grid px-4 py-2 text-sm font-semibold transition rounded-lg text-nowrap ring-2 ring-inset ring-blue-500 place-items-center hover:bg-gray-50 hover:no-underline">
 			<span>{{ __('user::auth.sign-up') }}</span>
 		</a>
-		<a href="{{ url('/' . app()->getLocale() . '/auth/login') }}" class="grid px-4 py-2 text-sm font-semibold text-white transition bg-blue-500 rounded-lg text-nowrap place-items-center hover:bg-blue-600 hover:no-underline">
+		<a href="{{route('login')}}" class="grid px-4 py-2 text-sm font-semibold text-white transition bg-blue-500 rounded-lg text-nowrap place-items-center hover:bg-blue-600 hover:no-underline">
 			<span>{{ __('user::auth.login-in') }}</span>
 		</a>
 	</div>
@@ -22,25 +22,25 @@
 		<ul>
 			@auth
 			<li>
-				<a href="{{ url('/' . app()->getLocale() . '/pages/wallet') }}" class="flex items-center p-2 space-x-2 transition-colors rounded hover:text-blue-500 hover:bg-white">
+				<a href="{{ url(app()->getLocale().'/pages/wallet') }}" class="flex items-center p-2 space-x-2 transition-colors rounded hover:text-blue-500 hover:bg-white">
 					<x-heroicon-o-wallet class="size-6" />
 					<span>Wallet</span>
 				</a>
 			</li>
 			<li>
-				<a href="{{ url('/' . app()->getLocale() . '/pages/profile') }}" class="flex items-center p-2 space-x-2 transition-colors rounded hover:text-blue-500 hover:bg-white">
+				<a href="{{ url(app()->getLocale().'/pages/profile') }}" class="flex items-center p-2 space-x-2 transition-colors rounded hover:text-blue-500 hover:bg-white">
 					<x-heroicon-o-user-circle class="size-6" />
 					<span>Profile</span>
 				</a>
 			</li>
 			@else
 			<li class="block lg:hidden">
-				<a href="{{ url('/' . app()->getLocale() . '/auth/register') }}" class="flex items-center p-2 space-x-2 text-blue-500 transition-colors rounded hover:text-blue-600 hover:bg-white">
+				<a href="{{route('register')}}" class="flex items-center p-2 space-x-2 text-blue-500 transition-colors rounded hover:text-blue-600 hover:bg-white">
 					<span>Sign Up</span>
 				</a>
 			</li>
 			<li class="block lg:hidden">
-				<a href="{{ url('/' . app()->getLocale() . '/auth/login') }}" class="flex items-center p-2 space-x-2 transition-colors rounded hover:text-blue-500 hover:bg-white">
+				<a href="{{route('login')}}" class="flex items-center p-2 space-x-2 transition-colors rounded hover:text-blue-500 hover:bg-white">
 					<span>Login</span>
 				</a>
 			</li>
@@ -58,7 +58,7 @@
 
 			@auth
 			<li>
-				<form action="{{ url('/' . app()->getLocale() . '/auth/logout') }}" method="post"> @csrf
+				<form action="{{ route('logout') }}" method="post"> @csrf
 					<button type="submit" class="flex items-center w-full p-2 space-x-2 text-red-500 rounded hover:text-red-600 hover:bg-white">
 						<x-heroicon-o-power class="size-6" />
 						<span>{{ __('Logout') }}</span>

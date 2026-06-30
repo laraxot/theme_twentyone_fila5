@@ -21,7 +21,7 @@ La pagina http://predict.local/it/predicts appariva scarna e con link errati.
 - `predicts-filters` — barra ricerca, filtri categoria, sort
 - `predicts-grid` — griglia card mercati con `x-predict::market-card`
 
-### 3. Layout container0.list
+### 3. Layout container0.index
 
 - Padding aumentato (`py-6 lg:py-10`)
 - Background `bg-slate-50 dark:bg-slate-950` per coerenza con hero scuro

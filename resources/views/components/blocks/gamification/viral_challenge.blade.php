@@ -1,5 +1,5 @@
 @props([
-    'title' => 'SFIDA VIRALE DEL GIORNO',
+    'title' => '🔥 SFIDA VIRALE DEL GIORNO',
     'subtitle' => 'Completa la sfida e vinci premi esclusivi!',
     'challenge' => null
 ])
@@ -13,7 +13,7 @@
         'participants' => 2847,
         'time_left' => '18:42:15',
         'progress' => 67,
-        'icon' => 'target',
+        'icon' => '🎯',
         'difficulty' => 'EPICA',
         'tags' => ['trending', 'limited', 'bonus_x2']
     ];
@@ -172,8 +172,8 @@
                 @foreach($recentWinners as $winner)
                 <div class="flex items-center justify-between py-2 px-3 bg-gray-700/30 rounded-lg hover:bg-gray-700/50 transition-all">
                     <div class="flex items-center space-x-2">
-                        <div class="w-6 h-6 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
-                            <x-filament::icon icon="heroicon-o-trophy" class="w-4 h-4 text-white" />
+                        <div class="w-6 h-6 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center text-xs font-bold text-white">
+                            🏆
                         </div>
                         <span class="text-white text-sm font-medium">{{ $winner['user'] }}</span>
                     </div>
@@ -260,10 +260,11 @@ document.addEventListener('DOMContentLoaded', function() {
         setInterval(() => {
             // Create temporary sparkle
             const sparkle = document.createElement('div');
-            sparkle.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 text-yellow-400"><path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" /></svg>';
+            sparkle.innerHTML = '✨';
             sparkle.style.position = 'absolute';
             sparkle.style.top = Math.random() * 100 + '%';
             sparkle.style.left = Math.random() * 100 + '%';
+            sparkle.style.fontSize = '12px';
             sparkle.style.pointerEvents = 'none';
             sparkle.style.animation = 'sparkle 1s ease-out forwards';
 

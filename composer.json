@@ -17,15 +17,9 @@
         "role": "Developer"
     }],
     "require": {
-        "filament/actions": "^5.0",
         "filament/filament": "^5.0",
-        "filament/forms": "^5.0",
-        "filament/infolists": "^5.0",
-        "filament/notifications": "^5.0",
-        "filament/schemas": "^5.0",
-        "filament/support": "^5.0",
         "filament/tables": "^5.0",
-        "filament/widgets": "^5.0"
+        "filament/forms": "^5.0"
     },
     "extra": {
         "laravel": {
@@ -59,6 +53,6 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require-dev": {
-        "orchestra/testbench": "^9.4"
+        "orchestra/testbench": "*"
     }
 }

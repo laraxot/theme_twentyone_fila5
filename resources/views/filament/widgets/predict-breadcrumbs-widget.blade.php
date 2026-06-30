@@ -1,14 +1,8 @@
 <div>
-    <?php
-    $breadcrumbCategories = [];
-    if ($predict->category) {
-        $breadcrumbCategories = $predict->category->ancestorsAndSelf()->get()->reverse()->all();
-    }
-    ?>
     <nav class="text-sm text-gray-600" aria-label="Breadcrumb">
         <ol class="flex items-center space-x-2">
-            @if ($breadcrumbCategories !== [])
-                @foreach ($breadcrumbCategories as $category)
+            @if ($predict->category)
+                @foreach ($predict->category->ancestorsAndSelf()->get()->reverse() as $category)
                     <li>
                         <div class="flex items-center">
                             <a href="{{ route('category.view', ['slug' => $category->slug]) }}"

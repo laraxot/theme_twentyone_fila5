@@ -94,7 +94,7 @@
 		</a>
         --}}
         @auth
-        <form action="{{ url(app()->getLocale().'/auth/logout') }}" method="POST">
+        <form action="{{ route('logout') }}" method="POST">
             @csrf
             <x-fas-sign-out-alt />
             <button type="submit">

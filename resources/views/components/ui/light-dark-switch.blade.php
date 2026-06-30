@@ -5,8 +5,10 @@
             document.documentElement.classList.toggle('dark');
             if(document.documentElement.classList.contains('dark')){
                 this.darkMode = true;
+                new Audio('/assets/audio/dark.mp3').play()
             } else {
                 this.darkMode = false;
+                new Audio('/assets/audio/light.mp3').play()
             }
         }
     }" 
@@ -14,14 +16,8 @@
     x-init="
         if(document.documentElement.classList.contains('dark')){ darkMode=true; }
     "
-    class="w-full h-full flex items-center justify-center hover:bg-gray-100 text-gray-500 hover:text-gray-600 dark:hover:bg-gray-800 dark:text-gray-300 dark:hover:text-gray-100 transition-colors duration-200 rounded-full"
-    aria-label="Toggle dark mode"
-    title="Toggle dark mode"
+    class="w-full h-full flex items-center justify-center hover:bg-gray-100 text-gray-500 hover:text-gray-600 dark:hover:bg-gray-800 dark:text-gray-300 dark:hover:text-gray-100"
 >
-    <svg x-show="!darkMode" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1.5m0 13.5v1.5m9.75-4.5h-1.5m-13.5 0h-1.5M12 18.75a6.75 6.75 0 110-13.5 6.75 6.75 0 010 13.5z" />
-    </svg>
-    <svg x-show="darkMode" x-cloak class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 21c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843-4.582" />
-    </svg>
+    <svg class="w-4 h-4 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" /></svg>
+
 </button>

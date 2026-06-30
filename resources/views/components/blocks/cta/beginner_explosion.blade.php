@@ -1,5 +1,5 @@
 @props([
-    'title' => 'BONUS BEGINNER ESPLOSIVO!',
+    'title' => '🎁 BONUS BEGINNER ESPLOSIVO!',
     'subtitle' => 'Inizia GRATIS e ricevi bonus immediati',
     'offers' => []
 ])
@@ -18,18 +18,16 @@
     <div class="absolute inset-0 bg-gradient-to-r from-green-600/10 via-blue-600/10 to-purple-600/10"></div>
     <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-64 h-64 bg-gradient-to-b from-green-400/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
 
-    <!-- Floating icons -->
+    <!-- Floating money emojis -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
         @for($i = 0; $i < 8; $i++)
-        <div class="absolute animate-bounce"
+        <div class="absolute animate-bounce text-2xl"
              style="
                 top: {{ rand(10, 90) }}%;
                 left: {{ rand(10, 90) }}%;
                 animation-delay: {{ $i * 0.5 }}s;
                 animation-duration: {{ 2 + ($i * 0.3) }}s;
-             ">
-            <x-filament::icon icon="heroicon-o-currency-euro" class="w-6 h-6 text-green-400/30" />
-        </div>
+             ">💰</div>
         @endfor
     </div>
 
@@ -64,9 +62,7 @@
                 </div>
 
                 <!-- Sparkle effect -->
-                <div class="absolute top-2 right-2">
-                    <x-filament::icon icon="heroicon-o-sparkles" class="w-5 h-5 text-yellow-400 animate-pulse" />
-                </div>
+                <div class="absolute top-2 right-2 text-yellow-400 animate-pulse">✨</div>
             </div>
             @endforeach
         </div>
@@ -74,10 +70,7 @@
         <!-- Urgency Counter -->
         <div class="bg-red-500/20 border border-red-500/30 rounded-xl p-4 mb-6">
             <div class="text-center">
-                <div class="flex items-center justify-center text-red-300 text-sm font-bold mb-2 gap-2">
-                    <x-filament::icon icon="heroicon-o-clock" class="w-4 h-4" />
-                    <span>OFFERTA LIMITATA - Solo per i primi 100 utenti oggi</span>
-                </div>
+                <div class="text-red-300 text-sm font-bold mb-2">⏰ OFFERTA LIMITATA - Solo per i primi 100 utenti oggi</div>
                 <div class="flex items-center justify-center space-x-2">
                     <div class="text-white font-bold">47 posti rimasti</div>
                     <div class="w-32 bg-gray-700 rounded-full h-2">
@@ -92,9 +85,9 @@
             <button class="px-12 py-6 bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 hover:from-green-600 hover:via-blue-600 hover:to-purple-600 text-white font-black text-xl rounded-2xl transition-all duration-300 transform hover:scale-110 shadow-2xl relative overflow-hidden group">
                 <div class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
                 <div class="flex items-center justify-center space-x-3 relative">
-                    <x-filament::icon icon="heroicon-o-rocket-launch" class="w-8 h-8" />
+                    <span class="text-3xl">🚀</span>
                     <span>INIZIA GRATIS ORA</span>
-                    <x-filament::icon icon="heroicon-o-gift" class="w-8 h-8 animate-bounce" />
+                    <span class="text-3xl animate-bounce">🎁</span>
                 </div>
             </button>
         </div>
@@ -102,17 +95,17 @@
         <!-- Trust Badges -->
         <div class="flex items-center justify-center space-x-6 text-sm text-gray-400">
             <div class="flex items-center space-x-1">
-                <x-filament::icon icon="heroicon-o-lock-closed" class="w-4 h-4" />
+                <span>🔒</span>
                 <span>Nessuna carta di credito</span>
             </div>
             <div class="w-px h-4 bg-gray-600"></div>
             <div class="flex items-center space-x-1">
-                <x-filament::icon icon="heroicon-o-bolt" class="w-4 h-4" />
+                <span>⚡</span>
                 <span>Accesso immediato</span>
             </div>
             <div class="w-px h-4 bg-gray-600"></div>
             <div class="flex items-center space-x-1">
-                <x-filament::icon icon="heroicon-o-target" class="w-4 h-4" />
+                <span>🎯</span>
                 <span>Solo crediti virtuali</span>
             </div>
         </div>

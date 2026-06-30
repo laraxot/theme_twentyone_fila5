@@ -201,7 +201,7 @@
                 <div class="text-center mt-6">
                     <p class="text-gray-600 text-sm">
                         {{ __('auth.no_account') }}
-                        <a href="{{ url('/' . app()->getLocale() . '/auth/register') }}" class="text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200">
+                        <a href="{{ route('register') }}" class="text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200">
                             {{ __('auth.create_account') }}
                         </a>
                     </p>

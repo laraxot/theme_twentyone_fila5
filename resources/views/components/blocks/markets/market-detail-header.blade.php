@@ -4,16 +4,16 @@
 
 @php
     $categoryConfig = [
-        'politics' => ['icon' => 'presentation-chart-bar', 'color' => 'blue'],
-        'sports' => ['icon' => 'trophy', 'color' => 'green'],
-        'crypto' => ['icon' => 'currency-euro', 'color' => 'yellow'],
-        'technology' => ['icon' => 'cpu-chip', 'color' => 'purple'],
-        'economics' => ['icon' => 'chart-bar', 'color' => 'indigo'],
-        'entertainment' => ['icon' => 'film', 'color' => 'pink'],
+        'politics' => ['icon' => '🗳️', 'color' => 'blue'],
+        'sports' => ['icon' => '⚽', 'color' => 'green'],
+        'crypto' => ['icon' => '₿', 'color' => 'yellow'],
+        'technology' => ['icon' => '💻', 'color' => 'purple'],
+        'economics' => ['icon' => '📈', 'color' => 'indigo'],
+        'entertainment' => ['icon' => '🎬', 'color' => 'pink'],
     ];
     
-    $config = $categoryConfig[$market['category']] ?? ['icon' => 'chart-bar-square', 'color' => 'gray'];
-    $resolutionDate = \Carbon\Carbon\Carbon::parse($market['resolution_date']);
+    $config = $categoryConfig[$market['category']] ?? ['icon' => '📊', 'color' => 'gray'];
+    $resolutionDate = \Carbon\Carbon::parse($market['resolution_date']);
     $daysUntilResolution = now()->diffInDays($resolutionDate);
 @endphp
 
@@ -22,7 +22,7 @@
     <div class="bg-gradient-to-r from-{{ $config['color'] }}-50 to-{{ $config['color'] }}-100 dark:from-{{ $config['color'] }}-900/20 dark:to-{{ $config['color'] }}-800/20 px-6 py-4">
         <div class="flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <x-filament::icon icon="heroicon-o-{{ $config['icon'] }}" class="w-8 h-8 text-{{ $config['color'] }}-600 dark:text-{{ $config['color'] }}-400" />
+                <div class="text-2xl">{{ $config['icon'] }}</div>
                 <div>
                     <div class="flex items-center space-x-2">
                         <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-{{ $config['color'] }}-100 text-{{ $config['color'] }}-800 dark:bg-{{ $config['color'] }}-900/20 dark:text-{{ $config['color'] }}-400">

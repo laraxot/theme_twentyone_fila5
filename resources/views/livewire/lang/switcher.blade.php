@@ -1,27 +1,45 @@
 @php
     $locales = [
         'it' => 'Italiano',
-        'en' => 'English',
+        'en' => 'English'
     ];
-
-    $base = str_replace(url('/'), '', url()->full());
-    $base = \Illuminate\Support\Str::of($base)->after('/' . $lang)->toString();
+    
+    $base = str_replace(url('/'),'',url()->full());
+    $base = Str::of($base)->after('/'.$lang)->toString();
 @endphp
 
-<div class="relative">
-    <details class="group">
-        <summary class="list-none cursor-pointer py-3 text-sm font-semibold">
-            <span class="inline-flex items-center gap-2">
-                <span>{{ $locales[$lang] ?? strtoupper($lang) }}</span>
-                <x-heroicon-o-chevron-down class="size-4 transition group-open:rotate-180" />
-            </span>
-        </summary>
-        <div class="absolute right-0 z-50 mt-2 min-w-[10rem] rounded-lg border border-slate-200 bg-white p-2 shadow-lg dark:border-slate-700 dark:bg-slate-900">
+<div>
+    <x-filament::dropdown>
+        <x-slot name="trigger">
+            <button type="bottom" class="grid py-3 text-sm font-semibold transition rounded-lg place-items-center">
+                <div class="flex items-center space-x-2">
+                    {{--  
+                    <div>{{ $_theme->flag($lang) }}</div>
+                    --}}
+                    <x-filament::icon
+					    icon="ui-flags.{{ $lang }}"
+					    class="size-5"
+				    />
+                    <span class="hidden sm:block">{{ $locales[$lang] }}</span>
+                    <x-heroicon-o-chevron-down class="hidden size-4 sm:block"/>
+                </div>
+            </button>
+        </x-slot>
+        <x-filament::dropdown.list>
             @foreach($locales as $key => $locale)
-                <a href="{{ url('/' . $key . $base) }}" class="block rounded px-3 py-2 text-sm hover:bg-slate-100 dark:hover:bg-slate-800">
-                    {{ $locale }}
-                </a>
+                <x-filament::dropdown.list.item  href="{{ url('/'.$key.$base) }}" tag="a">
+                    <div class="flex items-center space-x-2">
+                        {{--  
+                        <div>{{ $_theme->flag($key) }}</div>
+                        --}}
+                        <x-filament::icon
+					        icon="ui-flags.{{ $key }}"
+					        class="size-5"
+				        />
+                        <span>{{ $locale }}</span>
+                    </div>
+                </x-filament::dropdown.list.item>
             @endforeach
-        </div>
-    </details>
+        </x-filament::dropdown.list>
+    </x-filament::dropdown>
 </div>

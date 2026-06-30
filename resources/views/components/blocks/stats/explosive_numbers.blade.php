@@ -1,252 +1,327 @@
-@php
+<?php
 
-    $title = 'Numeri che Parlano Chiaro';
-    $subtitle = 'I risultati della nostra community';
-    $counterDuration = 2000;
+use function Livewire\Volt\{state, computed, mount, on};
 
-    $predictClass = 'Modules\Predict\Models\Predict';
-    $profileClass = 'Modules\Predict\Models\Profile';
-    $transactionClass = 'Modules\Predict\Models\Transaction';
+state([
+    'title' => '📊 Numeri che Parlano Chiaro',
+    'subtitle' => 'I risultati della nostra community',
+    'stats' => [],
+    'show_live_counter' => true,
+    'show_growth_indicators' => true,
+    'counter_speed' => 50 // milliseconds
+]);
 
-    try {
-        $marketsCount = class_exists($predictClass) ? $predictClass::query()->where('is_active', true)->count() : 0;
-    } catch (\Throwable) {
-        $marketsCount = 0;
+mount(function ($data = []) {
+    foreach ($data as $key => $value) {
+        if (property_exists($this, $key)) {
+            $this->$key = $value;
+        }
     }
-
-    try {
-        $usersCount = class_exists($profileClass) ? $profileClass::query()->distinct('user_id')->count('user_id') : 0;
-    } catch (\Throwable) {
-        $usersCount = 0;
+    
+    if (empty($this->stats)) {
+        $this->stats = $this->getDefaultStats();
     }
+});
 
-    try {
-        $volumeTotal = class_exists($transactionClass) ? (int) $transactionClass::query()->sum('amount') : 0;
-    } catch (\Throwable) {
-        $volumeTotal = 0;
-    }
-
-    $growthRates = [
-        'markets' => min(99, max(5, $marketsCount * 2)),
-        'users' => min(99, max(10, $usersCount > 0 ? 45 : 0)),
-        'volume' => min(99, max(15, $volumeTotal > 0 ? 67 : 0)),
-        'predictions' => min(99, max(8, $marketsCount > 0 ? 34 : 0)),
-    ];
-
-    $stats = [
+$getDefaultStats = function() {
+    return [
         [
-            'id' => 'markets_available',
-            'label' => 'Mercati Attivi',
-            'value' => $marketsCount,
-            'display_value' => $marketsCount > 0 ? number_format($marketsCount, 0, ',', '.') : '0',
-            'icon' => 'heroicon-o-chart-bar',
-            'color' => 'cyan',
-            'growth' => '+' . $growthRates['markets'] . '%',
+            'id' => 'total_earnings',
+            'label' => 'Guadagni Totali',
+            'value' => 2400000,
+            'display_value' => '€2.4M+',
+            'icon' => '💰',
+            'color' => 'green',
+            'growth' => '+127%',
             'growth_period' => 'questo mese',
-            'description' => 'Previsioni disponibili',
-            'suffix' => '+',
+            'description' => 'Pagati agli utenti',
+            'animated' => true
         ],
         [
             'id' => 'active_users',
             'label' => 'Utenti Attivi',
-            'value' => $usersCount,
-            'display_value' => $usersCount > 0 ? number_format($usersCount, 0, ',', '.') : '0',
-            'icon' => 'heroicon-o-users',
+            'value' => 12847,
+            'display_value' => '12.8K+',
+            'icon' => '👥',
             'color' => 'blue',
-            'growth' => '+' . $growthRates['users'] . '%',
+            'growth' => '+89%',
             'growth_period' => 'ultima settimana',
-            'description' => 'Predictor registrati',
-            'suffix' => '+',
+            'description' => 'Predictor attivi',
+            'animated' => true
         ],
         [
-            'id' => 'total_volume',
-            'label' => 'Volume Scambiato',
-            'value' => $volumeTotal,
-            'display_value' => $volumeTotal > 0
-                ? ($volumeTotal >= 1000000
-                    ? number_format($volumeTotal / 1000000, 1) . 'M'
-                    : number_format($volumeTotal / 1000, 1) . 'K')
-                : '0',
-            'icon' => 'heroicon-o-banknotes',
-            'color' => 'emerald',
-            'growth' => '+' . $growthRates['volume'] . '%',
+            'id' => 'success_rate',
+            'label' => 'Tasso di Successo',
+            'value' => 89,
+            'display_value' => '89%',
+            'icon' => '🎯',
+            'color' => 'purple',
+            'growth' => '+12%',
+            'growth_period' => 'vs media settore',
+            'description' => 'Previsioni vincenti',
+            'animated' => true
+        ],
+        [
+            'id' => 'markets_available',
+            'label' => 'Mercati Disponibili',
+            'value' => 247,
+            'display_value' => '247+',
+            'icon' => '📈',
+            'color' => 'orange',
+            'growth' => '+34%',
             'growth_period' => 'questo mese',
-            'description' => 'Crediti scambiati',
-            'suffix' => '',
+            'description' => 'Categorie diverse',
+            'animated' => true
         ],
         [
-            'id' => 'total_users',
-            'label' => 'Community',
-            'value' => $usersCount,
-            'display_value' => $usersCount > 0 ? number_format($usersCount, 0, ',', '.') : '0',
-            'icon' => 'heroicon-o-user-group',
-            'color' => 'violet',
-            'growth' => '+' . $growthRates['predictions'] . '%',
-            'growth_period' => 'vs mese scorso',
-            'description' => 'Utenti registrati',
-            'suffix' => '+',
+            'id' => 'daily_predictions',
+            'label' => 'Previsioni Giornaliere',
+            'value' => 1547,
+            'display_value' => '1.5K+',
+            'icon' => '⚡',
+            'color' => 'yellow',
+            'growth' => '+156%',
+            'growth_period' => 'vs ieri',
+            'description' => 'Ogni giorno',
+            'animated' => true
         ],
+        [
+            'id' => 'avg_rating',
+            'label' => 'Rating Medio',
+            'value' => 4.9,
+            'display_value' => '4.9★',
+            'icon' => '⭐',
+            'color' => 'pink',
+            'growth' => '+0.3',
+            'growth_period' => 'ultimo mese',
+            'description' => 'Soddisfazione utenti',
+            'animated' => false
+        ]
     ];
+};
 
-    $getColorClasses = function (string $color): array {
-        $colors = [
-            'cyan' => [
-                'bg' => 'from-cyan-500 to-sky-600',
-                'text' => 'text-cyan-400',
-                'border' => 'border-cyan-400/30',
-                'icon_bg' => 'bg-cyan-500/10',
-                'growth' => 'text-cyan-400 bg-cyan-500/10',
-            ],
-            'blue' => [
-                'bg' => 'from-blue-500 to-indigo-600',
-                'text' => 'text-blue-400',
-                'border' => 'border-blue-400/30',
-                'icon_bg' => 'bg-blue-500/10',
-                'growth' => 'text-blue-400 bg-blue-500/10',
-            ],
-            'emerald' => [
-                'bg' => 'from-emerald-500 to-green-600',
-                'text' => 'text-emerald-400',
-                'border' => 'border-emerald-400/30',
-                'icon_bg' => 'bg-emerald-500/10',
-                'growth' => 'text-emerald-400 bg-emerald-500/10',
-            ],
-            'violet' => [
-                'bg' => 'from-violet-500 to-purple-600',
-                'text' => 'text-violet-400',
-                'border' => 'border-violet-400/30',
-                'icon_bg' => 'bg-violet-500/10',
-                'growth' => 'text-violet-400 bg-violet-500/10',
-            ],
-        ];
+$getColorClasses = function($color) {
+    $colors = [
+        'green' => [
+            'bg' => 'from-green-500 to-emerald-600',
+            'text' => 'text-green-600',
+            'border' => 'border-green-200',
+            'icon_bg' => 'bg-green-100',
+            'growth' => 'text-green-600 bg-green-100'
+        ],
+        'blue' => [
+            'bg' => 'from-blue-500 to-cyan-600',
+            'text' => 'text-blue-600',
+            'border' => 'border-blue-200',
+            'icon_bg' => 'bg-blue-100',
+            'growth' => 'text-blue-600 bg-blue-100'
+        ],
+        'purple' => [
+            'bg' => 'from-purple-500 to-violet-600',
+            'text' => 'text-purple-600',
+            'border' => 'border-purple-200',
+            'icon_bg' => 'bg-purple-100',
+            'growth' => 'text-purple-600 bg-purple-100'
+        ],
+        'orange' => [
+            'bg' => 'from-orange-500 to-red-600',
+            'text' => 'text-orange-600',
+            'border' => 'border-orange-200',
+            'icon_bg' => 'bg-orange-100',
+            'growth' => 'text-orange-600 bg-orange-100'
+        ],
+        'yellow' => [
+            'bg' => 'from-yellow-500 to-orange-500',
+            'text' => 'text-yellow-600',
+            'border' => 'border-yellow-200',
+            'icon_bg' => 'bg-yellow-100',
+            'growth' => 'text-yellow-600 bg-yellow-100'
+        ],
+        'pink' => [
+            'bg' => 'from-pink-500 to-rose-600',
+            'text' => 'text-pink-600',
+            'border' => 'border-pink-200',
+            'icon_bg' => 'bg-pink-100',
+            'growth' => 'text-pink-600 bg-pink-100'
+        ]
+    ];
+    
+    return $colors[$color] ?? $colors['blue'];
+};
 
-        return $colors[$color] ?? $colors['cyan'];
-    };
-@endphp
+?>
 
-
-<div class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16 md:py-24">
-    {{-- Background Effects --}}
-    <div class="absolute inset-0" aria-hidden="true">
-        <div class="absolute top-1/4 left-1/4 h-64 w-64 rounded-full bg-cyan-500/10 blur-3xl"></div>
-        <div class="absolute bottom-1/4 right-1/4 h-64 w-64 rounded-full bg-violet-500/10 blur-3xl"></div>
+<div class="py-16 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
+    
+    <!-- Background Effects -->
+    <div class="absolute inset-0">
+        <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse animation-delay-2000"></div>
     </div>
-
-    <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {{-- Header --}}
-        <div class="mb-16 text-center">
-            <h2 class="mb-4 text-3xl font-black tracking-tight text-white sm:text-4xl md:text-5xl">
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white mb-4">
                 {{ $title }}
             </h2>
-            <p class="mx-auto max-w-3xl text-lg text-slate-300">
+            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
                 {{ $subtitle }}
             </p>
         </div>
-
-        {{-- Stats Grid --}}
-        <div class="mb-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+        
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             @foreach($stats as $stat)
                 @php
                     $colors = $getColorClasses($stat['color']);
                 @endphp
-
-                <div class="group relative overflow-hidden rounded-2xl border {{ $colors['border'] }} bg-slate-800/50 p-6 backdrop-blur transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
-                    {{-- Background Gradient --}}
-                    <div class="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-gradient-to-br {{ $colors['bg'] }} opacity-10 blur-2xl transition-opacity group-hover:opacity-20"></div>
-
-                    {{-- Icon --}}
-                    <div class="mb-6 flex items-center justify-between">
-                        <div class="flex h-14 w-14 items-center justify-center rounded-2xl {{ $colors['icon_bg'] }}">
-                            <x-filament::icon :icon="$stat['icon']" class="h-7 w-7 {{ $colors['text'] }}" aria-hidden="true" />
+                
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border-2 {{ $colors['border'] }} dark:border-gray-700 p-8 relative overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                    
+                    <!-- Background Gradient -->
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-gradient-to-br {{ $colors['bg'] }} rounded-full opacity-10 blur-2xl"></div>
+                    
+                    <!-- Icon -->
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-16 h-16 {{ $colors['icon_bg'] }} dark:bg-gray-700 rounded-2xl flex items-center justify-center text-2xl">
+                            {{ $stat['icon'] }}
                         </div>
-
-                        @if(isset($stat['growth']))
+                        
+                        @if($show_growth_indicators && isset($stat['growth']))
                             <div class="text-right">
-                                <div class="inline-flex items-center rounded-full px-3 py-1 text-xs font-bold {{ $colors['growth'] }}">
+                                <div class="inline-flex items-center px-3 py-1 rounded-full text-sm font-bold {{ $colors['growth'] }} dark:bg-gray-700 dark:text-white">
                                     ↗ {{ $stat['growth'] }}
                                 </div>
-                                <div class="mt-1 text-xs text-slate-400">
+                                <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">
                                     {{ $stat['growth_period'] }}
                                 </div>
                             </div>
                         @endif
                     </div>
-
-                    {{-- Value --}}
-                    <div>
-                        <div class="mb-2 flex items-baseline gap-1">
-                            <span class="text-4xl font-black tracking-tight text-white"
-                                  x-data="{
-                                      count: 0,
-                                      target: {{ $stat['value'] ?? 0 }},
-                                      suffix: '{{ $stat['suffix'] ?? '' }}',
-                                      formatted: '{{ $stat['display_value'] }}'
-                                  }"
-                                  x-init="
-                                      if (target > 0) {
-                                          const duration = {{ $counterDuration }};
-                                          const steps = 60;
-                                          const increment = target / steps;
-                                          const stepTime = duration / steps;
-                                          let current = 0;
-                                          
-                                          const timer = setInterval(() => {
-                                              current += increment;
-                                              if (current >= target) {
-                                                  current = target;
-                                                  clearInterval(timer);
-                                              }
-                                              
-                                              const formatted = Math.floor(current).toLocaleString('it-IT');
-                                              $el.textContent = formatted + suffix;
-                                          }, stepTime);
-                                      } else {
-                                          $el.textContent = '0' + suffix;
-                                      }
-                                  ">
+                    
+                    <!-- Value -->
+                    <div class="mb-4">
+                        @if($show_live_counter && $stat['animated'])
+                            <div class="text-4xl font-black {{ $colors['text'] }} dark:text-white mb-2" 
+                                 x-data="{ 
+                                     count: 0, 
+                                     target: {{ $stat['value'] }},
+                                     display: '{{ $stat['display_value'] }}'
+                                 }"
+                                 x-init="
+                                     let increment = target / 100;
+                                     let timer = setInterval(() => {
+                                         count += increment;
+                                         if (count >= target) {
+                                             count = target;
+                                             clearInterval(timer);
+                                         }
+                                     }, {{ $counter_speed }});
+                                 ">
+                                <span x-text="display"></span>
+                            </div>
+                        @else
+                            <div class="text-4xl font-black {{ $colors['text'] }} dark:text-white mb-2">
                                 {{ $stat['display_value'] }}
-                            </span>
-                        </div>
-
-                        <h3 class="mb-1 text-base font-bold text-white">
+                            </div>
+                        @endif
+                        
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-1">
                             {{ $stat['label'] }}
                         </h3>
-
-                        <p class="text-sm text-slate-400">
+                        
+                        <p class="text-sm text-gray-600 dark:text-gray-400">
                             {{ $stat['description'] }}
                         </p>
                     </div>
+                    
+                    <!-- Progress Bar (for percentage stats) -->
+                    @if(str_contains($stat['display_value'], '%'))
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-4">
+                            <div class="bg-gradient-to-r {{ $colors['bg'] }} h-2 rounded-full transition-all duration-1000 ease-out" 
+                                 style="width: {{ $stat['value'] }}%"
+                                 x-data
+                                 x-init="setTimeout(() => $el.style.width = '{{ $stat['value'] }}%', 500)">
+                            </div>
+                        </div>
+                    @endif
                 </div>
             @endforeach
         </div>
-
-        {{-- CTA Section --}}
-        <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-cyan-600 via-blue-600 to-violet-600 p-8 text-center md:p-12">
-            {{-- Decorative elements --}}
-            <div class="absolute -left-10 -top-10 h-40 w-40 rounded-full bg-white/10 blur-2xl" aria-hidden="true"></div>
-            <div class="absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-white/10 blur-2xl" aria-hidden="true"></div>
-
-            <div class="relative">
-                <h3 class="mb-4 text-2xl font-black text-white md:text-3xl">
-                    Pronto a Far Parte di Questi Numeri?
-                </h3>
-                <p class="mx-auto mb-8 max-w-2xl text-blue-100">
-                    Sii tra i primi a prevedere il futuro. La piattaforma è appena nata.
-                </p>
-                <div class="flex flex-col justify-center gap-4 sm:flex-row">
-                    <a href="{{ url(app()->getLocale().'/register') }}"
-                       class="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-base font-bold text-blue-600 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                        <x-filament::icon icon="heroicon-o-rocket-launch" class="mr-2 h-5 w-5" aria-hidden="true" />
-                        Inizia Gratis
-                        <x-filament::icon icon="heroicon-o-arrow-right" class="ml-2 h-5 w-5" aria-hidden="true" />
-                    </a>
-                    <a href="{{ url(app()->getLocale().'/predicts') }}"
-                       class="inline-flex items-center justify-center rounded-full border-2 border-white/30 bg-white/10 px-8 py-4 text-base font-bold text-white backdrop-blur transition-all duration-300 hover:bg-white/20">
-                        <x-filament::icon icon="heroicon-o-chart-bar" class="mr-2 h-5 w-5" aria-hidden="true" />
-                        Esplora i Mercati
-                    </a>
+        
+        <!-- Live Activity Feed -->
+        @if($show_live_counter)
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 p-8 mb-12">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
+                        <div class="w-4 h-4 bg-green-400 rounded-full animate-pulse mr-3"></div>
+                        🔥 Attività in Tempo Reale
+                    </h3>
+                    <div class="text-sm text-gray-500 dark:text-gray-400">
+                        Aggiornato ogni secondo
+                    </div>
                 </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="text-center p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl">
+                        <div class="text-3xl font-black text-green-600 dark:text-green-400" 
+                             x-data="{ count: 0 }"
+                             x-init="setInterval(() => count = Math.floor(Math.random() * 50) + 1200, 2000)">
+                            €<span x-text="count.toLocaleString()"></span>
+                        </div>
+                        <div class="text-sm text-gray-600 dark:text-gray-400">Guadagnati ora</div>
+                    </div>
+                    
+                    <div class="text-center p-4 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-xl">
+                        <div class="text-3xl font-black text-blue-600 dark:text-blue-400"
+                             x-data="{ count: 0 }"
+                             x-init="setInterval(() => count = Math.floor(Math.random() * 20) + 80, 3000)">
+                            <span x-text="count"></span>
+                        </div>
+                        <div class="text-sm text-gray-600 dark:text-gray-400">Utenti online</div>
+                    </div>
+                    
+                    <div class="text-center p-4 bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 rounded-xl">
+                        <div class="text-3xl font-black text-purple-600 dark:text-purple-400"
+                             x-data="{ count: 0 }"
+                             x-init="setInterval(() => count = Math.floor(Math.random() * 10) + 25, 1500)">
+                            <span x-text="count"></span>
+                        </div>
+                        <div class="text-sm text-gray-600 dark:text-gray-400">Previsioni/min</div>
+                    </div>
+                </div>
+            </div>
+        @endif
+        
+        <!-- Call to Action -->
+        <div class="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-white">
+            <h3 class="text-3xl font-bold mb-4">Pronto a Far Parte di Questi Numeri?</h3>
+            <p class="text-purple-100 mb-8 max-w-2xl mx-auto text-lg">
+                Unisciti alla community di predictor più vincente d'Italia. I numeri parlano chiaro: qui si guadagna davvero!
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="/register" 
+                   class="inline-flex items-center px-8 py-4 text-lg font-bold text-purple-600 bg-white rounded-full hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                    🚀 Inizia Gratis
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </a>
+                <a href="/demo" 
+                   class="inline-flex items-center px-6 py-4 text-lg font-semibold text-white border-2 border-white/30 rounded-full hover:bg-white/10 transition-all duration-300">
+                    📊 Vedi Demo
+                </a>
             </div>
         </div>
     </div>
 </div>
+
+@push('styles')
+<style>
+    .animation-delay-2000 {
+        animation-delay: 2s;
+    }
+</style>
+@endpush
