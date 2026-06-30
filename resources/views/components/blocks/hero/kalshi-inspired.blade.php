@@ -80,44 +80,32 @@
                 <h3 class="text-2xl font-semibold text-white text-center mb-8">Popular Categories</h3>
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                     <a href="#" class="group flex flex-col items-center p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105">
-                        <div class="mb-3 group-hover:scale-110 transition-transform">
-                            <x-filament::icon icon="heroicon-o-presentation-chart-bar" class="w-8 h-8 text-white" />
-                        </div>
+                        <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">🗳️</div>
                         <div class="text-white font-medium text-center mb-1">Politics</div>
                         <div class="text-slate-400 text-sm">45 markets</div>
                     </a>
                     <a href="#" class="group flex flex-col items-center p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105">
-                        <div class="mb-3 group-hover:scale-110 transition-transform">
-                            <x-filament::icon icon="heroicon-o-trophy" class="w-8 h-8 text-white" />
-                        </div>
+                        <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">⚽</div>
                         <div class="text-white font-medium text-center mb-1">Sports</div>
                         <div class="text-slate-400 text-sm">67 markets</div>
                     </a>
                     <a href="#" class="group flex flex-col items-center p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105">
-                        <div class="mb-3 group-hover:scale-110 transition-transform">
-                            <x-filament::icon icon="heroicon-o-chart-bar" class="w-8 h-8 text-white" />
-                        </div>
+                        <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">📈</div>
                         <div class="text-white font-medium text-center mb-1">Economics</div>
                         <div class="text-slate-400 text-sm">34 markets</div>
                     </a>
                     <a href="#" class="group flex flex-col items-center p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105">
-                        <div class="mb-3 group-hover:scale-110 transition-transform">
-                            <x-filament::icon icon="heroicon-o-command-line" class="w-8 h-8 text-white" />
-                        </div>
+                        <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">💻</div>
                         <div class="text-white font-medium text-center mb-1">Technology</div>
                         <div class="text-slate-400 text-sm">28 markets</div>
                     </a>
                     <a href="#" class="group flex flex-col items-center p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105">
-                        <div class="mb-3 group-hover:scale-110 transition-transform">
-                            <x-filament::icon icon="heroicon-o-film" class="w-8 h-8 text-white" />
-                        </div>
+                        <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">🎬</div>
                         <div class="text-white font-medium text-center mb-1">Entertainment</div>
                         <div class="text-slate-400 text-sm">23 markets</div>
                     </a>
                     <a href="#" class="group flex flex-col items-center p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105">
-                        <div class="mb-3 group-hover:scale-110 transition-transform">
-                            <x-filament::icon icon="predict-currency" class="w-8 h-8 text-white" />
-                        </div>
+                        <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">₿</div>
                         <div class="text-white font-medium text-center mb-1">Crypto</div>
                         <div class="text-slate-400 text-sm">19 markets</div>
                     </a>

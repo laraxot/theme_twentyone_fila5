@@ -46,8 +46,8 @@ final class ResolveCinematicHeroDataAction
 
         $data = [
             'eyebrow' => $this->translateText('predict::home.hero.eyebrow.label', 'Mercati multi-opzione in primo piano'),
-            'title' => $heroTitle ?: $this->translateText('predict::home.hero.title', 'Prevedi il Futuro'),
-            'subtitle' => $heroSubtitle ?: $this->translateText('predict::home.hero.subtitle', 'Mercati visuali, percentuali calcolate dal database e flussi pensati per capire chi sta davvero salendo.'),
+            'title' => $heroTitle ? $heroTitle : $this->translateText('predict::home.hero.title', 'Prevedi il Futuro'),
+            'subtitle' => $heroSubtitle ? $heroSubtitle : $this->translateText('predict::home.hero.subtitle', 'Mercati visuali, percentuali calcolate dal database e flussi pensati per capire chi sta davvero salendo.'),
             'primaryCta' => [
                 'text' => (string) ($ctaPrimary['text'] ?? $this->translateText('predict::home.hero.cta_primary.label', 'Esplora i mercati')),
                 'url' => (string) ($ctaPrimary['url'] ?? $this->localizedUrl($locale, '/predicts')),
@@ -122,7 +122,7 @@ final class ResolveCinematicHeroDataAction
         }
 
         $translatedLabel = __($key.'.label');
-        if (is_string($translatedLabel) && $translatedLabel !== ($key.'.label')) {
+        if (is_string($translatedLabel) && $translatedLabel !== $key.'.label') {
             return $translatedLabel;
         }
 

@@ -42,18 +42,18 @@ final class ResolveFeaturedMarketsGridDataAction
         $locale = app()->getLocale();
 
         return [
-            'title' => $title ?: $this->tx('predict::home.featured_markets.title', 'Mercati in primo piano'),
-            'subtitle' => $subtitle ?: $this->tx('predict::home.featured_markets.subtitle', 'Mercati reali, multi-opzione e dati calcolati dal database'),
-            'showAllLink' => $showAllLink ?: (LaravelLocalization::getLocalizedURL($locale, '/predicts') ?? url('/'.$locale.'/predicts')),
-            'showAllLabel' => $this->tx('predict::home.featured_markets.cta_all', 'Esplora tutti i mercati'),
-            'openMarketLabel' => $this->tx('predict::actions.trade_market', 'Apri il mercato'),
-            'activeMarketsLabel' => $this->tx('predict::home.featured_markets.active_markets', 'mercati attivi'),
-            'multiOutcomeLabel' => $this->tx('predict::home.featured_markets.multi_outcome_focus', 'Solo mercati con 4+ esiti'),
-            'visualOptionsLabel' => $this->tx('predict::home.featured_markets.visual_options', 'Opzioni visive con quota crediti'),
-            'freshnessLabel' => $this->tx('predict::home.featured_markets.freshness', 'Quote e partecipazione dai mercati pubblici'),
-            'educationLabel' => $this->tx('predict::home.featured_markets.education', 'Probabilità aggiornate su dati reali'),
-            'emptyStateTitle' => $this->tx('predict::predict_table.empty_state.no_markets_available.message', 'Nessun mercato disponibile'),
-            'emptyStateBody' => $this->tx('predict::home.featured_markets.empty_body', 'Pubblica o abilita mercati visibili per popolare questa sezione.'),
+            'title' => $title ? $title : $this__('predict::home.featured_markets.title'),
+            'subtitle' => $subtitle ? $subtitle : $this__('predict::home.featured_markets.subtitle'),
+            'showAllLink' => $showAllLink ? $showAllLink : (LaravelLocalization::getLocalizedURL($locale, '/predicts') ?? url('/'.$locale.'/predicts')),
+            'showAllLabel' => $this__('predict::home.featured_markets.cta_all'),
+            'openMarketLabel' => $this__('predict::actions.trade_market'),
+            'activeMarketsLabel' => $this__('predict::home.featured_markets.active_markets'),
+            'multiOutcomeLabel' => $this__('predict::home.featured_markets.multi_outcome_focus'),
+            'visualOptionsLabel' => $this__('predict::home.featured_markets.visual_options'),
+            'freshnessLabel' => $this__('predict::home.featured_markets.freshness'),
+            'educationLabel' => $this__('predict::home.featured_markets.education'),
+            'emptyStateTitle' => $this__('predict::predict_table.empty_state.no_markets_available.message'),
+            'emptyStateBody' => $this__('predict::home.featured_markets.empty_body'),
             'cards' => app(GetHomepageMarketCardsAction::class)->execute($limit, 'featured'),
         ];
     }

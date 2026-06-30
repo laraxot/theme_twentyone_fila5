@@ -26,7 +26,7 @@
                     @if($show_categories)
                     <div class="flex items-center justify-between mb-4">
                         <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-300">
-                            <x-heroicon-o-users class="w-4 h-4 mr-1" /> Politics
+                            🗳️ Politics
                         </span>
                         <div class="text-sm text-gray-500 dark:text-gray-400">Resolves: Dec 2025</div>
                     </div>
@@ -75,7 +75,7 @@
                     @if($show_categories)
                     <div class="flex items-center justify-between mb-4">
                         <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-300">
-                            <x-heroicon-o-trophy class="w-4 h-4 mr-1" /> Sports
+                            ⚽ Sports
                         </span>
                         <div class="text-sm text-gray-500 dark:text-gray-400">Resolves: May 2025</div>
                     </div>
@@ -120,7 +120,7 @@
                     @if($show_categories)
                     <div class="flex items-center justify-between mb-4">
                         <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-300">
-                            <x-filament::icon icon="heroicon-o-currency-euro" class="w-4 h-4 mr-1" /> Crypto
+                            ₿ Crypto
                         </span>
                         <div class="text-sm text-gray-500 dark:text-gray-400">Resolves: Jun 2025</div>
                     </div>
@@ -165,7 +165,7 @@
                     @if($show_categories)
                     <div class="flex items-center justify-between mb-4">
                         <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-100 text-purple-800 dark:bg-purple-900/20 dark:text-purple-300">
-                            <x-heroicon-o-command-line class="w-4 h-4 mr-1" /> Technology
+                            💻 Technology
                         </span>
                         <div class="text-sm text-gray-500 dark:text-gray-400">Resolves: Dec 2025</div>
                     </div>
@@ -210,7 +210,7 @@
                     @if($show_categories)
                     <div class="flex items-center justify-between mb-4">
                         <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900/20 dark:text-indigo-300">
-                            <x-filament::icon icon="heroicon-o-chart-bar" class="w-4 h-4 mr-1" /> Economics
+                            📈 Economics
                         </span>
                         <div class="text-sm text-gray-500 dark:text-gray-400">Resolves: Mar 2025</div>
                     </div>
@@ -255,7 +255,7 @@
                     @if($show_categories)
                     <div class="flex items-center justify-between mb-4">
                         <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-pink-100 text-pink-800 dark:bg-pink-900/20 dark:text-pink-300">
-                            <x-heroicon-o-film class="w-4 h-4 mr-1" /> Entertainment
+                            🎬 Entertainment
                         </span>
                         <div class="text-sm text-gray-500 dark:text-gray-400">Resolves: Feb 2025</div>
                     </div>

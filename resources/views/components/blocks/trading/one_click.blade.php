@@ -56,12 +56,8 @@ $market = [
     <div class="flex-1 pr-4">
       <h3 class="text-xl font-bold text-white leading-tight">{{ $market['title'] }}</h3>
       <div class="flex items-center space-x-4 mt-2">
-        <div class="flex items-center gap-1 text-sm text-gray-400">
-        <x-filament::icon icon="heroicon-o-clock" class="h-4 w-4" aria-hidden="true" /> {{ $market['time_remaining'] }}
-      </div>
-        <div class="flex items-center gap-1 text-sm text-gray-400">
-      <x-filament::icon icon="predict-trending-up" class="h-4 w-4" aria-hidden="true" /> {{ $market['volume'] }}
-    </div>
+        <div class="text-sm text-gray-400">⏰ {{ $market['time_remaining'] }}</div>
+        <div class="text-sm text-gray-400">📈 {{ $market['volume'] }}</div>
       </div>
     </div>
     <div class="text-right">
@@ -86,7 +82,7 @@ $market = [
   <!-- Trend Indicator -->
   <div class="flex items-center justify-center mb-4">
     <div class="flex items-center space-x-2 {{ str_starts_with($market['trend'], '+') ? 'text-green-400' : 'text-red-400' }}">
-      <x-filament::icon :icon="str_starts_with($market['trend'], '+') ? 'predict-trending-up' : 'predict-trending-down'" class="h-4 w-4" aria-hidden="true" />
+      <span class="text-sm">{{ str_starts_with($market['trend'], '+') ? '📈' : '📉' }}</span>
       <span class="font-bold">{{ $market['trend'] }} nelle ultime 24h</span>
     </div>
   </div>
@@ -97,7 +93,7 @@ $market = [
       onclick="quickTrade('{{ $market['id'] }}', 'yes')"
       class="btn-trade-yes bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white py-4 px-4 rounded-xl font-black text-lg transition-all duration-200 transform hover:scale-105 active:scale-95 flex flex-col items-center space-y-1 shadow-lg">
       <div class="flex items-center space-x-2">
-        <x-filament::icon icon="heroicon-o-hand-thumb-up" class="h-5 w-5" aria-hidden="true" />
+        <span>👍</span>
         <span>SÌ</span>
       </div>
       <div class="text-xs opacity-80">{{ number_format($market['yes_price'], 2) }}</div>
@@ -106,7 +102,7 @@ $market = [
       onclick="quickTrade('{{ $market['id'] }}', 'no')"
       class="btn-trade-no bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white py-4 px-4 rounded-xl font-black text-lg transition-all duration-200 transform hover:scale-105 active:scale-95 flex flex-col items-center space-y-1 shadow-lg">
       <div class="flex items-center space-x-2">
-        <x-filament::icon icon="heroicon-o-hand-thumb-down" class="h-5 w-5" aria-hidden="true" />
+        <span>👎</span>
         <span>NO</span>
       </div>
       <div class="text-xs opacity-80">{{ number_format($market['no_price'], 2) }}</div>
@@ -116,10 +112,10 @@ $market = [
   <!-- Quick Info -->
   <div class="text-center">
     <div class="text-xs text-gray-400 mb-2">
-      <x-filament::icon icon="predict-currency" class="inline h-3.5 w-3.5" aria-hidden="true" /> Bet minimo €10 • <x-filament::icon icon="heroicon-o-bolt" class="inline h-3.5 w-3.5" aria-hidden="true" /> Esecuzione istantanea • <x-filament::icon icon="heroicon-o-x-circle" class="inline h-3.5 w-3.5" aria-hidden="true" /> 0% commissioni
+      💸 Bet minimo €10 • ⚡ Esecuzione istantanea • 🚫 0% commissioni
     </div>
     <div class="text-xs text-yellow-400 font-semibold">
-      <x-filament::icon icon="heroicon-o-light-bulb" class="inline h-3.5 w-3.5" aria-hidden="true" /> Tip: {{ $market['yes_percent'] > 50 ? 'Mercato rialzista' : 'Mercato ribassista' }}
+      💡 Tip: {{ $market['yes_percent'] > 50 ? 'Mercato rialzista' : 'Mercato ribassista' }}
     </div>
   </div>
 
@@ -152,11 +148,8 @@ async function quickTrade(marketId, position) {
             (100 / {{ 100 - $market['yes_percent'] }});
         const potentialWin = Math.round(betAmount * multiplier);
 
-        // Show success toast with celebration (SVG icons, no emoji)
-        const successIcon = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline w-5 h-5 mr-2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>`;
-        const moneyIcon = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline w-4 h-4 mr-1"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>`;
-        const boltIcon = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline w-4 h-4 mr-1"><path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" /></svg>`;
-        showSuccessToast(`${successIcon} Bet <strong>${position.toUpperCase()}</strong> piazzato!<br>${moneyIcon} Potential win: <strong>€${potentialWin}</strong><br>${boltIcon} Elaborazione in corso...`);
+        // Show success toast with celebration
+        showSuccessToast(`🎉 Bet ${position.toUpperCase()} piazzato!\n💰 Potential win: €${potentialWin}\n⚡ Elaborazione in corso...`);
 
         // Add visual feedback
         button.classList.add('animate-pulse');
@@ -169,8 +162,7 @@ async function quickTrade(marketId, position) {
         }, 1000);
 
     } catch (error) {
-        const errorIcon = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline w-5 h-5 mr-2"><path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>`;
-        showErrorToast(`${errorIcon} Errore nel trading. Riprova tra poco.`);
+        showErrorToast('❌ Errore nel trading. Riprova tra poco.');
         button.innerHTML = originalContent;
         button.disabled = false;
     }

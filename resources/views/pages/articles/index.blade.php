@@ -17,12 +17,5 @@ name('articles.index');
 
 ?>
 <x-layouts.app>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <x-predict::blocks.article_list.play_money_markets.index
-            :articles="collect()"
-            :show-order-select="true"
-            selected-order="recent"
-            container-class="space-y-6"
-        />
-    </div>
+    @include('predict::components.blocks.article_list.play_money_markets', ['method' => 'getAllArticles'])
 </x-layouts.app>

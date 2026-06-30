@@ -8,31 +8,30 @@
 		<ul class="flex flex-wrap max-w-4xl gap-1">
 			@foreach($_theme->categories() as $category)
 			{{-- {{ dddx($category) }} --}}
-		<li class="flex flex-col w-[220px] p-3 space-y-4 transition-colors rounded justify-content-between hover:ring-1 hover:ring-gray-100">
-				<a href="{{ url(app()->getLocale().'/categories/'.$category->slug) }}">
-				<div class="flex items-center space-x-2">
-					<span class="grid text-blue-600 bg-blue-100 rounded place-items-center size-8">
-						@if($category->icon == null)
-							<x-heroicon-o-question-mark-circle class="size-6"/>
-						@else
-							@php
-								$icon = $category->icon;
-								if ($icon === 'cpu' || $icon === 'heroicon-o-cpu') {
-									$icon = 'heroicon-o-cpu-chip';
-								}
-								// Fallback robusto se l'icona non esiste/non è caricabile
-								// In un sistema di produzione dovremmo verificare la correttezza della stringa
-							@endphp
-							@svg($icon ?? 'heroicon-o-question-mark-circle', 'size-6')
-						@endif
-					</span>
-					<span class="font-semibold">{{ $category->title }}</span>
-				</div>
+			<li class="flex flex-col w-[220px] p-3 space-y-4 transition-colors rounded justify-content-between hover:ring-1 hover:ring-gray-100">
+				<a href="
+					{{-- {{ "/categories/{$category->slug}" }} --}}
+					{{ route('category.view', ['lang'=>$lang,'slug' => $category->slug ]) }}
+					">
+					<div class="flex items-center space-x-2">
+						<span class="grid text-blue-600 bg-blue-100 rounded place-items-center size-8">
+							@if($category->icon == null)
+								<x-heroicon-o-question-mark-circle class="size-6"/>
+							@else
+								@svg($category->icon, 'size-6')
+							@endif
+						</span>
+						<span class="font-semibold">{{ $category->title }}</span>
+					</div>
 				</a>
 				<ul class="space-y-1 grow">
 					@foreach($category->children as $child)
 					<li>
-						<a class="block p-1 -ms-1 hover:text-blue-600" href="{{ url(app()->getLocale().'/categories/'.$child->slug) }}">
+						<a class="block p-1 -ms-1 hover:text-blue-600" 
+							href="
+								{{-- {{ "/categories/{$child->slug}" }} --}}
+								{{ route('category.view', ['lang'=>$lang,'slug' => $child->slug ]) }}
+								">
 							{{ $child->title }}
 						</a>
 					</li>

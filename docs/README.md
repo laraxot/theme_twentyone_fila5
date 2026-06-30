@@ -1,7 +1,12 @@
-# TwentyOne Theme Documentation
+---
+title: "TwentyOne Module Documentation"
+type: documentation
+tags: [module, documentation]
+created: 2026-06-05
+updated: 2026-06-05
+---
 
-Per workflow GSD/BMAD e coordinamento multi-agente: [docs/project/gsd-and-bmad-workflow.md](../../../../docs/project/gsd-and-bmad-workflow.md).  
-Per studio web design e checklist sito: [web-design-study.md](web-design-study.md).
+# TwentyOne Theme Documentation
 
 ## Introduzione
 TwentyOne è un tema moderno e performante per Laravel, basato su Tailwind CSS e Vite.
@@ -76,19 +81,13 @@ Per problemi comuni, consulta la documentazione nella cartella `docs`:
 
 ## Documentazione correlata
 - `laravel/Themes/TwentyOne/docs/` - Documentazione del tema
-- `docs/` - Documentazione globale di progetto
+- `project_docs/` - Documentazione di progetto (architettura, sviluppo)
+- `project_docs/roadmaps/` - Roadmap master e stato avanzamento
 
-## Web Design Best Practices
-Per le linee guida aggiornate sul web design moderno (2026), consulta:
-- `docs/web-design-best-practices-2026.md` - Best practices complete
-- `docs/website-checklist-2026.md` - Checklist operativa
+## LLM Wiki Workflow
 
-Questi documenti includono:
-- Web Design Immersivo e Cinetico
-- Micro-interazioni
-- Design Emozionale
-- Accessibilità Web (WCAG 2.2)
-- Performance Optimization
+- Canonical wiki layer: [../../../../docs/wiki/README.md](../../../../docs/wiki/README.md)
+- Compiled index: [../../../../docs/wiki/index.md](../../../../docs/wiki/index.md)
 
 ## Contribuire
 Le contribuzioni sono benvenute! Per contribuire:
@@ -98,3 +97,17 @@ Le contribuzioni sono benvenute! Per contribuire:
 
 ## Licenza
 Questo tema è rilasciato sotto la licenza MIT. Vedi il file [LICENSE](../LICENSE) per maggiori dettagli. 
+
+
+## Standard Rules & Workflow
+
+- [[BMAD Method](../../../../docs/wiki/concepts/bmad-method.md)]
+- [[Context Engineering](../../../../docs/wiki/concepts/context-engineering.md)]
+- [[LLM Wiki Governance](../../../../docs/wiki/concepts/llm-wiki-governance.md)]
+
+## Documentation
+
+- [On-Demand Pattern](./ON-DEMAND-PATTERN.md) — Pattern per caricamento efficiente
+- [QMD Setup](./QMD-SETUP.md) — Configurazione ricerca locale
+- [Performance](./PERFORMANCE-OPTIMIZATION.md) — Metriche e best practice
+- [Project Structure](./PROJECT-STRUCTURE.md) — Directory layout
