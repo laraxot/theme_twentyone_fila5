@@ -3,7 +3,7 @@ title: "Hub ridondanze TwentyOne ↔ Xot core"
 type: concept
 theme: twentyone
 created: "2026-05-21"
-updated: "2026-05-21"
+updated: "2026-05-26"
 related:
   - ../../analisi-metodi-duplicati.md
   - ../../dry-kiss-analysis.md
@@ -26,12 +26,18 @@ Evitare un **nuovo mega-report tecnico**: il tema ha già analisi voluminose (**
 
 **Nota temporale**: numeri LOC / occorrenze **non sono auto-aggiornati** — dopo refactor grandi ricontrollare con `rg`/PHPStan prima di affidarsi alle tabelle storiche.
 
+## Componenti byte-identici vs Sixteen (2026-05-23)
+
+Scan statico cross-tema: esistono file **`placeholder.blade.php`** con **stesso contenuto** tra **TwentyOne** e **Sixteen** (e due varianti duplicate anche **dentro** Sixteen: `components/ui` vs `components/utilities`). Non è solo “stile”: implica **doppia manutenzione** su token markup/classi.
+
+**Politica:** una sola SSoT per il contratto visivo del placeholder; l’altro tema **include** o **estende** esplicitamente (documentare la scelta in issue #90 / #89). Dettaglio numeri globali: [`byte-identical-files-static-scan.md`](../../../../../Modules/Xot/docs/wiki/redundancy/byte-identical-files-static-scan.md).
+
 ## Hub globale modulo Xot
 
 L’analisi continuativa degli “anti-pattern di duplicazione” **cross-module** vivono in modulo **core**:
 
 - **[ridondanze-cross-cutting-codebase.md](../../../../../Modules/Xot/docs/wiki/concepts/ridondanze-cross-cutting-codebase.md)** (scaffold LLM‑wiki ripetuti, wizard doc pair, liste moduli cluster)
-- **[redundancy-report.md](../../../../../Modules/Xot/docs/redundancy-report.md)** inventario tecnico più recente nel modulo (`ColumnBuilder`, `AutoLabel`, DTO ospitati nella cartella sbagliata).
+- **[`audit-profondo-ridondanze-holistic.md`](../../../../../Modules/Xot/docs/wiki/redundancy/audit-profondo-ridondanze-holistic.md)** — dopo 2026-05-26 include **§ analisi nominale classe / pivot / ThemeComposer CMS** accanto allo scan checksum.
 
 ## Dove documentare dopo una nuova scoperta
 

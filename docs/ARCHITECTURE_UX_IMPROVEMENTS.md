@@ -162,7 +162,7 @@ Module components (predict-view, market-overview, etc.)
 - [ ] NO module-specific methods in generic blade
 - [ ] Using `ResolvePageAction` for data loading
 - [ ] Passing `$item` to `x-page` (NOT `record/article/predict`)
-- [ ] Route names correct (`container0.list`, `container0.view`)
+- [ ] Route names correct (`container0.index`, `container0.view`)
 - [ ] Filters collapsible by default
 - [ ] Sorting always visible
 - [ ] Mobile responsive
