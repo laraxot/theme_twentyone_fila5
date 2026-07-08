@@ -75,7 +75,7 @@ use function Laravel\Folio\name;
 use Livewire\Volt\Component;
 use Modules\Cms\Http\Middleware\PageSlugMiddleware;
 
-name('container0.list');
+name('container0.index');
 middleware(PageSlugMiddleware::class);
 
 new class extends Component {
@@ -92,7 +92,7 @@ new class extends Component {
 ?>
 
 <x-layouts.app :title="$pageTitle">
-    @volt('container0.list')
+    @volt('container0.index')
     <div class="min-h-screen">
         {{-- GENERIC: Works for ANY container --}}
         <x-page side="content" :slug="$this->pageSlug" :data="$this->data" />

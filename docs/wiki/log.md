@@ -1,3 +1,15 @@
+## [2026-06-06] architecture | Folio container0 Filament way
+
+- Codice: `[container0]/index` → `container0.index`; `[slug0]/index` → `container0.view` + `@volt`
+- Slug0: rimosso `container0.detail`, special-case `predict-view`; usa `ResolvePageAction::pageSlug`
+- Doc: `route-names-philosophy.md`, `wiki/concepts/folio-container0-filament-way.md`
+- Pest: `tests/Unit/FolioPageMountContractTest.php`
+
+## [2026-06-05] docs | HackerNoon harness — tips 001-022 in wiki locale
+
+- Stub/checklist: second-brain → canon Xot, ai-harness, [hackernoon map](../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md), [llm-wiki.txt](../../../../../bashscripts/tools/prompts/llm-wiki.txt)
+- GitHub: [#272](https://github.com/laraxot/base_fixcity_fila5/issues/272) / [D#273](https://github.com/laraxot/base_fixcity_fila5/discussions/273)
+
 # TwentyOne Wiki Log
 
 ## [2026-04-28] governance | recepita regola PHPMD standalone `.phar`

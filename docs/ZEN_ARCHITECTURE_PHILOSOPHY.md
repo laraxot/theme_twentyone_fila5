@@ -291,7 +291,7 @@ class ViewRecipeWidget extends XotBaseViewWidget
 File: `[container0]/[slug0]/index.blade.php`
 
 ```php
-name('container0.detail');
+name('container0.view');
 
 new class extends Component {
     public string $container0 = '';

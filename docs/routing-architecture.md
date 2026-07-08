@@ -10,7 +10,7 @@ Modules provide logic and components — the theme decides how to render them.
 | File | Route | Purpose |
 |------|-------|---------|
 | `pages/[container0]/[slug0]/index.blade.php` | `/{locale}/{container}/{slug}` | Catch-all detail page (`container0.view`) |
-| `pages/[container0]/index.blade.php` | `/{locale}/{container}` | Container list page (`container0.list`) |
+| `pages/[container0]/index.blade.php` | `/{locale}/{container}` | Container list page (`container0.index`) |
 | `pages/index.blade.php` | `/{locale}` | Homepage |
 
 ## Catch-all flow
