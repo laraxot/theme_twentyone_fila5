@@ -6,7 +6,6 @@ namespace Themes\TwentyOne\Actions\Markets;
 
 use Illuminate\Support\Collection;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
-use Modules\Predict\Actions\Homepage\GetHomepageMarketCardsAction;
 
 final class ResolveFeaturedMarketsGridDataAction
 {
@@ -42,20 +41,64 @@ final class ResolveFeaturedMarketsGridDataAction
         $locale = app()->getLocale();
 
         return [
-            'title' => $title ? $title : $this__('predict::home.featured_markets.title'),
-            'subtitle' => $subtitle ? $subtitle : $this__('predict::home.featured_markets.subtitle'),
-            'showAllLink' => $showAllLink ? $showAllLink : (LaravelLocalization::getLocalizedURL($locale, '/predicts') ?? url('/'.$locale.'/predicts')),
-            'showAllLabel' => $this__('predict::home.featured_markets.cta_all'),
-            'openMarketLabel' => $this__('predict::actions.trade_market'),
-            'activeMarketsLabel' => $this__('predict::home.featured_markets.active_markets'),
-            'multiOutcomeLabel' => $this__('predict::home.featured_markets.multi_outcome_focus'),
-            'visualOptionsLabel' => $this__('predict::home.featured_markets.visual_options'),
-            'freshnessLabel' => $this__('predict::home.featured_markets.freshness'),
-            'educationLabel' => $this__('predict::home.featured_markets.education'),
-            'emptyStateTitle' => $this__('predict::predict_table.empty_state.no_markets_available.message'),
-            'emptyStateBody' => $this__('predict::home.featured_markets.empty_body'),
-            'cards' => app(GetHomepageMarketCardsAction::class)->execute($limit, 'featured'),
+            'title' => $title ?? $this->tx('predict::home.featured_markets.title', 'Mercati in evidenza'),
+            'subtitle' => $subtitle ?? $this->tx('predict::home.featured_markets.subtitle', 'Scopri i mercati più attivi'),
+            'showAllLink' => $showAllLink ?? $this->resolveShowAllLink($locale),
+            'showAllLabel' => $this->tx('predict::home.featured_markets.cta_all', 'Vedi tutti'),
+            'openMarketLabel' => $this->tx('predict::actions.trade_market', 'Apri mercato'),
+            'activeMarketsLabel' => $this->tx('predict::home.featured_markets.active_markets', 'Mercati attivi'),
+            'multiOutcomeLabel' => $this->tx('predict::home.featured_markets.multi_outcome_focus', 'Multi-esito'),
+            'visualOptionsLabel' => $this->tx('predict::home.featured_markets.visual_options', 'Opzioni visuali'),
+            'freshnessLabel' => $this->tx('predict::home.featured_markets.freshness', 'Aggiornati di recente'),
+            'educationLabel' => $this->tx('predict::home.featured_markets.education', 'Impara a prevedere'),
+            'emptyStateTitle' => $this->tx('predict::predict_table.empty_state.no_markets_available.message', 'Nessun mercato disponibile'),
+            'emptyStateBody' => $this->tx('predict::home.featured_markets.empty_body', 'Torna presto per scoprire nuovi mercati.'),
+            'cards' => $this->resolveCards($limit),
         ];
+    }
+
+    /**
+     * @return Collection<int, array{
+     *     title:string,
+     *     slug:string,
+     *     url:string,
+     *     image_url:string|null,
+     *     category:string|null,
+     *     participants:int,
+     *     volume:float,
+     *     ends_at_human:string|null,
+     *     outcomes:array<int, array{title:string, percentage:float, image_url:string|null}>
+     * }>
+     */
+    private function resolveCards(int $limit): Collection
+    {
+        unset($limit);
+
+        /** @var Collection<int, array{
+         *     title:string,
+         *     slug:string,
+         *     url:string,
+         *     image_url:string|null,
+         *     category:string|null,
+         *     participants:int,
+         *     volume:float,
+         *     ends_at_human:string|null,
+         *     outcomes:array<int, array{title:string, percentage:float, image_url:string|null}>
+         * }> $empty */
+        $empty = new Collection;
+
+        return $empty;
+    }
+
+    private function resolveShowAllLink(string $locale): string
+    {
+        $localized = LaravelLocalization::getLocalizedURL($locale, '/predicts');
+
+        if (is_string($localized) && $localized !== '') {
+            return $localized;
+        }
+
+        return url('/'.$locale.'/predicts');
     }
 
     private function tx(string $key, string $fallback): string
