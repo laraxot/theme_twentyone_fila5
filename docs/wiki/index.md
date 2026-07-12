@@ -3,7 +3,7 @@ title: "TwentyOne Theme Wiki Index"
 type: index
 tags: [twentyone, theme, wiki, index]
 created: 2026-04-15
-updated: 2026-06-05
+updated: 2026-07-12
 qmd: "twentyone theme wiki index second brain harness"
 issues:
   - "https://github.com/laraxot/base_fixcity_fila5/issues/272"
@@ -38,7 +38,7 @@ Indice operativo del wiki TwentyOne.
 - [comparisons/](./comparisons/): Implementazioni alternative.
 - [decisions/](./decisions/): Decisioni design tema.
 - [troubleshooting/](./troubleshooting/): Problemi noti e soluzioni.
-- [_archive/](./_archive/): Documentazione legacy.
+- [_archive/](./_archive/): Documentazione legacy (es. [main-files](./_archive/main-files/readme.md)).
 - [_templates/](./_templates/): Template standard.
 
 ## Regole collegate
@@ -48,6 +48,7 @@ Indice operativo del wiki TwentyOne.
 - [laravel12-lang-path-rule](./concepts/laravel12-lang-path-rule.md): Path corrette Laravel 12.
 - [theme-css-only-parity-rule](../../../../laravel/Themes/Sixteen/docs/wiki/concepts/theme-css-only-parity-rule.md): CSS solo in tema, non inline.
 - [phpmd-standalone-phar-rule](../../../../docs/wiki/concepts/phpmd-standalone-phar-rule.md): quality gates del tema con PHPMD standalone `.phar`, mai via Composer.
+- [queueable-action-trait-mandatory](../../../../docs/wiki/rules/queueable-action-trait-mandatory.md): ogni classe in `app/Actions/` del tema usa `QueueableAction` + `execute()`.
 
 ## Scopo TwentyOne Theme
 

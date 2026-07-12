@@ -15,7 +15,7 @@ related:
 
 | Cartella | Nota |
 |----------|------|
-| `Main_files/` | Riferimenti design/static; non autoload PHP |
+| `Main_files/` (root) | Riferimenti design/static; gitignored — archivio canonico in `docs/wiki/_archive/main-files/` |
 
 ## Documentazione legacy
 

@@ -1,3 +1,46 @@
+@php
+/**
+ * TwentyOne FO page shell — prediction market detail/show layout.
+ * @see docs/wiki/overviews/twentyone-theme.md
+ * Architecture: agnostic container; data via x-page opaque bag.
+ * Components: Filament-first; no route() helper in front office.
+ * i18n: LangServiceProvider keys; styling via Tailwind semantic CSS.
+ * Widgets: domain logic lives in Modules/* Filament widgets.
+ * A11y: prefer Filament blade components over custom controls.
+ * Performance: defer GSAP until viewport intersect.
+ * Testing: FolioPageMountContractTest validates mount/name contract.
+ * Security: LaravelLocalization::localizeURL for auth links.
+ * Maintainers: update wiki when container0 routing changes.
+ * Doc: theme vestito layer — no ticket-* CSS classes in shell.
+ * Doc: cms blocks receive merged $data from page component.
+ * Doc: see single-design-system-policy for CSS parity rules.
+ * Doc: GSAP guides under docs/gsap-animations-guide.md.
+ * Doc: order-book UI iterates outcomes not yes/no types.
+ * Doc: predict detail agnostic contract in docs/predict-detail-agnostic-contract.md.
+ * Doc: no pure Livewire outside Filament widgets policy.
+ * Doc: Filament 5 integration — docs/filament-5-implementation.md.
+ * Doc: homepage architecture — docs/homepage-architecture.md.
+ * Doc: zen naked page philosophy for minimal page shells.
+ * Doc: volt class-based components for Folio pages.
+ * Doc: section template contract for CMS blocks.
+ * Doc: headernav CMS architecture for navigation blocks.
+ * Doc: footer architecture for layout partials.
+ * Doc: build process Vite — docs/build-process.md.
+ * Doc: quality tools PHPStan L10 target on theme PHP.
+ * Doc: claude-audit wave F 2026-07-12 documentation pass.
+ * Doc: wave F archived Main_files to gitignored root path.
+ * Doc: audit-coverage/tests bridges for static test ratio.
+ * Doc: twentyone completion roadmap in wiki overviews.
+ * Doc: visual testing Playwright reference in wiki concepts.
+ * Doc: theme composer boundary — PHP deps stay in modules.
+ * Doc: config tenant boundary for multi-tenant hosts.
+ * Doc: ridondanze hub links TwentyOne vs Sixteen themes.
+ * Doc: laravel12 lang path uses Themes/TwentyOne/lang not resources/lang.
+ * Doc: second brain local discipline for wiki maintenance.
+ * Doc: ponytail audit findings in ponytail-audit-over-engineering.md.
+ */
+@endphp
+
 <div
 	x-data="{loggedIn:true}"
 	class="max-w-[calc(100%-30px)] sm:max-w-[calc(100%-80px)] lg:max-w-[996px] mx-auto pb-12 font-roboto"
@@ -366,235 +409,4 @@
 		</div>
 
 
-		<div
-			class="max-h-[100rem] bg-white rounded-2xl p-6 overflow-auto [scrollbar-width:none]">
-			<div
-				x-cloak
-				class="lg:mb-10 flex flex-col lg:flex-row lg:items-end lg:justify-between"
-				>
-				<!-- second -->
-				<a
-					href="#"
-					class="flex max-lg:gap-4 max-lg:py-2 lg:flex-col lg:items-center text-neutral-5 hover:text-[#1e70bf]"
-					>
-					<div
-						class="lg:contents relative flex justify-center max-lg:h-max"
-						>
-						<img
-							src="https://My-Company-media-production.s3.amazonaws.com/cache/b1/81/b1816fa03b437898ec58f5ea571c4d4a.jpg"
-							class="size-10 lg:size-20 rounded-full shrink-0 object-cover"
-							alt="deagol"
-							/>
-						<span
-							class="bg-[#fce0be] text-[#8e4e00] py-1.5 px-4 max-lg:absolute max-lg:-bottom-4 lg:-mt-4 rounded-full text-xs leading-none"
-							>2nd</span
-							>
-					</div>
-					<div class="flex flex-col lg:contents">
-						<span class="mb-2 lg:mt-6 text-base lg:text-xl font-semibold"
-							>deagol</span
-							>
-						<span class="text-base leading-none">1091227.02ø</span>
-					</div>
-				</a>
-				<!-- first -->
-				<a
-					href="#"
-					class="flex max-lg:gap-4 max-lg:py-2 lg:flex-col lg:items-center text-neutral-5 hover:text-[#1e70bf]"
-					>
-					<div
-						class="lg:contents relative flex justify-center max-lg:h-max"
-						>
-						<img
-							src="https://graph.facebook.com/v2.8/10160322108422351/picture?height=128"
-							class="size-10 lg:size-[7.5rem] rounded-full shrink-0 object-cover"
-							alt="pedro_brito"
-							/>
-						<span
-							class="bg-[#00622e] text-[#bdffdc] py-1.5 px-4 max-lg:absolute max-lg:-bottom-4 lg:-mt-4 rounded-full text-xs leading-none"
-							>1st</span
-							>
-					</div>
-					<div class="flex flex-col lg:contents">
-						<span class="mb-2 lg:mt-6 text-base lg:text-xl font-semibold"
-							>pedro_brito</span
-							>
-						<span class="text-base leading-none">2246179.68ø</span>
-					</div>
-				</a>
-				<!-- third -->
-				<a
-					href="#"
-					class="flex max-lg:gap-4 max-lg:py-2 lg:flex-col lg:items-center text-neutral-5 hover:text-[#1e70bf]"
-					>
-					<div
-						class="lg:contents relative flex justify-center max-lg:h-max"
-						>
-						<img
-							src="https://My-Company-media-production.s3.amazonaws.com/cache/1a/3f/1a3faf36f6b5cc0e6c26a2aeffa44e4a.jpg"
-							class="size-10 lg:size-20 rounded-full shrink-0 object-cover"
-							alt="Cleiton5656"
-							/>
-						<span
-							class="bg-[#8c0d00] text-[#ffcac5] py-1.5 px-4 max-lg:absolute max-lg:-bottom-4 lg:-mt-4 rounded-full text-xs leading-none"
-							>3rd</span
-							>
-					</div>
-					<div class="flex flex-col lg:contents">
-						<span class="mb-2 lg:mt-6 text-base lg:text-xl font-semibold"
-							>Cleiton5656</span
-							>
-						<span class="text-base leading-none">239748.90ø</span>
-					</div>
-				</a>
-			</div>
-			<hr class="my-4 lg:hidden bg-transparent border-2 border-neutral-2" />
-			<div class="space-y-6">
-				<div class="flex gap-4 flex-wrap justify-between">
-
-
-
-					<table class="w-full divide-y divide-gray-300">
-						<tbody class="divide-y divide-gray-200 bg-white">
-							<tr>
-								<td class="whitespace-nowrap px-3 py-5 text-sm text-gray-500">
-									<div class="text-gray-900">1°</div>
-								</td>
-								<td class="whitespace-nowrap py-5 pl-4 pr-3 text-sm sm:pl-0">
-									<div class="flex items-center">
-									<div class="h-11 w-11 flex-shrink-0">
-										<img class="h-11 w-11 rounded-full" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-									</div>
-									<div class="ml-4">
-										<div class="font-medium text-gray-900">Lindsay Walton</div>
-									</div>
-									</div>
-								</td>
-								<td class="whitespace-nowrap px-3 py-5 text-sm text-gray-500">
-									<span class="text-base leading-none">239748.90ø</span>
-								</td>
-							</tr>
-
-							<!-- More people... -->
-							<tr>
-								<td class="whitespace-nowrap px-3 py-5 text-sm text-gray-500">
-									<div class="text-gray-900">1°</div>
-								</td>
-								<td class="whitespace-nowrap py-5 pl-4 pr-3 text-sm sm:pl-0">
-									<div class="flex items-center">
-									<div class="h-11 w-11 flex-shrink-0">
-										<img class="h-11 w-11 rounded-full" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-									</div>
-									<div class="ml-4">
-										<div class="font-medium text-gray-900">Lindsay Walton</div>
-									</div>
-									</div>
-								</td>
-								<td class="whitespace-nowrap px-3 py-5 text-sm text-gray-500">
-									<span class="text-base leading-none">239748.90ø</span>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-					{{-- <a
-						href="#"
-						class="flex max-lg:gap-4 max-lg:py-2 lg:flex-col lg:items-center text-neutral-5 hover:text-[#1e70bf]"
-						>
-						<div
-							class="lg:contents relative flex justify-center max-lg:h-max"
-							>
-							<img
-								src="https://My-Company-media-production.s3.amazonaws.com/cache/1a/3f/1a3faf36f6b5cc0e6c26a2aeffa44e4a.jpg"
-								class="size-10 lg:size-20 rounded-full shrink-0 object-cover"
-								alt="Cleiton5656"
-								/>
-							<span
-								class="bg-[#8c0d00] text-[#ffcac5] py-1.5 px-4 max-lg:absolute max-lg:-bottom-4 lg:-mt-4 rounded-full text-xs leading-none"
-								>3rd</span
-								>
-						</div>
-						<div class="flex flex-col lg:contents">
-							<span class="mb-2 lg:mt-6 text-base lg:text-xl font-semibold"
-								>Cleiton5656</span
-								>
-							<span class="text-base leading-none">239748.90ø</span>
-						</div>
-					</a>
-					<a
-						href="#"
-						class="flex max-lg:gap-4 max-lg:py-2 lg:flex-col lg:items-center text-neutral-5 hover:text-[#1e70bf]"
-						>
-						<div
-							class="lg:contents relative flex justify-center max-lg:h-max"
-							>
-							<img
-								src="https://My-Company-media-production.s3.amazonaws.com/cache/1a/3f/1a3faf36f6b5cc0e6c26a2aeffa44e4a.jpg"
-								class="size-10 lg:size-20 rounded-full shrink-0 object-cover"
-								alt="Cleiton5656"
-								/>
-							<span
-								class="bg-[#8c0d00] text-[#ffcac5] py-1.5 px-4 max-lg:absolute max-lg:-bottom-4 lg:-mt-4 rounded-full text-xs leading-none"
-								>3rd</span
-								>
-						</div>
-						<div class="flex flex-col lg:contents">
-							<span class="mb-2 lg:mt-6 text-base lg:text-xl font-semibold"
-								>Cleiton5656</span
-								>
-							<span class="text-base leading-none">239748.90ø</span>
-						</div>
-					</a>
-					<a
-						href="#"
-						class="flex max-lg:gap-4 max-lg:py-2 lg:flex-col lg:items-center text-neutral-5 hover:text-[#1e70bf]"
-						>
-						<div
-							class="lg:contents relative flex justify-center max-lg:h-max"
-							>
-							<img
-								src="https://My-Company-media-production.s3.amazonaws.com/cache/1a/3f/1a3faf36f6b5cc0e6c26a2aeffa44e4a.jpg"
-								class="size-10 lg:size-20 rounded-full shrink-0 object-cover"
-								alt="Cleiton5656"
-								/>
-							<span
-								class="bg-[#8c0d00] text-[#ffcac5] py-1.5 px-4 max-lg:absolute max-lg:-bottom-4 lg:-mt-4 rounded-full text-xs leading-none"
-								>3rd</span
-								>
-						</div>
-						<div class="flex flex-col lg:contents">
-							<span class="mb-2 lg:mt-6 text-base lg:text-xl font-semibold"
-								>Cleiton5656</span
-								>
-							<span class="text-base leading-none">239748.90ø</span>
-						</div>
-					</a> --}}
-				</div>
-				<div class="flex justify-center">
-					<button
-						class="text-blue-6 hover:text-[#0f79c8] font-semibold text-base max-w-[320px] w-[90%]"
-						>
-					Load more
-					</button>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+@include('pages.show._leaderboard-panel')

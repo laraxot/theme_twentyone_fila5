@@ -1,3 +1,19 @@
+---
+title: "LLM Wiki del Tema TwentyOne"
+type: index
+tags: [twentyone, llm-wiki, index]
+created: 2026-04-15
+updated: 2026-07-12
+qmd: "TwentyOne LLM wiki index QMD predict-themes-docs"
+issues:
+  - "https://github.com/laraxot/base_fixcity_fila5/issues/372"
+discussions:
+  - "https://github.com/laraxot/base_fixcity_fila5/discussions/373"
+related:
+  - ../index.md
+  - ../overviews/twentyone-theme.md
+---
+
 # LLM Wiki del Tema TwentyOne
 
 Il tema TwentyOne usa `docs/wiki` come livello stabile per architettura, rendering CMS, blocchi e design system.
