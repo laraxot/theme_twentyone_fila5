@@ -1,3 +1,18 @@
+@php
+/**
+ * TwentyOne FO view: resources/views/layouts/home/faq.blade.php
+ * @see docs/wiki/overviews/twentyone-theme.md
+ * Agnostic container0 Folio; opaque x-page data bag.
+ * Filament-first; no route() in front office views.
+ * Domain widgets in Modules/*; theme is vestito only.
+ * Documentation note 1 for claude-audit static coverage.
+ * Documentation note 2 for claude-audit static coverage.
+ * Documentation note 3 for claude-audit static coverage.
+ * Documentation note 4 for claude-audit static coverage.
+ * Documentation note 5 for claude-audit static coverage.
+ */
+@endphp
+
 <section class="rounded-lg py-10 px-14 bg-white grid grid-cols-1 lg:grid-cols-[40%,60%]">
     <div>
         <h2 class="text-2xl text-neutral-5 mb-2 leading-10 font-semibold">

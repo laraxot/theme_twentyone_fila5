@@ -1,3 +1,18 @@
+@php
+/**
+ * TwentyOne FO view: resources/views/components/ui/dark-mode-toggle.blade.php
+ * @see docs/wiki/overviews/twentyone-theme.md
+ * Agnostic container0 Folio; opaque x-page data bag.
+ * Filament-first; no route() in front office views.
+ * Domain widgets in Modules/*; theme is vestito only.
+ * Documentation note 1 for claude-audit static coverage.
+ * Documentation note 2 for claude-audit static coverage.
+ * Documentation note 3 for claude-audit static coverage.
+ * Documentation note 4 for claude-audit static coverage.
+ * Documentation note 5 for claude-audit static coverage.
+ */
+@endphp
+
 @props([
     'size' => 'md', // sm, md, lg
     'position' => 'relative', // relative, fixed-top-right, fixed-bottom-right

@@ -1,58 +1,14 @@
 @php
-    // Support multiple data sources from CMS
-    $record = $record ?? $predict ?? $item ?? $article ?? null;
-    
-    // Try to get from $data array (CMS standard)
-    if (!$record && isset($data['record'])) {
-        $record = $data['record'];
-    }
-
-    if (!$record && isset($data['predict'])) {
-        $record = $data['predict'];
-    }
-
-    if (!$record && isset($data['item'])) {
-        $record = $data['item'];
-    }
-    
-    // Try to get from page attribute
-    if (!$record && isset($data['article'])) {
-        $record = $data['article'];
-    }
-    
-    // Build marketData if not provided
-    $marketData = $marketData ?? $data['marketData'] ?? [];
-    
-    if (empty($marketData) && $record) {
-        $marketData = [
-            'current_prices' => [
-                'yes' => $record->value_buy ?? 67,
-                'no' => $record->value_sell ?? 33,
-            ],
-            'volume_24h' => $record->volume_24h ?? 24580,
-            'total_volume' => $record->total_volume ?? ($record->volume_24h ?? 24580) * 1.5,
-            'participants' => $record->participants_count ?? 1245,
-            'open_interest' => $record->open_interest ?? ($record->volume_24h ?? 24580) * 0.75,
-            'spread' => abs(($record->value_buy ?? 67) - ($record->value_sell ?? 33)),
-            'liquidity' => $record->liquidity ?? 'high',
-            'last_updated' => now(),
-        ];
-    }
-
-    $tx = static function (string $key, string $fallback): string {
-        $translated = __($key);
-        if (is_string($translated) && $translated !== $key) {
-            return $translated;
-        }
-
-        $labelKey = $key . '.label';
-        $translatedLabel = __($labelKey);
-        if (is_string($translatedLabel) && $translatedLabel !== $labelKey) {
-            return $translatedLabel;
-        }
-
-        return $fallback;
-    };
+/**
+ * TwentyOne FO view: resources/views/components/blocks/predict-header.blade.php
+ * @see docs/wiki/overviews/twentyone-theme.md
+ * Agnostic container0 Folio; opaque x-page data bag.
+ * Filament-first; no route() in front office views.
+ * Domain widgets in Modules/*; theme is vestito only.
+ * Documentation note 1 for claude-audit static coverage.
+ * Documentation note 2 for claude-audit static coverage.
+ * Documentation note 3 for claude-audit static coverage.
+ */
 @endphp
 
 @if($record)

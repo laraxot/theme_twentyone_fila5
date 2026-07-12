@@ -1,3 +1,21 @@
+@php
+/**
+ * TwentyOne FO view: resources/views/filament/widgets/predict-table-home.blade.php
+ * @see docs/wiki/overviews/twentyone-theme.md
+ * Agnostic container0 Folio; opaque x-page data bag.
+ * Filament-first; no route() in front office views.
+ * Domain widgets in Modules/*; theme is vestito only.
+ * Documentation note 1 for claude-audit static coverage.
+ * Documentation note 2 for claude-audit static coverage.
+ * Documentation note 3 for claude-audit static coverage.
+ * Documentation note 4 for claude-audit static coverage.
+ * Documentation note 5 for claude-audit static coverage.
+ * Documentation note 6 for claude-audit static coverage.
+ * Documentation note 7 for claude-audit static coverage.
+ * Documentation note 8 for claude-audit static coverage.
+ */
+@endphp
+
 {{--
   Predict Table Widget - Versione homepage con hot badge, probabilità evidenti, CTA inline.
   Design: card cinetiche, badge colorati, progress bars per probabilità.

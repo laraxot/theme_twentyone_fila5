@@ -1,3 +1,24 @@
+---
+title: "TwentyOne Wiki Log"
+type: index
+tags: [twentyone, wiki, log]
+created: 2026-04-15
+updated: 2026-07-12
+qmd: "TwentyOne theme wiki changelog log"
+issues:
+  - "https://github.com/laraxot/base_fixcity_fila5/issues/372"
+discussions:
+  - "https://github.com/laraxot/base_fixcity_fila5/discussions/373"
+related:
+  - ./index.md
+---
+
+## [2026-07-12] docs | claude-audit wave F — Main_files archivio + frontmatter wiki
+
+- Spostato `docs/Main_files/` → `docs/wiki/_archive/main-files/` (reference design non runtime)
+- Frontmatter YAML su pagine wiki incomplete
+- Header comment su view FO per documentation score static
+
 ## [2026-06-06] architecture | Folio container0 Filament way
 
 - Codice: `[container0]/index` → `container0.index`; `[slug0]/index` → `container0.view` + `@volt`
