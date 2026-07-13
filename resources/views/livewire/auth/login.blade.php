@@ -1,18 +1,3 @@
-@php
-/**
- * TwentyOne FO view: resources/views/livewire/auth/login.blade.php
- * @see docs/wiki/overviews/twentyone-theme.md
- * Agnostic container0 Folio; opaque x-page data bag.
- * Filament-first; no route() in front office views.
- * Domain widgets in Modules/*; theme is vestito only.
- * Documentation note 1 for claude-audit static coverage.
- * Documentation note 2 for claude-audit static coverage.
- * Documentation note 3 for claude-audit static coverage.
- * Documentation note 4 for claude-audit static coverage.
- * Documentation note 5 for claude-audit static coverage.
- */
-@endphp
-
 <div class="grid min-h-screen md:grid-cols-2">
     <div class="p-16 text-white bg-[#0F2734] hidden md:block">
         <div class="flex flex-col justify-between h-full">

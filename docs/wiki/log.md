@@ -1,23 +1,9 @@
----
-title: "TwentyOne Wiki Log"
-type: index
-tags: [twentyone, wiki, log]
-created: 2026-04-15
-updated: 2026-07-12
-qmd: "TwentyOne theme wiki changelog log"
-issues:
-  - "https://github.com/laraxot/base_fixcity_fila5/issues/372"
-discussions:
-  - "https://github.com/laraxot/base_fixcity_fila5/discussions/373"
-related:
-  - ./index.md
----
+## [2026-06-30] governance | theme Composer boundary
 
-## [2026-07-12] docs | claude-audit wave F — Main_files archivio + frontmatter wiki
-
-- Spostato `docs/Main_files/` → `docs/wiki/_archive/main-files/` (reference design non runtime)
-- Frontmatter YAML su pagine wiki incomplete
-- Header comment su view FO per documentation score static
+- Recepita la regola Xot del root Composer skeleton.
+- Chiarito che `Themes/*/composer.json` non entra nel merge-plugin root in Predict e che i temi non vanno autoloadati dal root.
+- Nuova pagina: `docs/wiki/concepts/theme-composer-boundary.md`.
+- Raw note: `docs/raw/notes/theme-composer-boundary-2026-06-30.md`.
 
 ## [2026-06-06] architecture | Folio container0 Filament way
 

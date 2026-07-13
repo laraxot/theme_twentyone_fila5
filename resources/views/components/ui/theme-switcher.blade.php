@@ -1,24 +1,3 @@
-@php
-/**
- * TwentyOne FO view: resources/views/components/ui/theme-switcher.blade.php
- * @see docs/wiki/overviews/twentyone-theme.md
- * Agnostic container0 Folio; opaque x-page data bag.
- * Filament-first; no route() in front office views.
- * Domain widgets in Modules/*; theme is vestito only.
- * Documentation note 1 for claude-audit static coverage.
- * Documentation note 2 for claude-audit static coverage.
- * Documentation note 3 for claude-audit static coverage.
- * Documentation note 4 for claude-audit static coverage.
- * Documentation note 5 for claude-audit static coverage.
- * Documentation note 6 for claude-audit static coverage.
- * Documentation note 7 for claude-audit static coverage.
- * Documentation note 8 for claude-audit static coverage.
- * Documentation note 9 for claude-audit static coverage.
- * Documentation note 10 for claude-audit static coverage.
- * Documentation note 11 for claude-audit static coverage.
- */
-@endphp
-
 @props([
     'variant' => 'header', // 'header' | 'footer'
     'size' => 'md', // 'sm' | 'md' | 'lg'

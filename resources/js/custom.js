@@ -1,8 +1,3 @@
-/**
- * TwentyOne theme — Alpine.js plugins and UI helpers.
- * @see docs/wiki/overviews/twentyone-theme.md
- * @file custom.js — date formatting, clipboard, scroll helpers for FO views.
- */
 import focus from "@alpinejs/focus";
 Alpine.plugin(focus);
 

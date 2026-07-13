@@ -1,19 +1,3 @@
-@php
-/**
- * TwentyOne FO view: resources/views/article/show/sidebar/check.blade.php
- * @see docs/wiki/overviews/twentyone-theme.md
- * Agnostic container0 Folio; opaque x-page data bag.
- * Filament-first; no route() in front office views.
- * Domain widgets in Modules/*; theme is vestito only.
- * Documentation note 1 for claude-audit static coverage.
- * Documentation note 2 for claude-audit static coverage.
- * Documentation note 3 for claude-audit static coverage.
- * Documentation note 4 for claude-audit static coverage.
- * Documentation note 5 for claude-audit static coverage.
- * Documentation note 6 for claude-audit static coverage.
- */
-@endphp
-
 <div class="flex flex-col" {{-- x-show="isloggedIn" --}}>
     <div
         class="block w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"

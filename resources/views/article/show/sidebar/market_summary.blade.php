@@ -1,15 +1,28 @@
 @php
-/**
- * TwentyOne FO view: resources/views/article/show/sidebar/market_summary.blade.php
- * @see docs/wiki/overviews/twentyone-theme.md
- * Agnostic container0 Folio; opaque x-page data bag.
- * Filament-first; no route() in front office views.
- * Domain widgets in Modules/*; theme is vestito only.
- * Documentation note 1 for claude-audit static coverage.
- * Documentation note 2 for claude-audit static coverage.
- * Documentation note 3 for claude-audit static coverage.
- * Documentation note 4 for claude-audit static coverage.
- */
+    $closedAt = data_get($article, 'closed_at');
+    $resolvedAt = data_get($article, 'resolved_at');
+    $eventEndsAt = data_get($article, 'ends_at') ?? data_get($article, 'event_end_date');
+    $liquidity = data_get($article, 'liquidity');
+    $positionsCount = (int) (data_get($article, 'count_credit') ?? 0);
+    $creditsVolume = (float) (data_get($article, 'sum_credit') ?? 0);
+
+    $ordersCount = 0;
+    if (($article->exists ?? false) && method_exists($article, 'orders')) {
+        $ordersCount = (int) $article->orders()->count();
+    }
+
+    $statusLabel = 'Archivato';
+    $statusTone = 'slate';
+    if ($resolvedAt !== null) {
+        $statusLabel = 'Risolto';
+        $statusTone = 'emerald';
+    } elseif ($closedAt !== null && $closedAt->isPast()) {
+        $statusLabel = 'In risoluzione';
+        $statusTone = 'amber';
+    } elseif ($closedAt !== null && $closedAt->isFuture()) {
+        $statusLabel = 'Aperto';
+        $statusTone = 'sky';
+    }
 @endphp
 
 <div class="mb-4 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">

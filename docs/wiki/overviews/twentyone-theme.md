@@ -1,24 +1,13 @@
 ---
-title: "TwentyOne Theme — Overview"
 type: overview
 theme: TwentyOne
-tags: [twentyone, theme, zen, kinetic, gsap]
-created: 2026-04-15
-updated: 2026-07-12
-qmd: "TwentyOne theme overview zen agnostic container kinetic GSAP"
-issues:
-  - "https://github.com/laraxot/base_fixcity_fila5/issues/372"
-discussions:
-  - "https://github.com/laraxot/base_fixcity_fila5/discussions/373"
 sources:
-  - ../../../zen-architecture-philosophy.md
-  - ../../../kinetic-web-design-spec.md
-  - ../../../homepage-architecture.md
-  - ../../../layout-architecture-philosophy.md
+  - ../../../docs/ZEN_ARCHITECTURE_PHILOSOPHY.md
+  - ../../../docs/KINETIC_WEB_DESIGN_SPEC.md
+  - ../../../docs/HOMEPAGE_ARCHITECTURE.md
+  - ../../../docs/LAYOUT_ARCHITECTURE_PHILOSOPHY.md
 confidence: high
-related:
-  - ../concepts/folio-container0-filament-way.md
-  - ../concepts/testing.md
+updated: 2026-04-15
 ---
 
 # TwentyOne Theme — Overview

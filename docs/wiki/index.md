@@ -3,7 +3,7 @@ title: "TwentyOne Theme Wiki Index"
 type: index
 tags: [twentyone, theme, wiki, index]
 created: 2026-04-15
-updated: 2026-07-12
+updated: 2026-06-05
 qmd: "twentyone theme wiki index second brain harness"
 issues:
   - "https://github.com/laraxot/base_fixcity_fila5/issues/272"
@@ -38,7 +38,7 @@ Indice operativo del wiki TwentyOne.
 - [comparisons/](./comparisons/): Implementazioni alternative.
 - [decisions/](./decisions/): Decisioni design tema.
 - [troubleshooting/](./troubleshooting/): Problemi noti e soluzioni.
-- [_archive/](./_archive/): Documentazione legacy (es. [main-files](./_archive/main-files/readme.md)).
+- [_archive/](./_archive/): Documentazione legacy.
 - [_templates/](./_templates/): Template standard.
 
 ## Regole collegate
@@ -46,9 +46,9 @@ Indice operativo del wiki TwentyOne.
 - [forbidden-folders-rule](../../../../docs/wiki/concepts/forbidden-folders.md): Vincoli strutturali strict.
 - [llm-wiki-standard](../../../../docs/project/karpathy-llm-wiki-adoption.md): Mapping repository e ciclo di vita conoscenza.
 - [laravel12-lang-path-rule](./concepts/laravel12-lang-path-rule.md): Path corrette Laravel 12.
+- [theme-composer-boundary](./concepts/theme-composer-boundary.md): il root non fonde `Themes/*/composer.json`; TwentyOne resta bridge-only.
 - [theme-css-only-parity-rule](../../../../laravel/Themes/Sixteen/docs/wiki/concepts/theme-css-only-parity-rule.md): CSS solo in tema, non inline.
 - [phpmd-standalone-phar-rule](../../../../docs/wiki/concepts/phpmd-standalone-phar-rule.md): quality gates del tema con PHPMD standalone `.phar`, mai via Composer.
-- [queueable-action-trait-mandatory](../../../../docs/wiki/rules/queueable-action-trait-mandatory.md): ogni classe in `app/Actions/` del tema usa `QueueableAction` + `execute()`.
 
 ## Scopo TwentyOne Theme
 
@@ -60,6 +60,7 @@ Tema alternativo zen-agnostic con design kinetic, GSAP animations e integrazione
 |--------|------|-----------|------|
 | [twentyone-theme](./overviews/twentyone-theme.md) | Overview | Zen agnostic, kinetic design | 2026-04-21 |
 | [ridondanze-hub-twentyone-xot](./concepts/ridondanze-hub-twentyone-xot.md) | Concept | Ridondanza: hub tema ↔ Xot | 2026-05-21 |
+| [theme-composer-boundary](./concepts/theme-composer-boundary.md) | Concept | Boundary Composer del tema rispetto a nWidart | 2026-06-30 |
 
 - Usare componenti Blade riutilizzabili (vedi [blade-component-extraction-governance](../../../../docs/wiki/concepts/blade-component-extraction-governance.md))
 - Estendere XotBase classes per Folio pages (vedi [xotbase-check](../../../../docs/wiki/concepts/xotbase-check.md))
