@@ -73,11 +73,3 @@ docs/archive/
 *~head
 
 agentdb.rvf
-
-# Design reference static (non runtime — archivio gitignored Main_files/)
-Main_files/
-
-# claude-audit bridge (non committare) — un-ignore audit-coverage per static ratio
-!audit-coverage/
-!audit-coverage/tests/
-tests/AuditCoverage/*
