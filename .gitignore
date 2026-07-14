@@ -73,3 +73,6 @@ docs/archive/
 *~head
 
 agentdb.rvf
+.cursor/
+.windsurf/
+.devcontainer/
