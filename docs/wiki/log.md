@@ -1,3 +1,10 @@
+## [2026-06-30] governance | theme Composer boundary
+
+- Recepita la regola Xot del root Composer skeleton.
+- Chiarito che `Themes/*/composer.json` non entra nel merge-plugin root in Predict e che i temi non vanno autoloadati dal root.
+- Nuova pagina: `docs/wiki/concepts/theme-composer-boundary.md`.
+- Raw note: `docs/raw/notes/theme-composer-boundary-2026-06-30.md`.
+
 ## [2026-06-06] architecture | Folio container0 Filament way
 
 - Codice: `[container0]/index` → `container0.index`; `[slug0]/index` → `container0.view` + `@volt`
