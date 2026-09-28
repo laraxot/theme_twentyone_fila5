@@ -1,3 +1,14 @@
+---
+title: "homepage cms architecture"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "homepage cms architecture"
+issues: []
+discussions: []
+---
+
 # HOMEPAGE CMS ARCHITECTURE
 
 ## Principio Fondamentale
@@ -175,5 +186,13 @@ Il tema TwentyOne deve funzionare con qualsiasi contenuto CMS:
 
 ---
 
+title: "homepage cms architecture"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "homepage cms architecture"
+issues: []
+discussions: []
 **Stato**: Implementato (2026-03-18)
 **Autore**: AI Agent

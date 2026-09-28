@@ -1,3 +1,14 @@
+---
+title: "futuur design analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "futuur design analysis"
+issues: []
+discussions: []
+---
+
 # Analisi Design Futuur.com - Prediction Market
 
 ## 📊 Panoramica del Sito

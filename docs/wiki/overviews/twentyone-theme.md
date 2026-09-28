@@ -1,4 +1,10 @@
 ---
+title: "twentyone theme"
+tags: [documentation]
+created: 2026-09-26
+qmd: "twentyone theme"
+issues: []
+discussions: []
 type: overview
 theme: TwentyOne
 sources:

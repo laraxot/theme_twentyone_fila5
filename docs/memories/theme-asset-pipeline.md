@@ -1,3 +1,14 @@
+---
+title: "theme asset pipeline"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "theme asset pipeline"
+issues: []
+discussions: []
+---
+
 # Memory - TwentyOne Theme Asset Pipeline
 
 - `@vite(..., 'themes/TwentyOne')` legge da `public_html/themes/TwentyOne/manifest.json`

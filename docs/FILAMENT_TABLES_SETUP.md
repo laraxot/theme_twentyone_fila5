@@ -1,3 +1,14 @@
+---
+title: "FILAMENT TABLES SETUP"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "FILAMENT TABLES SETUP"
+issues: []
+discussions: []
+---
+
 # Filament Tables Setup - TwentyOne Theme
 
 ## Panoramica
@@ -417,6 +428,14 @@ Questo confine evita drift funzionale e mantiene il tema focalizzato su UI/UX.
 
 ---
 
+title: "FILAMENT TABLES SETUP"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "FILAMENT TABLES SETUP"
+issues: []
+discussions: []
 **Ultimo Aggiornamento**: 2026-03-22  
 **Versione Filament**: 5.4.1  
 **Versione Tema**: TwentyOne  

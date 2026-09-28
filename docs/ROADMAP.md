@@ -1,3 +1,14 @@
+---
+title: "ROADMAP"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ROADMAP"
+issues: []
+discussions: []
+---
+
 # 🎨 TWENTYONE THEME - ROADMAP 2025
 
 **Tema**: TwentyOne (Admin Interface)  
@@ -8,6 +19,14 @@
 
 ---
 
+title: "ROADMAP"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ROADMAP"
+issues: []
+discussions: []
 ## 🎯 THEME OVERVIEW
 
 Il tema **TwentyOne** è il tema dedicato all'interfaccia amministrativa della piattaforma FixCity, progettato per fornire un'esperienza ottimale per operatori, amministratori e gestori del sistema.

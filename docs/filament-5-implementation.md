@@ -1,3 +1,14 @@
+---
+title: "filament 5 implementation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament 5 implementation"
+issues: []
+discussions: []
+---
+
 # Filament 5.x Implementation Guide
 
 **Last Updated**: 2026-03-22  
@@ -8,6 +19,14 @@
 
 ---
 
+title: "filament 5 implementation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament 5 implementation"
+issues: []
+discussions: []
 ## 📋 Overview
 
 Questo documento descrive l'implementazione di Filament 5.x nel tema TwentyOne, basata sulla documentazione ufficiale:

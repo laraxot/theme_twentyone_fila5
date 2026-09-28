@@ -1,3 +1,14 @@
+---
+title: "predict detail page reusable hero fix"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "predict detail page reusable hero fix"
+issues: []
+discussions: []
+---
+
 # Predict Detail Page Reusable Hero Fix
 
 > Indice: [./00-INDEX.md](./00-INDEX.md)

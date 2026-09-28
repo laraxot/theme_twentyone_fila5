@@ -1,4 +1,7 @@
 ---
+qmd: "INDEX"
+issues: []
+discussions: []
 title: "Skills Index"
 type: index
 created: 2026-05-11
@@ -34,21 +37,13 @@ Le Skills progettuali vivono qui, nel wiki del Theme **TwentyOne**, e vengono ca
 
 - La sorgente di verita' per le Skills e' sempre il wiki locale
 - Non embeddare Skills nei prompt di avvio
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_R6IZNv
+---
 - Per Skills globali, consulta il [wiki root](../../../../../../docs/wiki/skills/INDEX.md)
-=======
+---
 - Per Skills globali, consulta il [wiki root](../../docs/wiki/skills/INDEX.md)
->>>>>>> .merge_file_9DXBDd
-<<<<<<< HEAD
-=======
+---
 - Per Skills globali, consulta il [wiki root](../../docs/wiki/skills/INDEX.md)
->>>>>>> 5f88010 (.)
-=======
->>>>>>> laraxot/dev
+---
 
 ## Aggiungere una Nuova SKILLS
 

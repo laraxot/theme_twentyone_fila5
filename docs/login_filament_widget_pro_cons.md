@@ -1,3 +1,14 @@
+---
+title: "login filament widget pro cons"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "login filament widget pro cons"
+issues: []
+discussions: []
+---
+
 # Login con Widget Filament: Vantaggi, Svantaggi e Best Practice
 
 ## Vantaggi
@@ -54,6 +65,14 @@ class LoginWidget extends XotBaseWidget
 
 ---
 
+title: "login filament widget pro cons"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "login filament widget pro cons"
+issues: []
+discussions: []
 ## Uso del trait AuthenticatesUsers di Laravel UI nel LoginWidget
 
 ### Vantaggi

@@ -1,3 +1,14 @@
+---
+title: "JSON ARCHITECTURE"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "JSON ARCHITECTURE"
+issues: []
+discussions: []
+---
+
 # TwentyOne Theme — JSON-Based Architecture
 
 > **Data**: 2026-03-18  
@@ -7,6 +18,14 @@
 
 ---
 
+title: "JSON ARCHITECTURE"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "JSON ARCHITECTURE"
+issues: []
+discussions: []
 ## 🎯 Filosofia del Tema
 
 ### 1. **Agnosticismo**

@@ -1,3 +1,14 @@
+---
+title: "icon rendering policy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "icon rendering policy"
+issues: []
+discussions: []
+---
+
 # TwentyOne Icon Rendering Policy
 
 Il tema `TwentyOne` segue la policy globale di rendering icone:

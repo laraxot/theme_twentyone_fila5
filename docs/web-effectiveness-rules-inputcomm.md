@@ -1,3 +1,14 @@
+---
+title: "web effectiveness rules inputcomm"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "web effectiveness rules inputcomm"
+issues: []
+discussions: []
+---
+
 # Regole per un Sito Web Efficace (InputComm)
 
 Riferimento: [InputComm - Le 11 Regole per un Sito Web Efficace](https://www.inputcomm.it/regole-sito-web-efficace/)

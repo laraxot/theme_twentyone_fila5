@@ -1,3 +1,14 @@
+---
+title: "web design study"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "web design study"
+issues: []
+discussions: []
+---
+
 # Studio Web Design — TwentyOne Theme
 
 > **Aggiornato**: 2026-03-18
@@ -6,6 +17,14 @@
 
 ---
 
+title: "web design study"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "web design study"
+issues: []
+discussions: []
 ## 📊 Sintesi Studio (31 Fonti)
 
 ### 🔟 Le 10 Tendenze Principali 2026

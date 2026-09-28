@@ -1,3 +1,14 @@
+---
+title: "gsd methodology"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gsd methodology"
+issues: []
+discussions: []
+---
+
 # GSD Method - Get Shit Done per Agenti AI
 
 ## 🎯 Filosofia GSD - Get Shit Done

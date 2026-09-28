@@ -1,3 +1,14 @@
+---
+title: "hybrid design implementation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "hybrid design implementation"
+issues: []
+discussions: []
+---
+
 # Implementazione Design Ibrido - Futuur + Prediki
 
 ## 🎨 Sistema di Design Ibrido

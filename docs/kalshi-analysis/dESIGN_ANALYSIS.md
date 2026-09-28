@@ -1,3 +1,14 @@
+---
+title: "dESIGN ANALYSIS"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "dESIGN ANALYSIS"
+issues: []
+discussions: []
+---
+
 # Kalshi.com Design Analysis
 
 **Data**: 2026-03-19  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "dESIGN ANALYSIS"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "dESIGN ANALYSIS"
+issues: []
+discussions: []
 ## 1. Panoramica Kalshi
 
 Kalshi è la principale piattaforma americana di prediction market regolamentata CFTC. Fondata nel 2018 da ex-studenti MIT.

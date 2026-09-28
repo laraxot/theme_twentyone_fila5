@@ -1,3 +1,14 @@
+---
+title: "filament structure analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament structure analysis"
+issues: []
+discussions: []
+---
+
 # Analisi della Struttura Filament e Correzione degli Errori
 
 ## Errore Grave Commesso

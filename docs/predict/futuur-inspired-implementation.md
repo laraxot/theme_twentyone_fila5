@@ -1,3 +1,14 @@
+---
+title: "futuur inspired implementation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "futuur inspired implementation"
+issues: []
+discussions: []
+---
+
 # Implementazione Ispirata a Futuur - Prediction Market
 
 ## 🎨 Sistema di Design Futuur-Inspired

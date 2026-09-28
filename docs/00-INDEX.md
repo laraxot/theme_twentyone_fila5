@@ -1,3 +1,14 @@
+---
+title: "00 INDEX"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "00 INDEX"
+issues: []
+discussions: []
+---
+
 # 📚 Twenty One Theme - Documentation Index
 
 **Path**: `laravel/Themes/TwentyOne/docs/`  
@@ -46,4 +57,12 @@
 
 ---
 
+title: "00 INDEX"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "00 INDEX"
+issues: []
+discussions: []
 **Ultimo Aggiornamento**: 2026-07-01

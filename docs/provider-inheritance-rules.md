@@ -1,3 +1,14 @@
+---
+title: "provider inheritance rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "provider inheritance rules"
+issues: []
+discussions: []
+---
+
 # Regole di Ereditarietà dei Service Provider
 
 ## Importanza dell'Analisi dell'Ereditarietà

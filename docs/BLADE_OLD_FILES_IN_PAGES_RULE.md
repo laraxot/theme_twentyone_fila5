@@ -1,3 +1,14 @@
+---
+title: "BLADE OLD FILES IN PAGES RULE"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "BLADE OLD FILES IN PAGES RULE"
+issues: []
+discussions: []
+---
+
 # 🔴 REGOLA: File .blade.php.old Nella Cartella Pages
 
 **Data**: 2026-03-22  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "BLADE OLD FILES IN PAGES RULE"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "BLADE OLD FILES IN PAGES RULE"
+issues: []
+discussions: []
 ## 📜 La Regola
 
 ```

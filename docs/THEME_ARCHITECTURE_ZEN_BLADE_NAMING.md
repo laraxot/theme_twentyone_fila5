@@ -1,3 +1,14 @@
+---
+title: "THEME ARCHITECTURE ZEN BLADE NAMING"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "THEME ARCHITECTURE ZEN BLADE NAMING"
+issues: []
+discussions: []
+---
+
 # Theme Architecture Zen - Blade File Naming Convention
 
 **Data**: 2026-03-22  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "THEME ARCHITECTURE ZEN BLADE NAMING"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "THEME ARCHITECTURE ZEN BLADE NAMING"
+issues: []
+discussions: []
 ## 🎯 FILOSOFIA ZEN
 
 ### Il Principio Fondamentale

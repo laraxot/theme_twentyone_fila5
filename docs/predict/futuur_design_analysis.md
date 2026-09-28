@@ -1,9 +1,28 @@
+---
+title: "futuur design analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "futuur design analysis"
+issues: []
+discussions: []
+---
+
 # Futuur.com – Analisi delle Scelte Grafiche
 
 > **Obiettivo:** estrarre pattern UI/UX e soluzioni visive adottabili in `predicts/[slug].blade.php` e, più in generale, nel tema TwentyOne per i mercati di previsione.
 
 ---
 
+title: "futuur design analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "futuur design analysis"
+issues: []
+discussions: []
 ## 1. Palette & Branding
 - **Colore primario:** blu royal (#0066FF) con toni di transizione (hover più scuro #0053d6).
 - **Accent secondary:** verde lime per esiti positivi; rosso corallo per negativi.

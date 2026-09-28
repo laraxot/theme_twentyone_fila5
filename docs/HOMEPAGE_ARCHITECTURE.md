@@ -1,3 +1,14 @@
+---
+title: "HOMEPAGE ARCHITECTURE"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "HOMEPAGE ARCHITECTURE"
+issues: []
+discussions: []
+---
+
 # Homepage Implementation — Predict Platform
 
 **Ultimo aggiornamento**: 2026-03-18  
@@ -7,6 +18,14 @@
 
 ---
 
+title: "HOMEPAGE ARCHITECTURE"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "HOMEPAGE ARCHITECTURE"
+issues: []
+discussions: []
 ## 📋 Panoramica
 
 La homepage di Predict Platform utilizza un'architettura **theme-first** con integrazione CMS dinamica tramite blocchi.

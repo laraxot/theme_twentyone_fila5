@@ -1,3 +1,14 @@
+---
+title: "llm wiki"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "llm wiki"
+issues: []
+discussions: []
+---
+
 # LLM Wiki del Tema TwentyOne
 
 Il tema TwentyOne usa `docs/wiki` come livello stabile per architettura, rendering CMS, blocchi e design system.

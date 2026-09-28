@@ -1,3 +1,14 @@
+---
+title: "2025 Q4 ROADMAP"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "2025 Q4 ROADMAP"
+issues: []
+discussions: []
+---
+
 # Theme TwentyOne Roadmap (2025 Q4)
 
 ## Vision & Scope

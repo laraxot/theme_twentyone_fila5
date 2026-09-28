@@ -1,3 +1,14 @@
+---
+title: "kinetic design"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "kinetic design"
+issues: []
+discussions: []
+---
+
 # Kinetic Web Design — TwentyOne Theme
 
 > Principi da [Berger.team - Web design cinetico](https://www.berger.team/it/website/kinetisches-webdesign-bewegung-als-zentrales-designelement/)

@@ -1,3 +1,14 @@
+---
+title: "vite error"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "vite error"
+issues: []
+discussions: []
+---
+
 # Errore Vite: Unable to locate file in Vite manifest
 
 ## Descrizione dell'Errore

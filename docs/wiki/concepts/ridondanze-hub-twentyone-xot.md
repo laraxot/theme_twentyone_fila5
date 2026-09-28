@@ -1,4 +1,8 @@
 ---
+tags: [documentation]
+qmd: "ridondanze hub twentyone xot"
+issues: []
+discussions: []
 title: "Hub ridondanze TwentyOne ↔ Xot core"
 type: concept
 theme: twentyone

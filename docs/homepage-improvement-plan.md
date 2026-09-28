@@ -1,3 +1,14 @@
+---
+title: "homepage improvement plan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "homepage improvement plan"
+issues: []
+discussions: []
+---
+
 # Homepage Improvement Plan — http://predict.local/it
 
 > **Data**: 2026-03-18  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "homepage improvement plan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "homepage improvement plan"
+issues: []
+discussions: []
 ## 📊 Stato Attuale
 
 ### ✅ Cosa Abbiamo

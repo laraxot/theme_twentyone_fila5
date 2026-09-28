@@ -1,3 +1,14 @@
+---
+title: "VOLT CLASS BASED COMPONENTS"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "VOLT CLASS BASED COMPONENTS"
+issues: []
+discussions: []
+---
+
 # ⚡ VOLT CLASS-BASED COMPONENTS - TwentyOne Theme
 
 **Data**: 2026-03-20  
@@ -7,6 +18,14 @@
 
 ---
 
+title: "VOLT CLASS BASED COMPONENTS"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "VOLT CLASS BASED COMPONENTS"
+issues: []
+discussions: []
 ## 🎯 FILOSOFIA TWENTYONE
 
 ### Ruolo del Theme con Volt

@@ -1,3 +1,14 @@
+---
+title: "f1 world champion 2026 analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "f1 world champion 2026 analysis"
+issues: []
+discussions: []
+---
+
 # 📸 F1 World Champion 2026 - Screenshots & Analysis
 
 **Market**: `http://predict.local/it/predicts/f1-world-champion-2026`  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "f1 world champion 2026 analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "f1 world champion 2026 analysis"
+issues: []
+discussions: []
 ## 🎯 ARCHITETTURA MULTI-OUTCOME
 
 > **CONCETTO CHIAVE**: SI/NO è solo un caso particolare di multi-risposta (2 outcome)

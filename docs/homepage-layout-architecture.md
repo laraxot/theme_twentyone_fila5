@@ -1,3 +1,14 @@
+---
+title: "homepage layout architecture"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "homepage layout architecture"
+issues: []
+discussions: []
+---
+
 # Layout Architecture - TwentyOne Theme
 
 **Last Updated**: 2026-03-20  
@@ -5,6 +16,14 @@
 
 ---
 
+title: "homepage layout architecture"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "homepage layout architecture"
+issues: []
+discussions: []
 ## 🎯 Philosophy
 
 > "Composizione > Duplicazione"  

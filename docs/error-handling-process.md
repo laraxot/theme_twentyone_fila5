@@ -1,3 +1,14 @@
+---
+title: "error handling process"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "error handling process"
+issues: []
+discussions: []
+---
+
 # Processo di Gestione Errori e Documentazione
 
 ## Riferimenti

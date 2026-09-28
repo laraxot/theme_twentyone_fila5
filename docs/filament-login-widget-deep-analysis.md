@@ -1,3 +1,14 @@
+---
+title: "filament login widget deep analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament login widget deep analysis"
+issues: []
+discussions: []
+---
+
 # Analisi Approfondita: LoginWidget
 
 ## Riferimenti e Contesto

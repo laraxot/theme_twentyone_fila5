@@ -1,4 +1,7 @@
 ---
+qmd: "INDEX"
+issues: []
+discussions: []
 title: "Troubleshooting Index"
 type: index
 tags: [troubleshooting, index]

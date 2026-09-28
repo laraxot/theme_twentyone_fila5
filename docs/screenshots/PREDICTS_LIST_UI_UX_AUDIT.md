@@ -1,3 +1,14 @@
+---
+title: "PREDICTS LIST UI UX AUDIT"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "PREDICTS LIST UI UX AUDIT"
+issues: []
+discussions: []
+---
+
 # 🔍 PREDICTS LIST PAGE - UI/UX AUDIT REPORT
 
 **Data**: 2026-03-20  
@@ -7,6 +18,14 @@
 
 ---
 
+title: "PREDICTS LIST UI UX AUDIT"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "PREDICTS LIST UI UX AUDIT"
+issues: []
+discussions: []
 ## 📊 EXECUTIVE SUMMARY
 
 | Categoria | Score | Target | Stato |

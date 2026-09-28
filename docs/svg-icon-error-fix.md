@@ -1,3 +1,14 @@
+---
+title: "svg icon error fix"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "svg icon error fix"
+issues: []
+discussions: []
+---
+
 # SVG Icon Error Fix Documentation
 
 ## Problem Analysis

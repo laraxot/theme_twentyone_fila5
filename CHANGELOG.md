@@ -1,3 +1,14 @@
+---
+title: "CHANGELOG"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "CHANGELOG"
+issues: []
+discussions: []
+---
+
 ## [1.0.0-dev.2](https://github.com/laraxot/theme_twentyone_fila5/compare/theme-twentyone-v1.0.0-dev.1...theme-twentyone-v1.0.0-dev.2) (2026-09-26)
 
 ### Features

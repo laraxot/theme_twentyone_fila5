@@ -1,4 +1,9 @@
 ---
+tags: [documentation]
+created: 2026-09-26
+qmd: "PERFORMANCE OPTIMIZATION"
+issues: []
+discussions: []
 title: "Performance Optimization (stub tema TwentyOne)"
 type: documentation
 updated: 2026-05-21

@@ -1,3 +1,14 @@
+---
+title: "multilingual support"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "multilingual support"
+issues: []
+discussions: []
+---
+
 # Supporto Multilingua - File [slug].blade.php
 
 ## Panoramica

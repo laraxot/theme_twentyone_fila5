@@ -1,3 +1,14 @@
+---
+title: "root boundary"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "root boundary"
+issues: []
+discussions: []
+---
+
 # I18n Root Boundary
 
 ## Regola

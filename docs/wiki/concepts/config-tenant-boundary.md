@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: Config tenant boundary
 type: concept
 theme: TwentyOne
