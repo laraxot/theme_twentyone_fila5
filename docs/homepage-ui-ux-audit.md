@@ -1,3 +1,14 @@
+---
+title: "homepage ui ux audit"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "homepage ui ux audit"
+issues: []
+discussions: []
+---
+
 # TwentyOne Homepage UI/UX Audit
 
 Documento operativo per migliorare la homepage `predict.local/it` del tema `TwentyOne` incrociando stato reale del progetto e linee guida UI/UX research-backed.

@@ -1,3 +1,14 @@
+---
+title: "kalshi implementation complete"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "kalshi implementation complete"
+issues: []
+discussions: []
+---
+
 # Implementazione Completata - Miglioramenti Kalshi
 
 ## 📋 Riepilogo Implementazione
@@ -292,4 +303,12 @@ Il codice è ora pronto per l'integrazione con il backend e può essere facilmen
 
 ---
 
+title: "kalshi implementation complete"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "kalshi implementation complete"
+issues: []
+discussions: []
 *Documento creato il 2025-01-24 come riepilogo dell'implementazione completata* 

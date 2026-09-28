@@ -1,3 +1,14 @@
+---
+title: "bmad methodology"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "bmad methodology"
+issues: []
+discussions: []
+---
+
 # BMAD Method - Metodologia Completa per Agenti AI
 
 ## 🎯 Filosofia BMAD - Build More Architect Dreams

@@ -1,3 +1,14 @@
+---
+title: "routing architecture"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "routing architecture"
+issues: []
+discussions: []
+---
+
 # TwentyOne Theme — Routing Architecture
 
 ## The theme is the sole front-office

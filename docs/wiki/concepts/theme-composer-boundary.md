@@ -1,4 +1,7 @@
 ---
+qmd: "theme composer boundary"
+issues: []
+discussions: []
 title: "Theme Composer Boundary"
 type: concept
 theme: TwentyOne

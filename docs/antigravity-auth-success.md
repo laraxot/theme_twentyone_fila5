@@ -1,3 +1,14 @@
+---
+title: "antigravity auth success"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "antigravity auth success"
+issues: []
+discussions: []
+---
+
 # Antigravity su Auth Success (TwentyOne)
 
 ## Scopo

@@ -1,3 +1,14 @@
+---
+title: "filament 5 installation guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament 5 installation guide"
+issues: []
+discussions: []
+---
+
 # Filament 5 Installation & Setup - Complete Guide
 
 **Data**: 2026-03-22  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "filament 5 installation guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament 5 installation guide"
+issues: []
+discussions: []
 ## 🎯 OBIETTIVO
 
 Documentare l'installazione corretta di Filament 5 per tabelle, form e widgets nel front-office, con configurazione CSS/JS e Tailwind.

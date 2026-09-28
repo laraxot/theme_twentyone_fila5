@@ -1,3 +1,14 @@
+---
+title: "gsap scrolltrigger theme guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gsap scrolltrigger theme guide"
+issues: []
+discussions: []
+---
+
 # 🎬 GSAP & SCROLLTRIGGER - Theme Implementation
 
 **Data**: 2026-03-23  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "gsap scrolltrigger theme guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gsap scrolltrigger theme guide"
+issues: []
+discussions: []
 ## 🏗 ARCHITETTURA TEMA
 
 ### File Structure

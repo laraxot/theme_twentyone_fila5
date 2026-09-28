@@ -1,3 +1,14 @@
+---
+title: "prediki design analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "prediki design analysis"
+issues: []
+discussions: []
+---
+
 # Prediki.com – Analisi delle Scelte Grafiche
 
 > **Focus:** identificare pattern di Prediki utili a potenziare la nostra pagina `predicts/[slug].blade.php` nel tema TwentyOne.
@@ -53,4 +64,12 @@ Usare variabili CSS `--twc-primary-dark`, `--twc-cta` per replicare contrasto CT
 
 ---
 
+title: "prediki design analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "prediki design analysis"
+issues: []
+discussions: []
 > Analisi condotta il 2025-07-23; screenshots e note archiviate internamente per riferimenti di UI.

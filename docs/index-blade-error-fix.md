@@ -1,3 +1,14 @@
+---
+title: "index blade error fix"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "index blade error fix"
+issues: []
+discussions: []
+---
+
 # ERRORE CRITICO: index.blade.php - Violazione Homepage Governance
 
 **Data**: 2026-03-19  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "index blade error fix"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "index blade error fix"
+issues: []
+discussions: []
 ## Errore Commesso
 
 Il file `index.blade.php` è stato polluto con ~1000 righe di CSS inline e ~100 righe di JS inline, violando pesantemente le regole del progetto.

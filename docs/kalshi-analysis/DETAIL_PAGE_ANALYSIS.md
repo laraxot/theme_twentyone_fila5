@@ -1,3 +1,14 @@
+---
+title: "DETAIL PAGE ANALYSIS"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "DETAIL PAGE ANALYSIS"
+issues: []
+discussions: []
+---
+
 # Kalshi Detail Page Analysis
 
 > **Data**: 2026-03-19 03:00 CET  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "DETAIL PAGE ANALYSIS"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "DETAIL PAGE ANALYSIS"
+issues: []
+discussions: []
 ## 📊 Layout Detail Page
 
 ```

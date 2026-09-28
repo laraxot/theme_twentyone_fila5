@@ -1,3 +1,14 @@
+---
+title: "filament laravel ui integration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament laravel ui integration"
+issues: []
+discussions: []
+---
+
 # Integrazione Laravel UI con LoginWidget Filament
 
 ## Analisi Laravel UI

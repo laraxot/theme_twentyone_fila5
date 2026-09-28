@@ -1,3 +1,14 @@
+---
+title: "technical specifications"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "technical specifications"
+issues: []
+discussions: []
+---
+
 # Specifiche Tecniche - Miglioramenti Prediction Market
 
 ## 🏗️ Architettura del Sistema

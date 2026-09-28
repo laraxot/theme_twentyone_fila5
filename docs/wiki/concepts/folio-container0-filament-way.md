@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "TwentyOne Folio container0 — Filament way"
 type: concept
 tags: [twentyone, folio, container0, index, view, volt, mount]

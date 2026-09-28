@@ -1,3 +1,14 @@
+---
+title: "FILAMENT WIDGET TRANSPARENT BACKGROUND"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "FILAMENT WIDGET TRANSPARENT BACKGROUND"
+issues: []
+discussions: []
+---
+
 # Filament Widgets - Front-Office Styling
 
 **Tema**: TwentyOne  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "FILAMENT WIDGET TRANSPARENT BACKGROUND"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "FILAMENT WIDGET TRANSPARENT BACKGROUND"
+issues: []
+discussions: []
 ## Architettura CSS
 
 Il tema TwentyOne controlla lo styling di tutti i widget Filament usati nel front-office.

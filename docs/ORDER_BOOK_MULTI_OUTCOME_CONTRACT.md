@@ -1,3 +1,14 @@
+---
+title: "ORDER BOOK MULTI OUTCOME CONTRACT"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ORDER BOOK MULTI OUTCOME CONTRACT"
+issues: []
+discussions: []
+---
+
 # Order Book Multi Outcome Contract
 
 Path: `laravel/Themes/TwentyOne/docs/ORDER_BOOK_MULTI_OUTCOME_CONTRACT.md`

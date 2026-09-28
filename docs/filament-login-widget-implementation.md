@@ -1,3 +1,14 @@
+---
+title: "filament login widget implementation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament login widget implementation"
+issues: []
+discussions: []
+---
+
 # Implementazione LoginWidget con AuthenticatesUsers
 
 ## Riferimenti
