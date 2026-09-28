@@ -1,3 +1,14 @@
+---
+title: "modern web design guidelines"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "modern web design guidelines"
+issues: []
+discussions: []
+---
+
 # Modern Web Design Guidelines 2025-2026
 
 > Principi, tecniche e checklist per un sito web dinamico, immersivo e ad alte performance.
@@ -5,6 +16,14 @@
 
 ---
 
+title: "modern web design guidelines"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "modern web design guidelines"
+issues: []
+discussions: []
 ## 1. Il Cambio di Paradigma
 
 Nel 2026 l'utente **non percepisce il sito come insieme di pagine, ma come ambiente coerente**.

@@ -1,3 +1,14 @@
+---
+title: "filament login widget code analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament login widget code analysis"
+issues: []
+discussions: []
+---
+
 # Analisi del Codice: LoginWidget
 
 ## Riferimenti

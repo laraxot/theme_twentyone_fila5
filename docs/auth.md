@@ -1,3 +1,14 @@
+---
+title: "auth"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "auth"
+issues: []
+discussions: []
+---
+
 # Sistema di Autenticazione TwentyOne
 
 ## Filosofia e Principi

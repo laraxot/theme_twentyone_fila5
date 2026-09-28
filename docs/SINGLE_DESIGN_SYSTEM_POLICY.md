@@ -1,3 +1,14 @@
+---
+title: "SINGLE DESIGN SYSTEM POLICY"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "SINGLE DESIGN SYSTEM POLICY"
+issues: []
+discussions: []
+---
+
 # Single Design System - Theme Policy
 
 **Tema**: TwentyOne  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "SINGLE DESIGN SYSTEM POLICY"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "SINGLE DESIGN SYSTEM POLICY"
+issues: []
+discussions: []
 ## Principio Fondamentale
 
 > **"Il tema TwentyOne controlla TUTTO il design system. Tutte le pagine DEVONO usare lo stesso layout, CSS, JS."**

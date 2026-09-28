@@ -1,3 +1,14 @@
+---
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
+---
+
 # Analisi Errore Vite: Unable to locate file in Vite manifest
 
 > **Nota:** Questo errore è documentato in modo centrale nella sezione "Errori di pubblicazione asset Vite/NPM e gestione temi" della documentazione PHPStan del modulo CMS. Consulta [Modules/Cms/docs/phpstan/README.md](../../../Modules/Cms/docs/phpstan/README.md) per dettagli, motivazioni architetturali e strategie di prevenzione condivise.
@@ -68,6 +79,14 @@ Questo è fondamentale per:
 
 ---
 
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
 ## Ipotesi di Risoluzione
 - **Automatizzare**: Integrare un controllo che segnali la mancanza del manifest o dei file nella pipeline di CI/CD.
 - **Documentare**: Aggiornare la documentazione di tutti i temi e la root per ricordare la necessità di pubblicare le risorse.

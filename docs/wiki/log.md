@@ -1,3 +1,14 @@
+---
+title: "log"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "log"
+issues: []
+discussions: []
+---
+
 ## [2026-06-30] governance | theme Composer boundary
 
 - Recepita la regola Xot del root Composer skeleton.

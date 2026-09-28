@@ -1,3 +1,14 @@
+---
+title: "NO PREDICT SPECIFIC PAGES"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "NO PREDICT SPECIFIC PAGES"
+issues: []
+discussions: []
+---
+
 # 🚫 NO Pagine Predict-Specific nel Theme
 
 **Data**: 2026-03-20  
@@ -7,6 +18,14 @@
 
 ---
 
+title: "NO PREDICT SPECIFIC PAGES"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "NO PREDICT SPECIFIC PAGES"
+issues: []
+discussions: []
 ## 🔴 REGOLA D'ORO
 
 ### MAI creare pagine specifiche per moduli nel theme

@@ -1,3 +1,14 @@
+---
+title: "product roadmap"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "product roadmap"
+issues: []
+discussions: []
+---
+
 # Product Roadmap - Theme TwentyOne
 
 ## Modern Tailwind + Vite Theme
@@ -8,6 +19,14 @@
 
 ---
 
+title: "product roadmap"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "product roadmap"
+issues: []
+discussions: []
 ## Vision Statement
 
 > **Become the developer's choice for modern Laravel applications - the fastest, most enjoyable theme to build with, combining cutting-edge tooling with production-ready components.**

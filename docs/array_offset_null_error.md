@@ -1,3 +1,14 @@
+---
+title: "array offset null error"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "array offset null error"
+issues: []
+discussions: []
+---
+
 # Errore: Accesso a offset di array su null
 
 ## Contesto

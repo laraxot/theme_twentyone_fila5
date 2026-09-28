@@ -1,3 +1,14 @@
+---
+title: "predict page improvements"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "predict page improvements"
+issues: []
+discussions: []
+---
+
 # Miglioramento pagina `predicts/[slug].blade.php` – Theme *TwentyOne*
 
 > Questa analisi replica e adatta quanto già redatto nel modulo `Predict` aggiungendo considerazioni specifiche per il tema *TwentyOne* (design-system, variabili CSS, dark-mode, componenti Blade del tema).
@@ -44,4 +55,12 @@
 
 ---
 
+title: "predict page improvements"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "predict page improvements"
+issues: []
+discussions: []
 Per i dettagli completi vedi `Modules/Predict/docs/predict_page_improvements.md`. Questa versione enfatizza solo l'integrazione con il tema TwentyOne.

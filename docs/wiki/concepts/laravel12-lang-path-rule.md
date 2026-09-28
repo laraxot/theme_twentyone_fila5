@@ -1,3 +1,14 @@
+---
+title: "laravel12 lang path rule"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "laravel12 lang path rule"
+issues: []
+discussions: []
+---
+
 # Laravel 12 lang path rule
 
 ## Sintesi

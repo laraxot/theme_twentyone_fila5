@@ -1,3 +1,14 @@
+---
+title: "gsd workflow"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gsd workflow"
+issues: []
+discussions: []
+---
+
 # GSD & BMAD Workflow — Tema TwentyOne
 
 > Workflow spec-driven per lo sviluppo del tema TwentyOne usando GSD e BMAD.
@@ -329,6 +340,14 @@ Commit: "test: verify phase 2 complete"
 
 ---
 
+title: "gsd workflow"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gsd workflow"
+issues: []
+discussions: []
 **Mantenuto da**: AI Agents Team  
 **Versione**: 2.0  
 **Ultimo aggiornamento**: 2026-03-18

@@ -1,3 +1,14 @@
+---
+title: "predicts listing fix"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "predicts listing fix"
+issues: []
+discussions: []
+---
+
 # Fix pagina /it/predicts — listing mercati
 
 ## Problema

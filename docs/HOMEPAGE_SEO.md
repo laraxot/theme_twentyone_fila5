@@ -1,3 +1,14 @@
+---
+title: "HOMEPAGE SEO"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "HOMEPAGE SEO"
+issues: []
+discussions: []
+---
+
 # Homepage Improvements — Sprint 1 (Critical)
 
 > **Data**: 2026-03-18  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "HOMEPAGE SEO"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "HOMEPAGE SEO"
+issues: []
+discussions: []
 ## ✅ Completati
 
 ### 1. SEO Meta Tags + JSON-LD

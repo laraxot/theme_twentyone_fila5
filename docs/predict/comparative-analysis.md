@@ -1,3 +1,14 @@
+---
+title: "comparative analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "comparative analysis"
+issues: []
+discussions: []
+---
+
 # Analisi Comparativa: Prediction Market vs Leader del Settore
 
 ## 🎯 Obiettivo dell'Analisi
@@ -360,5 +371,13 @@ Analisi comparativa dettagliata tra la pagina di predizione attuale e i migliori
 
 ---
 
+title: "comparative analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "comparative analysis"
+issues: []
+discussions: []
 *Documento creato il: {{ date('Y-m-d H:i:s') }}*
 *Basato sull'analisi comparativa con i principali prediction market del 2024* 

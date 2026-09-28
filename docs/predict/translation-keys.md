@@ -1,3 +1,14 @@
+---
+title: "translation keys"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "translation keys"
+issues: []
+discussions: []
+---
+
 # Chiavi di Traduzione per Prediction Market
 
 ## 📝 Pattern di Traduzione

@@ -1,3 +1,14 @@
+---
+title: "f1 world champion 2026 options"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "f1 world champion 2026 options"
+issues: []
+discussions: []
+---
+
 # Analisi Screenshot: F1 World Champion 2026
 
 ## URL
