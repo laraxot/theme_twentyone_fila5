@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "semantic css guide"
 issues: []
 discussions: []
+status: draft
 ---
 
 # 🎨 TwentyOne Theme - Semantic CSS Guide
@@ -17,15 +18,6 @@ discussions: []
 **Version**: 1.0
 
 ---
-
-title: "semantic css guide"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "semantic css guide"
-issues: []
-discussions: []
 ## 🎯 Core Principle
 
 > **"Il tema è bridge-only: usa classi semantiche, non inventare stili."**

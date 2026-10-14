@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "filters collapsible philosophy"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Filtri collassabili — filosofia UI/UX

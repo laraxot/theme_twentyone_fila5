@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "vite manifest error"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Errori Runtime Home `/it` - Theme TwentyOne

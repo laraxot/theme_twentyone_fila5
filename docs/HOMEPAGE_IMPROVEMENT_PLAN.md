@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "HOMEPAGE IMPROVEMENT PLAN"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Homepage Improvement Plan — http://predict.local/it
@@ -16,15 +17,6 @@ discussions: []
 > **Standard**: WCAG 2.2 AA, Core Web Vitals 2026, 10 Priorità Critiche (70% successo)
 
 ---
-
-title: "HOMEPAGE IMPROVEMENT PLAN"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "HOMEPAGE IMPROVEMENT PLAN"
-issues: []
-discussions: []
 ## 📊 Stato Attuale
 
 ### ✅ Cosa Abbiamo

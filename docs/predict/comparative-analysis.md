@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "comparative analysis"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Analisi Comparativa: Prediction Market vs Leader del Settore
@@ -370,14 +371,5 @@ Analisi comparativa dettagliata tra la pagina di predizione attuale e i migliori
 4. **A/B testing** - Performance optimization
 
 ---
-
-title: "comparative analysis"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "comparative analysis"
-issues: []
-discussions: []
 *Documento creato il: {{ date('Y-m-d H:i:s') }}*
 *Basato sull'analisi comparativa con i principali prediction market del 2024* 

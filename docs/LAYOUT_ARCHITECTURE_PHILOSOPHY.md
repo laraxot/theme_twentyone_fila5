@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "LAYOUT ARCHITECTURE PHILOSOPHY"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Layout Architecture Philosophy
@@ -16,15 +17,6 @@ discussions: []
 **Branch**: dev
 
 ---
-
-title: "LAYOUT ARCHITECTURE PHILOSOPHY"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "LAYOUT ARCHITECTURE PHILOSOPHY"
-issues: []
-discussions: []
 ## 🎯 Core Principle
 
 > **"Separazione delle concern, composizione > duplicazione"**

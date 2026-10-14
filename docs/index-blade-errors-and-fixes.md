@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "index blade errors and fixes"
 issues: []
 discussions: []
+status: draft
 ---
 
 # index.blade.php — Errori Storici e Correzioni

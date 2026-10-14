@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "kalshi competitor analysis"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Analisi Kalshi.com - Competitor Study
@@ -18,15 +19,6 @@ discussions: []
 **URL**: https://kalshi.com  
 
 ---
-
-title: "kalshi competitor analysis"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "kalshi competitor analysis"
-issues: []
-discussions: []
 ## Elementi Chiave Identificati
 
 ### 1. Struttura Header

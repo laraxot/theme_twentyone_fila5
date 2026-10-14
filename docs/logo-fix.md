@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "logo fix"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Logo Duplication Fix - TwentyOne Theme

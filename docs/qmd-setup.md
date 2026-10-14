@@ -7,6 +7,7 @@ discussions: []
 title: "QMD Setup (stub tema TwentyOne)"
 type: documentation
 updated: 2026-05-21
+status: draft
 ---
 
 # QMD Setup — stub

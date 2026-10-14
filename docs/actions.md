@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "actions"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Azioni del Tema TwentyOne

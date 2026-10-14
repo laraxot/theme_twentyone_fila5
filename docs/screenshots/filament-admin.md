@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "filament admin"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Filament Admin Screenshot Analysis

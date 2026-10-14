@@ -13,6 +13,7 @@ related:
   - ../../dry-kiss-analysis.md
   - ../../../../../Modules/Xot/docs/wiki/concepts/ridondanze-cross-cutting-codebase.md
   - ../../../../../Modules/Xot/docs/redundancy-report.md
+status: draft
 ---
 
 # Ridondanza: perché questo file esiste nel tema TwentyOne

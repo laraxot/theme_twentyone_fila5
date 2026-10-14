@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "kalshi implementation plan"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Piano di Implementazione Miglioramenti Kalshi - [slug].blade.php
@@ -542,13 +543,4 @@ Basato su `completion-summary.md`:
 4. **Performance tests** per load testing
 
 ---
-
-title: "kalshi implementation plan"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "kalshi implementation plan"
-issues: []
-discussions: []
 *Piano creato il 2025-01-24 basato sull'analisi dei documenti esistenti* 

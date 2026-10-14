@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "PREDICTS LIST CINEMATIC REDESIGN"
 issues: []
 discussions: []
+status: draft
 ---
 
 # 🎨 PREDICTS LIST - CINEMATIC REDESIGN REPORT
@@ -17,15 +18,6 @@ discussions: []
 **Miglioramento**: **+15%** (+12 punti)
 
 ---
-
-title: "PREDICTS LIST CINEMATIC REDESIGN"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "PREDICTS LIST CINEMATIC REDESIGN"
-issues: []
-discussions: []
 ## 📊 BEFORE vs AFTER
 
 ### Prima (BRUTTO ❌)

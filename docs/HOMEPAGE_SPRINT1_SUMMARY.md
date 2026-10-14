@@ -154,8 +154,8 @@ button, a.btn, [role="button"] {
 ## 📚 Riferimenti
 
 - [website-checklist.md](docs/project/website-checklist.md)
-- [HOMEPAGE_IMPROVEMENT_PLAN.md](Themes/TwentyOne/docs/HOMEPAGE_IMPROVEMENT_PLAN.md)
-- [HOMEPAGE_SEO.md](Themes/TwentyOne/docs/HOMEPAGE_SEO.md)
+- [HOMEPAGE_IMPROVEMENT_PLAN.md](HOMEPAGE_IMPROVEMENT_PLAN.md)
+- [HOMEPAGE_SEO.md](HOMEPAGE_SEO.md)
 - [044-website-checklist.md](.github/ISSUES/044-website-checklist.md)
 
 ---

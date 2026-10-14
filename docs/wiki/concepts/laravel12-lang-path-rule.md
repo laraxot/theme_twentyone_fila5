@@ -23,4 +23,4 @@ Per il tema `TwentyOne`, le traduzioni vivono in `lang/` e non in `resources/lan
 
 ## Backlink
 
-- [Regola globale Laravel 12 lang root](../../../../../docs/wiki/concepts/laravel12-lang-root-rule.md)
+- [Regola globale Laravel 12 lang root](../../../../../../docs/wiki/concepts/laravel12-lang-root-rule.md)

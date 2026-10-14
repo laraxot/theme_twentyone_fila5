@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "filament laravel ui deep analysis"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Analisi Approfondita: Laravel UI e LoginWidget

@@ -108,8 +108,8 @@ discussions: []
 
 ## Collegamenti contestuali
 
-- **[LOGIN_FILAMENT_WIDGET_ERROR.md](LOGIN_FILAMENT_WIDGET_ERROR.md)** — Per vedere errori tipici e cosa evitare quando si implementa un LoginWidget, consulta questo file: approfondisce le problematiche reali e le soluzioni sbagliate da non ripetere.
-- **[WIDGETS_STRUCTURE.md](../../../Modules/User/docs/WIDGETS_STRUCTURE.md)** — Per la struttura corretta e le regole architetturali dei widget Filament, consulta questo file: contiene pattern, esempi e motivazioni tecniche su come organizzare e implementare i widget in modo conforme alle regole Windsurf/Xot.
+- **[LOGIN_FILAMENT_WIDGET_ERROR.md](login_filament_widget_error.md)** — Per vedere errori tipici e cosa evitare quando si implementa un LoginWidget, consulta questo file: approfondisce le problematiche reali e le soluzioni sbagliate da non ripetere.
+- **[WIDGETS_STRUCTURE.md](../../../Modules/User/docs/widgets_structure.md)** — Per la struttura corretta e le regole architetturali dei widget Filament, consulta questo file: contiene pattern, esempi e motivazioni tecniche su come organizzare e implementare i widget in modo conforme alle regole Windsurf/Xot.
 
 ---
 

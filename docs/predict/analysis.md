@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "analysis"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Analisi Pagina Prediction Market - TwentyOne Theme
@@ -748,14 +749,5 @@ public function show(string $slug)
 - [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci)
 
 ---
-
-title: "analysis"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "analysis"
-issues: []
-discussions: []
 *Documento creato il: {{ date('Y-m-d H:i:s') }}*
 *Ultimo aggiornamento: {{ date('Y-m-d H:i:s') }}* 

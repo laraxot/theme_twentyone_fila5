@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "f1 world champion 2026 options"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Analisi Screenshot: F1 World Champion 2026

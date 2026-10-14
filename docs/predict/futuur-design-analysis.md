@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "futuur design analysis"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Analisi Design Futuur.com - Prediction Market

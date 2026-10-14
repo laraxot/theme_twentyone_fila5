@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "bmad methodology"
 issues: []
 discussions: []
+status: draft
 ---
 
 # BMAD Method - Metodologia Completa per Agenti AI

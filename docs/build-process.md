@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "build process"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Build Process - Tema TwentyOne

@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "CHANGELOG"
 issues: []
 discussions: []
+status: draft
 ---
 
 ## 1.0.0-dev.1 (2026-06-13)

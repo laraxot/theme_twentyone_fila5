@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "FILAMENT 5 IMPLEMENTATION"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Filament 5.x Implementation Guide
@@ -18,15 +19,6 @@ discussions: []
 **PHP**: 8.3.30
 
 ---
-
-title: "FILAMENT 5 IMPLEMENTATION"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "FILAMENT 5 IMPLEMENTATION"
-issues: []
-discussions: []
 ## 📋 Overview
 
 Questo documento descrive l'implementazione di Filament 5.x nel tema TwentyOne, basata sulla documentazione ufficiale:

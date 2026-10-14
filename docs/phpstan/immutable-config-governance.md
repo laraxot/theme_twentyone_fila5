@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "immutable config governance"
 issues: []
 discussions: []
+status: draft
 ---
 
 # PHPStan Immutable Config Governance

@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "homepage ui ux audit"
 issues: []
 discussions: []
+status: draft
 ---
 
 # TwentyOne Homepage UI/UX Audit

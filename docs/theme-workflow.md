@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "theme workflow"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Theme Development & Build Workflow

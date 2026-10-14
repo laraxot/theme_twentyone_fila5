@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "icon rendering policy"
 issues: []
 discussions: []
+status: draft
 ---
 
 # TwentyOne Icon Rendering Policy

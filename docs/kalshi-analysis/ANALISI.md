@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "ANALISI"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Analisi Competitor: Kalshi.com

@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "code quality analysis"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Code Quality Analysis - TwentyOne Theme
@@ -16,15 +17,6 @@ discussions: []
 **Status:** ✅ Good
 
 ---
-
-title: "code quality analysis"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "code quality analysis"
-issues: []
-discussions: []
 ## 📊 Summary
 
 The TwentyOne theme shows **good code quality** with room for improvement in documentation and organization.

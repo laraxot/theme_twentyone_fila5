@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "kalshi implementation complete"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Implementazione Completata - Miglioramenti Kalshi
@@ -302,13 +303,4 @@ L'implementazione dei miglioramenti ispirati a Kalshi è stata completata con su
 Il codice è ora pronto per l'integrazione con il backend e può essere facilmente esteso con nuove funzionalità mantenendo la qualità e le performance.
 
 ---
-
-title: "kalshi implementation complete"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "kalshi implementation complete"
-issues: []
-discussions: []
 *Documento creato il 2025-01-24 come riepilogo dell'implementazione completata* 

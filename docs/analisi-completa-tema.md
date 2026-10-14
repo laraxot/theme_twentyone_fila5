@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "analisi completa tema"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Analisi Completa Tema TwentyOne - Tema Generico Laravel
@@ -685,15 +686,6 @@ Una volta completato, il tema TwentyOne diventerà una **soluzione moderna e com
 Questo lo renderà la **scelta ideale** per progetti Laravel moderni che richiedono un tema pulito, performante e facilmente personalizzabile.
 
 ---
-
-title: "analisi completa tema"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "analisi completa tema"
-issues: []
-discussions: []
 **Ultimo aggiornamento**: Gennaio 2025  
 **Versione analisi**: 1.0  
 **Prossima revisione**: Febbraio 2025

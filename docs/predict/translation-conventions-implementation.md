@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "translation conventions implementation"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Implementazione Convenzioni di Traduzione Standardizzate

@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "homepage dark light v1.png"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Screenshot Analysis: homepage-dark-light-v1.png
@@ -18,15 +19,6 @@ discussions: []
 **Commit**: `47c64d08` — feat(theme): dark/light mode support for Filament Table Widget and layout
 
 ---
-
-title: "homepage dark light v1.png"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "homepage dark light v1.png"
-issues: []
-discussions: []
 ## Panoramica
 
 Lo screenshot cattura la homepage dei mercati di previsione dopo l'implementazione completa del supporto dark/light mode. La pagina è renderizzata in **light mode** poiché è il default iniziale senza preferenze salvate.

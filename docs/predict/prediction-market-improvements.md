@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "prediction market improvements"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Analisi e Miglioramenti Pagina Prediction Market

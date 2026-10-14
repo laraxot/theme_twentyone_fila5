@@ -10,6 +10,7 @@ discussions: []
 module: theme
 topic: codex-error-fix
 canonical: ../../docs/shared-components/codex-error-fix.md
+status: stub
 ---
 
 See canonical documentation: ../../docs/shared-components/codex-error-fix.md

@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "provider inheritance rules"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Regole di Ereditarietà dei Service Provider

@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "prediction page improvements"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Miglioramenti Pagina Prediction Market - Analisi Completa
@@ -706,14 +707,5 @@ function toggleMobileMenu() {
 - [Hotjar](https://www.hotjar.com/)
 
 ---
-
-title: "prediction page improvements"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "prediction page improvements"
-issues: []
-discussions: []
 *Documento creato il: {{ date('Y-m-d H:i:s') }}*
 *Basato sull'analisi dei principali prediction market del 2024* 

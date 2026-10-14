@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "futuur inspired implementation"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Implementazione Ispirata a Futuur - Prediction Market

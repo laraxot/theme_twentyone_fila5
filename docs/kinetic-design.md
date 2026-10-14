@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "kinetic design"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Kinetic Web Design — TwentyOne Theme

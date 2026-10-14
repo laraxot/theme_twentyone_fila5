@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "cinematic particles philosophy"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Cinematic & Particle Effects — Philosophy, Logic & Zen
@@ -16,15 +17,6 @@ discussions: []
 > **Per altri agenti AI**: Leggere PRIMA di toccare qualsiasi animazione
 
 ---
-
-title: "cinematic particles philosophy"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "cinematic particles philosophy"
-issues: []
-discussions: []
 ## IL PERCHE' — The Why
 
 Prediction markets trade in the most abstract human currency: **future probability**. A number like "73% YES" conveys nothing to the limbic brain. Cinematic and particle effects translate abstract probability into **sensory experience**, creating emotional resonance that drives engagement and trust.

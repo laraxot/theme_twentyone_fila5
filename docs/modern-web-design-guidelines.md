@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "modern web design guidelines"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Modern Web Design Guidelines 2025-2026
@@ -15,15 +16,6 @@ discussions: []
 > Fonti: ricerca approfondita su risorse specializzate italiane e internazionali (marzo 2026).
 
 ---
-
-title: "modern web design guidelines"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "modern web design guidelines"
-issues: []
-discussions: []
 ## 1. Il Cambio di Paradigma
 
 Nel 2026 l'utente **non percepisce il sito come insieme di pagine, ma come ambiente coerente**.

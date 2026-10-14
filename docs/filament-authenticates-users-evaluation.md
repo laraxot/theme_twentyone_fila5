@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "filament authenticates users evaluation"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Valutazione Finale: Utilizzo di AuthenticatesUsers

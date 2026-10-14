@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "technical specifications"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Specifiche Tecniche - Miglioramenti Prediction Market

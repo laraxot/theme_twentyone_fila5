@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "translation keys"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Chiavi di Traduzione per Prediction Market

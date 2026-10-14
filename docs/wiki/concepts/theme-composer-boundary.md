@@ -12,6 +12,7 @@ related:
   - ../../raw/notes/theme-composer-boundary-2026-06-30.md
   - ../../../../Modules/Xot/docs/wiki/concepts/composer-root-skeleton-modular.md
   - ../../../../Modules/Xot/docs/wiki/concepts/theme-psr4-autoload-without-merge.md
+status: draft
 ---
 
 # Theme Composer Boundary

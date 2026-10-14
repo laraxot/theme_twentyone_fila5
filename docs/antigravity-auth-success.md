@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "antigravity auth success"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Antigravity su Auth Success (TwentyOne)

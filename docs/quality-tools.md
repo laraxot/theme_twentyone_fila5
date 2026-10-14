@@ -11,7 +11,7 @@ discussions: []
 
 # Quality Tools Usage (Theme TwentyOne)
 
-Theme-specific guidance for PHPMD, PHP-CS-Fixer, Laravel Pint, Psalm, PHPQA, actionlint, markdownlint, gitleaks. Canonical reference: [docs/quality-tools-setup](../../../docs/quality-tools-setup.md). PHPInsights phar: [docs/phpinsights-phar-build](../../../docs/phpinsights-phar-build.md).
+Theme-specific guidance for PHPMD, PHP-CS-Fixer, Laravel Pint, Psalm, PHPQA, actionlint, markdownlint, gitleaks. Canonical reference: [docs/quality-tools-setup](../../../../docs/quality-tools-setup.md). PHPInsights phar: [docs/phpinsights-phar-build](../../../../docs/phpinsights-phar-build.md).
 
 ## Scope
 - Analyze only `Themes/TwentyOne` and related theme PHP code.

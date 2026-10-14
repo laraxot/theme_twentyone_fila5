@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "kalshi design implementation analysis"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Analisi Implementazione Design Kalshi - [slug].blade.php
@@ -110,13 +111,4 @@ Questo documento analizza l'implementazione dei miglioramenti ispirati a Kalshi.
 - Posizionamento competitivo con i leader del settore
 
 ---
-
-title: "kalshi design implementation analysis"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "kalshi design implementation analysis"
-issues: []
-discussions: []
 *Documento creato il 2025-01-24* 

@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "f1 world champion 2026 analysis"
 issues: []
 discussions: []
+status: draft
 ---
 
 # 📸 F1 World Champion 2026 - Screenshots & Analysis
@@ -16,15 +17,6 @@ discussions: []
 **Outcomes**: 6+ piloti (Verstappen, Hamilton, Leclerc, Norris, Alonso, Others)
 
 ---
-
-title: "f1 world champion 2026 analysis"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "f1 world champion 2026 analysis"
-issues: []
-discussions: []
 ## 🎯 ARCHITETTURA MULTI-OUTCOME
 
 > **CONCETTO CHIAVE**: SI/NO è solo un caso particolare di multi-risposta (2 outcome)

@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "gsap animations guide"
 issues: []
 discussions: []
+status: draft
 ---
 
 # GSAP Animations - Theme TwentyOne
@@ -17,15 +18,6 @@ discussions: []
 **Stato**: ✅ DOCUMENTATO
 
 ---
-
-title: "gsap animations guide"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "gsap animations guide"
-issues: []
-discussions: []
 ## ARCHITETTURA
 
 ### File Structure

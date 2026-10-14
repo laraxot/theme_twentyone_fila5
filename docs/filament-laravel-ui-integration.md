@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "filament laravel ui integration"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Integrazione Laravel UI con LoginWidget Filament
