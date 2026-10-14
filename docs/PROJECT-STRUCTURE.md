@@ -7,6 +7,7 @@ discussions: []
 title: "Project Structure (stub tema TwentyOne)"
 type: documentation
 updated: 2026-05-21
+status: draft
 ---
 
 # Project Structure — stub

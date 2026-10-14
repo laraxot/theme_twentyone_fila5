@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "HOMEPAGE ANALYSIS"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Kalshi.com Analysis — Complete Design Study
@@ -16,15 +17,6 @@ discussions: []
 > **Scopo**: Replicare e migliorare lo stile per Base Predict
 
 ---
-
-title: "HOMEPAGE ANALYSIS"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "HOMEPAGE ANALYSIS"
-issues: []
-discussions: []
 ## 📊 1. Homepage Analysis
 
 ### Layout e Struttura

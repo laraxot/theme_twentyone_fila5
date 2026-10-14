@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "zen naked page philosophy"
 issues: []
 discussions: []
+status: draft
 ---
 
 # 🧠 ZEN NAKED PAGE PHILOSOPHY
@@ -16,15 +17,6 @@ discussions: []
 **Priorità**: CRITICAL
 
 ---
-
-title: "zen naked page philosophy"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "zen naked page philosophy"
-issues: []
-discussions: []
 ## 🎯 IL CONCETTO DI "NAKED PAGE"
 
 La filosofia **Zen Naked Page** impone che i file di routing del theme (Folio pages) siano il più possibile privi di styling hardcoded.

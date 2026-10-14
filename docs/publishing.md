@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "publishing"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Processo di Pubblicazione del Tema TwentyOne

@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "BLADE OLD FILES IN PAGES RULE"
 issues: []
 discussions: []
+status: draft
 ---
 
 # 🔴 REGOLA: File .blade.php.old Nella Cartella Pages
@@ -16,15 +17,6 @@ discussions: []
 **Priorità**: CRITICAL  
 
 ---
-
-title: "BLADE OLD FILES IN PAGES RULE"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "BLADE OLD FILES IN PAGES RULE"
-issues: []
-discussions: []
 ## 📜 La Regola
 
 ```

@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "NO PREDICT SPECIFIC PAGES"
 issues: []
 discussions: []
+status: draft
 ---
 
 # 🚫 NO Pagine Predict-Specific nel Theme
@@ -17,15 +18,6 @@ discussions: []
 **Enforcement**: Pre-commit Hook + Code Review
 
 ---
-
-title: "NO PREDICT SPECIFIC PAGES"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "NO PREDICT SPECIFIC PAGES"
-issues: []
-discussions: []
 ## 🔴 REGOLA D'ORO
 
 ### MAI creare pagine specifiche per moduli nel theme

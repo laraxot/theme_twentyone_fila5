@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "comprehensive analysis and plan"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Analisi Completa e Piano di Implementazione - [slug].blade.php
@@ -15,15 +16,6 @@ discussions: []
 ## Basato su: Studio approfondito di tutta la documentazione in docs/predict
 
 ---
-
-title: "comprehensive analysis and plan"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "comprehensive analysis and plan"
-issues: []
-discussions: []
 ## 1. SINTESI DELLO STUDIO DOCUMENTAZIONE
 
 ### Documenti Analizzati

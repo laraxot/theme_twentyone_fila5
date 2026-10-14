@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "refactoring clean architecture"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Refactoring della Pagina Predict: Architettura Clean Code

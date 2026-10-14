@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "vite error"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Errore Vite: Unable to locate file in Vite manifest

@@ -14,6 +14,7 @@ sources:
   - ../../../docs/LAYOUT_ARCHITECTURE_PHILOSOPHY.md
 confidence: high
 updated: 2026-04-15
+status: draft
 ---
 
 # TwentyOne Theme — Overview

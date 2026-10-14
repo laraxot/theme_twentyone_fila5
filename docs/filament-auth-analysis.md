@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "filament auth analysis"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Analisi e Correzione: Integrazione Autenticazione con Filament

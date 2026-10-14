@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "array offset null error"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Errore: Accesso a offset di array su null

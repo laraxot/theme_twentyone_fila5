@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "kalshi inspired improvements"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Miglioramenti Ispirati a Kalshi per [slug].blade.php
@@ -15,15 +16,6 @@ discussions: []
 ## Obiettivo: Implementare un'interfaccia professionale ispirata a Kalshi.com
 
 ---
-
-title: "kalshi inspired improvements"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "kalshi inspired improvements"
-issues: []
-discussions: []
 ## 1. ANALISI DELL'IMPLEMENTAZIONE ATTUALE
 
 ### Struttura Corrente

@@ -431,7 +431,7 @@ Builder::make('content_blocks')
 
 ### Theme Architecture
 - [`FOLIO_VOLT_ARCHITECTURE.md`](../laravel/docs/FOLIO_VOLT_ARCHITECTURE.md)
-- [`page-component-context-data.md`](../laravel/Modules/Cms/docs/page-component-context-data.md)
+- [`page-component-context-data.md`](../../../Modules/Cms/docs/page-component-context-data.md)
 
 ---
 

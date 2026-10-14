@@ -10,6 +10,7 @@ discussions: []
 module: theme
 topic: entity
 canonical: ../../../../docs/shared-components/entity-Modules.md
+status: stub
 ---
 
 See canonical documentation: ../../../../docs/shared-components/entity-Modules.md

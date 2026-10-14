@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "prediki design analysis"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Prediki.com – Analisi delle Scelte Grafiche
@@ -63,13 +64,4 @@ Usare variabili CSS `--twc-primary-dark`, `--twc-cta` per replicare contrasto CT
 | RSS feed job + `NewsFeed` component | Bassa |
 
 ---
-
-title: "prediki design analysis"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "prediki design analysis"
-issues: []
-discussions: []
 > Analisi condotta il 2025-07-23; screenshots e note archiviate internamente per riferimenti di UI.

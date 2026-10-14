@@ -13,6 +13,7 @@ related:
   - ../../concepts/theme-root-uppercase-folders.md
   - ../../overviews/twentyone-theme.md
   - ../../../ponytail-audit-over-engineering.md
+status: draft
 ---
 
 # Archivio `Main_files`

@@ -61,6 +61,6 @@ Nel front office pubblico del tema tutto converge su `container0.index` e `conta
 
 ## Canon condiviso
 
-- Root: [folio-container0-index-filament-way.md](../../../../../docs/wiki/memories/folio-container0-index-filament-way.md)
+- Root: [folio-container0-index-filament-way.md](../../../../docs/wiki/memories/folio-container0-index-filament-way.md)
 - Sixteen: `laravel/Themes/Sixteen/docs/folio-page-pattern.md`
 - Wiki locale: [wiki/concepts/folio-container0-filament-way.md](wiki/concepts/folio-container0-filament-way.md)

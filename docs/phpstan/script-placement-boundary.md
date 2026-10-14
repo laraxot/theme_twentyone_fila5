@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "script placement boundary"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Script Placement Boundary

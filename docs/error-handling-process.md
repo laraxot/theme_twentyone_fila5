@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "error handling process"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Processo di Gestione Errori e Documentazione

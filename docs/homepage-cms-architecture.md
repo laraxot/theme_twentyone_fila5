@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "homepage cms architecture"
 issues: []
 discussions: []
+status: draft
 ---
 
 # HOMEPAGE CMS ARCHITECTURE
@@ -185,14 +186,5 @@ Il tema TwentyOne deve funzionare con qualsiasi contenuto CMS:
 - `Themes/TwentyOne/docs/blade-generic-architecture.md`
 
 ---
-
-title: "homepage cms architecture"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "homepage cms architecture"
-issues: []
-discussions: []
 **Stato**: Implementato (2026-03-18)
 **Autore**: AI Agent

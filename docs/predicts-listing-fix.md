@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "predicts listing fix"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Fix pagina /it/predicts — listing mercati

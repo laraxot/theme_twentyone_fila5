@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "README"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Analisi Errore Vite: Unable to locate file in Vite manifest
@@ -78,15 +79,6 @@ Questo è fondamentale per:
 - [Sezione pubblicazione temi in docs root](../../../../project_docs/themes/management.md)
 
 ---
-
-title: "README"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "README"
-issues: []
-discussions: []
 ## Ipotesi di Risoluzione
 - **Automatizzare**: Integrare un controllo che segnali la mancanza del manifest o dei file nella pipeline di CI/CD.
 - **Documentare**: Aggiornare la documentazione di tutti i temi e la root per ricordare la necessità di pubblicare le risorse.

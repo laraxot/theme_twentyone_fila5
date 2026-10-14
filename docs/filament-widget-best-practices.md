@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "filament widget best practices"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Best Practices: Widget Filament

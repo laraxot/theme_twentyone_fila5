@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "conflict resolution"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Conflict Resolution — Theme TwentyOne

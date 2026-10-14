@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "filament auth pros cons"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Analisi Dettagliata: Autenticazione con Filament in un Modulo Laravel

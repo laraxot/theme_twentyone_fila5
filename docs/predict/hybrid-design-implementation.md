@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "hybrid design implementation"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Implementazione Design Ibrido - Futuur + Prediki

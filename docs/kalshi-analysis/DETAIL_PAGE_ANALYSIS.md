@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "DETAIL PAGE ANALYSIS"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Kalshi Detail Page Analysis
@@ -16,15 +17,6 @@ discussions: []
 > **Scopo**: Replicare e migliorare per Base Predict
 
 ---
-
-title: "DETAIL PAGE ANALYSIS"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "DETAIL PAGE ANALYSIS"
-issues: []
-discussions: []
 ## 📊 Layout Detail Page
 
 ```

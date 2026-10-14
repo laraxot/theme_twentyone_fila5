@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "troubleshooting homepage"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Troubleshooting Homepage - Error 500

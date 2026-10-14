@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "filament views structure"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Struttura Views per Widget Filament

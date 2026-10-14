@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "ORDER BOOK MULTI OUTCOME CONTRACT"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Order Book Multi Outcome Contract

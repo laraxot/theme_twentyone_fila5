@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "filament structure analysis"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Analisi della Struttura Filament e Correzione degli Errori

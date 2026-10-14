@@ -7,7 +7,14 @@ updated: 2026-09-26
 qmd: "log"
 issues: []
 discussions: []
+status: draft
 ---
+
+## [2026-10-14] docs | stato del tema provato e ingressi corretti
+
+- Story: [studio e ingressi](../stories/2026-10-14-docs-studio-stato-e-ingressi.story.md). TwentyOne non e' il tema di Fixcity (`pub_theme = Sixteen` nei 4 `xra.php`): e' importato dal progetto Predict, 30 occorrenze di `Modules\Predict` in `app/` e `resources/views/`, modulo assente da `laravel/Modules/`.
+- `README.md` (struttura, requisiti reali: PHP `^8.4`, Laravel `^13.0`, Filament `^5.0`) e `00-INDEX.md` (stato, classificazione cartelle) corretti; `wiki/index.md`: 4 link ripuntati, 5 annotati.
+- Non verificato: da dove si risolva `gsap` (importato ma non in `package.json`).
 
 ## [2026-06-30] governance | theme Composer boundary
 
@@ -25,7 +32,7 @@ discussions: []
 
 ## [2026-06-05] docs | HackerNoon harness — tips 001-022 in wiki locale
 
-- Stub/checklist: second-brain → canon Xot, ai-harness, [hackernoon map](../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md), [llm-wiki.txt](../../../../../bashscripts/tools/prompts/llm-wiki.txt)
+- Stub/checklist: second-brain → canon Xot, ai-harness, [hackernoon map](../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md), [llm-wiki.txt](../../../../../bashscripts/tools/prompts/llm-wiki.txt) _(target mancante, verificato 2026-10-14)_
 - GitHub: [#272](https://github.com/laraxot/base_fixcity_fila5/issues/272) / [D#273](https://github.com/laraxot/base_fixcity_fila5/discussions/273)
 
 # TwentyOne Wiki Log

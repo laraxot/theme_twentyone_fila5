@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "web effectiveness rules inputcomm"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Regole per un Sito Web Efficace (InputComm)

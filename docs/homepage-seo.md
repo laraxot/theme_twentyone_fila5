@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "homepage seo"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Homepage Improvements — Sprint 1 (Critical)
@@ -16,15 +17,6 @@ discussions: []
 > **Stato**: 🔄 IN PROGRESS
 
 ---
-
-title: "homepage seo"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "homepage seo"
-issues: []
-discussions: []
 ## ✅ Completati
 
 ### 1. SEO Meta Tags + JSON-LD

@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "routing architecture"
 issues: []
 discussions: []
+status: draft
 ---
 
 # TwentyOne Theme — Routing Architecture

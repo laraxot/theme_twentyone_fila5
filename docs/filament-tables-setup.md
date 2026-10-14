@@ -424,7 +424,7 @@ Questo confine evita drift funzionale e mantiene il tema focalizzato su UI/UX.
 - [Filament 5.x Tables](https://filamentphp.com/docs/5.x/tables/overview)
 - [Filament 5.x Installation](https://filamentphp.com/docs/5.x/introduction/installation)
 - [Tailwind CSS v4](https://tailwindcss.com/docs)
-- [Laraxot Theme Architecture](../../docs/THEME_ARCHITECTURE.md)
+- [Laraxot Theme Architecture](../../../../docs/THEME_ARCHITECTURE.md)
 
 ---
 

@@ -9,7 +9,7 @@ created: 2026-07-01
 updated: 2026-07-01
 qmd: "twentyone theme config tenant boundary bridge CMS sacred"
 related:
-  - ../../../../../docs/wiki/concepts/tenant-config-directory-sacred.md
+  - ../../../../../../docs/wiki/concepts/tenant-config-directory-sacred.md
   - ./theme-composer-boundary.md
   - ./second-brain-local-discipline.md
 ---
@@ -40,4 +40,4 @@ Se serve spostare ownership, documentare prima la nuova sorgente canonica e poi 
 
 - Nomi file `.md`: minuscolo kebab-case, senza date nel filename
 - Frontmatter YAML obbligatorio in `docs/wiki/`
-- Hub progetto: [tenant-config-directory-sacred.md](../../../../../docs/wiki/concepts/tenant-config-directory-sacred.md)
+- Hub progetto: [tenant-config-directory-sacred.md](../../../../../../docs/wiki/concepts/tenant-config-directory-sacred.md)

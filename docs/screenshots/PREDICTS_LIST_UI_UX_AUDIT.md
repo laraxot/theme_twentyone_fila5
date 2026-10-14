@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "PREDICTS LIST UI UX AUDIT"
 issues: []
 discussions: []
+status: draft
 ---
 
 # 🔍 PREDICTS LIST PAGE - UI/UX AUDIT REPORT
@@ -17,15 +18,6 @@ discussions: []
 **Metodologia**: 31 Fonti Italiane Web Design + WCAG 2.2 AA + Core Web Vitals 2026
 
 ---
-
-title: "PREDICTS LIST UI UX AUDIT"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "PREDICTS LIST UI UX AUDIT"
-issues: []
-discussions: []
 ## 📊 EXECUTIVE SUMMARY
 
 | Categoria | Score | Target | Stato |

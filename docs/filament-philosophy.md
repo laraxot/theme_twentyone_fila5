@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "filament philosophy"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Filosofia di Utilizzo dei Componenti Filament

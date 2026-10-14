@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "filament login widget implementation"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Implementazione LoginWidget con AuthenticatesUsers

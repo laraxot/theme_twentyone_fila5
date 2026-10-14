@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "filament login implementation"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Implementazione Login con Filament Widget

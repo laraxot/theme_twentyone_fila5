@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "GSAP SCROLLTRIGGER CONFIGURATION"
 issues: []
 discussions: []
+status: draft
 ---
 
 # GSAP & ScrollTrigger Configuration
@@ -17,15 +18,6 @@ discussions: []
 **Status**: ✅ OPERATIONAL
 
 ---
-
-title: "GSAP SCROLLTRIGGER CONFIGURATION"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "GSAP SCROLLTRIGGER CONFIGURATION"
-issues: []
-discussions: []
 ## 📚 Overview
 
 Questo documento descrive la configurazione di **GSAP (GreenSock Animation Platform)** e **ScrollTrigger** nel tema TwentyOne per Base Predict Fila5.

@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "section template contract"
 issues: []
 discussions: []
+status: draft
 ---
 
 # TwentyOne Section Template Contract

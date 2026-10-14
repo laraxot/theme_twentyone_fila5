@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "homepage layout architecture"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Layout Architecture - TwentyOne Theme
@@ -15,15 +16,6 @@ discussions: []
 **Status**: ✅ OPERATIONAL - Component-based layout system
 
 ---
-
-title: "homepage layout architecture"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "homepage layout architecture"
-issues: []
-discussions: []
 ## 🎯 Philosophy
 
 > "Composizione > Duplicazione"  

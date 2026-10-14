@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "filament authenticates users impact"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Impatto dell'Utilizzo di AuthenticatesUsers

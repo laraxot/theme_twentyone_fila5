@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "predict detail page reusable hero fix"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Predict Detail Page Reusable Hero Fix

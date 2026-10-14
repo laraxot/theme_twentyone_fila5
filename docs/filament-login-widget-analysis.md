@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "filament login widget analysis"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Analisi e Ragionamenti: LoginWidget

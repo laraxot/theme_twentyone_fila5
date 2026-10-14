@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "gsd methodology"
 issues: []
 discussions: []
+status: draft
 ---
 
 # GSD Method - Get Shit Done per Agenti AI

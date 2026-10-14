@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "root file policy"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Root file policy

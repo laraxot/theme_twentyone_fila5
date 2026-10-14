@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "login improvements"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Miglioramenti Pagina di Login

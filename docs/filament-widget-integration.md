@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "filament widget integration"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Integrazione Widget Filament

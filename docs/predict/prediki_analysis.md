@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "prediki analysis"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Analisi UI/UX di Prediki per il Miglioramento della Pagina di Previsione

@@ -10,6 +10,7 @@ discussions: []
 module: theme
 topic: REDUNDANCY_ANALYSIS
 canonical: ../../docs/shared-components/REDUNDANCY_ANALYSIS.md
+status: stub
 ---
 
 See canonical documentation: ../../docs/shared-components/REDUNDANCY_ANALYSIS.md

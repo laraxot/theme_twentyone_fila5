@@ -11,6 +11,7 @@ related:
   - ../../../../../../docs/wiki/memories/folio-container0-index-filament-way.md
   - ../../route-names-philosophy.md
   - ../../blade-generic-architecture.md
+status: draft
 ---
 
 # Folio `container0` — Filament way (TwentyOne)
