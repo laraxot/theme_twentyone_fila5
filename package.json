@@ -17,6 +17,7 @@
         "axios": "^1.17.0",
         "concurrently": "^9.1.2",
         "flowbite": "^3.1.2",
+        "fontaine": "^1.0.1",
         "laravel-vite-plugin": "^2.0.0",
         "postcss": "^8.5.6",
         "postcss-import": "^16.1.1",
