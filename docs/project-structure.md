@@ -14,4 +14,4 @@ status: draft
 
 Copia scaffold rimossa. **Fonte canonica** (wiki temi condivisa):
 
-**[PROJECT-STRUCTURE.md](../../docs/PROJECT-STRUCTURE.md)**
+**[PROJECT-STRUCTURE.md](../../docs/project-structure.md)**
