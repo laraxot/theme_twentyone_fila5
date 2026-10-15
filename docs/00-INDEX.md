@@ -34,7 +34,7 @@ Classificazione delle cartelle:
 | `predict/` (34), `kalshi-analysis/` (4) | legacy, estranea a Fixcity | analisi di prodotti di mercati di previsione |
 | `Main_files/` (36), `screenshots/` (24), `raw/` (12) | evidence | riferimenti statici e immagini; `raw/` e' immutabile |
 | `bmad/`, `phpstan/`, `i18n/`, `memories/`, `llm-wiki/`, `roadmap/`, `root-md-files/`, `outputs/` | supporto | dossier, note di processo |
-| `stories/` | canonica (cronologia BMAD) | creata il 2026-10-14: [stories/2026-10-14-docs-studio-stato-e-ingressi.story.md](stories/2026-10-14-docs-studio-stato-e-ingressi.story.md) |
+| `stories/` | canonica (cronologia BMAD) | creata il 2026-10-14: [stories/2026-10-14-docs-studio-stato-e-ingressi.story.md](stories/docs-studio-stato-e-ingressi.story.md) |
 
 Build reale (`package.json`): `npm run build` (`vite build`, uscita in `./public` con `manifest.json`) e `npm run copy` (copia `./public/*` in `public_html/themes/TwentyOne/`, cartella oggi assente).
 

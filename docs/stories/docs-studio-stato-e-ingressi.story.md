@@ -9,7 +9,7 @@ owner: theme:TwentyOne
 related:
   - ../00-INDEX.md
   - ../README.md
-  - ../../../Sixteen/docs/bmad/stories/2026-10-14-docs-studio-stato-e-ingressi.story.md
+  - ../../../Sixteen/docs/bmad/stories/docs-studio-stato-e-ingressi.story.md
   - ../../../../../bmad-output/stories/docs-organization/DOC-010.module-theme-quality.story.md
 tags: [docs, twentyone, bmad, ingressi, verifica, predict, doc-010, doc-002]
 qmd: "twentyone docs studio stato ingressi non usato fixcity importato progetto predict Modules/Predict submodule pub_theme sixteen"
