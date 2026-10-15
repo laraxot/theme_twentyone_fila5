@@ -14,4 +14,4 @@ status: draft
 
 Copia scaffold rimossa. **Fonte canonica** (wiki temi condivisa):
 
-**[PERFORMANCE-OPTIMIZATION.md](../../docs/PERFORMANCE-OPTIMIZATION.md)**
+**[PERFORMANCE-OPTIMIZATION.md](../../docs/performance-optimization.md)**
