@@ -181,7 +181,7 @@ Il tema TwentyOne deve funzionare con qualsiasi contenuto CMS:
 
 ## Riferimenti
 
-- `Modules/Cms/docs/content-blocks-system-1.md`
+- `Modules/Cms/docs/content-blocks-system-saluteora-sistema.md`
 - `Modules/Predict/docs/GENERIC_PAGE_ARCHITECTURE.md`
 - `Themes/TwentyOne/docs/blade-generic-architecture.md`
 
