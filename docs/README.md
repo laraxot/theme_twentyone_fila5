@@ -6,7 +6,7 @@ title: "TwentyOne Theme Documentation"
 type: readme
 tags: [theme, documentation]
 created: 2026-06-05
-updated: 2026-10-14
+updated: 2026-10-15
 status: draft
 ---
 
@@ -116,3 +116,20 @@ Questo tema è rilasciato sotto la licenza MIT. Vedi il file [LICENSE](../LICENS
 - [QMD Setup](./qmd-setup.md) — Configurazione ricerca locale
 - [Performance](./performance-optimization.md) — Metriche e best practice
 - [Project Structure](./project-structure.md) — Directory layout
+
+## Scopo in Fixcity
+
+TwentyOne **non** e' `pub_theme`. E' un import Predict (GSAP, mercati): utile come riferimento UX/animazioni, non come SSoT Fixcity. Tema vivo: [Sixteen](../../Sixteen/docs/README.md).
+
+## Moduli correlati
+
+| Modulo | Perché | Docs |
+|---|---|---|
+| `Cms` | pattern contenuti/Folio (non Predict) | [Cms](../../../Modules/Cms/docs/README.md) |
+| `UI` | componenti Blade/Filament condivisi | [UI](../../../Modules/UI/docs/README.md) |
+
+## Standing order
+
+PHPStan a zero, docs kebab-case, BMAD: [standing order](../../../../docs/wiki/memories/phpstan-quality-docs-bmad-standing-order.md).
+Duplicati UPPERCASE scaffold rimossi (2026-10-15): restano i canonici `qmd-setup.md`, `on-demand-pattern.md`, `project-structure.md`, `performance-optimization.md`, `redundancy-analysis.md`, `theme-philosophy-zen.md`.
+Test: solo directory `tests/` minuscolo (mai `Tests/` PascalCase).
