@@ -1,3 +1,15 @@
+---
+title: "KINETIC WEB DESIGN SPEC"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "KINETIC WEB DESIGN SPEC"
+issues: []
+discussions: []
+status: draft
+---
+
 # SPEC: Kinetic Web Design — Motion as Central Design Element
 
 > **Data**: 2026-03-18  
@@ -6,7 +18,6 @@
 > **Priorità**: Alta
 
 ---
-
 ## 1. Vision & Goals
 
 ### Obiettivo

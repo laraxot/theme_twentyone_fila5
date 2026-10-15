@@ -1,7 +1,13 @@
 ---
+tags: [documentation]
+created: 2026-09-26
+qmd: "ON DEMAND PATTERN"
+issues: []
+discussions: []
 title: "On-Demand Pattern (stub tema TwentyOne)"
 type: documentation
 updated: 2026-05-21
+status: draft
 ---
 
 # On-Demand Pattern — stub

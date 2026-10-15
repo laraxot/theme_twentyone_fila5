@@ -1,3 +1,14 @@
+---
+title: "route names philosophy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "route names philosophy"
+issues: []
+discussions: []
+---
+
 # Route Names — Filosofia e Convenzioni
 
 ## Scopo
@@ -50,6 +61,6 @@ Nel front office pubblico del tema tutto converge su `container0.index` e `conta
 
 ## Canon condiviso
 
-- Root: [folio-container0-index-filament-way.md](../../../../../docs/wiki/memories/folio-container0-index-filament-way.md)
+- Root: [folio-container0-index-filament-way.md](../../../../docs/wiki/memories/folio-container0-index-filament-way.md)
 - Sixteen: `laravel/Themes/Sixteen/docs/folio-page-pattern.md`
 - Wiki locale: [wiki/concepts/folio-container0-filament-way.md](wiki/concepts/folio-container0-filament-way.md)

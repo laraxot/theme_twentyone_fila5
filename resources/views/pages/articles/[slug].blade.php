@@ -24,7 +24,7 @@ render(function (View $view, string $slug) {
 
 ?>
 <x-layouts.app>
-    <x-comments::styles />
+    <x-comment::styles />
     <div>
         <!-- container -->
         <div class="max-w-[calc(100%-30px)] sm:max-w-[calc(100%-80px)] lg:max-w-[996px] mx-auto pb-12">

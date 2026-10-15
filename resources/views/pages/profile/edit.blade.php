@@ -29,7 +29,7 @@ new class extends Component {
     public function mount(): void
     {
         $user = auth()->user();
-        if (!$user instanceof \Modules\Fixcity\Models\User) {
+        if (!$user instanceof \Modules\User\Models\User) {
             throw new \RuntimeException('Authenticated user is not a Fixcity User');
         }
 
@@ -94,7 +94,7 @@ new class extends Component {
 
         Auth::logout();
 
-        if ($user instanceof \Modules\Fixcity\Models\User) {
+        if ($user instanceof \Modules\User\Models\User) {
             $user->delete();
         }
 

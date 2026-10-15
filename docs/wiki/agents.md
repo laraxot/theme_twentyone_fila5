@@ -9,6 +9,7 @@ issues: []
 discussions: []
 related:
   - ./coding-agent-manifests.md
+status: draft
 ---
 
 # TwentyOne {{TYPE^}} LLM Wiki Agent Instructions

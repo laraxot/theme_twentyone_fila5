@@ -1,3 +1,14 @@
+---
+title: "GSD WORKFLOW"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "GSD WORKFLOW"
+issues: []
+discussions: []
+---
+
 # GSD & BMAD Workflow — Tema TwentyOne
 
 > Workflow spec-driven per lo sviluppo del tema TwentyOne usando GSD e BMAD.
@@ -27,7 +38,7 @@ Tema frontend per il frontoffice:
 | Risorsa | Link |
 |---------|------|
 | **Workflow Completo** | [../../../docs/project/gsd-and-bmad-workflow.md](../../../docs/project/gsd-and-bmad-workflow.md) |
-| **Guida Completa** | [../../../.agents/docs/gsd-bmad-comprehensive-guide.md](../../../.agents/docs/gsd-bmad-comprehensive-guide.md) |
+| **Guida Completa** | [../../../.agents/docs/gsd-bmad-comprehensive-guide.md](../../../../.agents/docs/gsd-bmad-comprehensive-guide.md) |
 | **Coordinamento** | [../../../docs/project/gsd-agent-coordination.md](../../../docs/project/gsd-agent-coordination.md) |
 
 ## Workflow GSD per il Tema
@@ -303,7 +314,7 @@ Commit: "test: verify phase 2 complete"
 ### Documentazione Progetto
 
 - [Workflow Completo](../../../docs/project/gsd-and-bmad-workflow.md)
-- [Guida Completa](../../../.agents/docs/gsd-bmad-comprehensive-guide.md)
+- [Guida Completa](../../../../.agents/docs/gsd-bmad-comprehensive-guide.md)
 - [Coordinamento](../../../docs/project/gsd-agent-coordination.md)
 - [AGENTS.md](../../../AGENTS.md)
 
@@ -329,6 +340,14 @@ Commit: "test: verify phase 2 complete"
 
 ---
 
+title: "GSD WORKFLOW"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "GSD WORKFLOW"
+issues: []
+discussions: []
 **Mantenuto da**: AI Agents Team  
 **Versione**: 2.0  
 **Ultimo aggiornamento**: 2026-03-18

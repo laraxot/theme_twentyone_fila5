@@ -1,3 +1,15 @@
+---
+title: "docs root policy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "docs root policy"
+issues: []
+discussions: []
+status: draft
+---
+
 # Docs Root Policy
 
 ## Regola

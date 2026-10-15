@@ -1,3 +1,15 @@
+---
+title: "filament auth pros cons"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament auth pros cons"
+issues: []
+discussions: []
+status: draft
+---
+
 # Analisi Dettagliata: Autenticazione con Filament in un Modulo Laravel
 
 ## Vantaggi

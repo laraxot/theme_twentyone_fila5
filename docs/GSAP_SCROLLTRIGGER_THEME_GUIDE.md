@@ -1,3 +1,15 @@
+---
+title: "GSAP SCROLLTRIGGER THEME GUIDE"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "GSAP SCROLLTRIGGER THEME GUIDE"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🎬 GSAP & SCROLLTRIGGER - Theme Implementation
 
 **Data**: 2026-03-23  
@@ -5,7 +17,6 @@
 **Status**: ✅ THEME REFERENCE
 
 ---
-
 ## 🏗 ARCHITETTURA TEMA
 
 ### File Structure
