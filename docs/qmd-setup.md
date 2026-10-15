@@ -14,4 +14,4 @@ status: draft
 
 Copia scaffold rimossa. **Fonte canonica** (wiki temi condivisa):
 
-**[QMD-SETUP.md](../../docs/QMD-SETUP.md)**
+**[QMD-SETUP.md](../../docs/redundancy-analysis.md)**
