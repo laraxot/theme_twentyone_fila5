@@ -1,3 +1,15 @@
+---
+title: "futuur lessons"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "futuur lessons"
+issues: []
+discussions: []
+status: draft
+---
+
 # Lezioni da Futuur.com - Applicazioni Pratiche
 
 ## 🎯 Sintesi delle Lezioni Apprese
@@ -391,6 +403,5 @@ class MarketStats extends Component
 - [README](./README.md)
 
 ---
-
 *Documento creato il: {{ date('Y-m-d H:i:s') }}*
 *Ultimo aggiornamento: {{ date('Y-m-d H:i:s') }}* 

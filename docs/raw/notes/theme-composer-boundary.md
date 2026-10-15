@@ -1,4 +1,8 @@
 ---
+updated: 2026-09-26
+qmd: "theme composer boundary 2026 06 30"
+issues: []
+discussions: []
 title: "Boundary Composer dei temi"
 type: raw-note
 theme: TwentyOne

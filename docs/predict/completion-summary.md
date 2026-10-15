@@ -1,3 +1,15 @@
+---
+title: "completion summary"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "completion summary"
+issues: []
+discussions: []
+status: draft
+---
+
 # Riepilogo Completamento File [slug].blade.php
 
 ## Panoramica

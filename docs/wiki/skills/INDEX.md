@@ -1,4 +1,7 @@
 ---
+qmd: "INDEX"
+issues: []
+discussions: []
 title: "Skills Index"
 type: index
 created: 2026-05-11
@@ -7,6 +10,7 @@ tags: [skills, index, on-demand]
 related:
   - ../rules/00-TRIGGER_MAP.md
   - ../rules/on-demand-pattern.md
+status: draft
 ---
 
 # Skills Index
@@ -34,7 +38,13 @@ Le Skills progettuali vivono qui, nel wiki del Theme **TwentyOne**, e vengono ca
 
 - La sorgente di verita' per le Skills e' sempre il wiki locale
 - Non embeddare Skills nei prompt di avvio
+---
+- Per Skills globali, consulta il [wiki root](../../../../../../docs/wiki/skills/INDEX.md)
+---
 - Per Skills globali, consulta il [wiki root](../../docs/wiki/skills/INDEX.md)
+---
+- Per Skills globali, consulta il [wiki root](../../docs/wiki/skills/INDEX.md)
+---
 
 ## Aggiungere una Nuova SKILLS
 

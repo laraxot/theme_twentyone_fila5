@@ -1,3 +1,14 @@
+---
+title: "HOMEPAGE SPRINT1 SUMMARY"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "HOMEPAGE SPRINT1 SUMMARY"
+issues: []
+discussions: []
+---
+
 # 🚀 Homepage Improvements — Riepilogo Sprint 1
 
 > **Data**: 2026-03-18  
@@ -7,6 +18,14 @@
 
 ---
 
+title: "HOMEPAGE SPRINT1 SUMMARY"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "HOMEPAGE SPRINT1 SUMMARY"
+issues: []
+discussions: []
 ## 📊 Cosa Abbiamo Fatto
 
 ### 1. ✅ SEO Implementation Completa
@@ -135,8 +154,8 @@ button, a.btn, [role="button"] {
 ## 📚 Riferimenti
 
 - [website-checklist.md](docs/project/website-checklist.md)
-- [HOMEPAGE_IMPROVEMENT_PLAN.md](Themes/TwentyOne/docs/HOMEPAGE_IMPROVEMENT_PLAN.md)
-- [HOMEPAGE_SEO.md](Themes/TwentyOne/docs/HOMEPAGE_SEO.md)
+- [HOMEPAGE_IMPROVEMENT_PLAN.md](HOMEPAGE_IMPROVEMENT_PLAN.md)
+- [HOMEPAGE_SEO.md](HOMEPAGE_SEO.md)
 - [044-website-checklist.md](.github/ISSUES/044-website-checklist.md)
 
 ---

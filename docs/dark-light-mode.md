@@ -1,10 +1,21 @@
+---
+title: "dark light mode"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "dark light mode"
+issues: []
+discussions: []
+status: draft
+---
+
 # Dark/Light Mode — TwentyOne Theme
 
 **Data implementazione**: 2026-03-23
 **Commit**: `47c64d08`
 
 ---
-
 ## Architettura
 
 Il tema supporta dark/light mode tramite Tailwind CSS `dark:` variant con class strategy (classe `dark` su `<html>`).

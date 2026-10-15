@@ -1,3 +1,15 @@
+---
+title: "filament authenticates users analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament authenticates users analysis"
+issues: []
+discussions: []
+status: draft
+---
+
 # Analisi: Utilizzo di AuthenticatesUsers nel LoginWidget
 
 ## Struttura del Trait

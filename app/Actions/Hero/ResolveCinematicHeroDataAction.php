@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Themes\TwentyOne\Actions\Hero;
 
+use Spatie\QueueableAction\QueueableAction;
+
 use Illuminate\Support\Facades\Schema;
 use Modules\Predict\Actions\Homepage\GetHomepageHeroDataAction;
 use Modules\Predict\Actions\Homepage\GetHomepageMarketCardsAction;
@@ -12,6 +14,8 @@ use Throwable;
 
 final class ResolveCinematicHeroDataAction
 {
+    use QueueableAction;
+
     /**
      * @return array{
      *     eyebrow:string,

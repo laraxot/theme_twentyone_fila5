@@ -1,4 +1,8 @@
 ---
+updated: 2026-09-26
+qmd: "redundancy audit 2026 05 21"
+issues: []
+discussions: []
 title: "TwentyOne redundancy audit 2026-05-21"
 type: audit
 theme: TwentyOne
@@ -6,6 +10,7 @@ tags: [redundancy, blade, theme-boundary]
 created: 2026-05-21
 related:
   - https://github.com/laraxot/base_fixcity_fila5/issues/89
+status: draft
 ---
 
 # TwentyOne redundancy audit 2026-05-21

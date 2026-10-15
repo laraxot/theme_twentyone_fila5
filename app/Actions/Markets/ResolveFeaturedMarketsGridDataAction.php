@@ -4,12 +4,16 @@ declare(strict_types=1);
 
 namespace Themes\TwentyOne\Actions\Markets;
 
+use Spatie\QueueableAction\QueueableAction;
+
 use Illuminate\Support\Collection;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\Predict\Actions\Homepage\GetHomepageMarketCardsAction;
 
 final class ResolveFeaturedMarketsGridDataAction
 {
+    use QueueableAction;
+
     /**
      * @return array{
      *     title:string,

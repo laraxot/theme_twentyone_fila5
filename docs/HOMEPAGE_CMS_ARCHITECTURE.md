@@ -1,3 +1,15 @@
+---
+title: "HOMEPAGE CMS ARCHITECTURE"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "HOMEPAGE CMS ARCHITECTURE"
+issues: []
+discussions: []
+status: draft
+---
+
 # HOMEPAGE CMS ARCHITECTURE
 
 ## Principio Fondamentale
@@ -169,11 +181,10 @@ Il tema TwentyOne deve funzionare con qualsiasi contenuto CMS:
 
 ## Riferimenti
 
-- `Modules/Cms/docs/content-blocks-system-1.md`
+- `Modules/Cms/docs/content-blocks-system-saluteora-sistema.md`
 - `Modules/Predict/docs/GENERIC_PAGE_ARCHITECTURE.md`
 - `Themes/TwentyOne/docs/blade-generic-architecture.md`
 
 ---
-
 **Stato**: Implementato (2026-03-18)
 **Autore**: AI Agent

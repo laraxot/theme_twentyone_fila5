@@ -1,3 +1,15 @@
+---
+title: "prediki design analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "prediki design analysis"
+issues: []
+discussions: []
+status: draft
+---
+
 # Analisi Design Prediki.com - Prediction Market
 
 ## 📊 Panoramica del Sito

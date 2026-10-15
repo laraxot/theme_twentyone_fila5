@@ -1,3 +1,15 @@
+---
+title: "filament authenticates users impact"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament authenticates users impact"
+issues: []
+discussions: []
+status: draft
+---
+
 # Impatto dell'Utilizzo di AuthenticatesUsers
 
 ## Struttura delle Cartelle Coinvolte

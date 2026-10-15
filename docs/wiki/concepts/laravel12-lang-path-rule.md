@@ -1,3 +1,14 @@
+---
+title: "laravel12 lang path rule"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "laravel12 lang path rule"
+issues: []
+discussions: []
+---
+
 # Laravel 12 lang path rule
 
 ## Sintesi
@@ -12,4 +23,4 @@ Per il tema `TwentyOne`, le traduzioni vivono in `lang/` e non in `resources/lan
 
 ## Backlink
 
-- [Regola globale Laravel 12 lang root](../../../../../docs/wiki/concepts/laravel12-lang-root-rule.md)
+- [Regola globale Laravel 12 lang root](../../../../../../docs/wiki/concepts/laravel12-lang-root-rule.md)

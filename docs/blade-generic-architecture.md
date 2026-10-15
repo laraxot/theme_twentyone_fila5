@@ -1,3 +1,15 @@
+---
+title: "blade generic architecture"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "blade generic architecture"
+issues: []
+discussions: []
+status: draft
+---
+
 # BLADE ARCHITETTURA GENERICA - REGOLE FONDAMENTALI
 
 ## ⚠️ ERRORE DA EVITARE
@@ -204,5 +216,4 @@ Quando `$resolved->item` è null, la blade mostra un messaggio generico. Le trad
 | Riutilizzo | Tutti i container | Solo il modulo specifico |
 
 ---
-
 **Stato**: Documentato. La blade `[container0]/[slug0]/index.blade.php` è generica: usa ResolvePageAction, passa solo `item` a x-page (no record/article/predict). I blocchi usano fallback `$item ?? ...`. Nessun `use Predict` nella blade.
