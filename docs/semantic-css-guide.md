@@ -297,7 +297,7 @@ Themes/TwentyOne/
 ## 📚 Related Documents
 
 ### Internal
-- [THEME_PHILOSOPHY_ZEN.md](./theme-philosophy-zen.md) - Ruolo del tema
+- [THEME_PHILOSOPHY_ZEN.md](./THEME_PHILOSOPHY_ZEN.md) - Ruolo del tema
 - [PREDICT_DETAIL_AGNOSTIC_CONTRACT.md](./PREDICT_DETAIL_AGNOSTIC_CONTRACT.md) - Contratto detail
 - [NO_PREDICT_SPECIFIC_PAGES_IN_THEME.md](./NO_PREDICT_SPECIFIC_PAGES_IN_THEME.md) - Divieto pagine modulo-specific
 

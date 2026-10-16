@@ -82,8 +82,3 @@ Build reale (`package.json`): `npm run build` (`vite build`, uscita in `./public
 ---
 
 **Ultimo aggiornamento dell'elenco dei documenti**: 2026-07-01. Stato del tema e classificazione delle cartelle: 2026-10-14 (sezioni in alto).
-
-## Standing order
-
-Non e' il `pub_theme` Fixcity. Qualita'/PHPStan/BMAD: [standing order](../../../../docs/wiki/memories/phpstan-quality-docs-bmad-standing-order.md). Tema vivo: [Sixteen](../../Sixteen/docs/README.md). Moduli: [Cms](../../../Modules/Cms/docs/README.md), [UI](../../../Modules/UI/docs/README.md).
-Scaffold UPPERCASE duplicati rimossi a favore dei file kebab-case.

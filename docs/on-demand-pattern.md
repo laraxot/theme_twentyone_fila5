@@ -14,4 +14,4 @@ status: draft
 
 Copia scaffold rimossa. **Fonte canonica** (wiki temi condivisa):
 
-**[ON-DEMAND-PATTERN.md](../../docs/on-demand-pattern.md)**
+**[ON-DEMAND-PATTERN.md](../../docs/ON-DEMAND-PATTERN.md)**
