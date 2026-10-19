@@ -53,3 +53,18 @@ status: draft
 - Chiarita regola i18n del tema: usare `Themes/TwentyOne/lang/{locale}/...`.
 - Esplicitato che `resources/lang/` non è il path standard corrente del progetto Laravel 12.
 - Aggiunta pagina: `concepts/laravel12-lang-path-rule.md`.
+## 2026-10-18 — Second Brain Max — Contract fix + translations + DB
+- UserContract instance check (BaseUser→UserContract) documented in User module docs; translations fixed; DB auth_logs ownership (fixcity_user) confirmed.
+## 2026-10-18 — Spinner login + Bootstrap Italia study + BMAD
+- Spinner con Tailwind (animate-spin, wire:loading) sul bottone 'Accedi' nel widget login; chiave traduzione 'button_loading' aggiunta. Bootstrap Italia docs (componenti/buttons, progress-indicators) studiati come riferimento concettuale; NO Bootstrap Italia importato (stack Tailwind + Alpine + Lit + DaisyUI + Flowbite).
+## 2026-10-18 — Graphify Pipeline (BMAD + Second Brain)
+- /graphify . completato: 53622 file, 2124 nodi grafo, 3305 archi, 15401 parole report.
+- Output: graphify-out/graph.html (2MB), graph.json (2MB), GRAPH_REPORT.md (15KB), .graphify_labels.json.
+## Logo FixCity — Heroicons Outline (rifatto da zero) — 2026-10-18
+- Versione precedente: logo-fixcity-outline.svg (versione iniziale, troppo rozza, 1.0KB)
+- Nuova versione: logo rifatto con gradiente navy (#0a1635 -> #1a2e5a), megafono + skyline stilizzati, stroke-width 1.6-2.5, fill none, text 'FIXCITY' letter-spacing 2.5, aria-label + title, shadow morbido.
+- Non sovrascrive logo-fixcity.svg (originale complesso); crea solo la variante outline.
+## Logo FixCity v2 — Heroicons Outline (rifatto da zero, non cacca) — 2026-10-18
+- v1 (precedente): logo-fixcity-outline.svg (linee sottili, ma troppo semplice, 2.3KB)
+- v2 (nuova): logo-megafono-cittadino-blu-navy-v2.svg (gradiente navy elegante, megafono stilizzato con onde sonore, skyline con edifici, testo FIXCITY letter-spacing 3.5, aria-label + title, shadow, 2.5KB)
+- Non sovrascrive logo-fixcity.svg (originale complesso)
