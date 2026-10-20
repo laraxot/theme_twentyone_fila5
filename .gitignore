@@ -89,6 +89,7 @@ Thumbs.db
 .cursor/
 .devcontainer/
 .windsurf/
+# graphify-out: generated AST/knowledge graph — never commit (no git-lfs; rebuild with graphify update)
 graphify-out/
 _bmad-output
 .claude/
