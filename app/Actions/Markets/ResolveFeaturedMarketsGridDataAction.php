@@ -8,11 +8,16 @@ use Spatie\QueueableAction\QueueableAction;
 
 use Illuminate\Support\Collection;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
-use Modules\Predict\Actions\Homepage\GetHomepageMarketCardsAction;
 
+/**
+ * Dati griglia mercati homepage TwentyOne (tema Predict).
+ * Su basi senza Modules\Predict (FixCity) restituisce copy statico e cards vuote.
+ */
 final class ResolveFeaturedMarketsGridDataAction
 {
     use QueueableAction;
+
+    private const MARKET_CARDS_ACTION = 'Modules\\Predict\\Actions\\Homepage\\GetHomepageMarketCardsAction';
 
     /**
      * @return array{
@@ -44,22 +49,55 @@ final class ResolveFeaturedMarketsGridDataAction
     public function execute(?string $title = null, ?string $subtitle = null, ?string $showAllLink = null, int $limit = 12): array
     {
         $locale = app()->getLocale();
+        $localized = LaravelLocalization::getLocalizedURL($locale, '/predicts');
+        $defaultShowAll = is_string($localized) && $localized !== ''
+            ? $localized
+            : url('/'.$locale.'/predicts');
 
         return [
-            'title' => $title ? $title : $this__('predict::home.featured_markets.title'),
-            'subtitle' => $subtitle ? $subtitle : $this__('predict::home.featured_markets.subtitle'),
-            'showAllLink' => $showAllLink ? $showAllLink : (LaravelLocalization::getLocalizedURL($locale, '/predicts') ?? url('/'.$locale.'/predicts')),
-            'showAllLabel' => $this__('predict::home.featured_markets.cta_all'),
-            'openMarketLabel' => $this__('predict::actions.trade_market'),
-            'activeMarketsLabel' => $this__('predict::home.featured_markets.active_markets'),
-            'multiOutcomeLabel' => $this__('predict::home.featured_markets.multi_outcome_focus'),
-            'visualOptionsLabel' => $this__('predict::home.featured_markets.visual_options'),
-            'freshnessLabel' => $this__('predict::home.featured_markets.freshness'),
-            'educationLabel' => $this__('predict::home.featured_markets.education'),
-            'emptyStateTitle' => $this__('predict::predict_table.empty_state.no_markets_available.message'),
-            'emptyStateBody' => $this__('predict::home.featured_markets.empty_body'),
-            'cards' => app(GetHomepageMarketCardsAction::class)->execute($limit, 'featured'),
+            'title' => $title ?? $this->tx('predict::home.featured_markets.title', 'Mercati in evidenza'),
+            'subtitle' => $subtitle ?? $this->tx('predict::home.featured_markets.subtitle', 'Selezione multi-opzione dal database'),
+            'showAllLink' => $showAllLink ?? $defaultShowAll,
+            'showAllLabel' => $this->tx('predict::home.featured_markets.cta_all', 'Vedi tutti'),
+            'openMarketLabel' => $this->tx('predict::actions.trade_market', 'Apri mercato'),
+            'activeMarketsLabel' => $this->tx('predict::home.featured_markets.active_markets', 'Mercati attivi'),
+            'multiOutcomeLabel' => $this->tx('predict::home.featured_markets.multi_outcome_focus', 'Multi-opzione'),
+            'visualOptionsLabel' => $this->tx('predict::home.featured_markets.visual_options', 'Opzioni visuali'),
+            'freshnessLabel' => $this->tx('predict::home.featured_markets.freshness', 'Aggiornati di recente'),
+            'educationLabel' => $this->tx('predict::home.featured_markets.education', 'Impara mentre prevedi'),
+            'emptyStateTitle' => $this->tx('predict::predict_table.empty_state.no_markets_available.message', 'Nessun mercato disponibile'),
+            'emptyStateBody' => $this->tx('predict::home.featured_markets.empty_body', 'Torna piu tardi per nuove previsioni.'),
+            'cards' => $this->resolveCards($limit),
         ];
+    }
+
+    /**
+     * @return Collection<int, array{
+     *     title:string,
+     *     slug:string,
+     *     url:string,
+     *     image_url:string|null,
+     *     category:string|null,
+     *     participants:int,
+     *     volume:float,
+     *     ends_at_human:string|null,
+     *     outcomes:array<int, array{title:string, percentage:float, image_url:string|null}>
+     * }>
+     */
+    private function resolveCards(int $limit): Collection
+    {
+        if (! class_exists(self::MARKET_CARDS_ACTION)) {
+            return collect();
+        }
+
+        $action = app(self::MARKET_CARDS_ACTION);
+        if (! is_object($action) || ! method_exists($action, 'execute')) {
+            return collect();
+        }
+
+        $cards = $action->execute($limit, 'featured');
+
+        return $cards instanceof Collection ? $cards : collect();
     }
 
     private function tx(string $key, string $fallback): string
