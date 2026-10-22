@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+use function Safe\file_get_contents;
+
 namespace Themes\TwentyOne\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
