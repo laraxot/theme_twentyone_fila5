@@ -1,10 +1,10 @@
 ---
-title: "AGENTS"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "AGENTS"
+title: "Agent instructions"
+type: reference
+tags: [agents, coding-agent, llm-wiki]
+created: 2026-07-01
+updated: 2026-10-25
+qmd: "istruzioni agenti LLM wiki modulo"
 issues: []
 discussions: []
 status: draft
