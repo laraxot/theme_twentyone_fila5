@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "ZEN NAKED PAGE PHILOSOPHY"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: zen-naked-page-philosophy.md
 ---
 
 # 🧠 ZEN NAKED PAGE PHILOSOPHY

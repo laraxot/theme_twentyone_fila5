@@ -16,6 +16,7 @@ related:
   - ../../../../../../docs/wiki/concepts/second-brain-operating-model.md
   - ../../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md
   - ../../../../../../bashscripts/tools/prompts/llm-wiki.txt
+status: draft
 ---
 
 # Contratto wiki locale — stub TwentyOne

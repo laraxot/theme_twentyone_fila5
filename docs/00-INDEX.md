@@ -76,7 +76,7 @@ Build reale (`package.json`): `npm run build` (`vite build`, uscita in `./public
 ## 🔗 Riferimenti
 
 - [Predict Module](../../Modules/Predict/docs/00-INDEX.md) _(target mancante, verificato 2026-10-14)_ - Main module
-- [Xot Module](../../../Modules/Xot/docs/00-INDEX.md) - Base classes
+- [Xot Module](../../../Modules/Xot/docs/00-index.md) - Base classes
 - [AGENTS.md](../../../AGENTS.md) - Project guidelines
 
 ---

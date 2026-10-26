@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "GSAP SCROLLTRIGGER THEME GUIDE"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: gsap-scrolltrigger-theme-guide.md
 ---
 
 # 🎬 GSAP & SCROLLTRIGGER - Theme Implementation

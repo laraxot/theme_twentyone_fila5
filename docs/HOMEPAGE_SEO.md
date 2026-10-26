@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "HOMEPAGE SEO"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: homepage-seo.md
 ---
 
 # Homepage Improvements — Sprint 1 (Critical)

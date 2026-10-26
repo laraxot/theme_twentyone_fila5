@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "GSAP ANIMATIONS GUIDE"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: gsap-animations-guide.md
 ---
 
 # GSAP Animations - Theme TwentyOne

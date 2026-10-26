@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "json architecture"
 issues: []
 discussions: []
+status: draft
 ---
 
 # TwentyOne Theme — JSON-Based Architecture
@@ -17,15 +18,6 @@ discussions: []
 > **Back Office**: Filament Builder ready
 
 ---
-
-title: "json architecture"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "json architecture"
-issues: []
-discussions: []
 ## 🎯 Filosofia del Tema
 
 ### 1. **Agnosticismo**

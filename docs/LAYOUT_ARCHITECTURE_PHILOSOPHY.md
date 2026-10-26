@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "LAYOUT ARCHITECTURE PHILOSOPHY"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: layout-architecture-philosophy.md
 ---
 
 # Layout Architecture Philosophy
