@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "FILAMENT 5 INSTALLATION GUIDE"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: filament-5-installation-guide.md
 ---
 
 # Filament 5 Installation & Setup - Complete Guide

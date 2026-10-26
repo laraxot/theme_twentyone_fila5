@@ -3,6 +3,8 @@ title: "Sostenibilità e inbound marketing — TwentyOne"
 type: bmad-pointer
 status: decision-input
 updated: 2026-10-15
+tags: [docs, twentyone]
+qmd: "riferimento bmad twentyone"
 ---
 
 # Riferimento BMAD

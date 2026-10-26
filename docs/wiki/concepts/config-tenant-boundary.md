@@ -12,6 +12,7 @@ related:
   - ../../../../../../docs/wiki/concepts/tenant-config-directory-sacred.md
   - ./theme-composer-boundary.md
   - ./second-brain-local-discipline.md
+status: draft
 ---
 
 # Config tenant boundary

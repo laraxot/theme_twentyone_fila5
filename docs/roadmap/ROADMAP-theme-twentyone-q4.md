@@ -1,3 +1,11 @@
+---
+title: "Theme TwentyOne Roadmap (2025 Q4)"
+type: note
+status: draft
+updated: 2026-10-22
+tags: [docs, twentyone, roadmap]
+qmd: "theme twentyone roadmap (2025 q4) twentyone"
+---
 # Theme TwentyOne Roadmap (2025 Q4)
 
 ## Vision & Scope

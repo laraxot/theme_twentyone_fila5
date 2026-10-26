@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "LOGO FIX"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: logo-fix.md
 ---
 
 # Logo Duplication Fix - TwentyOne Theme

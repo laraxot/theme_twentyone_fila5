@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "THEME ARCHITECTURE ZEN BLADE NAMING"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: theme-architecture-zen-blade-naming.md
 ---
 
 # Theme Architecture Zen - Blade File Naming Convention

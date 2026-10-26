@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "SEMANTIC CSS GUIDE"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: semantic-css-guide.md
 ---
 
 # 🎨 TwentyOne Theme - Semantic CSS Guide

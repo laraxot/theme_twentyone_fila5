@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "THEME PHILOSOPHY ZEN"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: theme-philosophy-zen.md
 ---
 
 # Theme philosophy zen

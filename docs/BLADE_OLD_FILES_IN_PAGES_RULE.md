@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "BLADE OLD FILES IN PAGES RULE"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: blade-old-files-in-pages-rule.md
 ---
 
 # 🔴 REGOLA: File .blade.php.old Nella Cartella Pages

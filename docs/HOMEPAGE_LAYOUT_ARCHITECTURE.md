@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "HOMEPAGE LAYOUT ARCHITECTURE"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: homepage-layout-architecture.md
 ---
 
 # Layout Architecture - TwentyOne Theme

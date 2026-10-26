@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "homepage sprint1 summary"
 issues: []
 discussions: []
+status: draft
 ---
 
 # 🚀 Homepage Improvements — Riepilogo Sprint 1
@@ -17,15 +18,6 @@ discussions: []
 > **Prossimo Sprint**: 2 (Micro-Interazioni + Performance)
 
 ---
-
-title: "homepage sprint1 summary"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "homepage sprint1 summary"
-issues: []
-discussions: []
 ## 📊 Cosa Abbiamo Fatto
 
 ### 1. ✅ SEO Implementation Completa

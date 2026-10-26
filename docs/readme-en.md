@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "readme en"
 issues: []
 discussions: []
+status: draft
 ---
 
 # 🎯 TwentyOne — English presentation
@@ -24,15 +25,6 @@ discussions: []
 > **Alternative Laraxot theme.** Filament/Livewire base for secondary scenarios and legacy parity.
 
 ---
-
-title: "readme en"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "readme en"
-issues: []
-discussions: []
 ## Why it exists
 
 Architectural variant and historical reference in the monorepo.

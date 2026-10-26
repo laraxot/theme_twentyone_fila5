@@ -8,6 +8,8 @@ updated: 2026-10-26
 tags: [bmad, twentyone, theme, stories, remaining-work]
 related:
   - ../../docs/second-brain/project/bmad-architecture.md
+status: draft
+qmd: "twentyone theme   bmad stories & remaining work twentyone"
 ---
 
 # TwentyOne Theme — BMAD Stories & Remaining Work

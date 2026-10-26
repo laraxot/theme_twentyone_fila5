@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "TROUBLESHOOTING HOMEPAGE"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: troubleshooting-homepage.md
 ---
 
 # Troubleshooting Homepage - Error 500

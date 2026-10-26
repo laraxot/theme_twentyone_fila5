@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "ARCHITECTURE UX IMPROVEMENTS"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: architecture-ux-improvements.md
 ---
 
 # Theme TwentyOne - Architecture & UX Improvements

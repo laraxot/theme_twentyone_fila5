@@ -7,6 +7,8 @@ updated: 2026-09-26
 qmd: "GSD WORKFLOW"
 issues: []
 discussions: []
+status: superseded
+superseded_by: gsd-workflow.md
 ---
 
 # GSD & BMAD Workflow — Tema TwentyOne
