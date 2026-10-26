@@ -4,10 +4,9 @@ declare(strict_types=1);
 
 namespace Themes\TwentyOne\Actions\Markets;
 
-use Spatie\QueueableAction\QueueableAction;
-
 use Illuminate\Support\Collection;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Dati griglia mercati homepage TwentyOne (tema Predict).

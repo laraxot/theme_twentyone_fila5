@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Themes\TwentyOne\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+
 use function Safe\file_get_contents;
 
 /**
