@@ -13,7 +13,10 @@ name('article.view');
 
 render(function (View $view, string $slug) {
     try {
-        $article = Article::query()->where('slug', $slug)->sole();
+        $article = Article::query()
+            ->whereIn('type', ['event', 'article'])
+            ->where('slug', $slug)
+            ->sole();
     } catch (ModelNotFoundException|MultipleRecordsFoundException) {
         $article = null;
     }

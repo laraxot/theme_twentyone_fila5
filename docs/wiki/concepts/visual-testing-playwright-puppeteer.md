@@ -14,6 +14,7 @@ updated: 2026-05-04
 tags: [visual-testing, playwright, puppeteer, e2e, screenshot, laravel, theme, TwentyOne]
 related:
   - playwright-testing-policy
+status: draft
 ---
 
 # Visual Testing con Playwright e Puppeteer — Tema TwentyOne

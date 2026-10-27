@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "FILAMENT 4 INTEGRATION"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: filament-4-integration.md
 ---
 
 # Filament 4 Integration Guide - TwentyOne Theme

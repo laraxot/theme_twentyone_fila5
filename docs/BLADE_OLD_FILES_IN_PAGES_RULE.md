@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "BLADE OLD FILES IN PAGES RULE"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: blade-old-files-in-pages-rule.md
 ---
 
 # 🔴 REGOLA: File .blade.php.old Nella Cartella Pages
@@ -136,7 +137,7 @@ $files = $this->directory->getFiles('*.blade.php');
 
 - `docs/project/ARCHITECTURE_ZEN.md` - Architettura base
 - `NO_PREDICT_SPECIFIC_PAGES.md` - Regola pagine specifiche
-- `theme-philosophy-zen.md` - Filosofia theme
+- `THEME_PHILOSOPHY_ZEN.md` - Filosofia theme
 
 ---
 

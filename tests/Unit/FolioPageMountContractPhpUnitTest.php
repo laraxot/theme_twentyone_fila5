@@ -6,6 +6,8 @@ namespace Themes\TwentyOne\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
 
+use function Safe\file_get_contents;
+
 /**
  * Contratto pagine Folio dinamiche TwentyOne (PHPUnit bridge per claude-audit static).
  *

@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "route names philosophy"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Route Names — Filosofia e Convenzioni

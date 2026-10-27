@@ -7,6 +7,8 @@ updated: 2026-09-26
 qmd: "FILAMENT TABLES SETUP"
 issues: []
 discussions: []
+status: superseded
+superseded_by: filament-tables-setup.md
 ---
 
 # Filament Tables Setup - TwentyOne Theme

@@ -7,6 +7,8 @@ updated: 2026-09-26
 qmd: "HOMEPAGE SPRINT1 SUMMARY"
 issues: []
 discussions: []
+status: superseded
+superseded_by: homepage-sprint1-summary.md
 ---
 
 # 🚀 Homepage Improvements — Riepilogo Sprint 1

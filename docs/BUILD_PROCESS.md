@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "BUILD PROCESS"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: build-process.md
 ---
 
 # Build Process - Tema TwentyOne

@@ -13,6 +13,7 @@ related:
   - ../../../../../../docs/wiki/ci/semantic-release-monorepo.md
   - ../../../../Sixteen/docs/wiki/concepts/ci-semantic-release.md
   - ../../../../Modules/Xot/docs/ci/github-actions-modules.md
+status: draft
 ---
 
 # ci — semantic release tema TwentyOne

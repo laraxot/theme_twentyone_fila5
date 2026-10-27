@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "HEADERNAV CMS ARCHITECTURE"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: headernav-cms-architecture.md
 ---
 
 # HeaderNav CMS Architecture - Filosofia, Religione, Politica e Zen

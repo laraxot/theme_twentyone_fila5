@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "FILAMENT WIDGET TRANSPARENT BACKGROUND"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: filament-widget-transparent-background.md
 ---
 
 # Filament Widgets - Front-Office Styling

@@ -58,3 +58,10 @@ Cosa era falso negli ingressi:
 - Decidere se il submodule TwentyOne resta nel monorepo Fixcity o va archiviato (nessun uso trovato).
 - `gsap` importato ma non dichiarato in `package.json`: da risolvere se il tema viene mai costruito qui.
 - 49 coppie di duplicati per maiuscole in radice; 67 file del tema hanno link non risolti (150 eventi).
+
+## Boy scout 2026-10-22
+
+Tema Predict su base FixCity senza `Modules/Predict`. Corretti
+`ResolveFeaturedMarketsGridDataAction` (`$this__` → `$this->tx`) e
+`ResolveCinematicHeroDataAction` (niente import hard di Predict; `class_exists` + fallback).
+PHPStan actions: 74 → 0 (residuo Safe file_get_contents nei test mount).

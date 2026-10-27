@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "PREDICT DETAIL AGNOSTIC CONTRACT"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: predict-detail-agnostic-contract.md
 ---
 
 # Predict Detail Agnostic Contract
