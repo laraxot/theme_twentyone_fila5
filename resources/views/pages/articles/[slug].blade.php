@@ -14,7 +14,7 @@ name('article.view');
 render(function (View $view, string $slug) {
     try {
         $article = Article::query()
-            ->whereIn('content_type', ['event', 'article'])
+            ->whereIn('type', ['event', 'article'])
             ->where('slug', $slug)
             ->sole();
     } catch (ModelNotFoundException|MultipleRecordsFoundException) {
