@@ -7,6 +7,8 @@ updated: 2026-09-26
 qmd: "JSON ARCHITECTURE"
 issues: []
 discussions: []
+status: superseded
+superseded_by: json-architecture.md
 ---
 
 # TwentyOne Theme — JSON-Based Architecture

@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "login filament widget error"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Analisi dell'Errore: Login senza Widget Filament nel Modulo User
@@ -55,14 +56,6 @@ class LoginWidget extends XotBaseWidget
 - Integrare riferimenti incrociati tra docs, rules e memories.
 
 ---
-title: "login filament widget error"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "login filament widget error"
-issues: []
-discussions: []
 **Data:** 2025-05-07
 **Autore:** Cascade AI
 

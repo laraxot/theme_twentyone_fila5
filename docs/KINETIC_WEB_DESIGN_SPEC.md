@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "KINETIC WEB DESIGN SPEC"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: kinetic-web-design-spec.md
 ---
 
 # SPEC: Kinetic Web Design — Motion as Central Design Element

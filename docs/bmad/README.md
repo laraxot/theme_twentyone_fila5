@@ -10,6 +10,14 @@ issues: ["https://github.com/laraxot/base_fixcity_fila5/issues/383"]
 discussions: ["https://github.com/laraxot/base_fixcity_fila5/discussions/392"]
 ---
 # TwentyOne BMAD dossier
+
+## Kit BMAD owner (canonico)
+
+- [BMAD Planning](../bmad-planning.md)
+- [BMAD Brainstorming](../bmad-brainstorming.md)
+- [Filament blueprint](./filament-blueprint.md)
+- [Project context](./project-context.md)
+- [Decision log](./decision-log.md)
 **Purpose:** alternate presentation theme with its own assets and package contract.
 **Architecture:** views/assets only; domain data comes from module Actions and shared UI contracts.
 **PRD / epics:** classify active support, route coverage, accessibility and theme-specific build compatibility.

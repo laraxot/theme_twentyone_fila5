@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "NO PREDICT SPECIFIC PAGES IN THEME"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: no-predict-specific-pages-in-theme.md
 ---
 
 # NO PREDICT-SPECIFIC PAGES IN THEME

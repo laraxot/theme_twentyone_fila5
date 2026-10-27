@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "FILAMENT 5 IMPLEMENTATION"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: filament-5-implementation.md
 ---
 
 # Filament 5.x Implementation Guide

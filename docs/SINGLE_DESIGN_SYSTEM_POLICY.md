@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "SINGLE DESIGN SYSTEM POLICY"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: single-design-system-policy.md
 ---
 
 # Single Design System - Theme Policy

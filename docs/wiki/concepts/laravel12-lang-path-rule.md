@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "laravel12 lang path rule"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Laravel 12 lang path rule

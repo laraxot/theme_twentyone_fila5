@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "VOLT CLASS BASED COMPONENTS"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: volt-class-based-components.md
 ---
 
 # ⚡ VOLT CLASS-BASED COMPONENTS - TwentyOne Theme

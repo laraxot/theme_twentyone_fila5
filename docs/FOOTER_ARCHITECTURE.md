@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "FOOTER ARCHITECTURE"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: footer-architecture.md
 ---
 
 # Footer Architecture — CMS-Driven

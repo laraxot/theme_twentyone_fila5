@@ -4,19 +4,25 @@ declare(strict_types=1);
 
 namespace Themes\TwentyOne\Actions\Hero;
 
+use Illuminate\Support\Collection;
 use Spatie\QueueableAction\QueueableAction;
-
-use Illuminate\Support\Facades\Schema;
-use Modules\Predict\Actions\Homepage\GetHomepageHeroDataAction;
-use Modules\Predict\Actions\Homepage\GetHomepageMarketCardsAction;
-use Modules\Predict\Models\Predict;
 use Throwable;
 
+/**
+ * Hero cinematografico homepage TwentyOne (tema Predict).
+ * Su basi senza Modules\Predict (FixCity) usa solo copy/fallback tipizzati.
+ */
 final class ResolveCinematicHeroDataAction
 {
     use QueueableAction;
 
+    private const HERO_STATS_ACTION = 'Modules\\Predict\\Actions\\Homepage\\GetHomepageHeroDataAction';
+
+    private const MARKET_CARDS_ACTION = 'Modules\\Predict\\Actions\\Homepage\\GetHomepageMarketCardsAction';
+
     /**
+     * @param  array{text?:string, url?:string}|null  $ctaPrimary
+     * @param  array{text?:string, url?:string}|null  $ctaSecondary
      * @return array{
      *     eyebrow:string,
      *     title:string,
@@ -46,12 +52,12 @@ final class ResolveCinematicHeroDataAction
         ?array $ctaSecondary = null,
     ): array {
         $locale = app()->getLocale();
-        $heroStats = app(GetHomepageHeroDataAction::class)->execute();
+        $heroStats = $this->resolveHeroStats();
 
         $data = [
             'eyebrow' => $this->translateText('predict::home.hero.eyebrow.label', 'Mercati multi-opzione in primo piano'),
-            'title' => $heroTitle ? $heroTitle : $this->translateText('predict::home.hero.title', 'Prevedi il Futuro'),
-            'subtitle' => $heroSubtitle ? $heroSubtitle : $this->translateText('predict::home.hero.subtitle', 'Mercati visuali, percentuali calcolate dal database e flussi pensati per capire chi sta davvero salendo.'),
+            'title' => $heroTitle ?? $this->translateText('predict::home.hero.title', 'Prevedi il Futuro'),
+            'subtitle' => $heroSubtitle ?? $this->translateText('predict::home.hero.subtitle', 'Mercati visuali, percentuali calcolate dal database e flussi pensati per capire chi sta davvero salendo.'),
             'primaryCta' => [
                 'text' => (string) ($ctaPrimary['text'] ?? $this->translateText('predict::home.hero.cta_primary.label', 'Esplora i mercati')),
                 'url' => (string) ($ctaPrimary['url'] ?? $this->localizedUrl($locale, '/predicts')),
@@ -70,52 +76,43 @@ final class ResolveCinematicHeroDataAction
         ];
 
         try {
-            if ((int) $heroStats['marketsCount'] === 0) {
-                $data['stats'][0]['value'] = (string) Predict::query()
-                    ->visible()
-                    ->has('ratings', '>=', 4)
-                    ->count();
-            }
-
             $data['spotlightCards'] = $this->buildSpotlightCards();
         } catch (Throwable $e) {
             report($e);
         }
 
-        try {
-            if ($data['spotlightCards'] === []) {
-                $query = Predict::query()
-                    ->visible()
-                    ->where('show_on_homepage', true)
-                    ->has('ratings', '>=', 4);
+        return $data;
+    }
 
-                if ($this->hasVolumeColumn()) {
-                    $query->orderByDesc('sum_credit_yes');
-                }
-
-                $data['spotlightCards'] = $query
-                    ->orderByDesc('updated_at')
-                    ->limit(2)
-                    ->get()
-                    ->map(fn (Predict $predict): array => [
-                        'title' => (string) $predict->slug,
-                        'slug' => (string) $predict->slug,
-                        'url' => $this->localizedUrl($locale, '/predicts/'.$predict->slug),
-                        'image_url' => is_string($predict->main_image_url) ? $predict->main_image_url : null,
-                        'category' => null,
-                        'participants' => 0,
-                        'volume' => 0.0,
-                        'ends_at_human' => null,
-                        'outcomes' => [],
-                        'lead_outcome' => null,
-                    ])
-                    ->all();
-            }
-        } catch (Throwable $e) {
-            report($e);
+    /**
+     * @return array{marketsCount:int, usersCount:int, volumeCredits:int}
+     */
+    private function resolveHeroStats(): array
+    {
+        $defaults = ['marketsCount' => 0, 'usersCount' => 0, 'volumeCredits' => 0];
+        if (! class_exists(self::HERO_STATS_ACTION)) {
+            return $defaults;
         }
 
-        return $data;
+        $action = app(self::HERO_STATS_ACTION);
+        if (! is_object($action) || ! method_exists($action, 'execute')) {
+            return $defaults;
+        }
+
+        $stats = $action->execute();
+        if (! is_array($stats)) {
+            return $defaults;
+        }
+
+        $markets = $stats['marketsCount'] ?? 0;
+        $users = $stats['usersCount'] ?? 0;
+        $volume = $stats['volumeCredits'] ?? 0;
+
+        return [
+            'marketsCount' => is_numeric($markets) ? (int) $markets : 0,
+            'usersCount' => is_numeric($users) ? (int) $users : 0,
+            'volumeCredits' => is_numeric($volume) ? (int) $volume : 0,
+        ];
     }
 
     private function translateText(string $key, string $fallback): string
@@ -174,25 +171,71 @@ final class ResolveCinematicHeroDataAction
      */
     private function buildSpotlightCards(): array
     {
-        return app(GetHomepageMarketCardsAction::class)->execute(3, 'featured')
-            ->map(
-                static function (array $card): array {
-                    return [
-                        ...$card,
-                        'lead_outcome' => $card['outcomes'][0] ?? null,
+        if (! class_exists(self::MARKET_CARDS_ACTION)) {
+            return [];
+        }
+
+        $action = app(self::MARKET_CARDS_ACTION);
+        if (! is_object($action) || ! method_exists($action, 'execute')) {
+            return [];
+        }
+
+        $cards = $action->execute(3, 'featured');
+        if (! $cards instanceof Collection) {
+            return [];
+        }
+
+        $result = [];
+        foreach ($cards as $card) {
+            if (! is_array($card)) {
+                continue;
+            }
+            $title = $card['title'] ?? '';
+            $slug = $card['slug'] ?? '';
+            $url = $card['url'] ?? '';
+            if (! is_string($title) || ! is_string($slug) || ! is_string($url)) {
+                continue;
+            }
+            $rawOutcomes = $card['outcomes'] ?? [];
+            $outcomes = [];
+            if (is_array($rawOutcomes)) {
+                foreach ($rawOutcomes as $outcome) {
+                    if (! is_array($outcome)) {
+                        continue;
+                    }
+                    $oTitle = $outcome['title'] ?? '';
+                    $oPct = $outcome['percentage'] ?? 0;
+                    $oImg = $outcome['image_url'] ?? null;
+                    if (! is_string($oTitle)) {
+                        continue;
+                    }
+                    $outcomes[] = [
+                        'title' => $oTitle,
+                        'percentage' => is_numeric($oPct) ? (float) $oPct : 0.0,
+                        'image_url' => is_string($oImg) ? $oImg : null,
                     ];
                 }
-            )
-            ->values()
-            ->all();
-    }
+            }
+            $image = $card['image_url'] ?? null;
+            $category = $card['category'] ?? null;
+            $participants = $card['participants'] ?? 0;
+            $volume = $card['volume'] ?? 0;
+            $ends = $card['ends_at_human'] ?? null;
+            $result[] = [
+                'title' => $title,
+                'slug' => $slug,
+                'url' => $url,
+                'image_url' => is_string($image) ? $image : null,
+                'category' => is_string($category) ? $category : null,
+                'participants' => is_numeric($participants) ? (int) $participants : 0,
+                'volume' => is_numeric($volume) ? (float) $volume : 0.0,
+                'ends_at_human' => is_string($ends) ? $ends : null,
+                'outcomes' => $outcomes,
+                'lead_outcome' => $outcomes[0] ?? null,
+            ];
+        }
 
-    private function hasVolumeColumn(): bool
-    {
-        $predict = new Predict;
-
-        return Schema::connection($predict->getConnectionName())
-            ->hasColumn($predict->getTable(), 'sum_credit_yes');
+        return $result;
     }
 
     private function localizedUrl(string $locale, string $path): string

@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "HOMEPAGE ARCHITECTURE"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: homepage-architecture.md
 ---
 
 # Homepage Implementation — Predict Platform

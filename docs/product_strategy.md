@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "product strategy"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: product-strategy.md
 ---
 
 # Product Strategy - Theme TwentyOne

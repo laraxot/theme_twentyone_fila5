@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "HOMEPAGE IMPROVEMENT PLAN"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: homepage-improvement-plan.md
 ---
 
 # Homepage Improvement Plan — http://predict.local/it

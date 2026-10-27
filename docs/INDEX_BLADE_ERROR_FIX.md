@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "INDEX BLADE ERROR FIX"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: index-blade-error-fix.md
 ---
 
 # ERRORE CRITICO: index.blade.php - Violazione Homepage Governance

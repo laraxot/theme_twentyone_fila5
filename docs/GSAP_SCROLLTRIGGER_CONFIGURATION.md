@@ -7,7 +7,8 @@ updated: 2026-09-26
 qmd: "GSAP SCROLLTRIGGER CONFIGURATION"
 issues: []
 discussions: []
-status: draft
+status: superseded
+superseded_by: gsap-scrolltrigger-configuration.md
 ---
 
 # GSAP & ScrollTrigger Configuration
