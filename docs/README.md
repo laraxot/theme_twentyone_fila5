@@ -6,7 +6,7 @@ title: "TwentyOne Theme Documentation"
 type: readme
 tags: [theme, documentation]
 created: 2026-06-05
-updated: 2026-10-14
+updated: 2026-10-27
 status: draft
 ---
 
@@ -85,6 +85,7 @@ Per problemi comuni, consulta la documentazione nella cartella `docs`:
 - [Section Template Contract](section-template-contract.md)
 
 ## Documentazione correlata
+- Non creare `docs/archive/`: vale la [regola Second Brain no-docs-archive](../../../../bashscripts/ai/wiki/concepts/no-docs-archive-rule.md).
 - `laravel/Themes/TwentyOne/docs/` - Documentazione del tema
 - `project_docs/` - Documentazione di progetto (architettura, sviluppo)
 - `project_docs/roadmaps/` - Roadmap master e stato avanzamento
