@@ -26,7 +26,6 @@ related:
 | **Harness temi** | [ai-harness-theme-discipline.md](../../../docs/wiki/concepts/ai-harness-theme-discipline.md) |
 | **Config tenant sacri** | [tenant-config-directory-sacred.md](../../../../../../docs/wiki/concepts/tenant-config-directory-sacred.md) |
 | **Boundary tema** | [config-tenant-boundary.md](./config-tenant-boundary.md) |
-| **Tips 001–022** | [hackernoon map](../../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md) |
 | **Prompt router** | [llm-wiki.txt](../../../../../../bashscripts/tools/prompts/llm-wiki.txt) |
 
 Solo decisioni **TwentyOne** in `docs/wiki/`; FO attivo su Sixteen.

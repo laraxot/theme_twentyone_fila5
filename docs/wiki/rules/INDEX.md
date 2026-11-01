@@ -35,7 +35,6 @@ Le Rules progettuali vivono qui, nel wiki del Theme **TwentyOne**, e vengono car
 - La sorgente di verita' per le Rules e' sempre il wiki locale
 - Non embeddare Rules nei prompt di avvio
 - Per Rules globali, consulta il [wiki root](../../docs/wiki/rules/INDEX.md)
-- Per Rules globali, consulta il [wiki root](../../../../../../docs/wiki/rules/INDEX.md)
 
 ## Aggiungere una Nuova RULES
 
