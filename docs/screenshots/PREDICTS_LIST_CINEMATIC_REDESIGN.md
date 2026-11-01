@@ -1,3 +1,15 @@
+---
+title: "PREDICTS LIST CINEMATIC REDESIGN"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "PREDICTS LIST CINEMATIC REDESIGN"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🎨 PREDICTS LIST - CINEMATIC REDESIGN REPORT
 
 **Data**: 2026-03-20  
@@ -6,7 +18,6 @@
 **Miglioramento**: **+15%** (+12 punti)
 
 ---
-
 ## 📊 BEFORE vs AFTER
 
 ### Prima (BRUTTO ❌)

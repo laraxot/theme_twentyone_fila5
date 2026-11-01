@@ -1,3 +1,15 @@
+---
+title: "image analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "image analysis"
+issues: []
+discussions: []
+status: draft
+---
+
 # Image Analysis Guide
 
 ## Overview

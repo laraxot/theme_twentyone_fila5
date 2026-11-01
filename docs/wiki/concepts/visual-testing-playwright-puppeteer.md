@@ -1,4 +1,7 @@
 ---
+qmd: "visual testing playwright puppeteer"
+issues: []
+discussions: []
 title: Visual Testing con Playwright e Puppeteer — Tema TwentyOne
 type: concept
 sources:
@@ -11,6 +14,7 @@ updated: 2026-05-04
 tags: [visual-testing, playwright, puppeteer, e2e, screenshot, laravel, theme, TwentyOne]
 related:
   - playwright-testing-policy
+status: draft
 ---
 
 # Visual Testing con Playwright e Puppeteer — Tema TwentyOne
@@ -19,7 +23,7 @@ related:
 
 Il testing visivo permette di rilevare regressioni UI nel tema TwentyOne confrontando screenshot di riferimento con screenshot attuali.
 
-Per la policy di collocazione: vedi [Playwright Testing Policy](../../../../docs/wiki/concepts/playwright-testing-policy.md).
+Per la policy di collocazione: vedi [Playwright Testing Policy](../../../../../../docs/wiki/concepts/playwright-testing-policy.md).
 
 ## Collocazione Test
 
@@ -62,5 +66,5 @@ test('TwentyOne theme renders correctly', async ({ page }) => {
 ## Risorse
 
 - [Playwright Docs](https://playwright.dev/)
-- [Visual Control Mastery](../../../../docs/wiki/concepts/visual-control-mastery.md)
-- [Playwright Testing Policy](../../../../docs/wiki/concepts/playwright-testing-policy.md)
+- [Visual Control Mastery](../../../../../../docs/wiki/concepts/visual-control-mastery.md)
+- [Playwright Testing Policy](../../../../../../docs/wiki/concepts/playwright-testing-policy.md)

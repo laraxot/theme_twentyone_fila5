@@ -1,3 +1,15 @@
+---
+title: "Agent instructions"
+type: reference
+tags: [agents, coding-agent, llm-wiki]
+created: 2026-07-01
+updated: 2026-10-25
+qmd: "istruzioni agenti LLM wiki modulo"
+issues: []
+discussions: []
+status: draft
+---
+
 # TwentyOne Theme LLM Wiki Agent Instructions
 
 > **Module/Theme:** TwentyOne
@@ -22,6 +34,9 @@ You are the **TwentyOne Wiki Maintainer**. Your job is to:
 
 ```yaml
 ---
+qmd: "AGENTS"
+issues: []
+discussions: []
 title: "Page Title"
 type: concept|entity|source|comparison|decision|troubleshooting
 sources: ["raw/articles/filename.md"]

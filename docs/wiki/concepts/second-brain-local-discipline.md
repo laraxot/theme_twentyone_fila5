@@ -13,9 +13,10 @@ discussions:
 related:
   - ../../../../Xot/docs/wiki/concepts/second-brain-local-discipline.md
   - ../../../docs/wiki/concepts/ai-harness-theme-discipline.md
-  - ../../../docs/wiki/concepts/second-brain-operating-model.md
+  - ../../../../../../docs/wiki/concepts/second-brain-operating-model.md
   - ../../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md
   - ../../../../../../bashscripts/tools/prompts/llm-wiki.txt
+status: draft
 ---
 
 # Contratto wiki locale — stub TwentyOne

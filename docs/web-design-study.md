@@ -1,3 +1,15 @@
+---
+title: "web design study"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "web design study"
+issues: []
+discussions: []
+status: draft
+---
+
 # Studio Web Design — TwentyOne Theme
 
 > **Aggiornato**: 2026-03-18
@@ -5,7 +17,6 @@
 > **Standard**: WCAG 2.2 Level AA, European Accessibility Act (28 Giugno 2025), Core Web Vitals 2026
 
 ---
-
 ## 📊 Sintesi Studio (31 Fonti)
 
 ### 🔟 Le 10 Tendenze Principali 2026

@@ -1,3 +1,16 @@
+---
+title: "sprint planning"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sprint planning"
+issues: []
+discussions: []
+status: superseded
+superseded_by: sprint-planning.md
+---
+
 # Sprint Planning - Theme TwentyOne
 
 ## Modern Tailwind + Vite Theme
@@ -8,7 +21,6 @@
 **Team:** Theme TwentyOne Development Team
 
 ---
-
 ## Sprint Goal
 
 **"Complete core UI components (buttons, cards, forms) to 90% and establish documentation standards while maintaining build performance under 800ms."**
