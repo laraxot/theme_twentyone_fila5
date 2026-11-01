@@ -11,8 +11,9 @@ discussions:
   - "https://github.com/laraxot/module_fixcity_fila5/discussions/53"
 related:
   - ./visual-testing-playwright-puppeteer.md
-  - ../../../Sixteen/docs/wiki/overviews/completion-roadmap.md
+  - ../../../../Sixteen/docs/wiki/overviews/completion-roadmap.md
   - ../../../../Modules/Xot/docs/wiki/concepts/phpstan-pest-bridge-discipline.md
+status: draft
 ---
 
 # Testing in TwentyOne
@@ -36,4 +37,4 @@ Riferimento: [visual-testing-playwright-puppeteer.md](./visual-testing-playwrigh
 - [ ] Evitare duplicazione componenti già in Sixteen — [ridondanze-hub](./ridondanze-hub-twentyone-xot.md)
 - [ ] Quando Themes entrerà in scope PHPStan: tipizzare classi sotto `Themes/TwentyOne/app/`
 
-FO produzione Fixcity → priorità [Sixteen completion-roadmap](../../../Sixteen/docs/wiki/overviews/completion-roadmap.md).
+FO produzione Fixcity → priorità [Sixteen completion-roadmap](../../../../Sixteen/docs/wiki/overviews/completion-roadmap.md).

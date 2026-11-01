@@ -8,12 +8,29 @@
 ])
 
 @php
-    // Convert to collection and ensure we have max 3 trending markets
+    /**
+     * Scopo hero: fino a 3 market trend dal CMS/block props.
+     * Nessun Service: il modulo Predict non esiste qui; i dati arrivano gia' shaped
+     * (slug, title, trending_up, yes_percent) dal chiamante del blocco.
+     */
     $trending_markets = collect($trending_markets)->take(3);
-    
-    // Get market data from PredictService
-    $market_data = app('Modules\\Predict\\Services\\PredictService')
-        ->getMarketsData($trending_markets->all());
+    $market_data = $trending_markets->map(static function (mixed $market): array {
+        if (is_array($market)) {
+            return [
+                'slug' => (string) ($market['slug'] ?? ''),
+                'title' => (string) ($market['title'] ?? ''),
+                'trending_up' => (bool) ($market['trending_up'] ?? true),
+                'yes_percent' => $market['yes_percent'] ?? $market['change'] ?? '',
+            ];
+        }
+
+        return [
+            'slug' => '',
+            'title' => is_scalar($market) ? (string) $market : '',
+            'trending_up' => true,
+            'yes_percent' => '',
+        ];
+    });
 @endphp
 
 <section class="relative bg-gray-900 text-white py-20 md:py-32 overflow-hidden" style="background-image: url('{{ $background_image }}'); background-size: cover; background-position: center;">

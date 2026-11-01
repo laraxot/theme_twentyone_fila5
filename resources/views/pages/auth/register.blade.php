@@ -63,7 +63,7 @@ new class extends Component
 
         <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
             <div class="px-10 py-0 sm:py-8 sm:shadow-sm sm:bg-white dark:sm:bg-gray-950/50 dark:border-gray-200/10 sm:border sm:rounded-lg border-gray-200/60">
-                @volt('auth.register')
+                @volt('twentyone.auth.register')
                 <form wire:submit="register" class="space-y-6">
                     <x-ui.input label="Name" type="text" id="name" name="name" wire:model="name" />
                     <x-ui.input label="Email address" type="email" id="email" name="email" wire:model="email" />

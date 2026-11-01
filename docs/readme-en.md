@@ -1,3 +1,15 @@
+---
+title: "readme en"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "readme en"
+issues: []
+discussions: []
+status: draft
+---
+
 # 🎯 TwentyOne — English presentation
 
 [![Theme](https://img.shields.io/badge/Theme-TwentyOne-546E7A.svg)](#)
@@ -13,7 +25,6 @@
 > **Alternative Laraxot theme.** Filament/Livewire base for secondary scenarios and legacy parity.
 
 ---
-
 ## Why it exists
 
 Architectural variant and historical reference in the monorepo.
@@ -39,7 +50,7 @@ Architectural variant and historical reference in the monorepo.
 
 Explore **theme variants** without losing conventions.
 
-Frontoffice stack: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5** — see [STORY-133](../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
+Frontoffice stack: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5** — see [STORY-133](../../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
 
 ---
 

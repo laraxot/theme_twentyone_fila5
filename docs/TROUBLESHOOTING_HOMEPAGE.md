@@ -1,3 +1,16 @@
+---
+title: "TROUBLESHOOTING HOMEPAGE"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "TROUBLESHOOTING HOMEPAGE"
+issues: []
+discussions: []
+status: superseded
+superseded_by: troubleshooting-homepage.md
+---
+
 # Troubleshooting Homepage - Error 500
 
 ## Problema

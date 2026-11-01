@@ -1,3 +1,15 @@
+---
+title: "filament laravel ui deep analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament laravel ui deep analysis"
+issues: []
+discussions: []
+status: draft
+---
+
 # Analisi Approfondita: Laravel UI e LoginWidget
 
 ## Struttura di Laravel UI
