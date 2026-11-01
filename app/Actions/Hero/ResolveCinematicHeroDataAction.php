@@ -4,11 +4,12 @@ declare(strict_types=1);
 
 namespace Themes\TwentyOne\Actions\Hero;
 
+use Spatie\QueueableAction\QueueableAction;
+
 use Illuminate\Support\Facades\Schema;
 use Modules\Predict\Actions\Homepage\GetHomepageHeroDataAction;
 use Modules\Predict\Actions\Homepage\GetHomepageMarketCardsAction;
 use Modules\Predict\Models\Predict;
-use Spatie\QueueableAction\QueueableAction;
 use Throwable;
 
 final class ResolveCinematicHeroDataAction
@@ -16,8 +17,6 @@ final class ResolveCinematicHeroDataAction
     use QueueableAction;
 
     /**
-     * @param  array{text?: string, url?: string}|null  $ctaPrimary
-     * @param  array{text?: string, url?: string}|null  $ctaSecondary
      * @return array{
      *     eyebrow:string,
      *     title:string,
