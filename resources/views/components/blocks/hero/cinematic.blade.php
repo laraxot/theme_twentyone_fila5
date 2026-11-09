@@ -13,7 +13,6 @@
 
 <section class="antigravity-field relative overflow-hidden bg-[radial-gradient(circle_at_top,rgba(14,165,233,0.16),transparent_22%),linear-gradient(180deg,#020617_0%,#0f172a_55%,#020617_100%)]" data-antigravity-field>
     <x-ui.particles count="84" :color="$particlesColor" size="3px" zIndex="0" variant="antigravity" />
-    <div class="antigravity-grid" aria-hidden="true"></div>
     <div class="antigravity-spotlight" aria-hidden="true"></div>
     <div class="antigravity-orb antigravity-orb-1" aria-hidden="true"></div>
     <div class="antigravity-orb antigravity-orb-2" aria-hidden="true"></div>
@@ -28,12 +27,10 @@
                 </div>
 
                 <h1 class="reveal-kinetic mt-6 max-w-4xl text-5xl font-black leading-[0.94] tracking-tight text-white md:text-7xl xl:text-[5.5rem]" data-kinetic-block="fade-up" data-kinetic-delay="80">
-                    <span class="bg-gradient-to-r from-white via-sky-200 to-cyan-300 bg-clip-text text-transparent">
-                        {{ $hero['title'] }}
-                    </span>
+                    {{ $hero['title'] }}
                 </h1>
 
-                <p class="reveal-kinetic mt-6 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl" data-kinetic-block="fade-up" data-kinetic-delay="140">
+                <p class="reveal-kinetic mt-6 max-w-2xl text-pretty text-lg leading-8 text-slate-300 md:text-xl" data-kinetic-block="fade-up" data-kinetic-delay="140">
                     {{ $hero['subtitle'] }}
                 </p>
 
@@ -49,7 +46,7 @@
                 <div class="reveal-kinetic mt-10 flex flex-col gap-4 sm:flex-row" data-kinetic-block="fade-up" data-kinetic-delay="300">
                     <a
                         href="{{ $hero['primaryCta']['url'] }}"
-                        class="btn-kinetic inline-flex items-center justify-center gap-2 rounded-full border border-cyan-300/20 bg-gradient-to-r from-cyan-500 to-sky-500 px-7 py-4 text-base font-semibold text-slate-950 shadow-[0_18px_50px_rgba(14,165,233,0.3)]"
+                        class="btn-kinetic inline-flex items-center justify-center gap-2 rounded-full border border-cyan-300/20 bg-gradient-to-r from-cyan-500 to-sky-500 px-7 py-4 text-base font-semibold text-slate-950 shadow-xl"
                     >
                         <span>{{ $hero['primaryCta']['text'] }}</span>
                         <x-filament::icon icon="heroicon-o-arrow-right" class="h-5 w-5" />

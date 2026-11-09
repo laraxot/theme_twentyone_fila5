@@ -44,6 +44,13 @@ Build reale (`package.json`): `npm run build` (`vite build`, uscita in `./public
 
 ## 📄 Documenti
 
+### Manuale utente
+| File | Scopo |
+|------|-------|
+| [manuale-uso-front-office.md](manuale-uso-front-office.md) | Manuale d'uso completo del front office (rotte verificate, flussi, a11y, errori) |
+| [manuale-uso-front-office.pdf](manuale-uso-front-office.pdf) | Stessa guida in PDF stampabile |
+| [stories/front-office-manual-and-a11y.story.md](stories/front-office-manual-and-a11y.story.md) | Story BMAD: manuale + fix a11y/404/soft-404 |
+
 ### Architettura
 | File | Scopo |
 |------|-------|
@@ -51,6 +58,7 @@ Build reale (`package.json`): `npm run build` (`vite build`, uscita in `./public
 | HOMEPAGE_ARCHITECTURE.md | Homepage architecture |
 | HEADERNAV_CMS_ARCHITECTURE.md | Header/Nav CMS |
 | FOOTER_ARCHITECTURE.md | Footer architecture |
+| [CMS document shell](../../../Modules/Cms/docs/foot-component-architecture.md) | Layout owns `</body>` and `</html>`; `cms::foot` renders scripts and stacks |
 
 ### Filament
 | File | Scopo |

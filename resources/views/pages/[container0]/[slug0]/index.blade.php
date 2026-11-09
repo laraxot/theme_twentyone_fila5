@@ -7,6 +7,7 @@ use function Laravel\Folio\name;
 use Livewire\Volt\Component;
 use Modules\Cms\Actions\ResolvePageAction;
 use Modules\Cms\Http\Middleware\PageSlugMiddleware;
+use Modules\Cms\Models\Page as PageModel;
 
 name('container0.view');
 middleware(PageSlugMiddleware::class);
@@ -31,6 +32,13 @@ new class extends Component {
         $this->pageSlug = $resolved->pageSlug;
 
         $item = $resolved->item;
+
+        // Item mancante su vista dinamica '.view' o pagina CMS inesistente: 404, mai pagina vuota.
+        $isMissingView = $item === null
+            && (str_ends_with($this->pageSlug, '.view') || ! PageModel::where('slug', $this->pageSlug)->exists());
+        if ($isMissingView) {
+            abort(404);
+        }
         $predictId = is_object($item) && isset($item->id) ? $item->id : null;
 
         $this->data = [

@@ -1,5 +1,10 @@
 @import 'tailwindcss';
 
+/* Blade modules: classi Tailwind usate dalle view dei moduli (non auto-rilevate) */
+@source '../../../../Modules/**/resources/views/**/*.blade.php';
+@source '../../../../Modules/**/*.php';
+@source '../../../../storage/framework/views/*.php';
+
 /* Required by all components */
 @import '../../../../vendor/filament/support/resources/css/index.css';
 
@@ -75,4 +80,9 @@
 
 .btn-market-danger {
 	@apply bg-red-600 hover:bg-red-700 text-white;
+}
+
+/* WCAG: placeholder Filament >= 4.5:1 su bianco */
+.fi-input::placeholder {
+	color: #6b7280;
 }
