@@ -23,9 +23,9 @@
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
         @filamentStyles
         {{--
-        @vite(['resources/sass/app.scss'],'themes/TwentyOne/dist')
+        @vite(['resources/sass/app.scss'],'themes/TwentyOne')
         --}}
-        @vite(['resources/css/app.css'],'themes/TwentyOne/dist')
+        @vite(['resources/css/app.css'],'themes/TwentyOne')
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
@@ -36,6 +36,6 @@
         @livewire('notifications')
 
         @filamentScripts
-        @vite(['resources/js/app.js'],'themes/TwentyOne/dist')
+        @vite(['resources/js/app.js'],'themes/TwentyOne')
     </body>
 </html>

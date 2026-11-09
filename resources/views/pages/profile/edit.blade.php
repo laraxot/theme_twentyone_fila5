@@ -15,7 +15,7 @@ middleware(['auth', 'verified']);
 
 new class extends Component {
     #[Locked]
-    public ?Modules\Fixcity\Models\User $user = null;
+    public ?\Modules\User\Models\BaseUser $user = null;
 
     public string $name = '';
     public string $email = '';
@@ -29,8 +29,8 @@ new class extends Component {
     public function mount(): void
     {
         $user = auth()->user();
-        if (!$user instanceof \Modules\User\Models\User) {
-            throw new \RuntimeException('Authenticated user is not a Fixcity User');
+        if (! $user instanceof \Modules\User\Models\BaseUser) {
+            throw new \RuntimeException('Authenticated user is not a BaseUser');
         }
 
         $this->user = $user;
