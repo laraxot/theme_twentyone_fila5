@@ -37,3 +37,10 @@ Completare il progetto FO producendo un manuale utente verificato sul comportame
 
 ## Debito residuo
 - Dark mode dual non deciso; bundle CSS ~1.09MB; Sixteen Head/Foot non allineato; prompt `bashscripts/docs/prompts` da revisionare.
+
+## Update 2026-11-10 — bug scoperti route reali
+- `[container0]/index` ora fa fallback `'{c}.index'` → `'{c}'`: `/it/profile`, `/it/wallet`, `/it/setting` (slug CMS top-level) tornano 200.
+- `blocks/wallet/simple.blade.php`: `$profile` non era iniettato da nessuna parte → Undefined variable per ospiti. Ora risolve `Predict\Models\Profile` da `auth()->id()` e non renderizza senza profilo.
+- `StatsWidget` (profile): `($totalBets/$totalBets)` = division by zero + profitto hardcoded '1000' → sostituito con stat reale "Resolved bets" e rimossa la stat finta.
+- `/it/login` e simili erano soft-404: la vera auth e' `/it/auth/login` (pagine Folio `pages/auth/*`). Documentato nel manuale.
+- `SecurityMiddleware` (edit utente): validateInputs+CSRF spostati PRIMA di `$next()` — fix 419 login; PHPStan ok.

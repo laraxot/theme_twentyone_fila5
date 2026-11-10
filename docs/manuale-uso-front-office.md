@@ -10,7 +10,12 @@ related:
   - ../../Cms/docs/seo-head-architecture.md
 ---
 
-# Manuale d'uso del Front Office — Tema TwentyOne
+# Manuale d'uso del Front Office — Tema TwentyOne (scheda tecnica)
+
+> **Per gli utenti** (visitatori e giocatori, con schermate passo per passo) il manuale è
+> [Modules/Predict/docs/manuale/01-visitatore.md](../../../Modules/Predict/docs/manuale/01-visitatore.md)
+> e [02-giocatore.md](../../../Modules/Predict/docs/manuale/02-giocatore.md). Questa pagina è la
+> mappa tecnica per chi sviluppa o testa il tema.
 
 Guida completa all'esperienza pubblica della piattaforma di previsioni. Tutti i percorsi sono verificati su `http://192.168.1.40:8000` con locale `it`; le stesse pagine esistono in `en` e nelle altre lingue supportate da `mcamara/laravel-localization`.
 
@@ -34,11 +39,14 @@ Il front office è servito da **Laravel Folio** (routing file-based) + **Volt/Li
 | `/{locale}/predicts/{slug-o-id}` | 200/404 | Dettaglio mercato (`predicts.view`) |
 | `/{locale}/categories`, `/{locale}/categories/{slug}` | 200 | categorie e vista categoria |
 | `/{locale}/leaderboard` | 200 | classifica utenti |
-| `/{locale}/articles`, `/{locale}/blog` | 200/302 | articoli e blog |
+| `/{locale}/blog` | 200 | articoli non-mercato (vuoto finché non se ne pubblicano); `/{locale}/articles` → 301 a `/predicts` |
+| `/{locale}/{slug}` | 200 | pagine CMS semplici: `chi-siamo` (alias `about`), `how-it-works`, `contact`, `terms`, `privacy`, `cookies`, `disclaimer` |
+| `/{locale}/auth/login`, `/{locale}/auth/register`, `/{locale}/auth/password/reset` | 200 | autenticazione (429 sotto raffica: rate-limit `SecurityMiddleware`) |
+| `/{locale}/pages/profile`, `/{locale}/pages/wallet`, `/{locale}/profile/edit` | 200 / 302 al login | area utente (middleware `auth` dal JSON della pagina) |
+| `/{locale}/profile`, `/{locale}/wallet`, `/{locale}/setting` | 200 | alias top-level degli stessi slug CMS (fallback `'{c}.index'` → `'{c}'`) |
+| `/{locale}/search?q=` | 200 | ricerca mercati per titolo (`pages/search/index.blade.php`) |
 | `/{locale}/pages/{slug}` | 200 | pagine CMS statiche (about, privacy-policy, terms…) |
-| `/{locale}/login`, `/{locale}/register` | 200 | autenticazione |
-| `/{locale}/profile`, `/{locale}/wallet`, `/{locale}/setting` | 200 | area utente (auth) |
-| `/{locale}/{sconosciuto}` | **404** | pagina errore dedicata |
+| `/{locale}/{sconosciuto}` | **404** | pagina errore dedicata; pagine demo legacy (`cart`, `privacy`) non esposte |
 | `/{locale}/predicts/create` | **404** | rotta inesistente (rimosso link footer) |
 
 Slug CMS disponibili: `about`, `articles`, `home`, `leaderboard(.index)`, `predicts(.index/.view)`, `privacy-policy`, `profile`, `setting`, `terms(-and-conditions)`, `wallet`, `predict-view`, `crypto_001`.
