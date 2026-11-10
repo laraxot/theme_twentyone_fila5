@@ -83,9 +83,9 @@ Selettore lingua nell'header (prefisso URL). Tema scuro di default; toggle dark-
 ## 7. Limitazioni note
 
 - Creazione mercati **non è esposta** nel front office (solo backend/Filament): il link footer "Crea Mercato" è stato rimosso.
-- Dark mode: palette scura di design; il toggle esiste ma non tutte le sezioni hardcoded `slate-900` rispondono — decisione di prodotto da definire.
+- Dark mode: il FO è **dark-only di design** — sezioni hardcoded `slate-900` e i componenti toggle (`dark-mode-toggle`, `theme-switcher`) esistono in `resources/views/components/ui/` ma **non sono montati** in nessun layout attivo. Se si vorrà un light theme vero, è un progetto a parte (palette + `@variant dark` già pronti).
 - Bundle CSS ~1.09MB (import Filament nel tema) — candidato a code-splitting.
-- Tema `Two` mantiene shell manuale per Alpine/auth; `Sixteen` non ancora allineato allo standard Head/Foot.
+- Tema `Two` mantiene shell manuale per Alpine/auth; `Sixteen` usa un modello shell autonomo (documentato in `Themes/Sixteen/docs/wiki/concepts/document-shell.md`).
 
 ## 8. Troubleshooting
 
