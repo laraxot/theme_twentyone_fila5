@@ -22,7 +22,7 @@
         {{-- Titolo e categoria --}}
         <section>
         
-            <a href="{{ route('predict.view', ['lang' => app()->getLocale(), 'slug' => $record->slug]) }}" 
+            <a href="{{ url('/' . app()->getLocale() . '/predicts/' . $record->slug) }}" 
                class="block group">
                 <h3 class="text-sm font-bold text-gray-900 dark:text-white mb-1 line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     {{ $record->title }}
