@@ -68,8 +68,14 @@ new class extends Component
 
                 <div class="text-sm leading-6 text-gray-700 dark:text-gray-400">
                     <p>Before proceeding, please check your email for a verification link. If you did not receive the
-                        email, <a wire:click="resend" class="text-gray-700 underline transition duration-150 ease-in-out cursor-pointer dark:text-gray-300 hover:text-gray-600 focus:outline-none focus:underline">click
-                            here to request another</a>.</p>
+                        email,
+                        <a
+                            wire:click="resend"
+                            wire:loading.attr="disabled"
+                            wire:target="resend"
+                            class="text-gray-700 underline transition duration-150 ease-in-out cursor-pointer dark:text-gray-300 hover:text-gray-600 focus:outline-none focus:underline"
+                        ><span wire:loading.remove wire:target="resend">click
+                            here to request another</span><span wire:loading wire:target="resend" class="inline-flex items-center gap-1"><x-filament::loading-indicator class="h-3.5 w-3.5" />sending…</span></a>.</p>
                 </div>
             </div>
             @endvolt
