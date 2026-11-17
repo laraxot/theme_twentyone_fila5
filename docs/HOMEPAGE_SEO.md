@@ -1,16 +1,3 @@
----
-title: "HOMEPAGE SEO"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "HOMEPAGE SEO"
-issues: []
-discussions: []
-status: superseded
-superseded_by: homepage-seo.md
----
-
 # Homepage Improvements — Sprint 1 (Critical)
 
 > **Data**: 2026-03-18  
@@ -18,6 +5,7 @@ superseded_by: homepage-seo.md
 > **Stato**: 🔄 IN PROGRESS
 
 ---
+
 ## ✅ Completati
 
 ### 1. SEO Meta Tags + JSON-LD

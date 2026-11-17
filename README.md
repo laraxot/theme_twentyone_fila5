@@ -1,14 +1,3 @@
----
-title: "README"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "README"
-issues: []
-discussions: []
----
-
 # 🎯 TwentyOne
 
 [![Theme](https://img.shields.io/badge/Theme-TwentyOne-546E7A.svg)](#)
@@ -25,14 +14,6 @@ discussions: []
 
 ---
 
-title: "README"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "README"
-issues: []
-discussions: []
 ## Perché esiste
 
 Variante architetturale e riferimento storico nel monorepo.

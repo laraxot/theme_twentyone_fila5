@@ -1,16 +1,3 @@
----
-title: "SEMANTIC CSS GUIDE"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "SEMANTIC CSS GUIDE"
-issues: []
-discussions: []
-status: superseded
-superseded_by: semantic-css-guide.md
----
-
 # 🎨 TwentyOne Theme - Semantic CSS Guide
 
 **Path**: `laravel/Themes/TwentyOne/docs/SEMANTIC_CSS_GUIDE.md`  
@@ -19,6 +6,7 @@ superseded_by: semantic-css-guide.md
 **Version**: 1.0
 
 ---
+
 ## 🎯 Core Principle
 
 > **"Il tema è bridge-only: usa classi semantiche, non inventare stili."**

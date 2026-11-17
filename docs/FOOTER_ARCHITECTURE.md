@@ -1,16 +1,3 @@
----
-title: "FOOTER ARCHITECTURE"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "FOOTER ARCHITECTURE"
-issues: []
-discussions: []
-status: superseded
-superseded_by: footer-architecture.md
----
-
 # Footer Architecture — CMS-Driven
 
 > **Data**: 2026-03-18  
@@ -19,6 +6,7 @@ superseded_by: footer-architecture.md
 > **Modulo**: Predict (fornisce configurazione JSON)
 
 ---
+
 ## 🎯 Panoramica
 
 Il footer è **completamente gestito dal CMS** tramite configurazione JSON. Non ci sono Actions, Models o logica hardcoded nel tema.
