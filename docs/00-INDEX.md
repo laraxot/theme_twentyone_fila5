@@ -4,7 +4,7 @@ type: index
 status: active
 tags: [documentation]
 created: 2026-09-26
-updated: 2026-10-14
+updated: 2026-11-17
 qmd: "twentyone theme docs indice stato non usato fixcity importato progetto predict classificazione cartelle"
 issues: []
 discussions: []
@@ -14,6 +14,13 @@ discussions: []
 
 **Path**: `laravel/Themes/TwentyOne/docs/`  
 **Tema**: @Themes/TwentyOne
+
+## Progetti che usano il tema (aggiornato 2026-11-17)
+
+- **Predict**: tema d'origine (mercati di previsione).
+- **Passaparola**: tema pubblico (`pub_theme` in `config/local/passaparola/xra.php`), homepage con i
+  [blocchi di base](homepage-basic-blocks.md). Per farlo funzionare senza il modulo Predict il layout `app`
+  usa i [componenti di modulo facoltativi](optional-module-components.md).
 
 ## Stato del tema (verificato 2026-10-14)
 

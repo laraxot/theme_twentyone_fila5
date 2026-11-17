@@ -8,9 +8,12 @@
             {{ __('pub_theme::ui.skip_to_content') }}
         </a>
 
-		{{-- Bonus del giorno prima dell'intestazione: così il saldo in alto include già i crediti. --}}
+		{{-- Componenti di modulo facoltativi: compaiono solo se il modulo c'e' (ResolveAvailableComponentsAction).
+		     Bonus del giorno prima dell'intestazione (Predict): cosi' il saldo in alto include gia' i crediti. --}}
 		@auth
-			<x-predict::daily-bonus />
+			@foreach (app(\Themes\TwentyOne\Actions\Layout\ResolveAvailableComponentsAction::class)->execute(['predict::daily-bonus']) as $component)
+				<x-dynamic-component :component="$component" />
+			@endforeach
 		@endauth
 
 		<x-section slug="header" />
@@ -21,9 +24,11 @@
         
 		<x-section slug="footer" />
 
-        {{-- Coriandoli e messaggio quando un mercato su cui avevi puntato si risolve a tuo favore. --}}
+        {{-- Coriandoli quando un mercato su cui avevi puntato si risolve a tuo favore (Predict, se presente). --}}
         @auth
-            <x-predict::win-celebration />
+            @foreach (app(\Themes\TwentyOne\Actions\Layout\ResolveAvailableComponentsAction::class)->execute(['predict::win-celebration']) as $component)
+                <x-dynamic-component :component="$component" />
+            @endforeach
         @endauth
 
 
