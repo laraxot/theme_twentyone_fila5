@@ -1,16 +1,3 @@
----
-title: "NO PREDICT SPECIFIC PAGES IN THEME"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "NO PREDICT SPECIFIC PAGES IN THEME"
-issues: []
-discussions: []
-status: superseded
-superseded_by: no-predict-specific-pages-in-theme.md
----
-
 # NO PREDICT-SPECIFIC PAGES IN THEME
 
 **Last Updated**: 2026-03-22  
@@ -19,6 +6,7 @@ superseded_by: no-predict-specific-pages-in-theme.md
 **Principle**: Theme Agnosticism
 
 ---
+
 ## 🔴 CRITICAL RULE
 
 **MAI creare file specifici per modulo nel tema!**

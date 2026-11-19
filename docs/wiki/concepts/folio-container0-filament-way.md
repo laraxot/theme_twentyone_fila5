@@ -1,6 +1,4 @@
 ---
-issues: []
-discussions: []
 title: "TwentyOne Folio container0 — Filament way"
 type: concept
 tags: [twentyone, folio, container0, index, view, volt, mount]
@@ -11,7 +9,6 @@ related:
   - ../../../../../../docs/wiki/memories/folio-container0-index-filament-way.md
   - ../../route-names-philosophy.md
   - ../../blade-generic-architecture.md
-status: draft
 ---
 
 # Folio `container0` — Filament way (TwentyOne)

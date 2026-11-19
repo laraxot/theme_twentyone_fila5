@@ -1,16 +1,3 @@
----
-title: "GSAP ANIMATIONS GUIDE"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "GSAP ANIMATIONS GUIDE"
-issues: []
-discussions: []
-status: superseded
-superseded_by: gsap-animations-guide.md
----
-
 # GSAP Animations - Theme TwentyOne
 
 **Data**: 2026-03-23  
@@ -19,6 +6,7 @@ superseded_by: gsap-animations-guide.md
 **Stato**: ✅ DOCUMENTATO
 
 ---
+
 ## ARCHITETTURA
 
 ### File Structure

@@ -1,16 +1,3 @@
----
-title: "ZEN ARCHITECTURE PHILOSOPHY"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "ZEN ARCHITECTURE PHILOSOPHY"
-issues: []
-discussions: []
-status: superseded
-superseded_by: zen-architecture-philosophy.md
----
-
 # 🧘 Zen Architecture Philosophy
 
 **Tema**: TwentyOne  
@@ -18,6 +5,7 @@ superseded_by: zen-architecture-philosophy.md
 **Stato**: ✅ FOUNDATIONAL - Leggere PRIMA di modificare qualsiasi file
 
 ---
+
 ## 🔴 CRITICAL RULE: AGNOSTIC CONTAINER BLADE
 
 ### La Filosofia Zen

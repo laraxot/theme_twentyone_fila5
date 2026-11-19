@@ -1,15 +1,3 @@
----
-title: "kalshi competitor analysis"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "kalshi competitor analysis"
-issues: []
-discussions: []
-status: draft
----
-
 # Analisi Kalshi.com - Competitor Study
 
 ## Panoramica
@@ -19,6 +7,7 @@ status: draft
 **URL**: https://kalshi.com  
 
 ---
+
 ## Elementi Chiave Identificati
 
 ### 1. Struttura Header

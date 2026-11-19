@@ -1,16 +1,3 @@
----
-title: "LAYOUT ARCHITECTURE PHILOSOPHY"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "LAYOUT ARCHITECTURE PHILOSOPHY"
-issues: []
-discussions: []
-status: superseded
-superseded_by: layout-architecture-philosophy.md
----
-
 # Layout Architecture Philosophy
 
 **Last Updated**: 2026-03-20  
@@ -18,6 +5,7 @@ superseded_by: layout-architecture-philosophy.md
 **Branch**: dev
 
 ---
+
 ## 🎯 Core Principle
 
 > **"Separazione delle concern, composizione > duplicazione"**

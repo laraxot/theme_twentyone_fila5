@@ -1,16 +1,3 @@
----
-title: "THEME ARCHITECTURE ZEN BLADE NAMING"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "THEME ARCHITECTURE ZEN BLADE NAMING"
-issues: []
-discussions: []
-status: superseded
-superseded_by: theme-architecture-zen-blade-naming.md
----
-
 # Theme Architecture Zen - Blade File Naming Convention
 
 **Data**: 2026-03-22  
@@ -18,6 +5,7 @@ superseded_by: theme-architecture-zen-blade-naming.md
 **Philosophy**: Theme-First, Module-Agnostic
 
 ---
+
 ## 🎯 FILOSOFIA ZEN
 
 ### Il Principio Fondamentale

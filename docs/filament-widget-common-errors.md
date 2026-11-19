@@ -1,15 +1,3 @@
----
-title: "filament widget common errors"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "filament widget common errors"
-issues: []
-discussions: []
-status: draft
----
-
 # Errori Comuni: Widget Filament
 
 ## Riferimenti

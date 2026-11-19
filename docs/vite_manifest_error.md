@@ -1,15 +1,3 @@
----
-title: "vite manifest error"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "vite manifest error"
-issues: []
-discussions: []
-status: draft
----
-
 # Errori Runtime Home `/it` - Theme TwentyOne
 
 ## 1. Manifest Vite mancante
