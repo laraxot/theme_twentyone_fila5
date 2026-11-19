@@ -1,3 +1,15 @@
+---
+title: "prediki analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "prediki analysis"
+issues: []
+discussions: []
+status: draft
+---
+
 # Analisi UI/UX di Prediki per il Miglioramento della Pagina di Previsione
 
 ## 🎯 Panoramica

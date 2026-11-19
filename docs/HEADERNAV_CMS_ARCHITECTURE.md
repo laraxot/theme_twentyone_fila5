@@ -1,3 +1,16 @@
+---
+title: "HEADERNAV CMS ARCHITECTURE"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "HEADERNAV CMS ARCHITECTURE"
+issues: []
+discussions: []
+status: superseded
+superseded_by: headernav-cms-architecture.md
+---
+
 # HeaderNav CMS Architecture - Filosofia, Religione, Politica e Zen
 
 **Data**: 2026-03-23  
@@ -5,7 +18,6 @@
 **Version**: 1.0
 
 ---
-
 ## 🎯 FILOSOFIA: Il Header come Composable
 
 ### Il Principio Fondamentale

@@ -1,3 +1,15 @@
+---
+title: "filament tables setup"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament tables setup"
+issues: []
+discussions: []
+status: draft
+---
+
 # Filament Tables Setup - TwentyOne Theme
 
 ## Panoramica
@@ -413,10 +425,9 @@ Questo confine evita drift funzionale e mantiene il tema focalizzato su UI/UX.
 - [Filament 5.x Tables](https://filamentphp.com/docs/5.x/tables/overview)
 - [Filament 5.x Installation](https://filamentphp.com/docs/5.x/introduction/installation)
 - [Tailwind CSS v4](https://tailwindcss.com/docs)
-- [Laraxot Theme Architecture](../../docs/THEME_ARCHITECTURE.md)
+- [Laraxot Theme Architecture](../../../../docs/THEME_ARCHITECTURE.md)
 
 ---
-
 **Ultimo Aggiornamento**: 2026-03-22  
 **Versione Filament**: 5.4.1  
 **Versione Tema**: TwentyOne  

@@ -1,3 +1,15 @@
+---
+title: "filament login implementation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament login implementation"
+issues: []
+discussions: []
+status: draft
+---
+
 # Implementazione Login con Filament Widget
 
 ## Struttura del Widget

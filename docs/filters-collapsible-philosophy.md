@@ -1,3 +1,15 @@
+---
+title: "filters collapsible philosophy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filters collapsible philosophy"
+issues: []
+discussions: []
+status: draft
+---
+
 # Filtri collassabili — filosofia UI/UX
 
 ## Scopo

@@ -1,3 +1,16 @@
+---
+title: "BLADE OLD FILES IN PAGES RULE"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "BLADE OLD FILES IN PAGES RULE"
+issues: []
+discussions: []
+status: superseded
+superseded_by: blade-old-files-in-pages-rule.md
+---
+
 # 🔴 REGOLA: File .blade.php.old Nella Cartella Pages
 
 **Data**: 2026-03-22  
@@ -5,7 +18,6 @@
 **Priorità**: CRITICAL  
 
 ---
-
 ## 📜 La Regola
 
 ```

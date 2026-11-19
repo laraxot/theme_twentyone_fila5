@@ -1,3 +1,15 @@
+---
+title: "no predict specific pages in theme"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "no predict specific pages in theme"
+issues: []
+discussions: []
+status: draft
+---
+
 # NO PREDICT-SPECIFIC PAGES IN THEME
 
 **Last Updated**: 2026-03-22  
@@ -6,7 +18,6 @@
 **Principle**: Theme Agnosticism
 
 ---
-
 ## 🔴 CRITICAL RULE
 
 **MAI creare file specifici per modulo nel tema!**
