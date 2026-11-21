@@ -24,7 +24,7 @@
             type="button"
             class="grid px-4 py-2 text-sm font-semibold !text-white transition bg-blue-500 rounded-lg text-nowrap place-items-center hover:bg-blue-600 hover:no-underline"
             >
-        Login
+        {{ __('pub_theme::widgets_ratings.guest.login.label') }}
         </a>
     </div>
 </div>

@@ -96,6 +96,6 @@
 </div>
 @else
 <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden p-6">
-    <p class="text-gray-500 dark:text-gray-400 text-center">Market not found</p>
+    <p class="text-gray-500 dark:text-gray-400 text-center">{{ __('pub_theme::market_common.errors.market_not_found.message') }}</p>
 </div>
 @endif

@@ -3,7 +3,7 @@
 		class="flex flex-col items-center p-2 capitalize transition-all ease-out bg-transparent rounded-lg hover:bg-white text-neutral-3 focus:bg-white">
 		<x-heroicon-o-globe-europe-africa class="w-6 h-6"/>
 		<span class="flex items-center gap-1 navlink-text">
-			<span>Markets</span>
+			<span>{{ __('pub_theme::headernav.links.markets.label') }}</span>
             <x-fas-chevron-down class="h-3" />
 		</span>
 	</button>

@@ -85,12 +85,12 @@
             <div class="reveal-kinetic hero-spotlight-shell rounded-[2rem] border border-white/10 bg-white/6 p-4 shadow-[0_30px_90px_rgba(2,6,23,0.42)] backdrop-blur md:p-5" data-kinetic-block="fade-left" data-kinetic-delay="180">
                 <div class="mb-4 flex items-center justify-between gap-4">
                     <div>
-                        <p class="text-xs font-semibold uppercase tracking-[0.28em] text-sky-200/80">Mercati visuali</p>
-                        <h2 class="mt-1 text-2xl font-black tracking-tight text-white">Le risposte si capiscono al primo sguardo</h2>
+                        <p class="text-xs font-semibold uppercase tracking-[0.28em] text-sky-200/80">{{ __('pub_theme::blocks_hero.cinematic.visual_markets.label') }}</p>
+                        <h2 class="mt-1 text-2xl font-black tracking-tight text-white">{{ __('pub_theme::blocks_hero.cinematic.visual_markets.title') }}</h2>
                     </div>
 
                     <span class="hidden rounded-full border border-emerald-300/20 bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-100 md:inline-flex">
-                        4+ opzioni
+                        {{ __('pub_theme::blocks_hero.cinematic.options_count.label') }}
                     </span>
                 </div>
 
@@ -129,7 +129,7 @@
 
                                         @if($card['lead_outcome'])
                                             <div class="mt-3 max-w-xs rounded-[1.15rem] border border-white/12 bg-slate-950/72 p-3 backdrop-blur">
-                                                <p class="text-xs uppercase tracking-[0.24em] text-slate-300">Leader</p>
+                                                <p class="text-xs uppercase tracking-[0.24em] text-slate-300">{{ __('pub_theme::blocks_hero.cinematic.leader.label') }}</p>
                                                 <div class="mt-2 flex items-center justify-between gap-3">
                                                     <span class="text-sm font-semibold text-white">{{ $card['lead_outcome']['title'] }}</span>
                                                     <span class="text-base font-black text-cyan-300">{{ number_format($card['lead_outcome']['percentage'], 1, ',', '.') }}%</span>
@@ -161,16 +161,16 @@
                                     </div>
 
                                     <div class="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-white/10 pt-4 text-sm text-slate-300">
-                                        <span>{{ number_format($card['participants']) }} partecipanti</span>
-                                        <span>{{ number_format($card['volume'], 0, ',', '.') }} crediti</span>
+                                        <span>{{ trans_choice('pub_theme::market_common.stats.participants_count.label', $card['participants'], ['count' => number_format($card['participants'])]) }}</span>
+                                        <span>{{ trans_choice('pub_theme::market_common.stats.credits_count.label', $card['volume'], ['count' => number_format($card['volume'], 0, ',', '.')]) }}</span>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     @empty
                         <div class="rounded-[1.7rem] border border-dashed border-white/15 bg-slate-950/55 p-8 text-center text-slate-300">
-                            <p class="text-lg font-semibold text-white">Nessun mercato visuale disponibile</p>
-                            <p class="mt-2 text-sm">Popola il database con mercati multi-outcome e abilita `show_on_homepage` per vedere qui i migliori.</p>
+                            <p class="text-lg font-semibold text-white">{{ __('pub_theme::blocks_hero.cinematic.empty.title') }}</p>
+                            <p class="mt-2 text-sm">{{ __('pub_theme::blocks_hero.cinematic.empty.message') }}</p>
                         </div>
                     @endforelse
                 </div>

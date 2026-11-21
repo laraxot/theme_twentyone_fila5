@@ -58,9 +58,9 @@ render(function (View $view, string $slug) {
         @else
             <div class="py-10">
                 <h1 class="text-[2rem] mb-4  font-semibold text-neutral-5">
-                    Pagina non trovata
+                    {{ __('pub_theme::pages_misc.not_found.title.title') }}
                 </h1>
-                <p>La pagina richiesta non esiste.</p>
+                <p>{{ __('pub_theme::pages_misc.not_found.description.message') }}</p>
             </div>
         @endif
     </div>

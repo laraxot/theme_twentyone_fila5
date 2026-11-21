@@ -35,7 +35,7 @@
 
         @livewire('notifications')
 
-        @filamentScripts
+        @filamentScripts(withCore: true)
         @vite(['resources/js/app.js'],'themes/TwentyOne/dist')
     </body>
 </html>

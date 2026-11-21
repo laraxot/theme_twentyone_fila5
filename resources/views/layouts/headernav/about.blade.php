@@ -12,18 +12,18 @@
 				<li>
 					<a href="{{ url(app()->getLocale().'/pages/setting') }}" class="flex items-center p-2 space-x-2 transition-colors rounded hover:text-blue-500 hover:bg-white">
 						<x-heroicon-o-user-circle class="size-6"/>
-						<span>Profile</span>
+						<span>{{ __('pub_theme::headernav.user_menu.profile.label') }}</span>
 					</a>
 				</li>
 			@else
 				<li class="block lg:hidden">
 					<a href="{{route('register')}}" class="flex items-center p-2 space-x-2 text-blue-500 transition-colors rounded hover:text-blue-600 hover:bg-white">
-						<span>Sign Up</span>
+						<span>{{ __('pub_theme::headernav.auth.signup.label') }}</span>
 					</a>
 				</li>
 				<li class="block lg:hidden">
 					<a href="{{route('login')}}" class="flex items-center p-2 space-x-2 transition-colors rounded hover:text-blue-500 hover:bg-white">
-						<span>Login</span>
+						<span>{{ __('pub_theme::headernav.auth.login.label') }}</span>
 					</a>
 				</li>
 			@endauth
@@ -43,7 +43,7 @@
 					<form action="{{ route('logout') }}" method="post"> @csrf
 						<button type="submit" class="flex items-center w-full p-2 space-x-2 text-red-500 rounded hover:text-red-600 hover:bg-white">
 							<x-heroicon-o-power class="size-6" />
-							<span>{{ __('Logout') }}</span>
+							<span>{{ __('pub_theme::headernav.user_menu.logout.label') }}</span>
 						</button>
 					</form>
 				</li>

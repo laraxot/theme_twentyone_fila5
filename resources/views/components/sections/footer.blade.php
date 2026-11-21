@@ -13,7 +13,7 @@
                 <div class="space-y-1">
                     <p class="text-sm font-semibold text-white">{{ config('app.name') }}</p>
                     <p class="max-w-xl text-sm text-gray-400">
-                        Prediction market con crediti virtuali a tappi di bottiglia, mercati chiari e regole trasparenti.
+                        {{ __('pub_theme::sections_footer.brand.tagline.description') }}
                     </p>
                 </div>
 

@@ -69,19 +69,19 @@
             <div class="grid grid-cols-2 gap-6 max-w-2xl mx-auto mt-16 sm:grid-cols-4 animate-kinetic-scaleIn kinetic-delay-5">
                 <div class="p-4 text-center rounded-2xl bg-white/10 backdrop-blur-md border border-white/20">
                     <p class="text-3xl font-bold text-white">100%</p>
-                    <p class="mt-1 text-xs font-medium text-emerald-100 uppercase tracking-wide">Gratis</p>
+                    <p class="mt-1 text-xs font-medium text-emerald-100 uppercase tracking-wide">{{ __('pub_theme::blocks_hero.compact.free.label') }}</p>
                 </div>
                 <div class="p-4 text-center rounded-2xl bg-white/10 backdrop-blur-md border border-white/20">
                     <p class="text-3xl font-bold text-white">3+</p>
-                    <p class="mt-1 text-xs font-medium text-emerald-100 uppercase tracking-wide">Opzioni</p>
+                    <p class="mt-1 text-xs font-medium text-emerald-100 uppercase tracking-wide">{{ __('pub_theme::blocks_hero.compact.options.label') }}</p>
                 </div>
                 <div class="p-4 text-center rounded-2xl bg-white/10 backdrop-blur-md border border-white/20">
                     <p class="text-3xl font-bold text-white">24/7</p>
-                    <p class="mt-1 text-xs font-medium text-emerald-100 uppercase tracking-wide">Trading</p>
+                    <p class="mt-1 text-xs font-medium text-emerald-100 uppercase tracking-wide">{{ __('pub_theme::blocks_hero.compact.trading.label') }}</p>
                 </div>
                 <div class="p-4 text-center rounded-2xl bg-white/10 backdrop-blur-md border border-white/20">
                     <p class="text-3xl font-bold text-white">100%</p>
-                    <p class="mt-1 text-xs font-medium text-emerald-100 uppercase tracking-wide">Trasparente</p>
+                    <p class="mt-1 text-xs font-medium text-emerald-100 uppercase tracking-wide">{{ __('pub_theme::blocks_hero.compact.transparent.label') }}</p>
                 </div>
             </div>
         </div>

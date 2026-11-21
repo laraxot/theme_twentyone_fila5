@@ -8,8 +8,8 @@
     <div id="dropdown-notification" class="absolute z-10 hidden p-2 space-y-2 overflow-hidden text-sm border border-white rounded-lg bg-gray-50/85 backdrop-blur">
         <div>
             <ul class="flex space-x-1">
-                <li><button type="button" class="p-2 font-semibold border-b-2 border-blue-500">Your activities</button></li>
-                <li><button type="button" class="p-2 font-semibold hover:border-b-2 hover:border-gray-200">Forecasters you follow</button></li>
+                <li><button type="button" class="p-2 font-semibold border-b-2 border-blue-500">{{ __('pub_theme::blocks_nav.notifications.activities.label') }}</button></li>
+                <li><button type="button" class="p-2 font-semibold hover:border-b-2 hover:border-gray-200">{{ __('pub_theme::blocks_nav.notifications.followed_forecasters.label') }}</button></li>
             </ul>
         </div>
         <div>

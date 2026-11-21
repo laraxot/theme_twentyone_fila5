@@ -42,7 +42,7 @@ new class extends Component
             </x-ui.link>
 
             <h2 class="mt-5 text-2xl font-extrabold leading-9 text-center text-gray-800 dark:text-gray-200">
-                Reset password
+                {{ __('pub_theme::auth_pages.passwords.reset_title.title') }}
             </h2>
             <div class="text-sm leading-5 text-center text-gray-600 dark:text-gray-400 space-x-0.5">
                 <span>Or</span>
@@ -71,8 +71,8 @@ new class extends Component
                 </div>
                 @else
                 <form wire:submit="sendResetPasswordLink" class="space-y-6">
-                    <x-ui.input label="Email address" type="email" id="email" name="email" wire:model="email" />
-                    <x-ui.button type="primary" rounded="md" submit="true">Send password reset link</x-ui.button>
+                    <x-ui.input :label="__('pub_theme::auth_pages.fields.email_address.label')" type="email" id="email" name="email" wire:model="email" />
+                    <x-ui.button type="primary" rounded="md" submit="true">{{ __('pub_theme::auth_pages.passwords.send_link.label') }}</x-ui.button>
                 </form>
                 @endif
             </div>

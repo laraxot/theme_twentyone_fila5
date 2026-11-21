@@ -9,7 +9,7 @@
     @php
         $pos = collect($blocks)->groupBy('data.position');
     @endphp
-    <nav class="px-6 py-4 mx-auto container-xl" role="navigation" aria-label="{{ __('pub_theme::headernav.main') }}">
+    <nav class="px-6 py-4 mx-auto container-xl" role="navigation" aria-label="{{ __('pub_theme::headernav.sections.main.label') }}">
         <ul class="flex items-center justify-between lg:grid lg:grid-cols-3 gap-x-4">
             {{-- Left Position --}}
             <li class="flex items-center space-x-8">
