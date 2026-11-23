@@ -104,6 +104,14 @@ Il tema contiene pagine Folio generiche e blocchi riutilizzabili. Quando una pag
 - alcune pagine e link legacy convivono nell'albero delle view: la loro presenza non prova da sola che siano il percorso canonico di produzione;
 - le descrizioni di dominio vanno aggiunte solo dopo aver verificato il modulo proprietario.
 
+## Inventario documentale e funzionalità osservabili
+
+Il tema dispone della scheda tecnica [`manuale-uso-front-office.md`](manuale-uso-front-office.md), dei manuali [`manuals/manuale-utente.md`](manuals/manuale-utente.md) e [`manuals/user-manual.md`](manuals/user-manual.md), e dei PDF [`manuale-uso-front-office.pdf`](manuale-uso-front-office.pdf) e [`manuals/manuale-utente.pdf`](manuals/manuale-utente.pdf). L'ADR presente è [`adr/alternative-theme-isolated.md`](adr/alternative-theme-isolated.md); `contracts/` contiene il README dell'area, senza un contratto PHP autonomo del tema.
+
+Il materiale visuale è in [`screenshots/`](screenshots/), con schermate nominate per homepage, autenticazione, ricerca, categorie, blog e mercati; la cattura è descritta da [`screenshots/screenshot.py`](screenshots/screenshot.py).
+
+Dal codice delle view sono osservabili homepage/CMS, autenticazione e profilo, dashboard, ricerca, categorie, articoli/blog, leaderboard, wallet, posizioni, mercati/previsioni, dettaglio e blocchi di trading, eventi e notifiche. Sono superfici del tema e non una prova che ogni dominio o rotta sia attivo in tutti i tenant; per i percorsi verificati fare riferimento alla scheda front office.
+
 ## Fonti
 
 - [`Themes/TwentyOne/resources/views/pages/auth`](../resources/views/pages/auth)

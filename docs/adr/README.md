@@ -40,3 +40,5 @@ Pro, contro, debito che resta, cosa misurare. Chi cambia la decisione scrive un 
 
 ## Decisioni
 
+- [TwentyOne resta un tema alternativo isolato](alternative-theme-isolated.md)
+

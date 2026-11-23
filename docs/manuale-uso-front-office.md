@@ -12,10 +12,9 @@ related:
 
 # Manuale d'uso del Front Office — Tema TwentyOne (scheda tecnica)
 
-> **Per gli utenti** (visitatori e giocatori, con schermate passo per passo) il manuale è
-> [Modules/Predict/docs/manuale/01-visitatore.md](../../../Modules/Predict/docs/manuale/01-visitatore.md)
-> e [02-giocatore.md](../../../Modules/Predict/docs/manuale/02-giocatore.md). Questa pagina è la
-> mappa tecnica per chi sviluppa o testa il tema.
+> **Per gli utenti** (visitatori e utenti autenticati, con schermate passo per passo) il manuale è
+> [manuals/manuale-utente.md](manuals/manuale-utente.md). Questa pagina è la mappa tecnica
+> per chi sviluppa o testa il tema; non attribuisce al tema un modulo di dominio non presente.
 
 Guida completa all'esperienza pubblica della piattaforma di previsioni. Tutti i percorsi sono verificati su `http://192.168.1.40:8000` con locale `it`; le stesse pagine esistono in `en` e nelle altre lingue supportate da `mcamara/laravel-localization`.
 

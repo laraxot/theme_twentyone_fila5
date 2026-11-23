@@ -30,3 +30,8 @@ Chi cambia il comportamento aggiorna il contratto nello stesso commit.
 
 ## Contratti
 
+- [Superficie di build TwentyOne](build-surface.md)
+
+TwentyOne espone contratti di presentazione/build soltanto. Le Action del dominio restano nei moduli owner e non vengono
+inventariate come contratti del tema.
+
