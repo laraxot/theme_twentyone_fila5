@@ -116,7 +116,8 @@ input[type="button"], input[type="submit"] {
 
 - [website-checklist.md](../../../docs/project/website-checklist.md)
 - [HOMEPAGE_IMPROVEMENT_PLAN.md](homepage-improvement-plan.md)
-- [044-website-checklist.md](../../../.github/ISSUES/044-website-checklist.md)
+- Historical local `.github/ISSUES/044-website-checklist.md` reference removed;
+  current path audit is tracked in [issue #275](https://github.com/laraxot/base_fixcity_fila5/issues/275).
 
 ---
 

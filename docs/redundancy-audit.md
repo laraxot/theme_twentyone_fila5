@@ -19,6 +19,11 @@ High-risk findings:
 - UI primitives are duplicated with Sixteen: `button`, `input`, `checkbox`, `badge`, `modal`, `logo`, `text-link`, `light-dark-switch`, `placeholder`.
 - `pages/[slug].blade.php` and `pages/categories/[slug]/[slug].blade.php` are byte-identical.
 
+The `placeholder` finding is resolved in the current tree: the theme-local copy is
+removed and the shared implementation is `Modules/UI/resources/views/components/ui/placeholder.blade.php`,
+resolved by the existing `ui` component namespace. Do not recreate a theme-local
+copy or add a Folio page for this UI primitive.
+
 Risk:
 - Theme layout and component section directories compete as source of truth.
 - Blog module fragments copied into theme can drift from domain behavior.

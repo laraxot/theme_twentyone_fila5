@@ -6,8 +6,11 @@ RIFERIMENTI CREATI (2026-03-15):
 - docs/project/website-checklist.md — Checklist completa
 - docs/project/web-design-study-coordination.md — Coordinamento multi-agente
 - laravel/Themes/TwentyOne/docs/web-design-study.md — Sintesi per tema
-- .github/ISSUES/044-website-checklist.md — Issue GitHub
-- .github/DISCUSSIONS/004-website-design-strategy.md — Discussion
+- I riferimenti locali `.github/ISSUES/044-website-checklist.md` e
+  `.github/DISCUSSIONS/004-website-design-strategy.md` sono stati rimossi;
+  usare [issue #275](https://github.com/laraxot/base_fixcity_fila5/issues/275)
+  e [discussion #276](https://github.com/laraxot/base_fixcity_fila5/discussions/276)
+  per il coordinamento corrente.
 
 studia a fondo
 https://www.berger.team/it/website/kinetisches-webdesign-bewegung-als-zentrales-designelement/

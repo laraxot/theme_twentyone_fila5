@@ -123,8 +123,8 @@
 ### Ad Ogni Modifica
 - [ ] `Themes/TwentyOne/docs/HOMEPAGE_IMPROVEMENTS.md` — Log modifiche
 - [ ] `docs/project/website-checklist.md` — Spuntare voci implementate
-- [ ] `.github/ISSUES/044-website-checklist.md` — Aggiornare stato
-- [ ] `.github/DISCUSSIONS/004-website-design-strategy.md` — Condividere progressi
+- [ ] [Issue #275](https://github.com/laraxot/base_fixcity_fila5/issues/275) — verificare i riferimenti `.github` non standard
+- [ ] [Discussion #276](https://github.com/laraxot/base_fixcity_fila5/discussions/276) — condividere i progressi di coordinamento
 
 ### Creare Nuovi File
 - [ ] `Themes/TwentyOne/docs/homepage-seo.md` — SEO implementation

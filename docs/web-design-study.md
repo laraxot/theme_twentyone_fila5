@@ -259,8 +259,10 @@ status: draft
 
 - [website-checklist.md](../../../../docs/project/website-checklist.md) — Checklist completa (19 sezioni, 150+ voci)
 - [web-design-study-coordination.md](../../../../docs/project/web-design-study-coordination.md) — Coordinamento multi-agente
-- [Issue #044](../../../../.github/ISSUES/044-website-checklist.md) — Issue GitHub
-- [Discussion #004](../../../../.github/DISCUSSIONS/004-website-design-strategy.md) — Discussion
+- I riferimenti locali storici a Issue #044 e Discussion #004 sono stati rimossi
+  insieme ai path `.github/{ISSUES,DISCUSSIONS}`; il coordinamento corrente è
+  [issue #275](https://github.com/laraxot/base_fixcity_fila5/issues/275) /
+  [discussion #276](https://github.com/laraxot/base_fixcity_fila5/discussions/276).
 
 ---
 
