@@ -24,7 +24,7 @@ Indici correlati gia' esistenti (non sostituiti da questo file):
 - [README.md](./README.md) — presentazione tema, installazione, build, struttura
 - [readme-en.md](./readme-en.md) — presentazione in inglese
 - [docs-root-policy.md](./docs-root-policy.md) — regola: unico root documentale `docs/`, niente `_docs/`
-- [PROJECT-STRUCTURE.md](./project-structure.md) — layout directory del tema
+- [project-structure.md](./project-structure.md) — layout directory del tema
 - [ON-DEMAND-PATTERN.md](./ON-DEMAND-PATTERN.md) — pattern di caricamento efficiente della conoscenza
 - [QMD-SETUP.md](./QMD-SETUP.md) — configurazione ricerca locale (QMD)
 - [PERFORMANCE-OPTIMIZATION.md](./PERFORMANCE-OPTIMIZATION.md) — metriche e best practice performance
@@ -33,11 +33,11 @@ Indici correlati gia' esistenti (non sostituiti da questo file):
 
 - [bmad-methodology.md](./bmad-methodology.md) — metodologia BMAD applicata al tema
 - [gsd-methodology.md](./gsd-methodology.md) — metodologia GSD
-- [GSD_WORKFLOW.md](./gsd-workflow.md) — workflow operativo GSD
+- [gsd-workflow.md](./gsd-workflow.md) — workflow operativo GSD
 - [error-handling-process.md](./error-handling-process.md) — processo di gestione errori
 - [quality-tools.md](./quality-tools.md) — strumenti di qualita' usati nel tema
 - [actions.md](./actions.md) — azioni (Spatie Queueable Actions) del tema
-- [CODE_QUALITY_ANALYSIS.md](./code-quality-analysis.md) — analisi qualita' del codice (riferimento corrente; altre analisi datate in Storico)
+- [code-quality-analysis.md](./code-quality-analysis.md) — analisi qualita' del codice (riferimento corrente; altre analisi datate in Storico)
 - [stories/blade-i18n-no-hardcoded-text.story.md](./stories/blade-i18n-no-hardcoded-text.story.md) — niente testi fissi nelle Blade: chiavi `pub_theme::` in it, en, de, es (prima meta' del tema)
 
 ## Regole strutturali e naming
@@ -55,13 +55,13 @@ Indici correlati gia' esistenti (non sostituiti da questo file):
 
 - [blade-generic-architecture.md](./blade-generic-architecture.md) — architettura Blade generica/agnostica
 - [ZEN_ARCHITECTURE_PHILOSOPHY.md](./zen-architecture-philosophy.md) — filosofia architetturale Zen
-- [ZEN_NAKED_PAGE_PHILOSOPHY.md](./zen-naked-page-philosophy.md) — filosofia "naked page"
+- [zen-naked-page-philosophy.md](./zen-naked-page-philosophy.md) — filosofia "naked page"
 - [THEME_PHILOSOPHY_ZEN.md](./theme-philosophy-zen.md) — filosofia generale del tema Zen
-- [THEME_ARCHITECTURE_ZEN_BLADE_NAMING.md](./theme-architecture-zen-blade-naming.md) — convenzioni naming file Blade
-- [LAYOUT_ARCHITECTURE_PHILOSOPHY.md](./layout-architecture-philosophy.md) — filosofia architettura layout
+- [theme-architecture-zen-blade-naming.md](./theme-architecture-zen-blade-naming.md) — convenzioni naming file Blade
+- [layout-architecture-philosophy.md](./layout-architecture-philosophy.md) — filosofia architettura layout
 - [filament-philosophy.md](./filament-philosophy.md) — filosofia d'uso componenti Filament nel tema
 - [JSON_ARCHITECTURE.md](./json-architecture.md) — architettura basata su configurazione JSON
-- [SINGLE_DESIGN_SYSTEM_POLICY.md](./single-design-system-policy.md) — policy design system unico
+- [single-design-system-policy.md](./single-design-system-policy.md) — policy design system unico
 - [SEMANTIC_CSS_GUIDE.md](./semantic-css-guide.md) — guida CSS semantico
 
 ## UI e frontend
@@ -74,12 +74,12 @@ Indici correlati gia' esistenti (non sostituiti da questo file):
 
 ## GSAP, animazioni e kinetic design
 
-- [GSAP_ANIMATIONS_GUIDE.md](./gsap-animations-guide.md) — guida generale animazioni GSAP
-- [GSAP_SCROLLTRIGGER_CONFIGURATION.md](./gsap-scrolltrigger-configuration.md) — configurazione ScrollTrigger
+- [gsap-animations-guide.md](./gsap-animations-guide.md) — guida generale animazioni GSAP
+- [gsap-scrolltrigger-configuration.md](./gsap-scrolltrigger-configuration.md) — configurazione ScrollTrigger
 - [GSAP_SCROLLTRIGGER_THEME_GUIDE.md](./gsap-scrolltrigger-theme-guide.md) — guida ScrollTrigger applicata al tema
 - [cinematic-particles-philosophy.md](./cinematic-particles-philosophy.md) — filosofia particelle cinematiche
 - [kinetic-design.md](./kinetic-design.md) — principi di kinetic design
-- [KINETIC_WEB_DESIGN_SPEC.md](./kinetic-web-design-spec.md) — specifica kinetic web design
+- [kinetic-web-design-spec.md](./kinetic-web-design-spec.md) — specifica kinetic web design
 - [modern-web-design-guidelines.md](./modern-web-design-guidelines.md) — linee guida design moderno
 - [web-design-study.md](./web-design-study.md) — studio di design web
 - [web-effectiveness-rules-inputcomm.md](./web-effectiveness-rules-inputcomm.md) — regole di efficacia web (input/comunicazione)
@@ -87,24 +87,24 @@ Indici correlati gia' esistenti (non sostituiti da questo file):
 ## Homepage
 
 - [HOMEPAGE_ARCHITECTURE.md](./homepage-architecture.md) — architettura homepage
-- [HOMEPAGE_CMS_ARCHITECTURE.md](./homepage-cms-architecture.md) — architettura CMS della homepage
+- [homepage-cms-architecture.md](./homepage-cms-architecture.md) — architettura CMS della homepage
 - [HOMEPAGE_LAYOUT_ARCHITECTURE.md](./homepage-layout-architecture.md) — architettura layout homepage
 - [HEADERNAV_CMS_ARCHITECTURE.md](./headernav-cms-architecture.md) — architettura CMS header/nav
-- [FOOTER_ARCHITECTURE.md](./footer-architecture.md) — architettura footer
-- [ARCHITECTURE_UX_IMPROVEMENTS.md](./architecture-ux-improvements.md) — miglioramenti architettura/UX
+- [footer-architecture.md](./footer-architecture.md) — architettura footer
+- [architecture-ux-improvements.md](./architecture-ux-improvements.md) — miglioramenti architettura/UX
 - [homepage-governance.md](./homepage-governance.md) — governance dei contenuti homepage
 - [HOMEPAGE_IMPROVEMENT_PLAN.md](./homepage-improvement-plan.md) — piano di miglioramento homepage
 - [HOMEPAGE_SPRINT1_SUMMARY.md](./homepage-sprint1-summary.md) — riepilogo sprint 1 homepage
 - [homepage-ui-ux-audit.md](./homepage-ui-ux-audit.md) — audit UI/UX homepage
 - [HOMEPAGE_SEO.md](./homepage-seo.md) — SEO homepage
-- [TROUBLESHOOTING_HOMEPAGE.md](./troubleshooting-homepage.md) — troubleshooting problemi homepage
+- [troubleshooting-homepage.md](./troubleshooting-homepage.md) — troubleshooting problemi homepage
 
 ## Filament — setup, tabelle, widget
 
-- [FILAMENT_4_INTEGRATION.md](./filament-4-integration.md) — integrazione Filament 4
+- [filament-4-integration.md](./filament-4-integration.md) — integrazione Filament 4
 - [FILAMENT_5_IMPLEMENTATION.md](./filament-5-implementation.md) — implementazione Filament 5
-- [FILAMENT_5_INSTALLATION_GUIDE.md](./filament-5-installation-guide.md) — guida installazione Filament 5
-- [FILAMENT_TABLES_SETUP.md](./filament-tables-setup.md) — setup tabelle Filament
+- [filament-5-installation-guide.md](./filament-5-installation-guide.md) — guida installazione Filament 5
+- [filament-tables-setup.md](./filament-tables-setup.md) — setup tabelle Filament
 - [filament-structure-analysis.md](./filament-structure-analysis.md) — analisi struttura Filament
 - [filament-views-structure.md](./filament-views-structure.md) — struttura view Filament
 - [filament-widget-best-practices.md](./filament-widget-best-practices.md) — best practice widget
@@ -129,8 +129,8 @@ Nota: `login-improvements.md` e il cluster filament-login/auth sono in Storico.
 
 - [PREDICT_DETAIL_AGNOSTIC_CONTRACT.md](./predict-detail-agnostic-contract.md) — contratto detail page agnostico
 - [ORDER_BOOK_MULTI_OUTCOME_CONTRACT.md](./order-book-multi-outcome-contract.md) — contratto order book multi-outcome
-- [NO_PREDICT_SPECIFIC_PAGES.md](./no-predict-specific-pages.md) — regola: no pagine Predict-specific nel tema
-- [NO_PREDICT_SPECIFIC_PAGES_IN_THEME.md](./no-predict-specific-pages-in-theme.md) — variante/duplicato della regola precedente (vedi Storico)
+- [no-predict-specific-pages.md](./no-predict-specific-pages.md) — regola: no pagine Predict-specific nel tema
+- [no-predict-specific-pages-in-theme.md](./no-predict-specific-pages-in-theme.md) — variante/duplicato della regola precedente (vedi Storico)
 - [predict-detail-page-reusable-hero-fix.md](./predict-detail-page-reusable-hero-fix.md) — fix hero riutilizzabile detail page
 - [predicts-listing-fix.md](./predicts-listing-fix.md) — fix listing predicts
 - [market-detail-trust-ui.md](./market-detail-trust-ui.md) — UI di trust nel market detail
@@ -146,10 +146,10 @@ nel proprio README) e [kalshi-analysis/](#kalshi-analysis) (vedi sezione Sottoca
 - [theme-workflow.md](./theme-workflow.md) — workflow di sviluppo tema
 - [publishing.md](./publishing.md) — processo di pubblicazione del tema
 - [vite-error.md](./vite-error.md) — errore Vite (generico)
-- [vite_manifest_error.md](./vite-manifest-error.md) — errore manifest Vite
-- [LOGO_FIX.md](./logo-fix.md) — fix logo
+- [vite-manifest-error.md](./vite-manifest-error.md) — errore manifest Vite
+- [logo-fix.md](./logo-fix.md) — fix logo
 - [svg-icon-error-fix.md](./svg-icon-error-fix.md) — fix errore icone SVG
-- [array_offset_null_error.md](./array-offset-null-error.md) — fix errore array offset null
+- [array-offset-null-error.md](./array-offset-null-error.md) — fix errore array offset null
 - [codex-error-fix.md](./codex-error-fix.md) — fix errore Codex
 
 Nota: `index-blade-error-fix.md` e `index-blade-errors-and-fixes.md` sono duplicati dello
@@ -174,8 +174,8 @@ la versione corrente.
 
 - [predict/](./predict/README.md) — 34 file, indice proprio in `predict/README.md`
 - [kalshi-analysis/](./kalshi-analysis/analisi.md) — analisi competitor Kalshi:
-  [ANALISI.md](./kalshi-analysis/analisi.md),
-  [dESIGN_ANALYSIS.md](./kalshi-analysis/design-analysis.md),
+  [analisi.md](./kalshi-analysis/analisi.md),
+  [design-analysis.md](./kalshi-analysis/design-analysis.md),
   [DETAIL_PAGE_ANALYSIS.md](./kalshi-analysis/detail-page-analysis.md),
   [HOMEPAGE_ANALYSIS.md](./kalshi-analysis/homepage-analysis.md)
 - [phpstan/](./phpstan/README.md) — governance PHPStan/config immutabile:
@@ -223,15 +223,15 @@ Filament / AuthenticateUser). Da consolidare in un unico documento quando si tor
 - [filament-login-widget-deep-analysis.md](./filament-login-widget-deep-analysis.md)
 - [filament-login-widget-implementation.md](./filament-login-widget-implementation.md)
 - [filament-login-widget-related-files.md](./filament-login-widget-related-files.md)
-- [login_filament_widget_error.md](./login-filament-widget-error.md)
-- [login_filament_widget_pro_cons.md](./login-filament-widget-pro-cons.md)
+- [login-filament-widget-error.md](./login-filament-widget-error.md)
+- [login-filament-widget-pro-cons.md](./login-filament-widget-pro-cons.md)
 - [login-improvements.md](./login-improvements.md)
 
 ### Prodotto: roadmap / strategy / sprint / research / launch — due serie parallele
 
 - [roadmap.md](./roadmap.md)
 - [ROADMAP.md](./ROADMAP.md)
-- [ROADMAP_2025.md](./roadmap-2025.md)
+- [roadmap-2025.md](./roadmap-2025.md)
 - [product_roadmap.md](./product-roadmap.md)
 - [strategy.md](./strategy.md)
 - [product-strategy.md](./product-strategy.md)
@@ -260,7 +260,7 @@ roadmap in sottocartella.
 ### Coppie di duplicati puntuali
 
 - [INDEX_BLADE_ERROR_FIX.md](./index-blade-error-fix.md) vs [index-blade-errors-and-fixes.md](./index-blade-errors-and-fixes.md)
-- [NO_PREDICT_SPECIFIC_PAGES.md](./no-predict-specific-pages.md) vs [NO_PREDICT_SPECIFIC_PAGES_IN_THEME.md](./no-predict-specific-pages-in-theme.md)
+- [no-predict-specific-pages.md](./no-predict-specific-pages.md) vs [no-predict-specific-pages-in-theme.md](./no-predict-specific-pages-in-theme.md)
 - [antigravity-auth-success.md](./antigravity-auth-success.md) (root) vs [memories/antigravity-auth-success.md](./memories/antigravity-auth-success.md) (contenuto diverso, stesso argomento)
 
 ### Duplicati per naming (hyphen/underscore) in `predict/`

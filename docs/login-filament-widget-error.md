@@ -51,7 +51,7 @@ class LoginWidget extends XotBaseWidget
 
 ## Collegamenti contestuali
 
-- **[LOGIN_FILAMENT_WIDGET_PRO_CONS.md](login_filament_widget_pro_cons.md)** — Per un confronto approfondito tra approcci, vantaggi/svantaggi e best practice, consulta questo file: aiuta a scegliere la soluzione più adatta e conforme alle regole Windsurf/Xot.
+- **[LOGIN_FILAMENT_WIDGET_PRO_CONS.md](login-filament-widget-pro-cons.md)** — Per un confronto approfondito tra approcci, vantaggi/svantaggi e best practice, consulta questo file: aiuta a scegliere la soluzione più adatta e conforme alle regole Windsurf/Xot.
 - **[WIDGETS_STRUCTURE.md](../../../Modules/User/docs/WIDGETS_STRUCTURE.md)** — Per capire come strutturare correttamente i widget Filament, consulta questo file: contiene pattern, esempi e regole architetturali fondamentali per evitare errori strutturali.
 
 ---

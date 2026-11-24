@@ -1,8 +1,4 @@
 ---
-tags: [documentation]
-qmd: "ridondanze hub twentyone xot"
-issues: []
-discussions: []
 title: "Hub ridondanze TwentyOne ↔ Xot core"
 type: concept
 theme: twentyone
@@ -13,7 +9,6 @@ related:
   - ../../dry-kiss-analysis.md
   - ../../../../../Modules/Xot/docs/wiki/concepts/ridondanze-cross-cutting-codebase.md
   - ../../../../../Modules/Xot/docs/redundancy-report.md
-status: draft
 ---
 
 # Ridondanza: perché questo file esiste nel tema TwentyOne

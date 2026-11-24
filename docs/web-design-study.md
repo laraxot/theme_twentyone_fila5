@@ -1,15 +1,3 @@
----
-title: "web design study"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "web design study"
-issues: []
-discussions: []
-status: draft
----
-
 # Studio Web Design — TwentyOne Theme
 
 > **Aggiornato**: 2026-03-18
@@ -17,6 +5,7 @@ status: draft
 > **Standard**: WCAG 2.2 Level AA, European Accessibility Act (28 Giugno 2025), Core Web Vitals 2026
 
 ---
+
 ## 📊 Sintesi Studio (31 Fonti)
 
 ### 🔟 Le 10 Tendenze Principali 2026
@@ -259,10 +248,8 @@ status: draft
 
 - [website-checklist.md](../../../../docs/project/website-checklist.md) — Checklist completa (19 sezioni, 150+ voci)
 - [web-design-study-coordination.md](../../../../docs/project/web-design-study-coordination.md) — Coordinamento multi-agente
-- I riferimenti locali storici a Issue #044 e Discussion #004 sono stati rimossi
-  insieme ai path `.github/{ISSUES,DISCUSSIONS}`; il coordinamento corrente è
-  [issue #275](https://github.com/laraxot/base_fixcity_fila5/issues/275) /
-  [discussion #276](https://github.com/laraxot/base_fixcity_fila5/discussions/276).
+- [Issue #044](../../../../.github/ISSUES/044-website-checklist.md) — Issue GitHub
+- [Discussion #004](../../../../.github/DISCUSSIONS/004-website-design-strategy.md) — Discussion
 
 ---
 

@@ -1,22 +1,10 @@
----
-title: "HOMEPAGE LAYOUT ARCHITECTURE"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "HOMEPAGE LAYOUT ARCHITECTURE"
-issues: []
-discussions: []
-status: superseded
-superseded_by: homepage-layout-architecture.md
----
-
 # Layout Architecture - TwentyOne Theme
 
 **Last Updated**: 2026-03-20  
 **Status**: ✅ OPERATIONAL - Component-based layout system
 
 ---
+
 ## 🎯 Philosophy
 
 > "Composizione > Duplicazione"  
@@ -270,7 +258,7 @@ curl http://predict.local/it
 ### Related Docs
 
 - `docs/HOMEPAGE_LAYOUT_ARCHITECTURE.md` - This file
-- `docs/KINETIC_WEB_DESIGN_SPEC.md` - Kinetic design specs
+- `docs/kinetic-web-design-spec.md` - Kinetic design specs
 - `docs/CSS_ARCHITECTURE_PHILOSOPHY.md` - CSS separation
 - `docs/JS_ARCHITECTURE_PHILOSOPHY.md` - JS separation
 

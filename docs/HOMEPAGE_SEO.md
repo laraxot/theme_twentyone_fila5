@@ -1,16 +1,3 @@
----
-title: "HOMEPAGE SEO"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "HOMEPAGE SEO"
-issues: []
-discussions: []
-status: superseded
-superseded_by: homepage-seo.md
----
-
 # Homepage Improvements — Sprint 1 (Critical)
 
 > **Data**: 2026-03-18  
@@ -18,6 +5,7 @@ superseded_by: homepage-seo.md
 > **Stato**: 🔄 IN PROGRESS
 
 ---
+
 ## ✅ Completati
 
 ### 1. SEO Meta Tags + JSON-LD
@@ -128,8 +116,7 @@ input[type="button"], input[type="submit"] {
 
 - [website-checklist.md](../../../docs/project/website-checklist.md)
 - [HOMEPAGE_IMPROVEMENT_PLAN.md](HOMEPAGE_IMPROVEMENT_PLAN.md)
-- Historical local `.github/ISSUES/044-website-checklist.md` reference removed;
-  current path audit is tracked in [issue #275](https://github.com/laraxot/base_fixcity_fila5/issues/275).
+- [044-website-checklist.md](../../../.github/ISSUES/044-website-checklist.md)
 
 ---
 

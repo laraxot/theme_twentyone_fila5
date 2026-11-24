@@ -43,8 +43,7 @@ TwentyOne/
 2. Esegui `composer install` per installare le dipendenze PHP
 3. Esegui `npm install` per installare le dipendenze JavaScript
 4. Esegui `npm run build` per compilare gli asset del tema in `public/`
-5. Verifica che il webroot punti alla `public/` del tema tramite il symlink previsto dal deploy; non usare copie manuali
-   come contratto di rilascio.
+5. Esegui `npm run copy` per pubblicare manifest e asset in `public_html/themes/TwentyOne`
 
 ## Configurazione
 Il tema può essere configurato attraverso i seguenti file:
@@ -62,9 +61,10 @@ Per iniziare lo sviluppo:
 Per creare una build ottimizzata per la produzione:
 ```bash
 npm run build
+npm run copy
 ```
 
-Il build scrive nella `public/` del tema. La pubblicazione nel webroot è responsabilità del deploy e del suo symlink.
+Nel progetto corrente il solo `npm run build` non basta: Laravel legge gli asset del tema dal path runtime `public_html/themes/TwentyOne`, quindi dopo ogni build serve la copia verso quella destinazione.
 
 ## Personalizzazione
 Il tema può essere personalizzato in diversi modi:
@@ -81,9 +81,6 @@ Per problemi comuni, consulta la documentazione nella cartella `docs`:
 
 ## Documentazione correlata
 - `laravel/Themes/TwentyOne/docs/` - Documentazione del tema
-- [ADR](adr/README.md) — isolamento del tema alternativo
-- [Contratti](contracts/README.md) — presentation/build verificabili, senza dominio
-- [Contratto build](contracts/build-surface.md)
 - `project_docs/` - Documentazione di progetto (architettura, sviluppo)
 - `project_docs/roadmaps/` - Roadmap master e stato avanzamento
 

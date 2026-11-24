@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-use function Safe\file_get_contents;
-
 /**
  * Contratto pagine Folio dinamiche TwentyOne: mount() + @volt statico = name().
  */

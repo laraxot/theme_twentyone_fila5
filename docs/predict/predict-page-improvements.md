@@ -44,4 +44,4 @@
 
 ---
 
-Per i dettagli completi vedi `Modules/Predict/docs/predict_page_improvements.md`. Questa versione enfatizza solo l'integrazione con il tema TwentyOne.
+Per i dettagli completi vedi `Modules/Predict/docs/predict-page-improvements.md`. Questa versione enfatizza solo l'integrazione con il tema TwentyOne.

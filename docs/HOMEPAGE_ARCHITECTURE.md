@@ -1,16 +1,3 @@
----
-title: "HOMEPAGE ARCHITECTURE"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "HOMEPAGE ARCHITECTURE"
-issues: []
-discussions: []
-status: superseded
-superseded_by: homepage-architecture.md
----
-
 # Homepage Implementation — Predict Platform
 
 **Ultimo aggiornamento**: 2026-03-18  
@@ -19,6 +6,7 @@ superseded_by: homepage-architecture.md
 **Modulo**: Predict  
 
 ---
+
 ## 📋 Panoramica
 
 La homepage di Predict Platform utilizza un'architettura **theme-first** con integrazione CMS dinamica tramite blocchi.
@@ -269,7 +257,7 @@ Dallo studio di **27 fonti specializzate**, implementiamo:
 ### Documentazione Modulo
 
 - `Modules/Predict/docs/WEB_DESIGN_STUDY.md` — Studio web design applicato
-- `Modules/Predict/docs/GSD_WORKFLOW.md` — Workflow GSD
+- `Modules/Predict/docs/gsd-workflow.md` — Workflow GSD
 - `Modules/Predict/docs/GENERIC_PAGE_ARCHITECTURE.md` — Architettura pagine
 
 ### Documentazione Tema
@@ -279,11 +267,8 @@ Dallo studio di **27 fonti specializzate**, implementiamo:
 
 ### GitHub
 
-- The historical local mirrors `044-website-checklist.md` and
-  `004-website-design-strategy.md` were removed with the non-standard
-  `.github/{ISSUES,DISCUSSIONS}` directories; they are not active paths.
-- Current canonical tracking: [issue #275](https://github.com/laraxot/base_fixcity_fila5/issues/275)
-  and [discussion #276](https://github.com/laraxot/base_fixcity_fila5/discussions/276).
+- `.github/ISSUES/044-website-checklist.md` — Issue tracking
+- `.github/DISCUSSIONS/004-website-design-strategy.md` — Discussion
 
 ---
 

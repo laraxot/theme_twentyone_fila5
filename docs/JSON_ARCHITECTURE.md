@@ -1,16 +1,3 @@
----
-title: "JSON ARCHITECTURE"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "JSON ARCHITECTURE"
-issues: []
-discussions: []
-status: superseded
-superseded_by: json-architecture.md
----
-
 # TwentyOne Theme — JSON-Based Architecture
 
 > **Data**: 2026-03-18  
@@ -20,14 +7,6 @@ superseded_by: json-architecture.md
 
 ---
 
-title: "JSON ARCHITECTURE"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "JSON ARCHITECTURE"
-issues: []
-discussions: []
 ## 🎯 Filosofia del Tema
 
 ### 1. **Agnosticismo**
@@ -433,7 +412,7 @@ Builder::make('content_blocks')
 
 ### Theme Architecture
 - [`FOLIO_VOLT_ARCHITECTURE.md`](../laravel/docs/FOLIO_VOLT_ARCHITECTURE.md)
-- [`page-component-context-data.md`](../../../Modules/Cms/docs/page-component-context-data.md)
+- [`page-component-context-data.md`](../laravel/Modules/Cms/docs/page-component-context-data.md)
 
 ---
 

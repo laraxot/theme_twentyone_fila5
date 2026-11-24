@@ -1,7 +1,2 @@
-<?php
-
-use function Laravel\Folio\render;
-
-render(function () {
-    abort(404);
-});
+{{-- <h1>Under costruction</h1> --}}
+@include('pub_theme::404')
