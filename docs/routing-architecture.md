@@ -27,7 +27,7 @@ Modules provide logic and components — the theme decides how to render them.
 
 ## Route names
 
-Vedi [route-names-philosophy.md](route-names-philosophy.md) per convenzioni e uso.
+Vedi [route-names-philosophy.md](../archive/docs-legacy/root/route-names-philosophy.md) per convenzioni e uso.
 
 ## Why modules must NOT have conflicting Folio pages
 

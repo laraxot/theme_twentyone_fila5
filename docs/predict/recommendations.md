@@ -342,9 +342,9 @@ L'implementazione graduale permetterà di testare e ottimizzare ogni funzionalit
 
 ## 🔗 Documenti Correlati
 
-- [Analisi Dettagliata](./analysis.md)
+- [Analisi Dettagliata](../../archive/docs-legacy/predict/analysis.md)
 - [Best Practices](./best-practices.md)
-- [Implementazione Tecnica](./implementation.md)
+- [Implementazione Tecnica](../../archive/docs-legacy/predict/implementation.md)
 
 ---
 

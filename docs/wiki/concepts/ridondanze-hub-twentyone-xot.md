@@ -21,8 +21,8 @@ Evitare un **nuovo mega-report tecnico**: il tema ha già analisi voluminose (**
 
 | File | Cosa misura |
 |------|-------------|
-| [`analisi-metodi-duplicati.md`](../../analisi-metodi-duplicati.md) | Scan quantitativo replicazioni pattern Filament/List (`getTableColumns` ecc.) novembre 2025 |
-| [`dry-kiss-analysis.md`](../../dry-kiss-analysis.md) | Valutazione DRY/KISS del tema TwentyOne sullo stato del repo stesso giorno |
+| [`analisi-metodi-duplicati.md`](../../../archive/docs-legacy/root/analisi-metodi-duplicati.md) | Scan quantitativo replicazioni pattern Filament/List (`getTableColumns` ecc.) novembre 2025 |
+| [`dry-kiss-analysis.md`](../../../archive/docs-legacy/root/dry-kiss-analysis.md) | Valutazione DRY/KISS del tema TwentyOne sullo stato del repo stesso giorno |
 
 **Nota temporale**: numeri LOC / occorrenze **non sono auto-aggiornati** — dopo refactor grandi ricontrollare con `rg`/PHPStan prima di affidarsi alle tabelle storiche.
 

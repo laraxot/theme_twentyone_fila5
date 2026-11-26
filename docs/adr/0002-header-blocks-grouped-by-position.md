@@ -16,7 +16,7 @@ related:
 ## Contesto
 
 - Logo, menu, ricerca, selettore lingua e area utente cambiano tra installazioni e lingue; un `header.blade.php` con il
-  markup scritto a mano andava modificato per ogni variazione ([HEADERNAV_CMS_ARCHITECTURE](../HEADERNAV_CMS_ARCHITECTURE.md)).
+  markup scritto a mano andava modificato per ogni variazione ([HEADERNAV_CMS_ARCHITECTURE](../../archive/docs-legacy/root/HEADERNAV_CMS_ARCHITECTURE.md)).
 - I blocchi del JSON della sezione `header` (per lingua) hanno ognuno `view` e `data`, con `data.position`
   `left` | `center` | `right`.
 - Domanda: dove si decide cosa compare nell'header e dove?

@@ -115,7 +115,7 @@ input[type="button"], input[type="submit"] {
 ## 🔗 Riferimenti
 
 - [website-checklist.md](../../../docs/project/website-checklist.md)
-- [HOMEPAGE_IMPROVEMENT_PLAN.md](homepage-improvement-plan.md)
+- [HOMEPAGE_IMPROVEMENT_PLAN.md](../archive/docs-legacy/root/homepage-improvement-plan.md)
 - [044-website-checklist.md](../../../.github/ISSUES/044-website-checklist.md)
 
 ---

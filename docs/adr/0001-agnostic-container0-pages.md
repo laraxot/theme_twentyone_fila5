@@ -19,7 +19,7 @@ related:
   Folio: `resources/views/pages/[container0]/index.blade.php` e `[container0]/[slug0]/index.blade.php`.
 - Versioni precedenti usavano slug diversi per lo stesso ruolo (`container0.list`, `container0.detail`), variabili col nome
   del modulo nel container (`$predict`, `$article`) e logica CMS dentro la pagina (`CmsPage`, `resolveHomeTitle`)
-  ([PREDICT_DETAIL_AGNOSTIC_CONTRACT](../PREDICT_DETAIL_AGNOSTIC_CONTRACT.md)).
+  ([PREDICT_DETAIL_AGNOSTIC_CONTRACT](../../archive/docs-legacy/root/PREDICT_DETAIL_AGNOSTIC_CONTRACT.md)).
 - Ogni variante obbligava il JSON della pagina (`<container0>.view.json`) a seguire il nome scelto dal singolo file.
 - TwentyOne non e' il tema pubblico: `config/local/fixcity/xra.php:10` imposta `'pub_theme' => 'Sixteen'`. Ha `theme.json`
   con `"active": true`, ma `composer.json` dichiara `"providers": []` e non esiste `app/Providers`.

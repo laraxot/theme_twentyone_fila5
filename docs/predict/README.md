@@ -7,39 +7,39 @@ Questa documentazione copre l'analisi, l'implementazione e i miglioramenti del m
 ## 📚 Documenti Disponibili
 
 ### 📊 Analisi e Pianificazione
-- **[analysis.md](analysis.md)** - Analisi completa del file [slug].blade.php originale
+- **[analysis.md](../../archive/docs-legacy/predict/analysis.md)** - Analisi completa del file [slug].blade.php originale
 - **[best-practices.md](best-practices.md)** - Best practices dai leader del settore (Polymarket, PredictIt, Kalshi, Manifold)
 - **[recommendations.md](recommendations.md)** - Raccomandazioni principali con priorità e impatto
-- **[implementation.md](implementation.md)** - Guida tecnica per l'implementazione
+- **[implementation.md](../../archive/docs-legacy/predict/implementation.md)** - Guida tecnica per l'implementazione
 - **[technical-specifications.md](technical-specifications.md)** - Specifiche tecniche dettagliate
 
 ### 🎨 Design e UX
-- **[futuur-analysis.md](futuur-analysis.md)** - Analisi del design di Futuur.com
-- **[futuur-lessons.md](futuur-lessons.md)** - Lezioni apprese da Futuur.com
-- **[prediki-analysis.md](prediki-analysis.md)** - Analisi del design di Prediki.com
-- **[prediki-lessons.md](prediki-lessons.md)** - Lezioni apprese da Prediki.com
-- **[hybrid-design-implementation.md](hybrid-design-implementation.md)** - Implementazione design ibrido
+- **[futuur-analysis.md](../../archive/docs-legacy/predict/futuur-analysis.md)** - Analisi del design di Futuur.com
+- **[futuur-lessons.md](../../archive/docs-legacy/predict/futuur-lessons.md)** - Lezioni apprese da Futuur.com
+- **[prediki-analysis.md](../../archive/docs-legacy/predict/prediki-analysis.md)** - Analisi del design di Prediki.com
+- **[prediki-lessons.md](../../archive/docs-legacy/predict/prediki-lessons.md)** - Lezioni apprese da Prediki.com
+- **[hybrid-design-implementation.md](../../archive/docs-legacy/predict/hybrid-design-implementation.md)** - Implementazione design ibrido
 
 ### 🚀 Implementazione e Miglioramenti
-- **[completion-summary.md](completion-summary.md)** - Riepilogo del completamento del file [slug].blade.php
-- **[enhanced-implementation.md](enhanced-implementation.md)** - **NUOVO**: Documentazione dei miglioramenti applicati basati sulla documentazione esistente
-- **[prediction-page-improvements.md](prediction-page-improvements.md)** - Miglioramenti specifici per la pagina prediction
-- **[kalshi-implementation-plan.md](kalshi-implementation-plan.md)** - Piano di implementazione ispirato a Kalshi
-- **[kalshi-inspired-improvements.md](kalshi-inspired-improvements.md)** - Miglioramenti ispirati a Kalshi
+- **[completion-summary.md](../../archive/docs-legacy/predict/completion-summary.md)** - Riepilogo del completamento del file [slug].blade.php
+- **[enhanced-implementation.md](../../archive/docs-legacy/predict/enhanced-implementation.md)** - **NUOVO**: Documentazione dei miglioramenti applicati basati sulla documentazione esistente
+- **[prediction-page-improvements.md](../../archive/docs-legacy/predict/prediction-page-improvements.md)** - Miglioramenti specifici per la pagina prediction
+- **[kalshi-implementation-plan.md](../../archive/docs-legacy/predict/kalshi-implementation-plan.md)** - Piano di implementazione ispirato a Kalshi
+- **[kalshi-inspired-improvements.md](../../archive/docs-legacy/predict/kalshi-inspired-improvements.md)** - Miglioramenti ispirati a Kalshi
 
 ### 🌐 Supporto Multilingua
 - **[multilingual-support.md](multilingual-support.md)** - Documentazione delle modifiche per il supporto multilingua con convenzioni di naming standardizzate (.label, .description, .tooltip, etc.)
-- **[translation-conventions-implementation.md](translation-conventions-implementation.md)** - Implementazione delle convenzioni di traduzione standardizzate
+- **[translation-conventions-implementation.md](../../archive/docs-legacy/predict/translation-conventions-implementation.md)** - Implementazione delle convenzioni di traduzione standardizzate
 - **[translation-keys.md](translation-keys.md)** - Chiavi di traduzione complete per il modulo Predict
 
 ### 📈 Analisi Comparativa
-- **[comparative-analysis.md](comparative-analysis.md)** - Analisi comparativa tra piattaforme prediction market
-- **[improvements-summary.md](improvements-summary.md)** - Riepilogo generale dei miglioramenti
-- **[implementation-summary.md](implementation-summary.md)** - Riepilogo dell'implementazione
+- **[comparative-analysis.md](../../archive/docs-legacy/predict/comparative-analysis.md)** - Analisi comparativa tra piattaforme prediction market
+- **[improvements-summary.md](../../archive/docs-legacy/predict/improvements-summary.md)** - Riepilogo generale dei miglioramenti
+- **[implementation-summary.md](../../archive/docs-legacy/predict/implementation-summary.md)** - Riepilogo dell'implementazione
 
 ### 🔧 Architettura e Refactoring
-- **[refactoring-clean-architecture.md](refactoring-clean-architecture.md)** - Refactoring verso Clean Architecture
-- **[kalshi-design-implementation-analysis.md](kalshi-design-implementation-analysis.md)** - Analisi implementazione design Kalshi
+- **[refactoring-clean-architecture.md](../../archive/docs-legacy/predict/refactoring-clean-architecture.md)** - Refactoring verso Clean Architecture
+- **[kalshi-design-implementation-analysis.md](../../archive/docs-legacy/predict/kalshi-design-implementation-analysis.md)** - Analisi implementazione design Kalshi
 
 ## 🎯 Focus Principale
 

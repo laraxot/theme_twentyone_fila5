@@ -43,7 +43,7 @@ Portare **TwentyOne** a uno stato in cui il progetto ottiene un vantaggio netto 
 ## Collegamenti
 
 - [PRD](prd.md)
-- [Product Roadmap](product-roadmap.md)
+- [Product Roadmap](../archive/docs-legacy/root/product-roadmap.md)
 - [Indice centrale](../../../../docs/project/PRODUCT_DOCS_INDEX_2026_03_12.md)
 
 ## Regola architetturale

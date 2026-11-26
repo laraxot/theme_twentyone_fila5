@@ -14,4 +14,4 @@ Il tema **TwentyOne** fornisce un'interfaccia utente moderna, accessibile e alta
 - P1: Integrazione Blade/Livewire fluida.
 
 ## 3. References
-- [roadmap.md](roadmap.md)
+- [roadmap.md](../archive/docs-legacy/root/roadmap.md)

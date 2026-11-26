@@ -48,5 +48,5 @@ Titoli/meta → blocchi CMS o layout, non match nel mount lista.
 
 ## Backlink
 
-- [route-names-philosophy.md](../../route-names-philosophy.md)
+- [route-names-philosophy.md](../../../archive/docs-legacy/root/route-names-philosophy.md)
 - [routing-architecture.md](../../routing-architecture.md)
