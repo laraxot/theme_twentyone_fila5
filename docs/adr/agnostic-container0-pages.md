@@ -4,7 +4,7 @@ type: decision
 status: accepted
 theme: TwentyOne
 created: 2026-11-24
-updated: 2026-11-24
+updated: 2026-11-26
 related:
   - ../PREDICT_DETAIL_AGNOSTIC_CONTRACT.md
   - ../JSON_ARCHITECTURE.md
@@ -22,6 +22,11 @@ related:
 - Ogni variante obbligava il JSON della pagina (`<container0>.view.json`) a seguire il nome scelto dal singolo file.
 - Domanda: come si chiamano rotte, slug CMS e payload delle due pagine generiche?
 
+
+## Driver della decisione
+
+- TwentyOne è tema legacy/template: le pagine container0 restano agnostiche rispetto al dominio Fixcity.
+- Contenuti e policy restano nei moduli owner, non nel tema.
 ## Decisione
 
 - Elenco: `name('container0.index')`, `@volt('container0.index')`, `$this->pageSlug = $container0.'.index'`.
@@ -45,7 +50,7 @@ related:
 - Debito: le Action `app/Actions/Hero` e `app/Actions/Markets` e diversi blocchi nominano ancora `Modules\Predict`
   (vedi [contratti](../contracts/README.md)).
 
-## Verifica
+## Conferma
 
 `Themes/TwentyOne/tests/Unit/FolioPageMountContractTest.php` (sorgente, senza app) fallisce se le due pagine perdono
 `name()`/`@volt` canonici, se compaiono `container0.list`/`container0.detail`, `CmsPage` o `resolveHomeTitle`, o se il
