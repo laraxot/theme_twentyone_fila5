@@ -8,7 +8,6 @@
 [![PSR-12](https://img.shields.io/badge/Code-PSR--12-blue.svg)](https://www.php-fig.org/psr/psr-12/)
 [![Strict Types](https://img.shields.io/badge/PHP-strict__types-1-informational.svg)](#)
 [![Laraxot Modules](https://img.shields.io/badge/Architecture-Modular-purple.svg)](#)
-[![FixCity Platform](https://img.shields.io/badge/Platform-FixCity-008758.svg)](#)
 
 > **Tema alternativo Laraxot.** Base Filament/Livewire per scenari secondari e legacy parity.
 
@@ -53,4 +52,4 @@ Stack frontoffice: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filamen
 
 ---
 
-**Tema** `twentyone` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5
+**Tema** `twentyone` · **Laraxot** · PHPStan 10 · Filament 5
