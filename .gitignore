@@ -98,3 +98,6 @@ docs/project/visual-comparison/
 docs/visual-comparison/
 docs/archive/
 docs/screenshots/
+
+# Indice vettoriale locale (non versionare)
+ruvector.db
