@@ -5,7 +5,7 @@ status: done
 date: 2026-11-26
 owner: TwentyOne
 related:
-  - ../adr/agnostic-container0-pages.md
+  - ../adr/0001-agnostic-container0-pages.md
   - ../../../Modules/Xot/docs/stories/0042-laravel-day-harness-adoption.story.md
   - ../../../Modules/Xot/docs/adr/0012-behavioral-contract-governance.md
 ---
@@ -20,7 +20,7 @@ workflow agente. Xot resta owner delle regole trasversali.
 
 ## Stato
 
-- [x] ADR substantive owner: [container0 agnostico](../adr/agnostic-container0-pages.md)
+- [x] ADR substantive owner: [container0 agnostico](../adr/0001-agnostic-container0-pages.md)
 - [x] Indice `docs/adr/README.md` aggiornato con link relativi
 - [x] Gate `PackagesHaveContractsAndAdrTest` verde (substantive ADR + sezioni minime)
 

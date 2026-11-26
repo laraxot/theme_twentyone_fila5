@@ -1,5 +1,5 @@
-# Contracts
+# Behavioral and surface contracts — TwentyOne
 
-Behavioral contracts (harness laravelday / Xot 0012).
+Indice operativo della cartella owner-local. Il formato e la governance condivisi sono in [Xot](../../../../Modules/Xot/docs/contracts/README.md).
 
 - [resolve-cinematic-hero-data-action.md](resolve-cinematic-hero-data-action.md)

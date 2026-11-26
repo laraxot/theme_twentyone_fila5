@@ -10,6 +10,13 @@ use Modules\Predict\Actions\Homepage\GetHomepageMarketCardsAction;
 use Modules\Predict\Models\Predict;
 use Throwable;
 
+/**
+ * Dati di presentazione del blocco hero cinematografico.
+ *
+ * @see docs/contracts/resolve-cinematic-hero-data-action.md
+ *
+ * @contract docs/contracts/resolve-cinematic-hero-data-action.md
+ */
 final class ResolveCinematicHeroDataAction
 {
     /**
