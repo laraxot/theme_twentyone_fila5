@@ -30,3 +30,4 @@ qui nel formato del [canon](../../../../Modules/Xot/docs/rules/action-behavioral
 ## Contratti
 
 Nessuno (le Action del tema sono di sola lettura).
+- [resolve-cinematic-hero-data-action.md](resolve-cinematic-hero-data-action.md)

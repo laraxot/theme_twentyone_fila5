@@ -22,7 +22,7 @@ workflow agente. Xot resta owner delle regole trasversali.
 
 - [x] ADR substantive owner: [container0 agnostico](../adr/agnostic-container0-pages.md)
 - [x] Indice `docs/adr/README.md` aggiornato con link relativi
-- [x] Gate `PackagesHaveContractsAndAdrTest` da riverificare da `laravel/`
+- [x] Gate `PackagesHaveContractsAndAdrTest` verde (substantive ADR + sezioni minime)
 
 ## Criteri di accettazione
 
