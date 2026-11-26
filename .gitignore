@@ -92,3 +92,7 @@ phpinsights.php
 .php-cs-fixer.dist.php
 *.lock
 .windsurf/
+
+# screenshot di comparazione visiva (artefatti locali)
+docs/project/visual-comparison/
+docs/visual-comparison/
