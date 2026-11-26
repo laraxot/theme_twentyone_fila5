@@ -79,10 +79,9 @@ button, a.btn, [role="button"] {
 4. `docs/project/website-checklist.md` — 19 sezioni, 150+ voci (AGGIORNATO)
 5. `docs/project/web-design-study-coordination.md` — Multi-agente (AGGIORNATO)
 
-**Coordinamento aggiornato**:
-- I precedenti mirror locali `.github/{ISSUES,DISCUSSIONS}` non sono più path attivi.
-- Il tracciamento corrente è [issue #275](https://github.com/laraxot/base_fixcity_fila5/issues/275)
-  e [discussion #276](https://github.com/laraxot/base_fixcity_fila5/discussions/276).
+**GitHub Aggiornati**:
+- `.github/ISSUES/044-website-checklist.md` — Sprint 1 completato
+- `.github/DISCUSSIONS/004-website-design-strategy.md` — Progressi condivisi
 
 ---
 
@@ -138,7 +137,7 @@ button, a.btn, [role="button"] {
 - [website-checklist.md](docs/project/website-checklist.md)
 - [HOMEPAGE_IMPROVEMENT_PLAN.md](HOMEPAGE_IMPROVEMENT_PLAN.md)
 - [HOMEPAGE_SEO.md](HOMEPAGE_SEO.md)
-- [Issue #275](https://github.com/laraxot/base_fixcity_fila5/issues/275) — audit dei path `.github`
+- [044-website-checklist.md](.github/ISSUES/044-website-checklist.md)
 
 ---
 

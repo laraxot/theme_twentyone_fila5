@@ -1,15 +1,3 @@
----
-title: "layout architecture philosophy"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "layout architecture philosophy"
-issues: []
-discussions: []
-status: draft
----
-
 # Layout Architecture Philosophy
 
 **Last Updated**: 2026-03-20  
@@ -17,6 +5,7 @@ status: draft
 **Branch**: dev
 
 ---
+
 ## 🎯 Core Principle
 
 > **"Separazione delle concern, composizione > duplicazione"**
@@ -394,7 +383,7 @@ Il banner cookie è implementato in `main.blade.php`:
 - `docs/project/CSS_ARCHITECTURE_PHILOSOPHY.md` - CSS separation
 - `docs/project/VOLT_CLASS_BASED_COMPONENTS.md` - Volt components
 - `docs/project/FILAMENT_WIDGETS_FOR_LISTS_RULE.md` - Filament widgets
-- `docs/project/KINETIC_WEB_DESIGN_SPEC.md` - Kinetic animations
+- `docs/project/kinetic-web-design-spec.md` - Kinetic animations
 
 ---
 

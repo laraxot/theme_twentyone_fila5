@@ -126,7 +126,7 @@ I contenuti homepage sono in `config/local/predict/database/content/pages/home.j
 
 - [homepage-governance.md](homepage-governance.md) - Regole homepage
 - [translation-prototype-rule.md](../../docs/project/translation-prototype-rule.md) - Pattern traduzioni
-- [KINETIC_WEB_DESIGN_SPEC.md](kinetic-web-design-spec.md) - Specifica kinetic design
+- [kinetic-web-design-spec.md](kinetic-web-design-spec.md) - Specifica kinetic design
 - [docs/project/CMS_BLOCKS_FILAMENT_BUILDER_ARCHITECTURE.md](../../docs/project/CMS_BLOCKS_FILAMENT_BUILDER_ARCHITECTURE.md) - CMS con Filament Builder
 
 ---

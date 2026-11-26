@@ -1,15 +1,3 @@
----
-title: "single design system policy"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "single design system policy"
-issues: []
-discussions: []
-status: draft
----
-
 # Single Design System - Theme Policy
 
 **Tema**: TwentyOne  
@@ -17,6 +5,7 @@ status: draft
 **Stato**: ✅ ENFORCED  
 
 ---
+
 ## Principio Fondamentale
 
 > **"Il tema TwentyOne controlla TUTTO il design system. Tutte le pagine DEVONO usare lo stesso layout, CSS, JS."**

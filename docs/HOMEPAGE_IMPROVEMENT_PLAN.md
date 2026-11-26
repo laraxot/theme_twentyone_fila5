@@ -1,16 +1,3 @@
----
-title: "HOMEPAGE IMPROVEMENT PLAN"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "HOMEPAGE IMPROVEMENT PLAN"
-issues: []
-discussions: []
-status: superseded
-superseded_by: homepage-improvement-plan.md
----
-
 # Homepage Improvement Plan — http://predict.local/it
 
 > **Data**: 2026-03-18  
@@ -18,6 +5,7 @@ superseded_by: homepage-improvement-plan.md
 > **Standard**: WCAG 2.2 AA, Core Web Vitals 2026, 10 Priorità Critiche (70% successo)
 
 ---
+
 ## 📊 Stato Attuale
 
 ### ✅ Cosa Abbiamo
@@ -135,8 +123,8 @@ superseded_by: homepage-improvement-plan.md
 ### Ad Ogni Modifica
 - [ ] `Themes/TwentyOne/docs/HOMEPAGE_IMPROVEMENTS.md` — Log modifiche
 - [ ] `docs/project/website-checklist.md` — Spuntare voci implementate
-- [ ] [Issue #275](https://github.com/laraxot/base_fixcity_fila5/issues/275) — verificare i riferimenti `.github` non standard
-- [ ] [Discussion #276](https://github.com/laraxot/base_fixcity_fila5/discussions/276) — condividere i progressi di coordinamento
+- [ ] `.github/ISSUES/044-website-checklist.md` — Aggiornare stato
+- [ ] `.github/DISCUSSIONS/004-website-design-strategy.md` — Condividere progressi
 
 ### Creare Nuovi File
 - [ ] `Themes/TwentyOne/docs/HOMEPAGE_SEO.md` — SEO implementation

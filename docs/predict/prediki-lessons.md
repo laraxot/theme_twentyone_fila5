@@ -1,15 +1,3 @@
----
-title: "prediki lessons"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "prediki lessons"
-issues: []
-discussions: []
-status: draft
----
-
 # Lezioni da Prediki.com - Applicazioni Pratiche
 
 ## 🎯 Sintesi delle Lezioni Apprese
@@ -559,5 +547,6 @@ class LeaderboardWidget extends Component
 - [README](./README.md)
 
 ---
+
 *Documento creato il: {{ date('Y-m-d H:i:s') }}*
 *Ultimo aggiornamento: {{ date('Y-m-d H:i:s') }}* 

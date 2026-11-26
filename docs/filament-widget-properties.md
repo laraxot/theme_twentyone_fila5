@@ -1,15 +1,3 @@
----
-title: "filament widget properties"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "filament widget properties"
-issues: []
-discussions: []
-status: draft
----
-
 # Proprietà dei Widget Filament
 
 ## Riferimenti

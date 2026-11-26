@@ -1,16 +1,3 @@
----
-title: "INDEX BLADE ERROR FIX"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "INDEX BLADE ERROR FIX"
-issues: []
-discussions: []
-status: superseded
-superseded_by: index-blade-error-fix.md
----
-
 # ERRORE CRITICO: index.blade.php - Violazione Homepage Governance
 
 **Data**: 2026-03-19  
@@ -18,6 +5,7 @@ superseded_by: index-blade-error-fix.md
 **File**: `Themes/TwentyOne/resources/views/pages/index.blade.php`
 
 ---
+
 ## Errore Commesso
 
 Il file `index.blade.php` è stato polluto con ~1000 righe di CSS inline e ~100 righe di JS inline, violando pesantemente le regole del progetto.
@@ -138,7 +126,7 @@ I contenuti homepage sono in `config/local/predict/database/content/pages/home.j
 
 - [homepage-governance.md](homepage-governance.md) - Regole homepage
 - [translation-prototype-rule.md](../../docs/project/translation-prototype-rule.md) - Pattern traduzioni
-- [KINETIC_WEB_DESIGN_SPEC.md](KINETIC_WEB_DESIGN_SPEC.md) - Specifica kinetic design
+- [kinetic-web-design-spec.md](kinetic-web-design-spec.md) - Specifica kinetic design
 - [docs/project/CMS_BLOCKS_FILAMENT_BUILDER_ARCHITECTURE.md](../../docs/project/CMS_BLOCKS_FILAMENT_BUILDER_ARCHITECTURE.md) - CMS con Filament Builder
 
 ---

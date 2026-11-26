@@ -1,15 +1,3 @@
----
-title: "gsap animations guide"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "gsap animations guide"
-issues: []
-discussions: []
-status: draft
----
-
 # GSAP Animations - Theme TwentyOne
 
 **Data**: 2026-03-23  
@@ -18,6 +6,7 @@ status: draft
 **Stato**: ✅ DOCUMENTATO
 
 ---
+
 ## ARCHITETTURA
 
 ### File Structure
@@ -409,7 +398,7 @@ export function initSectionAnimations() {
 - `docs/project/GSAP_V3_COMPLETE_GUIDE.md`
 - `docs/project/GSAP_SCROLLTRIGGER_ADVANCED.md`
 - `docs/project/GSAP_PERFORMANCE_ACCESSIBILITY.md`
-- `Modules/Predict/docs/GSAP_ANIMATIONS_GUIDE.md`
+- `Modules/Predict/docs/gsap-animations-guide.md`
 
 ---
 

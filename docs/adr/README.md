@@ -1,44 +1,20 @@
 ---
-title: "Architecture Decision Records"
+title: "ADR del tema TwentyOne"
 type: index
-tags: [adr, decisioni]
-created: 2026-11-18
-updated: 2026-11-18
+tags: [adr, decisioni, twentyone]
+created: 2026-11-24
+updated: 2026-11-24
 ---
 
-# Architecture Decision Records
+# ADR del tema TwentyOne
 
-Il **perche'** delle scelte di questo pacchetto: una decisione per file, con le alternative scartate.
-Il nome del file e' l'argomento, senza date ne' numeri (la data sta nella frontmatter).
+TwentyOne e' un tema pubblico "agnostico" guidato dai JSON del CMS: le sue decisioni fissano i nomi delle pagine Folio
+generiche e il fatto che le sezioni (l'header per primo) siano solo orchestratori di blocchi.
 
-## Formato
-
-```markdown
----
-title: "ADR — <decisione in una riga>"
-type: decision
-status: accepted | superseded | deprecated
-created: AAAA-MM-GG
-updated: AAAA-MM-GG
-issues: []
----
-
-# ADR: <decisione>
-
-## Contesto
-Fatti e vincoli che hanno reso necessaria la scelta (misure, norme, policy, incidenti).
-
-## Decisione
-Cosa si fa, in concreto, e dove sta nel codice.
-
-## Alternative scartate
-Ogni alternativa seria, con il motivo per cui non e' stata scelta.
-
-## Conseguenze
-Pro, contro, debito che resta, cosa misurare. Chi cambia la decisione scrive un nuovo ADR e segna questo `superseded`.
-```
+**Quando leggerli:** prima di creare una pagina Folio per un tipo di contenuto, rinominare slug/rotte `container0.*`, o
+scrivere markup fisso in una sezione. Formato: [regola del canon](../../../../Modules/Xot/docs/rules/action-behavioral-contract.md).
 
 ## Decisioni
 
-- [TwentyOne resta un tema alternativo isolato](alternative-theme-isolated.md)
-
+- [Pagine container0 agnostiche](agnostic-container0-pages.md) — `container0.index` / `container0.view`, payload neutro `item`/`record`, risoluzione in `Modules/Cms`.
+- [Header come blocchi per posizione](header-blocks-grouped-by-position.md) — l'header rende i blocchi JSON raggruppati per `data.position`, senza markup proprio.

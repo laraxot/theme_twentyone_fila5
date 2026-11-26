@@ -60,14 +60,24 @@
                     {{ __('predict::comments.sort.label') }}
                 </span>
 
-                <x-filament::input.select
+                <x-filament::select
                     wire:model.live="sort"
-                    class="w-40 text-sm"
+                    size="sm"
+                    class="w-40"
                 >
-                    <option value="popular">{{ __('predict::comments.sort.popular') }}</option>
-                    <option value="recent">{{ __('predict::comments.sort.recent') }}</option>
-                    <option value="oldest">{{ __('predict::comments.sort.oldest') }}</option>
-                </x-filament::input.select>
+                    <x-filament::select.option value="popular">
+                        <x-heroicon-o-hand-thumb-up class="w-4 h-4 inline mr-1" />
+                        {{ __('predict::comments.sort.popular') }}
+                    </x-filament::select.option>
+                    <x-filament::select.option value="recent">
+                        <x-heroicon-o-clock class="w-4 h-4 inline mr-1" />
+                        {{ __('predict::comments.sort.recent') }}
+                    </x-filament::select.option>
+                    <x-filament::select.option value="oldest">
+                        <x-heroicon-o-calendar class="w-4 h-4 inline mr-1" />
+                        {{ __('predict::comments.sort.oldest') }}
+                    </x-filament::select.option>
+                </x-filament::select>
             </div>
         </div>
 

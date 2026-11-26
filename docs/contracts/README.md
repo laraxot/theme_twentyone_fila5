@@ -1,37 +1,32 @@
 ---
-title: "Contratti"
+title: "Contratti del tema TwentyOne"
 type: index
-tags: [contracts, actions, interfaces]
-created: 2026-11-18
-updated: 2026-11-18
+tags: [contracts, twentyone]
+created: 2026-11-24
+updated: 2026-11-24
 ---
 
-# Contratti
+# Contratti del tema TwentyOne
 
-Cosa promette la superficie pubblica di questo pacchetto: le Action che scrivono dati, chiamano servizi esterni o hanno
-effetti collaterali, e le interfacce (`app/Contracts`). Regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`.
+TwentyOne ha due Action, entrambe **di sola lettura** (preparano i dati di un blocco, non scrivono nulla, non chiamano
+servizi esterni): per la regola del canon non servono contratti, e la cartella resta vuota.
 
-## Contratto di comportamento di un'Action
+| Action | Cosa fa | Perche' niente contratto |
+|---|---|---|
+| `app/Actions/Hero/ResolveCinematicHeroDataAction.php` | testi, CTA, statistiche e card del blocco `blocks/hero/cinematic` | legge `Modules\Predict` (conteggi, card), nessuna scrittura |
+| `app/Actions/Markets/ResolveFeaturedMarketsGridDataAction.php` | etichette e card del blocco `blocks/markets/featured` | delega a `GetHomepageMarketCardsAction` di `Modules\Predict` |
 
-Un file per Action, nome in kebab-case della classe (`create-ticket-action.md`), frontmatter `type: contract` e
-`action: <FQCN>`, e queste sei sezioni nell'ordine:
+Da sapere prima di imitarle:
 
-```markdown
-## Input
-## Output
-## Invarianti
-## Effetti collaterali
-## Errori
-## Non fa
-```
+- Dipendono da `Modules\Predict`, che non e' installato in ogni progetto che usa il tema: dove manca, i due blocchi non
+  si rendono (il tema resta usabile solo se il JSON non li nomina).
+- `ResolveFeaturedMarketsGridDataAction::execute()` chiama `$this__(...)` (11 occorrenze) invece di `$this->tx(...)`:
+  e' una variabile indefinita, l'Action fallisce a runtime. Difetto da correggere, non uno stile da copiare.
 
-Il docblock dell'Action rimanda al file con la riga `Contratto di comportamento: docs/contracts/<file>.md`.
-Chi cambia il comportamento aggiorna il contratto nello stesso commit.
+**Dove stanno i contratti applicativi:** nei moduli (`Modules/Cms/docs/contracts/` per la risoluzione delle pagine, il
+modulo di dominio per mercati e quote). Se il tema acquisisce un'Action che scrive dati o chiama l'esterno, il contratto va
+qui nel formato del [canon](../../../../Modules/Xot/docs/rules/action-behavioral-contract.md).
 
 ## Contratti
 
-- [Superficie di build TwentyOne](build-surface.md)
-
-TwentyOne espone contratti di presentazione/build soltanto. Le Action del dominio restano nei moduli owner e non vengono
-inventariate come contratti del tema.
-
+Nessuno (le Action del tema sono di sola lettura).
